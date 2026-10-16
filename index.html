@@ -8,7 +8,7 @@
 <script>var t="dark";try{var s=localStorage.getItem("apff_theme");if(s)t=s}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Layout: one column scoreboard-style hub. Masthead with a yard-line ruler, then standings, weekly scores, pick ledger, rulebook. */
 :root {
@@ -340,6 +340,28 @@ tr.cut td { font-size: 13px; }
   --accent: #5aa0ff; --accent-ink: #08142b; --tint: #1b2b4a; --flag: #e3b947; --flag-tint: #33301c;
   --loss: #f08a8a; --loss-tint: #3a2229; color-scheme: dark;
 }
+
+/* readable fonts: Atkinson Hyperlegible for text and numbers, Lexend for headings */
+:root {
+  --display: "Lexend", Verdana, system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", Verdana, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Atkinson Hyperlegible", Verdana, system-ui, sans-serif;
+}
+body { font-size: 17px; line-height: 1.6; font-variant-numeric: tabular-nums; }
+h1, h2 { font-weight: 600; text-transform: none; line-height: 1.1; }
+h1 { font-size: clamp(32px, 6vw, 52px); }
+h2 { font-size: clamp(24px, 4vw, 30px); }
+.article h3 { text-transform: none; font-weight: 600; font-size: clamp(26px, 4.5vw, 38px); line-height: 1.15; }
+.rhead .rn { text-transform: none; font-weight: 600; font-size: 28px; line-height: 1.15; }
+.rank { font-weight: 600; font-size: 20px; }
+.strip .v { font-weight: 600; font-size: 30px; }
+.dispatch aside .strip .v { font-size: 26px; }
+.rules dd, td.num, th.num { font-size: 15px; }
+.nav a, .seg button, .btnrow button, .status button, .themebtn { font-size: 15px; font-weight: 400; }
+.nav a[aria-current="page"], .seg button[aria-pressed="true"] { font-weight: 700; }
+.article p { font-size: 18px; line-height: 1.7; }
+.tn, .pl .nm, .pk .ph b { font-weight: 700; }
+th { font-weight: 700; }
 </style>
 </head>
 <body>
