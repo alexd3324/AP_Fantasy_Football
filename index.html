@@ -607,6 +607,16 @@ td {font-size:16px}
 #teamProfiles .profile-current-team strong{font-family:var(--display);font-size:clamp(24px,3vw,35px);font-weight:850;color:var(--text)}
 @media(max-width:640px){#teamProfiles .profile-hero{padding:21px 19px}}
 
+
+/* Franchise selection belongs to the statistical profile header */
+#teamProfiles .profile-hero-picker{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:26px 0 0;padding:22px 0 0;border-top:1px solid var(--line)}
+#teamProfiles .profile-hero-picker label{font-size:15px;font-weight:800;color:var(--text)}
+#teamProfiles .profile-hero-picker select{min-width:280px;max-width:100%;font-size:17px;padding:11px 14px;background:var(--surface);color:var(--text)}
+#teamProfiles .profile-hero .profile-hero-help{font-size:14px;line-height:1.55;margin-top:13px;max-width:700px}
+#teamProfiles .profile-report-box{margin-top:0}
+#teamProfiles .profile-report-box:has(#profileContent:empty){display:none}
+@media(max-width:640px){#teamProfiles .profile-hero-picker{align-items:stretch;flex-direction:column;gap:9px}#teamProfiles .profile-hero-picker select{width:100%;min-width:0}}
+
 /* Dynasty Dispatch weekly awards */
 .dispatch-awards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:17px}
 .dispatch-award{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
@@ -634,12 +644,183 @@ td {font-size:16px}
 .matchup-lineups{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:20px}
 .matchup-lineup{min-width:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .matchup-lineup h3{margin:0;padding:14px 16px;background:var(--panel);font-size:17px}
-.matchup-player{display:grid;grid-template-columns:40px minmax(0,1fr) 70px;align-items:center;gap:10px;padding:10px 14px;border-top:1px solid var(--line);font-size:14px}
-.matchup-player:nth-child(odd){background:color-mix(in srgb,var(--surface) 90%,var(--accent) 10%)}
-.matchup-player .mp-pos{font-size:11px;color:var(--muted);font-weight:850}
-.matchup-player .mp-name{overflow-wrap:anywhere}.matchup-player .mp-pts{text-align:right;font-weight:850;font-variant-numeric:tabular-nums}
+/* Larger, cleaner matchup player cards */
+.matchup-dialog{width:min(1320px,100%)}
+.matchup-lineups{gap:22px;padding:22px}
+.matchup-lineup h3{padding:18px 20px;font-size:20px}
+.matchup-player{display:grid;grid-template-columns:48px minmax(0,1fr) 86px;align-items:center;gap:14px;padding:15px 18px;border-top:1px solid var(--line);font-size:16px;min-height:84px}
+.matchup-player:nth-child(odd){background:color-mix(in srgb,var(--panel) 58%,var(--surface) 42%)}
+.matchup-player .mp-pos{font-size:12px;color:var(--accent);font-weight:850;letter-spacing:.04em}
+.mp-main{min-width:0}.matchup-player .mp-name{font-size:16px;font-weight:800;line-height:1.3;overflow-wrap:anywhere}
+.mp-nfl{font-size:13px;font-weight:700;color:var(--muted);margin-top:5px}
+.mp-game{font-size:12px;color:var(--muted);line-height:1.45;margin-top:5px}
+.matchup-player .mp-pts{text-align:right;font-size:19px;font-weight:850;font-variant-numeric:tabular-nums}
+.matchup-schedule-note{padding:12px 24px;color:var(--muted);font-size:13px;border-bottom:1px solid var(--line)}
+@media(max-width:650px){.matchup-player{grid-template-columns:32px minmax(0,1fr) 65px;padding:13px 10px;gap:8px}.matchup-player .mp-name{font-size:14px}.matchup-player .mp-pts{font-size:16px}.mp-game{font-size:11px}}
 .matchup-footnote{padding:0 24px 22px;color:var(--muted);font-size:13px}
 @media(max-width:650px){.matchup-lineups{grid-template-columns:1fr}.matchup-summary{gap:6px;padding:18px 10px}.matchup-summary strong{font-size:22px}}
+
+/* Balanced matchup columns, clear numerals, and a single expandable franchise report */
+.matchup-lineups{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:20px;align-items:stretch}
+.matchup-lineup{width:100%;box-sizing:border-box;min-width:0}
+.matchup-player{grid-template-columns:40px minmax(0,1fr) 76px;gap:12px;padding:15px 16px;box-sizing:border-box}
+.matchup-summary strong,.matchup-player .mp-pts{font-family:Arial,Helvetica,sans-serif!important;font-feature-settings:"zero" 0!important;font-variant-numeric:tabular-nums;font-weight:800;letter-spacing:0}
+.matchup-player .mp-pts{font-size:19px}
+#teamProfiles .profile-report-box{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:26px;margin-top:8px}
+#teamProfiles .profile-report-box>.picker{margin:0;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+#teamProfiles .profile-report-box #profileTeam{min-width:260px;font-size:17px;padding:10px 12px}
+#teamProfiles #profileContent:empty{display:none}
+#teamProfiles #profileContent{margin-top:26px}
+@media(max-width:750px){.matchup-lineups{grid-template-columns:1fr;gap:16px;padding:14px}.matchup-player{grid-template-columns:34px minmax(0,1fr) 65px;padding:12px 10px;gap:8px}#teamProfiles .profile-report-box{padding:16px}#teamProfiles .profile-report-box #profileTeam{min-width:0;width:100%}}
+/* Consistent conventional zero glyphs across the entire website */
+html,body,button,input,select,textarea,table,td,th,strong,b,.num,.rank,.side,.strip,.profile-metric,.matchup-player,.matchup-summary{font-feature-settings:"zero" 0!important;font-variant-numeric:tabular-nums}
+.num,.rank,.side b,.strip .v,.profile-metric strong,.matchup-summary strong,.matchup-player .mp-pts,.facts dd{font-family:Arial,Helvetica,sans-serif!important;font-feature-settings:"zero" 0!important}
+
+/* Matchup Center: broadcast-style scoreboard */
+.matchups-board-shell{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:24px;margin-top:20px}
+.matchups-board-head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:18px}
+.matchups-board-head .matchups-subhead{font-size:25px}
+.matchups-week-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.matchups-week-controls>button{border:1px solid var(--line);border-radius:9px;padding:9px 13px;background:var(--surface);color:var(--text);font-weight:750;cursor:pointer}
+.matchups-week-controls>button:disabled{opacity:.35;cursor:default}
+#matchupWeekSeg{display:flex;gap:6px;flex-wrap:wrap}
+#matchupWeekSeg button{border-radius:9px;padding:9px 12px}
+#matchupWeekSeg button[aria-pressed="true"]{box-shadow:0 0 0 2px rgba(35,98,195,.17)}
+#matchupGames{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#matchupGames .matchup-page-card{min-width:0;margin:0;padding:0!important;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:0 3px 12px rgba(12,32,62,.04);display:block}
+#matchupGames .matchup-page-card.is-selected{border:2px solid var(--accent);box-shadow:0 0 0 3px rgba(35,98,195,.12)}
+.matchup-card-top{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line);gap:12px}
+.matchup-card-week{font-size:11px;font-weight:850;letter-spacing:.1em;color:var(--muted)}
+.matchup-status{border-radius:20px;padding:5px 10px;font-size:11px;font-weight:850;letter-spacing:.08em;background:rgba(95,119,151,.12);color:var(--muted)}
+.matchup-status.is-live{color:#b42332;background:rgba(214,53,68,.12)}
+.matchup-status.is-final{color:#187348;background:rgba(24,130,79,.11)}
+.matchup-score-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 18px;min-height:63px}
+.matchup-score-row+.matchup-score-row{border-top:1px solid var(--line)}
+.matchup-score-row .matchup-team{font-size:17px;font-weight:650;line-height:1.25;min-width:0;overflow-wrap:anywhere}
+.matchup-score-row .matchup-score{font-family:Arial,Helvetica,sans-serif;font-size:27px;line-height:1;font-weight:800;white-space:nowrap;font-feature-settings:'zero' 0}
+.matchup-score-row.is-leading .matchup-team{font-weight:850}
+.matchup-score-row.is-leading .matchup-score{color:var(--accent)}
+.matchup-card-footer{padding:12px 18px;border-top:1px solid var(--line);color:var(--accent);font-size:13px;font-weight:850;background:rgba(65,117,199,.055)}
+#matchupPageNote{margin:15px 0 0}
+@media(max-width:850px){#matchupGames{grid-template-columns:1fr}.matchups-board-shell{padding:14px}.matchup-score-row .matchup-team{font-size:15px}}
+
+/* Full-page matchup center */
+.matchups-page-head{padding:30px 34px;border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:16px;background:var(--panel);margin-bottom:22px}
+.matchups-kicker{font-size:12px;font-weight:800;letter-spacing:.11em;color:var(--accent)}
+.matchups-page-head h2{font-size:clamp(34px,5vw,54px);margin:12px 0}
+.matchups-page-head p{color:var(--muted);margin:0}
+.matchups-subhead{font-size:22px;margin:0}
+.matchup-page-card{cursor:pointer;transition:transform .12s,border-color .12s}
+.matchup-page-card:hover,.matchup-page-card:focus-visible{border-color:var(--accent);transform:translateY(-2px)}
+.matchup-page-detail{border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden;margin-top:28px;scroll-margin-top:20px}
+.matchup-page-detail[hidden]{display:none!important}
+.matchup-inline-title{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border-bottom:1px solid var(--line);background:var(--panel);font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.07em}
+.matchup-inline-title button{border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:9px 14px;border-radius:8px;cursor:pointer;font-weight:700}
+.matchup-page-detail .matchup-lineups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:22px}
+.matchup-page-detail .matchup-lineup{min-width:0;width:100%}
+#liveHQ .shead:after{content:"Open Matchups tab for full lineups →";color:var(--accent);font-weight:750;font-size:14px}
+@media(max-width:760px){.matchup-page-detail .matchup-lineups{grid-template-columns:1fr;padding:12px;gap:12px}.matchups-page-head{padding:20px}.matchup-inline-title{flex-wrap:wrap}}
+
+/* Dedicated theme row: no overlap with the League menu at any width. */
+.mast .site-nav-shell{display:block;width:100%;}
+.mast .site-nav-shell .nav{display:flex;width:100%;flex-wrap:wrap;overflow:visible;gap:8px;}
+.mast .site-nav-shell .nav > a,.mast .site-nav-shell .nav-more{flex:0 0 auto;}
+.mast .theme-controls{display:flex;justify-content:flex-end;width:100%;margin-top:8px;}
+.mast .theme-controls .themebtn{margin:0;min-height:40px;padding:8px 14px;border-radius:9px;font-size:14px;}
+.hq-matchups-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 32px;border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:16px;background:var(--surface);margin-top:26px;}
+.hq-matchups-cta h2{font:800 clamp(26px,3vw,40px)/1.2 var(--display);margin:8px 0;}
+.hq-matchups-cta p{margin:0;color:var(--muted);font-size:16px;max-width:680px;}
+.hq-matchups-link{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:10px;background:var(--accent);color:var(--accent-ink);font-weight:800;text-decoration:none;white-space:nowrap;}
+.hq-matchups-link:hover{filter:brightness(1.1);}
+@media(max-width:700px){.hq-matchups-cta{flex-direction:column;align-items:stretch;padding:22px}.hq-matchups-link{white-space:normal}}
+
+/* Numeric legibility: avoid fonts whose zero glyph has a slash. */
+body, button, input, select, textarea { font-family: Arial, Helvetica, sans-serif; font-feature-settings: "zero" 0, "tnum" 1 !important; }
+/* Retain distinctive heading typography; make all data and numbers conventional. */
+.num, .rank, .drow, .drow *, .strip, .strip *, .profile-report-box, .profile-report-box *,
+.matchup-page-detail, .matchup-page-detail *, .games, .games *, .scroll td, .scroll th,
+.facts, .facts *, .side, .side *, .pl, .pl *, .pk, .pk *, .score, .score *,
+.analytics-topic-panel, .analytics-topic-panel *, .matchup-summary, .matchup-summary *,
+.matchup-player, .matchup-player * { font-family: Arial, Helvetica, sans-serif !important; font-feature-settings: "zero" 0, "tnum" 1 !important; font-variant-numeric: tabular-nums; }
+.analytics-topic-panel { border: 1px solid var(--line); border-radius: 18px; background: var(--surface); padding: clamp(18px, 2.5vw, 32px); min-width: 0; }
+.analytics-topic-panel > .sub { margin-bottom: 16px; font-family: var(--display) !important; font-size: clamp(20px,2.3vw,26px); }
+.analytics-topic-panel .strip { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+.analytics-topic-panel .dchart { min-width: 0; }
+@media(max-width:650px){ .analytics-topic-panel { padding: 16px 12px; } }
+
+/* Headquarters: clear standings hierarchy and one coherent bracket panel */
+#standings .scroll{border:1px solid var(--line);border-radius:18px;overflow-x:auto;box-shadow:0 10px 32px rgba(14,36,70,.055)}
+#standings table{border-collapse:separate;border-spacing:0;width:100%}
+#standings thead th{padding-top:18px;padding-bottom:18px;background:color-mix(in srgb,var(--surface) 85%,var(--accent));font-size:12px;letter-spacing:.045em;text-transform:uppercase}
+#standings tbody td{padding-top:17px;padding-bottom:17px}
+#standings tbody tr.in td:first-child{border-left:4px solid var(--accent)}
+#standings tbody tr:not(.cut):hover{background:color-mix(in srgb,var(--surface) 79%,var(--accent))}
+#standings .tn{font-size:15px;font-weight:800}
+#standings .form b{font-variant-numeric:tabular-nums}
+.bracket-shell{margin-top:32px;padding:27px;border:1px solid var(--line);border-radius:20px;background:var(--surface);box-shadow:0 10px 30px rgba(14,36,70,.055)}
+.bracket-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.bracket-top h2{margin:7px 0 0;font-size:clamp(26px,3vw,38px);line-height:1.1}
+.bracket-eyebrow{color:var(--accent);font-size:11px;font-weight:850;letter-spacing:.12em}
+.bracket-provisional{padding:9px 12px;border-radius:999px;border:1px solid var(--line);font-size:11px;font-weight:800;color:var(--muted)}
+.bracket-desc{color:var(--muted);line-height:1.6;max-width:900px;margin:14px 0 24px}
+/* Connected tournament tree: rounds align vertically, with visible advancement paths. */
+.bracket-grid{display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr) 44px minmax(0,1fr);gap:0;align-items:stretch;min-height:500px}
+.bracket-round{position:relative;justify-content:space-around;padding:24px 0 8px}
+.bracket-round h3{position:absolute;top:0;left:0;right:0;text-align:center}
+.bracket-game{position:relative;z-index:1;flex:none}
+.bracket-connector{position:relative;min-width:0}
+.bracket-connector:before{content:"";position:absolute;top:27%;bottom:27%;left:0;right:50%;border:2px solid var(--accent);border-left:0;border-radius:0 9px 9px 0;opacity:.6}
+.bracket-connector:after{content:"";position:absolute;top:50%;left:50%;right:0;border-top:2px solid var(--accent);opacity:.6}
+.bracket-connector.second:before{top:27%;bottom:27%}
+.bracket-connector.second:after{top:50%}
+.bracket-round.final-round{justify-content:center}
+.bracket-round.semi-round{justify-content:space-around}
+.bracket-round.wild-round{justify-content:space-around}
+.bracket-round .bracket-game{box-shadow:0 5px 14px rgba(14,36,70,.055)}
+.bracket-round{min-width:0;display:flex;flex-direction:column;gap:14px}
+.bracket-round h3{font-size:14px;margin:0 0 3px;color:var(--text)}
+.bracket-game{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:color-mix(in srgb,var(--surface) 94%,var(--accent))}
+.bracket-game-label{display:block;padding:11px 14px;font-size:10px;font-weight:850;letter-spacing:.1em;color:var(--accent);border-bottom:1px solid var(--line)}
+.bracket-team{display:flex;align-items:center;gap:10px;padding:15px 13px;border-bottom:1px solid var(--line);min-height:59px}
+.bracket-team strong{flex:1;font-size:13px;overflow-wrap:anywhere}
+.bracket-team small{font-size:11px;color:var(--muted);white-space:nowrap}
+.bracket-seed{display:grid;place-items:center;flex:none;width:25px;height:25px;border-radius:7px;background:color-mix(in srgb,var(--surface) 78%,var(--accent));color:var(--accent);font-weight:850;font-size:12px}
+.bracket-placeholder{padding:17px 14px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);min-height:59px}
+.bracket-game-sub{padding:10px 13px;color:var(--muted);font-size:11px}
+.bracket-footnote{margin:17px 0 0;font-size:12px;color:var(--muted);line-height:1.55}
+@media(max-width:950px){.bracket-grid{grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr) 25px minmax(0,1fr)}.bracket-team{padding:11px 8px;gap:6px}.bracket-team strong{font-size:11px}.bracket-team small{display:none}}
+@media(max-width:650px){.bracket-grid{display:flex;flex-direction:column;gap:20px;min-height:0}.bracket-round{gap:12px;padding:32px 0 0}.bracket-round h3{text-align:left}.bracket-connector{height:20px;flex:none}.bracket-connector:before{display:none}.bracket-connector:after{left:50%;right:auto;top:0;bottom:0;height:100%;border-top:0;border-left:2px solid var(--accent)}.bracket-shell{padding:18px}.bracket-team strong{font-size:13px}.bracket-team small{display:block}}
+
+
+/* Consistent compact data tables and clickable column sorting */
+.scroll{border-radius:14px;overflow-x:auto;box-shadow:0 3px 14px rgba(17,38,74,.035)}
+.scroll table{border-collapse:separate;border-spacing:0;width:100%}
+.scroll table thead th{padding:13px 14px;font-weight:800;letter-spacing:.025em;font-size:12px;background:color-mix(in srgb,var(--surface) 86%,var(--accent));color:var(--fg)}
+.scroll table tbody td{padding:13px 14px;line-height:1.4}
+.scroll table tbody tr:nth-child(even):not(.cut){background:color-mix(in srgb,var(--surface) 95%,var(--accent))}
+.scroll table tbody tr:hover:not(.cut){background:color-mix(in srgb,var(--surface) 88%,var(--accent))}
+.table-sort{appearance:none;border:0;background:transparent;color:inherit;font:inherit;font-weight:inherit;text-transform:inherit;letter-spacing:inherit;display:inline-flex;align-items:center;justify-content:flex-end;gap:6px;cursor:pointer;padding:4px 0;white-space:nowrap}
+.table-sort:hover,.table-sort.active{color:var(--accent)}
+.table-sort .sort-arrow{font-size:13px;opacity:.5;line-height:1}
+.table-sort.active .sort-arrow{opacity:1}
+.table-sort:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+#standings .scroll table tbody td{padding-top:15px;padding-bottom:15px}
+#standings .scroll table tbody tr.cut{background:var(--flag-tint)}
+
+
+/* AP matchup forecasts: readable, clearly marked estimates */
+.matchup-forecast{padding:15px 18px 16px;border-top:1px solid var(--line);background:rgba(35,98,195,.035)}
+.matchup-forecast-title{font-size:12px;font-weight:850;letter-spacing:.055em;color:var(--muted);margin-bottom:10px;text-transform:uppercase}
+.matchup-forecast-names{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px;font-weight:750;margin-bottom:8px}
+.matchup-forecast-names span:last-child{text-align:right}
+.matchup-forecast-meter{display:flex;height:11px;overflow:hidden;border-radius:20px;background:var(--line);margin-bottom:13px}
+.matchup-forecast-meter i{display:block;background:var(--accent);height:100%;transition:width .25s ease}
+.matchup-forecast-meter b{display:block;flex:1;background:#93a6bf}
+.matchup-forecast-baselines{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:12px;color:var(--muted)}
+.matchup-forecast-baselines span:last-child{text-align:right}
+.matchup-forecast-baselines strong{display:block;font-family:Arial,Helvetica,sans-serif;font-size:17px;color:var(--text);font-feature-settings:'zero' 0;margin-top:3px}
+.matchup-forecast-note{font-size:11px;line-height:1.45;color:var(--muted);margin:11px 0 0}
+.matchup-forecast-alert{margin-top:10px;padding:8px 10px;border-radius:8px;background:rgba(201,109,34,.10);font-weight:750;font-size:12px;color:var(--text)}
 </style>
 </head>
 <body>
@@ -651,6 +832,7 @@ td {font-size:16px}
     <div class="site-nav-shell">
       <nav class="nav" id="nav" aria-label="Main navigation">
         <a href="#standings">Headquarters</a>
+        <a href="#matchups">🏈 Matchups</a>
         <a href="#analytics">Analytics</a>
         <a href="#players">Players</a>
         <a href="#picks">Draft Center</a>
@@ -660,15 +842,15 @@ td {font-size:16px}
         <div class="nav-more" id="leagueMenu">
           <button type="button" id="leagueMenuBtn" class="nav-more-button" aria-haspopup="true" aria-expanded="false" aria-controls="leagueMenuItems">League <span aria-hidden="true">▾</span></button>
           <div class="nav-more-items" id="leagueMenuItems" hidden>
-            <a href="#scores">Scores</a>
+            <a href="#matchups">Scores</a>
             <a href="#rosters">Rosters</a>
             <a href="#moves">Moves</a>
             <a href="#rules">Rules</a>
           </div>
         </div>
       </nav>
-      <button type="button" class="themebtn" id="themeBtn" aria-label="Change color theme">Theme: Auto</button>
     </div>
+    <div class="theme-controls"><button type="button" class="themebtn" id="themeBtn" aria-label="Change color theme">Theme: Auto</button></div>
     <dl class="facts" id="facts"></dl>
   </header>
   <div class="status" id="status" role="status">Loading league from Sleeper...</div>
@@ -683,17 +865,23 @@ td {font-size:16px}
       <table style="min-width: 760px">
         <thead>
           <tr>
-            <th>#</th><th>Team</th><th class="num">W-L</th><th class="num">PF</th><th class="num">PA</th>
-            <th class="num">Max PF</th><th class="num">Eff.</th><th>Form</th><th class="num" id="faabTh">FAAB</th>
+            <th><button class="table-sort" data-stand-sort="seed">Seed <span class="sort-arrow"></span></button></th><th><button class="table-sort" data-stand-sort="name">Team <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-stand-sort="wins">W-L <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-stand-sort="pf">PF <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-stand-sort="pa">PA <span class="sort-arrow"></span></button></th>
+            <th class="num"><button class="table-sort" data-stand-sort="max">Max PF <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-stand-sort="eff">Eff. <span class="sort-arrow"></span></button></th><th>Form</th><th class="num" id="faabTh"><button class="table-sort" data-stand-sort="faab">FAAB <span class="sort-arrow"></span></button></th>
           </tr>
         </thead>
         <tbody id="standBody"></tbody>
       </table>
     </div>
-    <p class="legend">PF is points for, PA is points against. Max PF is the most points a team's roster could have scored with perfect lineups. Eff. is PF divided by Max PF. <span id="faabLegend">FAAB is the waiver budget left.</span></p>
+    <p class="legend"><strong>Click any column heading to sort.</strong> The seed numbers always reflect the official playoff order, even when you sort by a statistic. PF is points for, PA is points against. Max PF is the most points a team's roster could have scored with perfect lineups. Eff. is PF divided by Max PF. <span id="faabLegend">FAAB is the waiver budget left.</span></p>
+    <div class="bracket-shell" id="projectedBracket"><div class="bracket-top"><div><span class="bracket-eyebrow">ROAD TO THE CHAMPIONSHIP</span><h2>Projected Playoff Bracket</h2></div><span class="bracket-provisional">PROVISIONAL · CURRENT STANDINGS</span></div><p class="bracket-desc">If the regular season ended today. Seeds 1–5 follow record (points for breaks ties); the sixth seed goes to the highest-scoring remaining franchise. Future results can change every seed.</p><div id="bracketContent"></div></div>
   </section>
 
-  <section id="liveHQ"><div class="shead"><h2>Live matchup center</h2><p class="note" id="liveNote">Estimated probabilities use recent player scoring; not betting odds.</p></div><div class="games" id="liveGames"></div></section>
+  <div id="liveHQ" hidden aria-hidden="true" style="display:none!important"><div id="liveNote" hidden></div><div id="liveGames" hidden></div></div>
+  <section id="matchups" aria-labelledby="h-matchups" hidden>
+    <div class="matchups-page-head"><span class="matchups-kicker">AP FANTASY FOOTBALL · GAME DAY</span><h2 id="h-matchups">Matchup Center</h2><p>Every weekly matchup, every starter, every score. Select a game to view its full lineup below.</p></div>
+    <div class="matchups-board-shell"><div class="matchups-board-head"><h3 class="matchups-subhead">Weekly scoreboard</h3><div class="matchups-week-controls"><button id="matchupPrev" type="button" aria-label="Previous week">← Previous</button><div class="seg" id="matchupWeekSeg" role="group" aria-label="Matchup week"></div><button id="matchupNext" type="button" aria-label="Next week">Next →</button></div></div><div class="games" id="matchupGames"></div><p class="note" id="matchupPageNote"></p></div>
+    <div id="matchupPageDetail" class="matchup-page-detail" hidden></div>
+  </section>
   <section id="analytics" aria-labelledby="h-analytics" hidden>
     <div class="shead">
       <h2 id="h-analytics">Analytics</h2>
@@ -711,12 +899,12 @@ td {font-size:16px}
         <div><dt>Wins above expected</dt><dd>Actual wins minus expected wins. Positive means a team has won more than its scoring deserves. Negative means it has been unlucky.</dd></div>
         <div><dt>Schedule luck</dt><dd>The league's average score minus the average score of the opponents a team actually faced, in points per game. Positive means an easier schedule than average.</dd></div>
       </dl>
-      <div>
+      <div class="analytics-topic-panel">
         <h3 class="sub">Wins above expected</h3>
         <div class="dchart" id="waeChart"></div>
+        <div class="strip" id="anStrip"></div>
       </div>
-      <div class="strip" id="anStrip"></div>
-      <div class="stack">
+      <div class="stack analytics-topic-panel">
         <div class="shead">
           <h3 class="sub" style="flex: 1; min-width: 160px">Expected standings</h3>
           <div class="seg" id="anSeg" role="group" aria-label="Sort"></div>
@@ -734,12 +922,12 @@ td {font-size:16px}
         </div>
         <p class="legend">All-play is each team's record against every team's score each week. Rank shift is the number of spots a team's expected rank sits above (+) or below (-) its place in the standings. Positive means the standings flatter the team.</p>
       </div>
-      <div>
+      <div class="analytics-topic-panel">
         <h3 class="sub">Season highs</h3>
         <div class="strip" id="anHighs" style="border-top: 0"></div>
       </div>
     </div>
-    <div class="stack" id="teamProfiles"><div class="profile-hero"><span class="profile-hero-kicker">ANALYTICS / FRANCHISE BREAKDOWN</span><h3>Team Statistical Profiles</h3><p>Explore a franchise’s season at a glance</p></div><p class="note">Choose a franchise for its record, weekly scoring trends, consistency, positional efficiency, and top starters. All panels update together.</p><div class="picker"><label for="profileTeam">Franchise</label><select id="profileTeam"></select></div><div id="profileContent"></div></div>
+    <div class="stack" id="teamProfiles"><div class="profile-hero"><span class="profile-hero-kicker">ANALYTICS / FRANCHISE BREAKDOWN</span><h3>Team Statistical Profiles</h3><p>Explore a franchise’s season at a glance</p><div class="picker profile-hero-picker"><label for="profileTeam">Choose a franchise</label><select id="profileTeam"><option value="">Select a franchise…</option></select></div><p class="profile-hero-help">Select a team to see its record, weekly scoring trends, consistency, positional efficiency, and top starters.</p></div><div class="profile-report-box" id="profileReportBox"><div id="profileContent"></div></div></div>
   </section>
 
   <section id="dispatch" aria-labelledby="h-dispatch" hidden>
@@ -808,7 +996,7 @@ td {font-size:16px}
       <select id="pickTeam"></select>
     </div>
     <p class="pickfocus" id="pickFocus"></p>
-    <div class="stack"><h3 class="sub">Draft capital power rankings</h3><p class="note">Capital score weights rounds 1–4 at 100, 45, 20 and 8 points, discounted for later years. Only the upcoming draft uses projected pick slots; future years are valued by round, without speculative positions.</p><div class="scroll"><table><thead><tr><th>Rank</th><th>Team</th><th class="num">Capital score</th><th class="num">Picks</th><th class="num">Firsts</th></tr></thead><tbody id="capitalRows"></tbody></table></div><h3 class="sub">Draft capital by franchise and year</h3><p class="note">Upcoming draft: projected slots. Later drafts: round and original franchise, not projected pick numbers.</p><div class="scroll"><table><thead><tr><th>Franchise</th><th>2027</th><th>2028</th><th>2029</th></tr></thead><tbody id="capitalByYear"></tbody></table></div></div>
+    <div class="stack"><h3 class="sub">Draft capital power rankings</h3><p class="note">Capital score weights rounds 1–4 at 100, 45, 20 and 8 points, discounted for later years. Only the upcoming draft uses projected pick slots; future years are valued by round, without speculative positions.</p><div class="scroll"><table><thead><tr><th><button class="table-sort" data-cap-sort="rank">Rank <span class="sort-arrow"></span></button></th><th><button class="table-sort" data-cap-sort="name">Team <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="score">Capital score <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="count">Picks <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="firsts">Firsts <span class="sort-arrow"></span></button></th></tr></thead><tbody id="capitalRows"></tbody></table></div><h3 class="sub">Draft capital by franchise and year</h3><p class="note">Upcoming draft: projected slots. Later drafts: round and original franchise, not projected pick numbers.</p><div class="scroll"><table><thead><tr><th>Franchise</th><th>2027</th><th>2028</th><th>2029</th></tr></thead><tbody id="capitalByYear"></tbody></table></div></div>
     <h3 class="sub">Projected pick-by-pick draft board</h3><div class="board" id="pickBoard"></div>
     <p class="legend">Non-playoff draft slots are projected from reverse Max PF (lower Max PF picks earlier). Playoff-team slots are provisional until postseason results are final. The number on the right is that team's record. A green line reading "from" marks a pick that was traded to its current holder.</p>
   </section>
@@ -866,13 +1054,14 @@ td {font-size:16px}
     }
   };
 
+  var standSort="seed", standDesc=false, capitalSort="rank", capitalDesc=false;
   var S = {};
   var NAMES = {};
   var curWeek = null, curSeason = null, moveFilter = "all", moveLimit = 30, pickFocus = 0, anSort = "exp", dispWeek = null;
   var IDPPOS = { LB: 1, DB: 1, DL: 1, DE: 1, DT: 1 };
   var POSORD = ["QB", "RB", "WR", "TE", "K", "DL", "DE", "DT", "LB", "DB"];
   var SLOTLABEL = { QB: "QB", RB: "RB", WR: "WR", TE: "TE", FLEX: "Flex", REC_FLEX: "Flex", WRRB_FLEX: "Flex", SUPER_FLEX: "SFlx", K: "K", DEF: "DEF", DL: "DL", LB: "LB", DB: "DB", IDP_FLEX: "IDP" };
-  var VIEWS = ["standings", "analytics", "dispatch", "scores", "rosters", "moves", "picks", "players", "history", "hall", "rules"];
+  var VIEWS = ["matchups", "standings", "analytics", "dispatch", "scores", "rosters", "moves", "picks", "players", "history", "hall", "rules"];
 
   function setStatus(msg, retry) {
     var el = $("status");
@@ -890,9 +1079,10 @@ td {font-size:16px}
   /* ---------- routing ---------- */
   function route(scroll) {
     var h = (location.hash || "").replace("#", "");
+    if (h === "scores") h = "matchups";
     if (VIEWS.indexOf(h) < 0) h = "standings";
     VIEWS.forEach(function (v) { $(v).hidden = v !== h; });
-    $("liveHQ").hidden = h !== "standings";
+    $("liveHQ").hidden = true;
     Array.prototype.forEach.call(document.querySelectorAll("#nav a"), function (a) {
       if (a.getAttribute("href") === "#" + h) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
@@ -900,6 +1090,7 @@ td {font-size:16px}
     if (leagueActive) $("leagueMenuBtn").setAttribute("aria-current", "page"); else $("leagueMenuBtn").removeAttribute("aria-current");
     $("leagueMenuItems").hidden = true;
     $("leagueMenuBtn").setAttribute("aria-expanded", "false");
+    if (h === "matchups") renderMatchupsPage();
     if (scroll) window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", function () { route(true); });
@@ -1128,15 +1319,27 @@ td {font-size:16px}
     $("standNote").textContent = cut ? "Seeds 1 to " + (cut - 1) + " go to the best records, with points for as the tiebreaker. Seed " + cut + " goes to the team with the most points for among the rest." : "Ranked by wins, then points for.";
     var champ = S.league.metadata && S.league.metadata.latest_league_winner_roster_id;
     var rows = "";
-    S.order.forEach(function (id, idx) {
+    var ordered=S.order.slice();
+    if(standSort!=="seed") ordered.sort(function(a,b){
+      var x=S.T[a],y=S.T[b],vx,vy;
+      if(standSort==="name")return (standDesc?-1:1)*x.name.localeCompare(y.name);
+      if(standSort==="wins"){vx=Number(x.wins||0)+Number(x.ties||0)*.5;vy=Number(y.wins||0)+Number(y.ties||0)*.5;}
+      else if(standSort==="eff"){vx=x.max?x.pf/x.max:0;vy=y.max?y.pf/y.max:0;}
+      else if(standSort==="faab"){vx=(st.waiver_budget||0)-(x.faabUsed||0);vy=(st.waiver_budget||0)-(y.faabUsed||0);}
+      else {vx=Number(x[standSort]||0);vy=Number(y[standSort]||0);}
+      return (standDesc?-1:1)*(vx-vy) || S.order.indexOf(a)-S.order.indexOf(b);
+    });
+    document.querySelectorAll('[data-stand-sort]').forEach(function(btn){var active=btn.dataset.standSort===standSort;btn.classList.toggle('active',active);btn.querySelector('.sort-arrow').textContent=active?(standSort==='seed'?'↕':standDesc?'↓':'↑'):'↕';btn.setAttribute('aria-pressed',String(active));});
+    ordered.forEach(function (id, idx) {
+      var seed=S.order.indexOf(id)+1;
       var t = S.T[id], tags = "";
       if (t.owner) tags += '<span class="tag">Commissioner</span>';
       if (champ && Number(champ) === id) tags += '<span class="tag champ">Defending champ</span>';
       if (cut && S.wild === id) tags += '<span class="tag">Seed ' + cut + ' by points</span>';
       if (mine === id) tags += '<span class="tag you">You</span>';
       var pips = (form[id] || []).slice(-5).map(function (x) { return '<b class="' + x.toLowerCase() + '" title="' + (x === "W" ? "Win" : x === "L" ? "Loss" : "Tie") + '">' + x + "</b>"; }).join("");
-      rows += '<tr class="' + (cut && idx < cut ? "in" : "") + '">' +
-        '<td class="rank">' + (idx + 1) + "</td>" +
+      rows += '<tr class="' + (cut && seed <= cut ? "in" : "") + '">' +
+        '<td class="rank">' + seed + "</td>" +
         '<td><div class="tn">' + esc(t.name) + tags + '</div><div class="th">' + esc(t.handle) + "</div></td>" +
         '<td class="num">' + recStr(t) + "</td>" +
         '<td class="num pfcell">' + f2(t.pf) + '<span class="pfbar"><i style="width:' + (t.pf / maxPF * 100).toFixed(1) + '%"></i></span></td>' +
@@ -1145,10 +1348,27 @@ td {font-size:16px}
         '<td class="num">' + (t.max ? (t.pf / t.max * 100).toFixed(1) + "%" : "") + "</td>" +
         '<td><span class="form">' + pips + "</span></td>" +
         (faab ? '<td class="num">$' + (st.waiver_budget - t.faabUsed) + "</td>" : "") + "</tr>";
-      if (cut && idx === cut - 1 && idx < S.order.length - 1) rows += '<tr class="cut"><td colspan="' + (faab ? 9 : 8) + '">Playoff line · top ' + cut + " advance</td></tr>";
+      if (standSort === "seed" && cut && idx === cut - 1 && idx < S.order.length - 1) rows += '<tr class="cut"><td colspan="' + (faab ? 9 : 8) + '">Playoff line · top ' + cut + " advance</td></tr>";
     });
     $("standBody").innerHTML = rows;
+    if(standSort!=="seed" && cut){var playoff=S.order.slice(0,cut).map(function(id){return tname(id);});$("standBody").setAttribute('aria-label','Sorted statistical view; playoff seeds remain fixed');}
     $("faabLegend").hidden = !faab;
+    renderProjectedBracket();
+  }
+
+
+  function renderProjectedBracket(){
+    var el=$("bracketContent"),cut=Number((S.league.settings||{}).playoff_teams||6);
+    if(cut!==6){el.innerHTML='<p class="note">This preview currently supports the league’s six-team playoff format.</p>';return;}
+    var ids=S.order.slice(0,6);
+    if(ids.length<6){el.innerHTML='<p class="note">Playoff seeds will appear once standings are available.</p>';return;}
+    function team(seed){return '<div class="bracket-team"><span class="bracket-seed">'+seed+'</span><strong>'+esc(tname(ids[seed-1]))+'</strong><small>'+esc(recStr(S.T[ids[seed-1]]))+'</small></div>';}
+    function slot(label,content,sub){return '<div class="bracket-game"><span class="bracket-game-label">'+label+'</span>'+content+(sub?'<div class="bracket-game-sub">'+sub+'</div>':'')+'</div>';}
+    el.innerHTML='<div class="bracket-grid">'+
+      '<div class="bracket-round wild-round"><h3>Wild Card · Week 15</h3>'+slot('MATCHUP A',team(3)+team(6),'Winner advances')+slot('MATCHUP B',team(4)+team(5),'Winner advances')+'</div><div class="bracket-connector" aria-hidden="true"></div>'+
+      '<div class="bracket-round semi-round"><h3>Semifinals · Week 16</h3>'+slot('SEMIFINAL 1',team(1)+'<div class="bracket-placeholder">Lowest remaining seed</div>','No. 1 seed has a first-round bye')+slot('SEMIFINAL 2',team(2)+'<div class="bracket-placeholder">Other wild-card winner</div>','No. 2 seed has a first-round bye')+'</div><div class="bracket-connector second" aria-hidden="true"></div>'+
+      '<div class="bracket-round final-round"><h3>Championship · Week 17</h3>'+slot('AP TITLE GAME','<div class="bracket-placeholder">Semifinal 1 winner</div><div class="bracket-placeholder">Semifinal 2 winner</div>','Projected participants TBD')+'</div></div>'+
+      '<p class="bracket-footnote">Bracket lines show progression between rounds, not guaranteed semifinal pairings. The semifinal opponents are placeholders, not predicted winners. The highest remaining seed faces the lowest remaining seed if the league reseeds; verify bracket rules in Sleeper.</p>';
   }
 
   /* ---------- analytics ---------- */
@@ -1493,14 +1713,57 @@ td {font-size:16px}
     panel.hidden=false;
   }
 
+  /* NFL kickoff/venue details are optional and fetched from ESPN's public scoreboard.
+     Never guess a kickoff or venue when the schedule is unavailable. */
+  var NFL_SCHEDULE_CACHE={};
+  function nflGameDetails(week){
+    var season=Number(S.league && S.league.season)||new Date().getFullYear();
+    var key=season+'-'+week;
+    if(NFL_SCHEDULE_CACHE[key])return NFL_SCHEDULE_CACHE[key];
+    var url='https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates='+season+'&seasontype=2&week='+week+'&limit=100';
+    NFL_SCHEDULE_CACHE[key]=fetch(url).then(function(r){if(!r.ok)throw Error('Schedule unavailable');return r.json();}).then(function(data){
+      var map={},aliases={JAC:'JAX',WSH:'WAS',LA:'LAR'};
+      (data.events||[]).forEach(function(ev){
+        var comp=(ev.competitions||[])[0]||{},cs=comp.competitors||[];
+        if(cs.length<2)return;
+        var home=cs.find(function(c){return c.homeAway==='home';}),away=cs.find(function(c){return c.homeAway==='away';});
+        if(!home||!away)return;
+        var h=home.team.abbreviation,a=away.team.abbreviation;
+        var date=new Date(ev.date),valid=!isNaN(date.getTime());
+        var when=valid?new Intl.DateTimeFormat('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/New_York',timeZoneName:'short'}).format(date):'Kickoff unavailable';
+        var venue=(comp.venue&&comp.venue.fullName)||'Venue unavailable';
+        var city=(comp.venue&&comp.venue.address&&comp.venue.address.city)||'';
+        var obj={home:h,away:a,when:when,venue:venue+(city?' · '+city:''),state:(comp.status&&comp.status.type&&comp.status.type.description)||''};
+        [h,a].forEach(function(ab){map[ab]=obj;});
+      });
+      Object.keys(aliases).forEach(function(k){if(map[aliases[k]])map[k]=map[aliases[k]];});
+      return map;
+    }).catch(function(){return null;});
+    return NFL_SCHEDULE_CACHE[key];
+  }
+  function fillMatchupSchedule(w){
+    nflGameDetails(w).then(function(games){
+      var root=$('matchupDetail');if(!root||root.dataset.week!==String(w))return;
+      root.querySelectorAll('[data-nfl-team]').forEach(function(el){
+        var nfl=el.dataset.nflTeam,game=games&&games[nfl];
+        if(!game){el.textContent='NFL matchup details unavailable';return;}
+        var isHome=nfl===game.home;
+        el.textContent=(isHome?'vs ':'@ ')+(isHome?game.away:game.home)+' · '+game.when+' · '+(isHome?'Home':'Away')+' · '+game.venue;
+      });
+      var note=root.querySelector('.matchup-schedule-note');
+      if(note)note.textContent=games?'NFL opponents, kickoff times (Eastern), and venues: ESPN NFL schedule. Fantasy points: Sleeper.':'NFL schedule could not be loaded; fantasy player scores are still available from Sleeper.';
+    });
+  }
+
   /* Individual starters and recorded Sleeper points for the selected game. */
-  function openMatchup(w,matchupId){
+  function openMatchup(w,matchupId,inline){
     var entries=(S.weeks[w]||[]).filter(function(e){return String(e.matchup_id)===String(matchupId);});
     if(!entries.length)return;
     var overlay=$('matchupOverlay');
     $('matchupWeek').textContent='Week '+w+' · '+(w<=S.lastScored?'Final':'Live / latest recorded');
     $('matchupTitle').textContent='Matchup player scores';
     var a=entries[0],b=entries[1];
+    $('matchupDetail').dataset.week=String(w);
     $('matchupDetail').innerHTML='<div class="matchup-summary">'+
       '<div><span>'+esc(tname(a.roster_id))+'</span><strong>'+f2(Number(a.points)||0)+'</strong></div><div class="matchup-vs">VS</div>'+
       '<div>'+(b?'<span>'+esc(tname(b.roster_id))+'</span><strong>'+f2(Number(b.points)||0)+'</strong>':'<span>Opponent unavailable</span>')+'</div></div>'+
@@ -1511,18 +1774,117 @@ td {font-size:16px}
           var score=points[k];
           if(score==null&&e.players_points)score=e.players_points[id];
           var value=score==null?'—':f2(Number(score)||0);
-          return '<div class="matchup-player"><span class="mp-pos">'+esc(ppos(id))+'</span><span class="mp-name">'+esc(pname(id))+'</span><span class="mp-pts">'+value+'</span></div>';
+          var nfl=(NAMES[id]&&NAMES[id][2])||'';
+          return '<div class="matchup-player"><span class="mp-pos">'+esc(ppos(id))+'</span><div class="mp-main"><div class="mp-name">'+esc(pname(id))+'</div><div class="mp-nfl">'+esc(nfl||'NFL team unavailable')+'</div><div class="mp-game" data-nfl-team="'+esc(nfl)+'">Loading NFL matchup…</div></div><span class="mp-pts">'+value+'</span></div>';
         }).join('');
         return '<section class="matchup-lineup"><h3>'+esc(tname(e.roster_id))+' · Starters</h3>'+(rows||'<p class="matchup-footnote">Starter lineup not yet available from Sleeper.</p>')+'</section>';
-      }).join('')+'</div><p class="matchup-footnote">Player points are taken from Sleeper matchup data for this week. Live figures update when the website refreshes; team totals may include scoring adjustments not visible in individual starter rows.</p>';
-    overlay.hidden=false;document.body.style.overflow='hidden';$('matchupClose').focus();
+      }).join('')+'</div><div class="matchup-schedule-note">Loading NFL opponents, kickoff times and locations…</div><p class="matchup-footnote">Player points are taken from Sleeper matchup data for this week. Live figures update when the website refreshes; team totals may include scoring adjustments not visible in individual starter rows.</p>';
+    if(inline){
+      var target=$('matchupPageDetail');
+      target.innerHTML='<div class="matchup-inline-title"><span>WEEK '+w+' · STARTING LINEUPS</span><button type="button" id="closeInlineMatchup">Close breakdown ✕</button></div>'+$('matchupDetail').innerHTML;
+      target.dataset.week=String(w);
+      target.dataset.matchup=String(matchupId);
+      document.querySelectorAll("#matchupGames .matchup-page-card").forEach(function(card){card.classList.toggle("is-selected",card.dataset.matchup===String(matchupId));});
+      target.hidden=false;
+      overlay.hidden=true;
+      document.body.style.overflow='';
+      fillMatchupScheduleInto(w,target);
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+    }else{
+      overlay.hidden=false;document.body.style.overflow='hidden';$('matchupClose').focus();
+      fillMatchupSchedule(w);
+    }
   }
   function closeMatchup(){$('matchupOverlay').hidden=true;document.body.style.overflow='';}
-  document.addEventListener('click',function(ev){var card=ev.target.closest('[data-matchup][data-week]');if(card)openMatchup(Number(card.dataset.week),card.dataset.matchup);});
-  document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&!$('matchupOverlay').hidden)closeMatchup();if((ev.key==='Enter'||ev.key===' ')&&ev.target.matches('[data-matchup][data-week]')){ev.preventDefault();openMatchup(Number(ev.target.dataset.week),ev.target.dataset.matchup);}});
+  document.addEventListener('click',function(ev){
+    if(ev.target.closest('#closeInlineMatchup')){$('matchupPageDetail').hidden=true;document.querySelectorAll('#matchupGames .is-selected').forEach(function(c){c.classList.remove('is-selected');});return;}
+    var card=ev.target.closest('[data-matchup][data-week]');
+    if(card){var w=Number(card.dataset.week),mid=card.dataset.matchup;
+      if(card.closest('#matchupGames'))openMatchup(w,mid,true);
+      else{location.hash='matchups';matchupPageWeek=w;renderMatchupsPage();openMatchup(w,mid,true);}
+    }
+  });
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&!$('matchupOverlay').hidden)closeMatchup();if((ev.key==='Enter'||ev.key===' ')&&ev.target.matches('[data-matchup][data-week]')){ev.preventDefault();openMatchup(Number(ev.target.dataset.week),ev.target.dataset.matchup,ev.target.closest('#matchupGames')!==null);}});
   $('matchupClose').addEventListener('click',closeMatchup);
   $('matchupOverlay').addEventListener('click',function(ev){if(ev.target===this)closeMatchup();});
 
+  // Reuses the former Headquarters model; these are heuristic estimates, not official Sleeper odds.
+  function matchupForecastHistory(w){
+    var past={};
+    scoredWeeks().filter(function(k){return k<w;}).forEach(function(k){
+      (S.weeks[k]||[]).forEach(function(e){(e.starters||[]).forEach(function(pid,i){
+        if(!pid||pid==='0')return;
+        (past[pid]||(past[pid]=[])).push(Number((e.starters_points||[])[i]||0));
+      });});
+    });
+    return past;
+  }
+  function matchupForecast(e,o,past,final){
+    function estimate(x){
+      var expected=0,variance=0;
+      (x.starters||[]).forEach(function(pid){
+        if(!pid||pid==='0')return;
+        var v=past[pid]||[];
+        var avg=v.length?v.reduce(function(a,b){return a+b;},0)/v.length:12;
+        expected+=Math.max(0,avg);
+        variance+=Math.pow(Math.max(5,avg*.75),2);
+      });
+      return {mean:Math.max(Number(x.points)||0,expected),variance:variance};
+    }
+    var a=estimate(e),b=estimate(o);
+    var sd=Math.sqrt(a.variance+b.variance)||1;
+    var pa=final?(e.points>o.points?100:e.points<o.points?0:50):100/(1+Math.exp(-1.7*(a.mean-b.mean)/sd));
+    pa=Math.max(0,Math.min(100,pa));
+    return {a:a.mean,b:b.mean,pa:pa,pb:100-pa};
+  }
+  function matchupForecastCard(e,o,past){
+    var f=matchupForecast(e,o,past,false),pa=Math.round(f.pa),pb=100-pa;
+    var lead=Number(e.points)>Number(o.points)?e:Number(o.points)>Number(e.points)?o:null;
+    var leadProb=lead===e?f.pa:f.pb;
+    return '<div class="matchup-forecast">'+
+      '<div class="matchup-forecast-title">AP estimated chance to win</div>'+
+      '<div class="matchup-forecast-names"><span>'+esc(tname(e.roster_id))+' · '+pa+'%</span><span>'+pb+'% · '+esc(tname(o.roster_id))+'</span></div>'+
+      '<div class="matchup-forecast-meter" role="img" aria-label="Estimated win chances '+pa+' and '+pb+' percent"><i style="width:'+f.pa.toFixed(2)+'%"></i><b></b></div>'+
+      '<div class="matchup-forecast-title">Estimated scoring baseline</div>'+
+      '<div class="matchup-forecast-baselines"><span>'+esc(tname(e.roster_id))+'<strong>'+f1(f.a)+' pts</strong></span><span>'+esc(tname(o.roster_id))+'<strong>'+f1(f.b)+' pts</strong></span></div>'+
+      (lead&&leadProb<35?'<div class="matchup-forecast-alert">⚡ Upset watch: '+esc(tname(lead.roster_id))+' leads but is the estimated underdog.</div>':'')+
+      '<p class="matchup-forecast-note">AP estimates use earlier weeks’ starter scores and points already earned. Baselines are not clock-adjusted final-score projections; percentages are not calibrated odds.</p></div>';
+  }
+  var matchupPageWeek=null;
+  function renderMatchupsPage(){
+    if(!S.league)return;
+    if(matchupPageWeek==null)matchupPageWeek=S.leg;
+    var maxWeek=Math.max(S.leg,1);
+    matchupPageWeek=Math.max(1,Math.min(maxWeek,matchupPageWeek));
+    $('matchupWeekSeg').innerHTML=Array.from({length:maxWeek},function(_,i){var w=i+1;return '<button type="button" data-mw="'+w+'" aria-pressed="'+(w===matchupPageWeek)+'">Week '+w+'</button>';}).join('');
+    $('matchupPrev').disabled=matchupPageWeek<=1;
+    $('matchupNext').disabled=matchupPageWeek>=maxWeek;
+    var games=pairsOf(matchupPageWeek).filter(function(g){return g.length===2;});
+    var isFinal=matchupPageWeek<=S.lastScored;
+    var isCurrent=matchupPageWeek===S.leg&&!isFinal;
+    var status=isFinal?'FINAL':isCurrent?'CURRENT WEEK':'UPCOMING';
+    var forecastPast=!isFinal?matchupForecastHistory(matchupPageWeek):null;
+    var statusClass=isFinal?'is-final':isCurrent?'is-live':'';
+    $('matchupGames').innerHTML=games.map(function(g){
+      var a=Number(g[0].points)||0,b=Number(g[1].points)||0;
+      var selected=$('matchupPageDetail').hidden===false&&$('matchupPageDetail').dataset.week===String(matchupPageWeek)&&$('matchupPageDetail').dataset.matchup===String(g[0].matchup_id);
+      return '<article class="game matchup-page-card'+(selected?' is-selected':'')+'" role="button" tabindex="0" aria-label="View '+esc(tname(g[0].roster_id))+' versus '+esc(tname(g[1].roster_id))+' lineups" data-week="'+matchupPageWeek+'" data-matchup="'+esc(String(g[0].matchup_id))+'">'+
+        '<div class="matchup-card-top"><span class="matchup-card-week">WEEK '+matchupPageWeek+' · MATCHUP</span><span class="matchup-status '+statusClass+'">'+status+'</span></div>'+
+        g.map(function(e,i){var score=i===0?a:b;var lead=(a!==b&&score===Math.max(a,b));return '<div class="matchup-score-row'+(lead?' is-leading':'')+'"><span class="matchup-team">'+esc(tname(e.roster_id))+'</span><strong class="matchup-score">'+f2(score)+'</strong></div>';}).join('')+
+        (!isFinal?matchupForecastCard(g[0],g[1],forecastPast):'')+
+        '<div class="matchup-card-footer">View full starting lineups →</div></article>';
+    }).join('')||'<div class="pending">Matchups have not been published for this week.</div>';
+    $('matchupPageNote').textContent=isFinal?'Final scores from Sleeper.':isCurrent?'Current-week scores reflect the latest Sleeper data loaded; refreshes occur every 60 seconds while the site is open.':'Upcoming matchup pairings from Sleeper; scores will appear when available.';
+  }
+  $('matchupWeekSeg').addEventListener('click',function(ev){var btn=ev.target.closest('[data-mw]');if(!btn)return;matchupPageWeek=Number(btn.dataset.mw);$('matchupPageDetail').hidden=true;renderMatchupsPage();});
+  ['matchupPrev','matchupNext'].forEach(function(id){$(id).addEventListener('click',function(){matchupPageWeek+=id==='matchupPrev'?-1:1;$('matchupPageDetail').hidden=true;renderMatchupsPage();});});
+  function fillMatchupScheduleInto(w,root){
+    nflGameDetails(w).then(function(games){
+      if(root.dataset.week!==String(w))return;
+      root.querySelectorAll('[data-nfl-team]').forEach(function(el){var nfl=el.dataset.nflTeam,game=games&&games[nfl];if(!game){el.textContent='NFL matchup details unavailable';return;}var home=nfl===game.home;el.textContent=(home?'vs ':'@ ')+(home?game.away:game.home)+' · '+game.when+' · '+(home?'Home':'Away')+' · '+game.venue;});
+      var note=root.querySelector('.matchup-schedule-note');if(note)note.textContent=games?'NFL schedule: ESPN · Fantasy scoring: Sleeper.':'NFL schedule unavailable · Fantasy scoring: Sleeper.';
+    });
+  }
   /* ---------- scores ---------- */
   function renderScores() {
     if (curWeek == null) curWeek = S.lastScored || S.leg || 1;
@@ -1703,7 +2065,9 @@ td {font-size:16px}
   }
 
   /* ---------- additional league tools ---------- */
+  var lastCapitalYears=[],lastCapitalRounds=4;
   function renderCapital(years, rounds) {
+    lastCapitalYears=years.slice();lastCapitalRounds=rounds;
     var totals = {}, yearly = {};
     S.ids.forEach(function(id){totals[id]={score:0,count:0,firsts:0};yearly[id]={};years.forEach(function(y){yearly[id][y]=[];});});
     years.forEach(function(y,yi){
@@ -1716,7 +2080,15 @@ td {font-size:16px}
       });
     });
     var ranked=S.ids.slice().sort(function(a,b){return totals[b].score-totals[a].score;});
-    $('capitalRows').innerHTML=ranked.map(function(id,i){var v=totals[id];return '<tr><td class="rank">'+(i+1)+'</td><td class="tn">'+esc(tname(id))+'</td><td class="num">'+f1(v.score)+'</td><td class="num">'+v.count+'</td><td class="num">'+v.firsts+'</td></tr>';}).join('');
+    var rankOf={};ranked.forEach(function(id,i){rankOf[id]=i+1;});
+    var displayed=ranked.slice();
+    if(capitalSort!=="rank")displayed.sort(function(a,b){
+      var v1=capitalSort==="name"?tname(a):totals[a][capitalSort],v2=capitalSort==="name"?tname(b):totals[b][capitalSort];
+      var cmp=capitalSort==="name"?v1.localeCompare(v2):v1-v2;
+      return (capitalDesc?-1:1)*cmp||rankOf[a]-rankOf[b];
+    });
+    document.querySelectorAll('[data-cap-sort]').forEach(function(btn){var active=btn.dataset.capSort===capitalSort;btn.classList.toggle('active',active);btn.querySelector('.sort-arrow').textContent=active?(capitalSort==='rank'?'↕':capitalDesc?'↓':'↑'):'↕';btn.setAttribute('aria-pressed',String(active));});
+    $('capitalRows').innerHTML=displayed.map(function(id,i){var v=totals[id];return '<tr><td class="rank">'+rankOf[id]+'</td><td class="tn">'+esc(tname(id))+'</td><td class="num">'+f1(v.score)+'</td><td class="num">'+v.count+'</td><td class="num">'+v.firsts+'</td></tr>';}).join('');
     // Each draft year is a real table cell, not a series of inline spans.
     var header = $('capitalByYear').closest('table').querySelector('thead tr');
     header.innerHTML = '<th>Franchise</th>' + years.map(function(y){return '<th>'+y+'</th>';}).join('');
@@ -1811,8 +2183,10 @@ td {font-size:16px}
   }
   function renderProfiles(){
     if(!S.T)return;
-    var sel=$('profileTeam'),keep=Number(sel.value)||myTeam()||S.order[0];
-    sel.innerHTML=S.ids.map(function(id){return '<option value="'+id+'">'+esc(tname(id))+'</option>';}).join('');sel.value=keep;
+    var sel=$('profileTeam'),keep=sel.value;
+    sel.innerHTML='<option value="">Select a franchise…</option>'+S.ids.map(function(id){return '<option value="'+id+'">'+esc(tname(id))+'</option>';}).join('');
+    sel.value=keep;
+    if(!sel.value){$('profileContent').innerHTML='';return;}
     var id=Number(sel.value),by={},startsByPos={},weeks=0,season=0,starters={},weekly=[],oppTotal=0,wins=0,losses=0,ties=0,allWins=0,allGames=0;
     scoredWeeks().filter(function(w){return w<=regEnd();}).forEach(function(w){
       var es=(S.weeks[w]||[]),e=es.find(function(x){return x.roster_id===id&&x.matchup_id!=null;});if(!e)return;
@@ -2078,10 +2452,17 @@ td {font-size:16px}
   route(false);
   init().then(function(){ loadHistory(); });
   setInterval(function(){ if (!document.hidden && S.league) {
-    getJSON("/league/"+LEAGUE_ID+"/matchups/"+S.leg).then(function(d){S.weeks[S.leg]=d||[]; renderScores(); renderLive(); renderPlayers(); refreshNFLGameStatus();}).catch(function(){});
+    getJSON("/league/"+LEAGUE_ID+"/matchups/"+S.leg).then(function(d){S.weeks[S.leg]=d||[]; renderScores(); renderLive(); renderMatchupsPage(); renderPlayers(); refreshNFLGameStatus();}).catch(function(){});
   }},60000);
 })();
 
+
+  document.addEventListener('click',function(ev){
+    var b=ev.target.closest('[data-stand-sort]');
+    if(b){var k=b.dataset.standSort;if(standSort===k){standDesc=!standDesc;}else{standSort=k;standDesc=k!=="name"&&k!=="seed";}if(standSort==="seed")standDesc=false;if(S&&S.league)renderStandings();return;}
+    b=ev.target.closest('[data-cap-sort]');
+    if(b){var c=b.dataset.capSort;if(capitalSort===c){capitalDesc=!capitalDesc;}else{capitalSort=c;capitalDesc=c!=="name"&&c!=="rank";}if(capitalSort==="rank")capitalDesc=false;if(S&&S.ids&&S.ids.length){if(lastCapitalYears.length)renderCapital(lastCapitalYears,lastCapitalRounds);}return;}
+  });
 </script>
 </body>
 </html>
