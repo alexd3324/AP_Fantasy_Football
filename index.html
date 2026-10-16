@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>League Hub</title>
+<script>var t="dark";try{var s=localStorage.getItem("apff_theme");if(s)t=s}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -267,6 +268,78 @@ body { margin: 0; }
 .dispatch aside .strip .v { font-size: 28px; }
 @media (max-width: 820px) { .dispatch { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 480px) { .drow { grid-template-columns: minmax(90px, 130px) minmax(0, 1fr) 48px; gap: 8px; } }
+
+/* comfort pass: softer colors, larger type, fewer all-caps labels */
+:root {
+  --bg: #f2f4f0; --surface: #fbfcfa; --fg: #232e28; --muted: #58665e; --line: #d9dfda;
+  --accent: #2a6e4b; --accent-ink: #ffffff; --tint: #e3eee7; --flag: #8f6500; --flag-tint: #f5ebc9;
+  --loss: #a8392f; --loss-tint: #f4e0dc;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141a17; --surface: #1b231f; --fg: #d3ddd6; --muted: #9aa9a0; --line: #2b3730;
+    --accent: #6fc99a; --accent-ink: #10231a; --tint: #223229; --flag: #e0b84a; --flag-tint: #35301a;
+    --loss: #ee8b80; --loss-tint: #3a2421; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141a17; --surface: #1b231f; --fg: #d3ddd6; --muted: #9aa9a0; --line: #2b3730;
+  --accent: #6fc99a; --accent-ink: #10231a; --tint: #223229; --flag: #e0b84a; --flag-tint: #35301a;
+  --loss: #ee8b80; --loss-tint: #3a2421; color-scheme: dark;
+}
+body { font-size: 16px; line-height: 1.6; }
+h1 { font-size: clamp(38px, 7vw, 64px); font-weight: 700; letter-spacing: 0; }
+h2 { font-size: clamp(26px, 4.5vw, 34px); font-weight: 700; letter-spacing: 0.01em; }
+.wrap { gap: 52px; }
+.eyebrow, .facts dt, th, .tag, .nav a, .seg button, .btnrow button, .status button, .strip .k, .grp h3, .rules h3, .sub,
+.rnd h3, .picker label, .article .kicker, .margin, tr.cut td, .pl .slot, .inj {
+  font-family: var(--body); text-transform: none; letter-spacing: 0.01em; font-weight: 600;
+}
+.eyebrow, .facts dt, .strip .k, .picker label, .article .kicker { font-size: 13.5px; color: var(--muted); }
+.article .kicker { color: var(--accent); }
+.facts dd { font-size: 15px; }
+th { font-size: 13.5px; color: var(--muted); }
+th, td { padding: 13px 14px; }
+td.num, th.num { font-size: 14.5px; }
+.tag { font-size: 12px; padding: 2px 7px; font-weight: 600; }
+.nav a, .seg button, .btnrow button, .status button { font-size: 14.5px; font-weight: 500; padding: 8px 14px; }
+.grp h3, .rules h3, .sub, .rnd h3 { font-size: 14px; color: var(--fg); }
+.strip .k { font-size: 13.5px; }
+.strip .v { font-weight: 700; }
+.legend, .note, .softnote { font-size: 14px; line-height: 1.55; }
+.pl .slot { font-size: 12.5px; }
+.pl .nm, .pk .ph b { font-size: 15.5px; }
+.pl .mt, .pk .pr, .pk .pn { font-size: 13px; }
+.pl { padding: 9px 0; }
+.pk { padding: 9px 6px; }
+.side { padding: 11px 16px; }
+.margin { font-size: 13px; }
+tr.cut td { font-size: 13px; }
+.drow .dv, .rhead .rm { font-size: 14px; }
+.article p { font-size: 17px; line-height: 1.7; }
+.article h3 { font-weight: 700; }
+.ruler { opacity: 0.6; }
+.themebtn { margin-left: auto; background: var(--surface); color: var(--fg); border: 1px solid var(--line); border-radius: 4px; cursor: pointer; font-family: var(--body); font-size: 14.5px; font-weight: 500; padding: 8px 14px; }
+.themebtn:hover { border-color: var(--accent); }
+
+/* blue theme */
+:root {
+  --bg: #eef2f8; --surface: #f9fbfe; --fg: #1a2433; --muted: #526078; --line: #d3dbe8;
+  --accent: #1f5fbf; --accent-ink: #ffffff; --tint: #dde8f7; --flag: #8f6500; --flag-tint: #f5ebc9;
+  --loss: #b23a3a; --loss-tint: #f6e0e0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1424; --surface: #131d33; --fg: #d6dfef; --muted: #94a3bf; --line: #25324d;
+    --accent: #5aa0ff; --accent-ink: #08142b; --tint: #1b2b4a; --flag: #e3b947; --flag-tint: #33301c;
+    --loss: #f08a8a; --loss-tint: #3a2229; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1424; --surface: #131d33; --fg: #d6dfef; --muted: #94a3bf; --line: #25324d;
+  --accent: #5aa0ff; --accent-ink: #08142b; --tint: #1b2b4a; --flag: #e3b947; --flag-tint: #33301c;
+  --loss: #f08a8a; --loss-tint: #3a2229; color-scheme: dark;
+}
 </style>
 </head>
 <body>
@@ -285,6 +358,7 @@ body { margin: 0; }
       <a href="#moves">Moves</a>
       <a href="#picks">Draft picks</a>
       <a href="#rules">Rules</a>
+      <button type="button" class="themebtn" id="themeBtn" aria-label="Change color theme">Theme: Auto</button>
     </nav>
   </header>
   <div class="status" id="status" role="status">Loading league from Sleeper...</div>
@@ -1139,6 +1213,16 @@ body { margin: 0; }
   });
   $("refreshBtn").addEventListener("click", function () { init(); });
 
+  var themeBtn = $("themeBtn");
+  function themeNow() { var t = document.documentElement.getAttribute("data-theme"); return t === "light" || t === "dark" ? t : "auto"; }
+  function themeLabel() { var t = themeNow(); themeBtn.textContent = "Theme: " + (t === "auto" ? "Auto" : t === "light" ? "Light" : "Dark"); }
+  themeBtn.addEventListener("click", function () {
+    var next = { auto: "light", light: "dark", dark: "auto" }[themeNow()];
+    if (next === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", next);
+    store.set("apff_theme", next);
+    themeLabel();
+  });
+  themeLabel();
   $("slink").href = "https://sleeper.com/leagues/" + LEAGUE_ID;
   route(false);
   init();
