@@ -990,7 +990,14 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 #picks .draft-audit-table th:nth-child(5),#picks .draft-audit-table th:nth-child(6),#picks .draft-audit-table th:nth-child(7){width:122px}
 #picks .draft-audit-table th.num{white-space:nowrap;font-size:13px;letter-spacing:0;text-align:right}
 #picks .draft-audit-table td.num{white-space:nowrap;text-align:right}
-
+#draftRankTable:not(.show-details) .dr-extra{display:none}
+#draftRankTable.show-details table{min-width:900px}
+#draftRankBanner{margin:14px 0;padding:14px 18px;border:1px solid var(--line);border-left:4px solid var(--flag);border-radius:10px;background:var(--flag-tint);color:var(--fg);font-size:15px;line-height:1.55}
+#draftRankBanner:empty{display:none}
+#draftRankTable tr.dr-detail-row td{padding:4px 18px 20px;background:var(--bg);cursor:default;border-bottom:2px solid var(--accent)}
+#draftRankTable tr.dr-detail-row:hover td{background:var(--bg)}
+#draftRankTable tr.is-open>td{background:var(--tint)}
+#draftRankTable tr.is-open .draft-rank-chevron{display:inline-block;transform:rotate(90deg)}
 </style>
 </head>
 <body>
@@ -1068,7 +1075,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     <div class="stack" id="anBody">
       <div class="stack" id="rosPanel">
         <div class="shead"><h3 class="sub">Rest-of-season standings projections</h3><p class="note" id="rosNote">Loading future matchups…</p></div>
-        <div class="scroll"><table style="min-width:750px"><thead><tr><th>Projected rank</th><th>Franchise</th><th class="num">Current W–L</th><th class="num">Projected wins</th><th class="num">Playoff chance</th><th class="num">Projected finish</th></tr></thead><tbody id="rosRows"></tbody></table></div>
+        <div class="scroll"><table style="min-width:750px"><thead><tr><th>Projected rank</th><th>Franchise</th><th class="num">Current W–L</th><th class="num">Projected wins</th><th class="num">Playoff chance</th><th class="num">Avg. finish</th></tr></thead><tbody id="rosRows"></tbody></table></div>
         <p class="legend">Forecasts simulate remaining scheduled regular-season matchups 3,000 times using each team's scoring history. Estimates are uncertain, assume scoring strength remains similar, and update as completed games are recorded. Playoff odds use the league's top seeds plus the points-for wildcard; postseason outcomes are not simulated.</p>
       </div>
     </div>
@@ -1185,7 +1192,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     <div class="draft-quick-nav" aria-label="Draft Center sections"><button type="button" data-draft-go="historicalDraftPanel" data-draft-child="draftFranchiseFold">🏆 Drafting rankings <span>Compare teams &amp; audit picks</span></button><button type="button" data-draft-go="historicalDraftPanel" data-draft-child="draftBoardFold">📚 Rookie draft archive <span>Boards by season</span></button><button type="button" data-draft-go="futureDraftPanel">📈 Future picks <span>Capital &amp; projections</span></button></div>
     <details class="draft-main-accordion draft-primary" id="futureDraftPanel"><summary><span>📈 Future draft capital</span><small>Power rankings, pick ownership &amp; projected draft board</small></summary><div class="stack" style="padding:0 18px 18px"><div class="draft-future-controls"><p class="note" id="pickNote"></p><div class="picker"><label for="pickTeam">Highlight a team</label><select id="pickTeam"></select></div><p class="pickfocus" id="pickFocus"></p></div><h3 class="sub">Draft capital power rankings</h3><p class="note">Capital score weights rounds 1–4 at 100, 45, 20 and 8 points, discounted for later years. Only the upcoming draft uses projected pick slots; future years are valued by round, without speculative positions.</p><div class="scroll"><table><thead><tr><th><button class="table-sort" data-cap-sort="rank">Rank <span class="sort-arrow"></span></button></th><th><button class="table-sort" data-cap-sort="name">Team <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="score">Capital score <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="count">Picks <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="firsts">Firsts <span class="sort-arrow"></span></button></th></tr></thead><tbody id="capitalRows"></tbody></table></div><h3 class="sub">Draft capital by franchise and year</h3><p class="note">Upcoming draft: projected slots. Later drafts: round and original franchise, not projected pick numbers.</p><div class="scroll"><table><thead><tr><th>Franchise</th><th>2027</th><th>2028</th><th>2029</th></tr></thead><tbody id="capitalByYear"></tbody></table></div><details class="draft-sub-accordion"><summary>🗓️ Projected future draft board</summary><div style="padding:0 18px 18px"><div class="board" id="pickBoard"></div><p class="legend">Non-playoff draft slots are projected from reverse Max PF. Playoff-team slots are provisional until postseason results are final. A green “from” label marks a traded pick.</p></div></details></div></details>
     <details class="draft-main-accordion draft-primary" id="historicalDraftPanel"><summary><span>📚 Rookie drafts &amp; franchise drafting rankings</span><small>Browse boards, compare draft classes, and evaluate managers</small></summary><div class="draft-main-inner">
-      <details class="draft-sub-accordion" id="draftFranchiseFold"><summary>🏆 Who drafts best? · Rookie draft rankings</summary><div class="draft-ranking-content"><p class="note">Compare each franchise against the actual value of the draft class. Each pick is compared with a pooled, league-wide expectation for its draft slot, so strong and weak classes both show up. Scores are points above replacement per season, blended with current dynasty market value (market counts more for recent classes). Click any team to inspect its picks. Rankings are provisional where data is missing.</p><div class="draft-history-controls"><label for="draftRankYear">Season</label><select id="draftRankYear"><option value="all">All years · Cumulative</option></select><label for="draftRankMode">Ranking</label><select id="draftRankMode"><option value="evaluator">Per-pick talent evaluation</option><option value="class">Total draft haul</option></select><label for="draftRankPosition">Positions</label><select id="draftRankPosition"><option value="all">All positions · including IDP</option><option value="offense">Offense · QB / RB / WR / TE</option><option value="defense">Defense · DL / LB / DB</option></select></div><div id="draftRankStatus" class="note" role="status">Loading historical selections…</div><div id="draftRankCards" class="draft-eval-highlights"></div><div id="draftRankTable" class="scroll"></div><div id="draftRankDetail" class="draft-rank-detail" aria-live="polite"></div><details class="draft-minor-fold"><summary>How these rankings are calculated</summary><div class="draft-method"><p><strong>1 · Value each selection:</strong> For QB, RB, WR and TE, fantasy production percentile is converted to a nonlinear 0–100 production score and current Stats Guy Fantasy value to a separate 0–100 market score. With a market quote, the player score is 50% production and 50% market. Without a quote, the clearly labeled production-only score is used; a missing quote is not assumed to be zero. Players below the 50th production percentile get no production credit.</p><p><strong>2 · Include IDP fairly:</strong> Defensive players use the same position-relative production scoring, then receive a 0.40 player-value multiplier. This is a disclosed assumption, not an IDP market price.</p><p><strong>3 · Recalibrate pick cost:</strong> Within each historical draft, observed player scores form the reference distribution. Earlier slots carry a smoothly declining cost curve, blended with the observed class outcomes; late-round costs are never artificially flattened. Crucially, expected values and actual values now use <em>the same scale</em>. A complete draft therefore has approximately zero total surplus across all managers.</p><p><strong>4 · Rank franchises:</strong> Each pick contributes player value minus calibrated pick expectation. Best Draft Class adds these differences; Best Talent Evaluator averages with four neutral picks of sample-size shrinkage. Click any franchise to audit its contributions.</p><p><strong>Read carefully:</strong> Scores are <em>relative to the other selections in the same draft</em>, not a claim that a manager generated an absolute financial gain. The within-class benchmark is descriptive, not a historical success-probability model. Missing market values, incomplete historical scoring, and recent rookies make some comparisons provisional. Filtering positions preserves the original all-position baseline.</p></div></details></div></details>
+      <details class="draft-sub-accordion" id="draftFranchiseFold"><summary>🏆 Who drafts best? · Rookie draft rankings</summary><div class="draft-ranking-content"><p class="note">Compare each franchise against the actual value of the draft class. Each pick is compared with a pooled, league-wide expectation for its draft slot, so strong and weak classes both show up. Scores are points above replacement per season. By default they use production only, so offense and IDP are graded the same way; an optional market-assisted view is available. Click any team to inspect its picks. Rankings are provisional where data is missing.</p><div class="draft-history-controls"><label for="draftRankYear">Season</label><select id="draftRankYear"><option value="all">All years · Cumulative</option></select><label for="draftRankMode">Ranking</label><select id="draftRankMode"><option value="evaluator">Per-pick talent evaluation</option><option value="class">Total draft haul</option></select><label for="draftRankPosition">Positions</label><select id="draftRankPosition"><option value="all">All positions · including IDP</option><option value="offense">Offense · QB / RB / WR / TE</option><option value="defense">Defense · DL / LB / DB</option></select><label for="draftRankBasis">Value basis</label><select id="draftRankBasis"><option value="production" selected>Production only · same for all positions</option><option value="blend">Production + market · offense only</option></select><button type="button" id="draftRankDetailsBtn" class="draft-method-button" aria-pressed="false">Show detailed columns</button></div><div id="draftRankBanner" role="note"></div><div id="draftRankStatus" class="note" role="status">Loading historical selections…</div><div id="draftRankCards" class="draft-eval-highlights"></div><div id="draftRankTable" class="scroll"></div><div id="draftRankDetail" class="draft-rank-detail" aria-live="polite"></div><details class="draft-minor-fold"><summary>How these rankings are calculated</summary><div class="draft-method"><p><strong>1 · Value each selection:</strong> For QB, RB, WR and TE, fantasy production percentile is converted to a nonlinear 0–100 production score and current Stats Guy Fantasy value to a separate 0–100 market score. With a market quote, the player score is 50% production and 50% market. Without a quote, the clearly labeled production-only score is used; a missing quote is not assumed to be zero. Players below the 50th production percentile get no production credit.</p><p><strong>2 · Include IDP fairly:</strong> Defensive players use the same position-relative production scoring, then receive a 0.40 player-value multiplier. This is a disclosed assumption, not an IDP market price.</p><p><strong>3 · Recalibrate pick cost:</strong> Within each historical draft, observed player scores form the reference distribution. Earlier slots carry a smoothly declining cost curve, blended with the observed class outcomes; late-round costs are never artificially flattened. Crucially, expected values and actual values now use <em>the same scale</em>. A complete draft therefore has approximately zero total surplus across all managers.</p><p><strong>4 · Rank franchises:</strong> Each pick contributes player value minus calibrated pick expectation. Best Draft Class adds these differences; Best Talent Evaluator averages with four neutral picks of sample-size shrinkage. Click any franchise to audit its contributions.</p><p><strong>Read carefully:</strong> Scores are <em>relative to the other selections in the same draft</em>, not a claim that a manager generated an absolute financial gain. The within-class benchmark is descriptive, not a historical success-probability model. Missing market values, incomplete historical scoring, and recent rookies make some comparisons provisional. Filtering positions preserves the original all-position baseline.</p></div></details></div></details>
 
       <div class="draft-history-controls"><label for="historicDraftYear">Draft year</label><select id="historicDraftYear"><option value="">Loading draft years…</option></select><label for="historicDraftId">Draft</label><select id="historicDraftId"><option value="">Select a year first</option></select></div>
       <p id="historicDraftStatus" class="note" role="status">Loading the league's linked draft history…</p>
@@ -1772,8 +1779,8 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     }
     var sorted=ids.sort(function(a,b){return stats[a].rank-stats[b].rank;});
     $('rosRows').innerHTML=sorted.map(function(id,i){
-      var st=stats[id], mode=Object.keys(st.finish).sort(function(a,b){return st.finish[b]-st.finish[a];})[0];
-      return '<tr><td class="rank">'+(i+1)+'</td><td class="tn">'+esc(tname(id))+'</td><td class="num">'+current[id].w+'–'+current[id].l+'</td><td class="num">'+(st.wins/n).toFixed(1)+'</td><td class="num">'+(100*st.playoffs/n).toFixed(1)+'%</td><td class="num">'+Number(mode)+(Number(mode)===1?'st':Number(mode)===2?'nd':Number(mode)===3?'rd':'th')+'</td></tr>';
+      var st=stats[id];
+      return '<tr><td class="rank">'+(i+1)+'</td><td class="tn">'+esc(tname(id))+'</td><td class="num">'+current[id].w+'–'+current[id].l+'</td><td class="num">'+(st.wins/n).toFixed(1)+'</td><td class="num">'+(100*st.playoffs/n).toFixed(1)+'%</td><td class="num">'+(st.rank/n).toFixed(1)+'</td></tr>';
     }).join('');
     $('rosNote').textContent = '3,000 simulated seasons · '+future.length+' scheduled games remaining · through week '+regEnd();
   }
@@ -2381,6 +2388,23 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
       return base+'<td class="num">'+f2(a.pts)+'</td><td class="num">'+a.g+'</td><td class="num">'+f2(a.ppg)+'</td></tr>';
     }).join('')||'<tr><td colspan="'+8+'">No player data available yet.</td></tr>';
   }
+  function leaguePositionTotals(){
+    var out={};
+    S.ids.forEach(function(i){out[i]={};});
+    scoredWeeks().filter(function(w){return w<=regEnd();}).forEach(function(w){
+      (S.weeks[w]||[]).forEach(function(e){
+        if(e.matchup_id==null||!out[e.roster_id])return;
+        (e.starters||[]).forEach(function(pid,k){
+          if(!pid||pid==='0')return;
+          var pts=Number((e.starters_points||[])[k]||0),p=ppos(pid);
+          if(['DE','DT','NT'].indexOf(p)>=0)p='DL';
+          if(['CB','S','FS','SS'].indexOf(p)>=0)p='DB';
+          out[e.roster_id][p]=(out[e.roster_id][p]||0)+pts;
+        });
+      });
+    });
+    return out;
+  }
   function renderProfiles(){
     if(!S.T)return;
     var sel=$('profileTeam'),keep=sel.value;
@@ -2409,7 +2433,13 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     var metrics='<div class="profile-metrics">'+tile('Record',wins+'–'+losses+(ties?'–'+ties:''),'Completed matched weeks')+tile('Points / week',f1(avg),f1(season)+' total points')+tile('Opponent PPG',f1(weeks?oppTotal/weeks:0),'Points allowed per week')+tile('All-play win rate',allGames?f1(100*allWins/allGames)+'%':'—','Against every other weekly score')+tile('Weekly consistency',f1(sd),'Std. deviation · lower is steadier')+tile('Best / worst',high?f1(high.pts)+' / '+f1(low.pts):'—',high?'Weeks '+high.w+' / '+low.w:'No scored weeks')+'</div>';
     var maxWeekly=Math.max(1,...weekly.map(function(x){return x.pts;}));
     var trend='<div class="profile-section"><h4 class="profile-section-title">'+esc(tname(id))+' · Weekly scoring</h4><p class="profile-section-caption">Actual franchise scores by completed regular-season week. Bars use the same scale; opponent score shown for context.</p><div class="profile-week-grid">'+weekly.map(function(x){return '<div class="profile-week"><div class="profile-week-track"><i style="height:'+Math.max(2,100*x.pts/maxWeekly)+'%"></i></div><strong>'+f1(x.pts)+'</strong><span>W'+x.w+'</span><small>'+(x.opp===null?'No matchup':'vs '+f1(x.opp))+'</small></div>';}).join('')+'</div></div>';
-    var position='<div class="profile-section"><h4 class="profile-section-title">'+esc(tname(id))+' · Positional production</h4><p class="profile-section-caption">Points from starters, including flex slots. Points per start measures output per occupied lineup slot, not per week.</p><div class="scroll"><table><thead><tr><th>Position</th><th class="num">Starter points</th><th class="num">Starts</th><th class="num">Points / start</th><th class="num">Share</th></tr></thead><tbody>'+entries.map(function(x){var n=startsByPos[x[0]]||0;return '<tr><td><strong>'+esc(x[0])+'</strong></td><td class="num">'+f1(x[1])+'</td><td class="num">'+n+'</td><td class="num">'+f1(n?x[1]/n:0)+'</td><td class="num">'+f1(season?100*x[1]/season:0)+'%</td></tr>';}).join('')+'</tbody></table></div></div>';
+    var lgTot=leaguePositionTotals(),nTeams=S.ids.length,posRank={};
+    entries.forEach(function(x){
+      var pos=x[0],vals=S.ids.map(function(t){return {id:t,v:lgTot[t][pos]||0};}).sort(function(a,b){return b.v-a.v;});
+      posRank[pos]={rank:1+vals.filter(function(o){return o.v>x[1];}).length,avg:vals.reduce(function(t,o){return t+o.v;},0)/nTeams,leader:vals[0]};
+    });
+    function ord(n){var m=n%100;if(m>=11&&m<=13)return n+'th';return n+({1:'st',2:'nd',3:'rd'}[n%10]||'th');}
+    var position='<div class="profile-section"><h4 class="profile-section-title">'+esc(tname(id))+' · Positional production</h4><p class="profile-section-caption">Points from starters, including flex slots. Points per start measures output per occupied lineup slot, not per week. League rank compares starter points at each position with all franchises over the same weeks (1st scored the most); hover a rank to see the league leader.</p><div class="scroll"><table style="min-width:720px"><thead><tr><th>Position</th><th class="num">Starter points</th><th class="num">Starts</th><th class="num">Points / start</th><th class="num">Share</th><th class="num">League rank</th><th class="num">vs. league avg</th></tr></thead><tbody>'+entries.map(function(x){var n=startsByPos[x[0]]||0;return '<tr><td><strong>'+esc(x[0])+'</strong></td><td class="num">'+f1(x[1])+'</td><td class="num">'+n+'</td><td class="num">'+f1(n?x[1]/n:0)+'</td><td class="num">'+f1(season?100*x[1]/season:0)+'%</td>'+(function(){var r=posRank[x[0]],d=x[1]-r.avg;return '<td class="num" title="League leader: '+esc(tname(r.leader.id))+' ('+f1(r.leader.v)+')"><strong>'+ord(r.rank)+'</strong> of '+nTeams+'</td><td class="num '+(d>=0?'up':'down')+'">'+signed(d,1)+'</td>';})()+'</tr>';}).join('')+'</tbody></table></div></div>';
     var leaders='<div class="profile-section"><h4 class="profile-section-title">'+esc(tname(id))+' · Top scoring starters</h4><p class="profile-section-caption">Only this franchise’s starters. Includes weeks started, scoring average per start, and best single start.</p><div class="scroll"><table><thead><tr><th>Player</th><th>Position</th><th class="num">Starts</th><th class="num">Total</th><th class="num">Avg / start</th><th class="num">Best</th></tr></thead><tbody>'+tops.map(function(t){return '<tr><td>'+esc(pname(t.id))+'</td><td>'+esc(ppos(t.id))+'</td><td class="num">'+t.n+'</td><td class="num">'+f2(t.pts)+'</td><td class="num">'+f1(t.pts/t.n)+'</td><td class="num">'+f1(t.best)+'</td></tr>';}).join('')+'</tbody></table></div></div>';
     $('profileContent').innerHTML='<div class="profile-current-team"><span>FRANCHISE REPORT</span><strong>'+esc(tname(id))+'</strong></div><p class="note">'+esc(tname(id))+' · '+weeks+' completed regular-season weeks. All statistics use Sleeper league matchup data; positional and player statistics include started players only.</p>'+metrics+trend+position+leaders;
   }
@@ -2627,12 +2657,17 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     if(t.indexOf('rookie')>=0||(rounds>0&&rounds<=6))return 'rookie';
     return 'other';
   }
+  // Market format and TE premium come from THIS league's Sleeper settings, never from controls in other tabs.
+  function draftLeagueMarketSettings(){
+    var rp=(S.league&&S.league.roster_positions)||[],te=Number(((S.league&&S.league.scoring_settings)||{}).bonus_rec_te||0);
+    return {fmt:rp.indexOf('SUPER_FLEX')>=0?'sf_dynasty':'non_sf_dynasty',tep:te>=1.5?'bigtep':te>0?'tep':'std'};
+  }
   function draftRankMarket(){
-    var state=window.AP_DYNASTY_VALUES||{},sel=$('draftValueTep'),tep=sel?sel.value:'std',dataset=state[tep];
+    var state=window.AP_DYNASTY_VALUES||{},tep=draftLeagueMarketSettings().tep,dataset=state[tep];
     if(!dataset||!Array.isArray(dataset.players)){try{var saved=JSON.parse(localStorage.getItem('apfantasy_statsguy_v1_'+tep)||'null');if(saved&&saved.data&&Array.isArray(saved.data.players))dataset=saved.data;}catch(e){}}
     if(!dataset||!Array.isArray(dataset.players))return null;
     var byId={};dataset.players.forEach(function(p){if(p&&p.id!=null)byId[String(p.id)]=p;});
-    var fmt=$('draftValueFormat')?$('draftValueFormat').value:'sf_dynasty';
+    var fmt=draftLeagueMarketSettings().fmt;
     return {byId:byId,fmt:fmt,asof:dataset.valuesAsOf&&dataset.valuesAsOf[fmt]};
   }
   // The provider returns p.value[format], NOT p.values[format]. Both forms
@@ -2729,6 +2764,11 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
       }
       return fit[fit.length-1];
     }
+    // Position-aware contributor bar: scaled by each position's replacement-level scoring relative to the average position.
+    var replBy={},replVals=[];
+    items.forEach(function(o){var rp=o.r.replPPG;if(rp!==null&&rp!==undefined&&replBy[o.r.pos]===undefined){replBy[o.r.pos]=rp;replVals.push(rp);}});
+    var replMean=replVals.length?replVals.reduce(function(a,b){return a+b;},0)/replVals.length:0;
+    function contributorMin(pos){var rp=replBy[pos];if(!replMean||rp===undefined)return DRAFT_CONTRIBUTOR_MIN;return DRAFT_CONTRIBUTOR_MIN*Math.max(0.5,Math.min(2,rp/replMean));}
     var evals={},vals=[];
     items.forEach(function(o){
       var marketPts=null,w=0;
@@ -2738,7 +2778,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
       else if(marketPts!==null){value=marketPts;source='Market only · no games recorded yet';}
       else if(o.vor!==null){value=o.vor;source=['DL','LB','DB'].indexOf(o.r.pos)>=0?'Production only · no IDP market':'Production only · market unavailable';}
       else return;
-      var ev={value:value,vor:o.vor,marketRaw:o.raw,marketPts:marketPts,marketWeight:w,source:source,expected:0,surplus:0,raw:0,age:o.age,maturity:Math.min(1,o.age/2),contributor:value>=DRAFT_CONTRIBUTOR_MIN,hasMarket:marketPts!==null,pick:o.r.pick,draft:String(o.x.draft.draft_id)};
+      var ev={value:value,vor:o.vor,marketRaw:o.raw,marketPts:marketPts,marketWeight:w,source:source,expected:0,surplus:0,raw:0,age:o.age,maturity:Math.min(1,o.age/2),contributor:value>=contributorMin(o.r.pos),hasMarket:marketPts!==null,pick:o.r.pick,draft:String(o.x.draft.draft_id)};
       evals[o.key]=ev;vals.push(ev);
     });
     // Pooled pick-value curve, built leave-one-draft-out: each draft is graded against a curve fit
@@ -2772,7 +2812,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
   function draftRankRebuild(){
     if(!HIST_DRAFTS.length||DRAFT_RANK_BUSY)return;
     DRAFT_RANK_BUSY=true;
-    draftEnsureMarket();
+    if($('draftRankBasis')&&$('draftRankBasis').value==='blend')draftEnsureMarket();
     $('draftRankStatus').textContent='Retrieving historical draft picks and player production…';
     Promise.all(HIST_DRAFTS.map(function(d){var id=String(d.draft_id);return HIST_DRAFT_PICKS[id]?Promise.resolve(HIST_DRAFT_PICKS[id]):getJSON('/draft/'+id+'/picks').then(function(p){HIST_DRAFT_PICKS[id]=p||[];return HIST_DRAFT_PICKS[id];}).catch(function(){return null;});})).then(function(all){
       var missingDrafts=0;DRAFT_RANK_DATA={};
@@ -2801,7 +2841,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
   var DRAFT_RANK_MARKET_REQUEST=null;
   function draftEnsureMarket(){
     if(draftRankMarket()||DRAFT_RANK_MARKET_REQUEST)return;
-    var tep=$('draftValueTep')?$('draftValueTep').value:'std';
+    var tep=draftLeagueMarketSettings().tep;
     DRAFT_RANK_MARKET_REQUEST=fetch('https://api.statsguyfantasy.com/api/v1/players?tep='+encodeURIComponent(tep))
       .then(function(res){if(!res.ok)throw Error('HTTP '+res.status);return res.json();})
       .then(function(data){if(!data||!Array.isArray(data.players))throw Error('Unexpected player dataset');
@@ -2824,7 +2864,10 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
   function renderDraftRankings(){
     var year=$('draftRankYear').value||'all',mode=$('draftRankMode').value||'evaluator',position=$('draftRankPosition').value||'all';
     var entries=Object.keys(DRAFT_RANK_DATA).map(function(k){return DRAFT_RANK_DATA[k];}).filter(function(x){return (year==='all'||String(x.draft.season)===year);});
-    var market=draftRankMarket(),model=draftBuildModel(market);
+    var basis=$('draftRankBasis')?$('draftRankBasis').value:'production';
+    var market=basis==='blend'?draftRankMarket():null,model=draftBuildModel(market);
+    var maxSeasons=entries.reduce(function(m,x){return Math.max(m,x.weeks/DRAFT_SEASON_WEEKS);},0);
+    $('draftRankBanner').textContent=(entries.length&&maxSeasons<3)?'Early read: the oldest class in this view has only '+maxSeasons.toFixed(1)+' seasons of scoring data (3 or more is recommended). Use these ranks as a first look, not a verdict. With so few picks per team, most franchises cannot be separated from average yet.':'';
     var groups={},count=0,eligible=0,defense=0,missingWeeks=0,marketCovered=0,offenseCount=0;
     var sg=function(v,d){return (v>0?'+':'')+v.toFixed(d==null?1:d);};
     entries.forEach(function(x){
@@ -2858,35 +2901,53 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     }).filter(function(g){return g.eligible>0;}).sort(function(a,b){return b.score-a.score||b.eligible-a.eligible;});
     DRAFT_RANK_GROUPS=ranked;
     var missing=window.AP_DRAFT_RANK_MISSING||0;
-    $('draftRankStatus').textContent=entries.length+' draft(s) · '+count+' selections · '+eligible+' evaluated · '+defense+' IDP evaluated · '+(year==='all'?'all available years':year)+'. Each draft is graded against a curve built from the other '+Math.max(0,model.nDrafts-1)+' draft(s). Data depth: '+entries.slice().sort(function(a,b){return Number(b.draft.season)-Number(a.draft.season);}).map(function(x){return x.draft.season+' = '+(x.weeks/DRAFT_SEASON_WEEKS).toFixed(1)+' seasons';}).join(', ')+'. Young picks are shrunk toward zero (weight = seasons ÷ 2, capped at 1). Offensive market quotes: '+marketCovered+'/'+offenseCount+'. '+(model.useMarket?'':'Too few market matches; production only. ')+(missing?' '+missing+' draft(s) unavailable.':'')+(missingWeeks?' Some scoring weeks are missing.':'');
+    $('draftRankStatus').textContent=entries.length+' draft(s) · '+count+' selections · '+eligible+' evaluated · '+defense+' IDP evaluated · '+(year==='all'?'all available years':year)+'. Each draft is graded against a curve built from the other '+Math.max(0,model.nDrafts-1)+' draft(s). Data depth: '+entries.slice().sort(function(a,b){return Number(b.draft.season)-Number(a.draft.season);}).map(function(x){return x.draft.season+' = '+(x.weeks/DRAFT_SEASON_WEEKS).toFixed(1)+' seasons';}).join(', ')+'. Young picks are shrunk toward zero (weight = seasons ÷ 2, capped at 1). '+(basis==='blend'?'Offensive market quotes: '+marketCovered+'/'+offenseCount+'. '+(model.useMarket?'':'Too few market matches; production only. '):'Production only: every position, including IDP, is graded the same way. ')+(missing?' '+missing+' draft(s) unavailable.':'')+(missingWeeks?' Some scoring weeks are missing.':'');
     if(!ranked.length){$('draftRankCards').innerHTML='';$('draftRankTable').innerHTML='<p class="note">No comparable draft data for these filters.</p>';$('draftRankDetail').innerHTML='';return;}
     var best=ranked[0],most=ranked.slice().sort(function(a,b){return b.eligible-a.eligible;})[0];
     $('draftRankCards').innerHTML='<div class="draft-eval-card"><small>'+(mode==='class'?'Highest total draft haul':'Best per-pick talent evaluator')+'</small><strong>'+esc(best.name)+'</strong><p class="note">'+sg(best.score)+' pts/season vs. slot · '+best.eligible+' picks · '+Math.round(best.hit*100)+'% contributors</p></div><div class="draft-eval-card"><small>Most evaluated selections</small><strong>'+esc(most.name)+'</strong><p class="note">'+most.eligible+' picks across '+Object.keys(most.drafts).length+' draft(s)</p></div><div class="draft-eval-card"><small>Defensive picks included</small><strong>'+defense+' IDP picks</strong><p class="note">DL · LB · DB · same replacement-level scale</p></div>';
-    $('draftRankTable').innerHTML='<table><thead><tr><th>Rank</th><th>Franchise</th><th class="num">Picks</th><th class="num">IDP</th><th class="num">Contributors</th><th class="num">Capital used</th><th class="num">Return on capital</th><th class="num">Avg vs expected<br><small>80% range</small></th><th class="num">'+(mode==='class'?'Total vs expected':'Efficiency index')+'</th><th>Verdict</th></tr></thead><tbody>'+ranked.map(function(g,i){
-      var vc=g.verdict==='Clearly above average'?'draft-rank-positive':g.verdict==='Clearly below average'?'draft-rank-negative':'';
+    $('draftRankTable').innerHTML='<table><thead><tr><th>Rank</th><th>Franchise</th><th class="num">'+(mode==='class'?'Total vs expected':'Efficiency index')+'</th><th class="num dr-extra">Picks</th><th class="num dr-extra">IDP</th><th class="num dr-extra">Contributors</th><th class="num dr-extra">Capital used</th><th class="num dr-extra">Return on capital</th><th class="num dr-extra">Avg vs expected<br><small>80% range</small></th></tr></thead><tbody>'+ranked.map(function(g,i){
       return '<tr class="draft-rank-click" data-draft-team="'+i+'" tabindex="0" role="button" aria-label="Show picks for '+esc(g.name)+'"><td><strong>'+(i+1)+'</strong></td><td><strong>'+esc(g.name)+'</strong> <span class="draft-rank-chevron">↗</span>'+(g.best?'<div class="th">Best: '+esc(g.best.row.name)+' ('+sg(g.best.score)+')'+(g.top2!==null&&g.eligible>2?' · top 2 picks = '+Math.round(g.top2*100)+'% of gains':'')+'</div>':'')+'</td>'+
-        '<td class="num" title="'+Object.keys(g.drafts).length+' draft(s)">'+g.picks+'</td><td class="num">'+g.defense+'</td>'+
-        '<td class="num" title="'+g.contrib+' of '+g.eligible+' picks reached contributor level (17+ pts/season above replacement); '+g.positive+' beat their slot average">'+Math.round(g.hit*100)+'%</td>'+
-        '<td class="num" title="Expected value of the slots this franchise held, weighted by class maturity">'+Math.round(g.capital)+'</td>'+
-        '<td class="num '+(g.roc===null?'':g.roc>=0?'draft-rank-positive':'draft-rank-negative')+'">'+(g.roc===null?'—':sg(g.roc*100,0)+'%')+'</td>'+
-        '<td class="num '+(g.avg>=0?'draft-rank-positive':'draft-rank-negative')+'">'+sg(g.avg)+(g.ci?'<div class="th">'+sg(g.ci.lo)+' to '+sg(g.ci.hi)+'</div>':'')+'</td>'+
         '<td class="num '+(g.score>=0?'draft-rank-positive':'draft-rank-negative')+'"><strong>'+sg(g.score)+'</strong></td>'+
-        '<td class="'+vc+'"><strong>'+esc(g.verdict)+'</strong></td></tr>';
-    }).join('')+'</tbody></table><p class="note" style="padding:12px 14px 4px">Capital used is the expected value of the picks a franchise held; return on capital is value delivered divided by capital used, so a team cannot rank high just by holding extra picks. Verdicts resample each franchise&rsquo;s own picks (1,000 times) to get an 80% range for its average pick; with only a few drafts, most teams cannot be separated from average by luck alone.</p>';
-    $('draftRankDetail').innerHTML='<p class="note">Select a franchise in the leaderboard to see every draft selection and its contribution to the score.</p>';
+        '<td class="num dr-extra" title="'+Object.keys(g.drafts).length+' draft(s)">'+g.picks+'</td><td class="num dr-extra">'+g.defense+'</td>'+
+        '<td class="num dr-extra" title="'+g.contrib+' of '+g.eligible+' picks reached the position-adjusted contributor level (about 17 pts/season above replacement for an average position); '+g.positive+' beat their slot average">'+Math.round(g.hit*100)+'%</td>'+
+        '<td class="num dr-extra" title="Expected value of the slots this franchise held, weighted by class maturity">'+Math.round(g.capital)+'</td>'+
+        '<td class="num dr-extra '+(g.roc===null?'':g.roc>=0?'draft-rank-positive':'draft-rank-negative')+'">'+(g.roc===null?'—':sg(g.roc*100,0)+'%')+'</td>'+
+        '<td class="num dr-extra '+(g.avg>=0?'draft-rank-positive':'draft-rank-negative')+'">'+sg(g.avg)+(g.ci?'<div class="th">'+sg(g.ci.lo)+' to '+sg(g.ci.hi)+'</div>':'')+'</td></tr><tr class="dr-detail-row" data-detail-for="'+i+'" hidden><td colspan="3"></td></tr>';
+    }).join('')+'</tbody></table><p class="note" style="padding:12px 14px 4px">Capital used is the expected value of the picks a franchise held; return on capital is value delivered divided by capital used, so a team cannot rank high just by holding extra picks. The 80% range in the detailed columns resamples each franchise&rsquo;s own picks (1,000 times); when it spans zero, that team cannot be separated from average by luck alone, which is common with only a few drafts.</p>';
+    $('draftRankDetail').innerHTML='';
+    applyDraftRankOpen();
   }
-  function showDraftRankDetail(i){
-    var g=DRAFT_RANK_GROUPS[i];if(!g)return;
+  function draftAuditHtml(g){
     var rows=g.rows.slice().sort(function(a,b){return Number(b.year)-Number(a.year)||a.row.pick-b.row.pick;});
     var f1d=function(v){return Number.isFinite(v)?v.toFixed(1):'—';};
-    $('draftRankDetail').innerHTML='<div class="draft-detail-heading"><h4>'+esc(g.name)+' · pick-by-pick audit</h4><button type="button" id="closeDraftAudit">Close ✕</button></div>'+
+    return '<div class="draft-detail-heading"><h4>'+esc(g.name)+' · pick-by-pick audit</h4><button type="button" id="closeDraftAudit">Close ✕</button></div>'+
       '<p class="note">Values are points above replacement per 17-game season. Surplus = player value − the expected value for that pick slot, then shrunk toward zero for young picks (weight = seasons since the draft ÷ 2, capped at 1). Raw and weighted figures are in each breakdown.</p>'+
       '<p class="draft-audit-hint">Tap a player for the production and market breakdown. Swipe the table horizontally on smaller screens.</p>'+
       '<div class="draft-audit-scroll" role="region" aria-label="Pick by pick draft audit" tabindex="0"><table class="draft-audit-table"><thead><tr><th>Year</th><th>Pick</th><th>Player / breakdown</th><th>Pos</th><th class="num">Value</th><th class="num">Expected</th><th class="num">Surplus</th></tr></thead><tbody>'+
-      rows.map(function(o){var r=o.row,e=o.evaluation;return '<tr><td>'+esc(o.year)+'</td><td>'+r.pick+'</td><td class="draft-audit-player"><details><summary><strong>'+esc(r.name)+'</strong>'+(e&&e.maturity<1?' <span class="tag">Provisional ×'+e.maturity.toFixed(2)+'</span>':'')+'</summary><div class="draft-audit-breakdown"><span>Games played <b>'+r.games+(r.weeks?' of '+r.weeks:'')+'</b></span><span>Points / game <b>'+(r.games?r.ppg.toFixed(1):'—')+'</b></span><span>Replacement ('+esc(r.pos)+') <b>'+(r.replPPG!==null&&r.replPPG!==undefined?r.replPPG.toFixed(1)+' ppg':'—')+'</b></span><span>Production delivered <b>'+(e&&e.vor!==null?f1d(e.vor)+(e.vor===0?(r.games?' · below replacement':' · no games recorded'):''):'—')+'</b></span><span>Market quote <b>'+(e&&e.marketRaw!==null?Math.round(e.marketRaw).toLocaleString():'Not available')+'</b></span><span>Asset value now (market) <b>'+(e&&e.marketPts!==null?f1d(e.marketPts):'—')+'</b></span><span>Blend <b>'+esc(e?e.source:'—')+'</b></span><span>Raw surplus <b>'+(e?f1d(e.raw):'—')+'</b></span><span>Maturity weight <b>'+(e?e.maturity.toFixed(2):'—')+'</b></span></div></details></td><td>'+esc(r.pos)+'</td><td class="num">'+(e?e.value.toFixed(1):'—')+'</td><td class="num">'+(e?e.expected.toFixed(1):'—')+'</td><td class="num '+(o.score===null?'':o.score>=0?'draft-rank-positive':'draft-rank-negative')+'">'+(o.score===null?'—':(o.score>0?'+':'')+o.score.toFixed(1))+'</td></tr>';}).join('')+'</tbody></table></div>';
-    $('closeDraftAudit').onclick=function(){$('draftRankDetail').innerHTML='';};
+      rows.map(function(o){var r=o.row,e=o.evaluation;return '<tr><td>'+esc(o.year)+'</td><td>'+r.pick+'</td><td class="draft-audit-player"><details><summary><strong>'+esc(r.name)+'</strong>'+(e&&e.maturity<1?' <span class="tag">Provisional ×'+e.maturity.toFixed(2)+'</span>':'')+'</summary><div class="draft-audit-breakdown"><span>Games played <b>'+r.games+(r.weeks?' of '+r.weeks:'')+'</b></span><span>Points / game <b>'+(r.games?r.ppg.toFixed(1):'—')+'</b></span><span>Replacement ('+esc(r.pos)+') <b>'+(r.replPPG!==null&&r.replPPG!==undefined?r.replPPG.toFixed(1)+' ppg':'—')+'</b></span><span>Production delivered <b>'+(e&&e.vor!==null?f1d(e.vor)+(e.vor===0?(r.games?' · below replacement':' · no games recorded'):''):'—')+'</b></span><span>Market quote <b>'+(e&&e.marketRaw!==null?Math.round(e.marketRaw).toLocaleString():'Not used or unavailable')+'</b></span><span>Asset value now (market) <b>'+(e&&e.marketPts!==null?f1d(e.marketPts):'—')+'</b></span><span>Blend <b>'+esc(e?e.source:'—')+'</b></span><span>Raw surplus <b>'+(e?f1d(e.raw):'—')+'</b></span><span>Maturity weight <b>'+(e?e.maturity.toFixed(2):'—')+'</b></span></div></details></td><td>'+esc(r.pos)+'</td><td class="num">'+(e?e.value.toFixed(1):'—')+'</td><td class="num">'+(e?e.expected.toFixed(1):'—')+'</td><td class="num '+(o.score===null?'':o.score>=0?'draft-rank-positive':'draft-rank-negative')+'">'+(o.score===null?'—':(o.score>0?'+':'')+o.score.toFixed(1))+'</td></tr>';}).join('')+'</tbody></table></div>';
   }
-  $('draftRankTable').addEventListener('click',function(e){var row=e.target.closest('[data-draft-team]');if(row)showDraftRankDetail(Number(row.dataset.draftTeam));});
+  // The audit expands as a drop-down row directly beneath its franchise, inside the leaderboard table.
+  var DRAFT_RANK_OPEN=null;
+  function applyDraftRankOpen(){
+    var tbl=$('draftRankTable'),span=tbl.classList.contains('show-details')?9:3,open=-1;
+    DRAFT_RANK_GROUPS.forEach(function(g,i){if(DRAFT_RANK_OPEN!=null&&g.id===DRAFT_RANK_OPEN)open=i;});
+    if(open<0)DRAFT_RANK_OPEN=null;
+    tbl.querySelectorAll('tr.dr-detail-row').forEach(function(row){
+      var i=Number(row.dataset.detailFor),on=i===open,cell=row.firstElementChild;
+      row.hidden=!on;cell.colSpan=span;
+      if(on&&!cell.dataset.filled){cell.innerHTML=draftAuditHtml(DRAFT_RANK_GROUPS[i]);cell.dataset.filled='1';}
+    });
+    tbl.querySelectorAll('tr[data-draft-team]').forEach(function(row){
+      var on=Number(row.dataset.draftTeam)===open;
+      row.setAttribute('aria-expanded',String(on));row.classList.toggle('is-open',on);
+    });
+  }
+  function showDraftRankDetail(i){
+    var g=DRAFT_RANK_GROUPS[i];if(!g)return;
+    DRAFT_RANK_OPEN=DRAFT_RANK_OPEN===g.id?null:g.id;
+    applyDraftRankOpen();
+  }
+  $('draftRankTable').addEventListener('click',function(e){if(e.target.closest('#closeDraftAudit')){DRAFT_RANK_OPEN=null;applyDraftRankOpen();return;}var row=e.target.closest('[data-draft-team]');if(row)showDraftRankDetail(Number(row.dataset.draftTeam));});
   $('draftRankTable').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){var row=e.target.closest('[data-draft-team]');if(row){e.preventDefault();showDraftRankDetail(Number(row.dataset.draftTeam));}}});
 
 
@@ -2929,21 +2990,21 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
       if(content)content.innerHTML=`<h4>1 · Production: points above replacement</h4>
       <p>For every player on a roster since the draft, the site totals recorded Sleeper fantasy points and counts games played (weeks with non-zero points). <strong>Replacement level</strong> at each position is the points-per-game of the Nth-best rostered player there, where N = 1.5 × teams × the position's weekly starter slots (starters plus bench depth; flex slots are split by typical usage). A pick's production value is <strong>games played × max(0, points per game − replacement) ÷ weeks since the draft × 17</strong>: points above replacement per 17-game season. Missed weeks earn nothing, and fringe production earns nothing because replacement-level players are freely available. Because IDP is scored in this league, defensive players use the same formula with no arbitrary multiplier.</p>
       <h4>2 · Market value in the same units</h4>
-      <p>For QB, RB, WR and TE, current Stats Guy Fantasy quotes are matched by Sleeper ID. Each quote is converted to production units with a <strong>monotone regression</strong> of production on market price across all quoted picks: the value is the typical production seen at that price, so mid-priced players get a realistic nonzero expectation instead of being rounded down to zero. Missing quotes are never treated as zero; those players use production only. IDP has no market, so it uses production only.</p>
-      <h4>3 · Blend by class age</h4>
+      <p><strong>By default the rankings are production-only</strong>, so offense and IDP are graded identically; the “Value basis” menu switches on a market-assisted view for offense. The market inputs in this step and the next apply only to that view, and its settings (superflex vs 1-QB, TE premium) are read from this league&rsquo;s Sleeper settings, not from controls in other tabs. For QB, RB, WR and TE, current Stats Guy Fantasy quotes are matched by Sleeper ID. Each quote is converted to production units with a <strong>monotone regression</strong> of production on market price across all quoted picks: the value is the typical production seen at that price, so mid-priced players get a realistic nonzero expectation instead of being rounded down to zero. Missing quotes are never treated as zero; those players use production only. IDP has no market, so it uses production only.</p>
+      <h4>3 · Blend by class age (market-assisted view only)</h4>
       <p>Fresh rookies have little production, so the market dominates. As seasons accumulate, production takes over: <strong>market weight = 0.8 − 0.2 × seasons since the draft, limited to 0.2–0.8</strong>. Players with no games yet are valued by market alone.</p>
       <h4>4 · Pick-value curve, leave-one-draft-out</h4>
       <p>Expected value for each pick slot comes from the league's other rookie drafts: slot averages are fit with a non-increasing (isotonic) curve, lightly smoothed, then shrunk toward a gentle decay prior. <strong>Each draft is graded against a curve built without it</strong>, so a hit never raises its own bar. Picks from young classes carry little weight in the curve, so it describes what a slot delivers once a class has matured.</p>
       <h4>5 · Maturity weighting</h4>
       <p>A pick&rsquo;s surplus (value minus expected) is multiplied by <strong>min(1, seasons since the draft ÷ 2)</strong>. A six-week-old rookie therefore moves the rankings very little, and a two-year-old class counts in full. The audit shows the raw surplus, the weight and a Provisional tag. The two-season ramp is a judgment call, not a fitted value.</p>
       <h4>6 · Rankings, capital and verdicts</h4>
-      <p><strong>Per-pick talent evaluation</strong> (the default) divides total weighted surplus by eligible picks plus four neutral picks, so it measures how well a franchise chose, not how many picks it held. <strong>Total draft haul</strong> adds the surplus, so it also rewards volume from traded picks. <strong>Capital used</strong> is the expected value of the slots a franchise held; <strong>return on capital</strong> is value delivered divided by capital used. <strong>Contributors</strong> is the share of picks worth at least 17 points per season above replacement. <strong>Verdicts</strong> come from resampling a franchise&rsquo;s own picks 1,000 times to get an 80% range for its average pick: if the whole range is above zero the franchise is clearly above average, if it is entirely below zero it is clearly below, and otherwise it cannot be separated from average. A franchise with fewer than six picks is not judged. Under each name, the best pick and the share of total gains from its top two picks show whether a score rests on one or two hits.</p>
+      <p><strong>Per-pick talent evaluation</strong> (the default) divides total weighted surplus by eligible picks plus four neutral picks, so it measures how well a franchise chose, not how many picks it held. <strong>Total draft haul</strong> adds the surplus, so it also rewards volume from traded picks. <strong>Capital used</strong> is the expected value of the slots a franchise held; <strong>return on capital</strong> is value delivered divided by capital used. <strong>Contributors</strong> is the share of picks worth at least a position-adjusted bar: 17 points per season above replacement for an average position, scaled up or down (between half and double) by how high that position&rsquo;s replacement-level scoring is, so QBs are not judged on the same raw bar as TEs. <strong>The 80% range</strong> (detailed columns) comes from resampling a franchise&rsquo;s own picks 1,000 times to get an 80% range for its average pick: if the whole range is above zero the franchise is clearly above average, if it is entirely below zero it is clearly below, and otherwise it cannot be separated from average. A franchise with fewer than six picks is not judged. Under each name, the best pick and the share of total gains from its top two picks show whether a score rests on one or two hits.</p>
       <h4>7 · Asset value versus production</h4>
       <p>Each pick&rsquo;s audit shows <strong>production delivered</strong> (points above replacement already scored) and <strong>asset value now</strong> (what its current market price implies). The ranking uses the blend of the two, with market counting more for young classes, but you can see which one drove a result.</p>
       <h4>8 · Future draft capital</h4>
       <p>Future picks are valued by round: <strong>first = 100, second = 45, third = 20, fourth = 8</strong> before a discount for more distant seasons. The upcoming draft board estimates non-playoff order using reverse maximum points for; playoff picks are provisional. Later seasons show ownership and round without inventing exact slots. Traded picks count toward the current holder.</p>
       <h4>9 · Limitations</h4>
-      <p>These are <strong>relative, model-based grades</strong>, not verified profits or scouting grades. With only a few drafts, the leave-one-out curve and every franchise&rsquo;s result are noisy, and a few big hits can dominate a team&rsquo;s total. The resampling ranges treat picks as independent and are approximate for small samples. Market quotes are today&rsquo;s snapshot, not the price at draft time. Replacement level is estimated from rostered players only (free agents are not in matchup data). Games played are inferred from non-zero scores. The pick curve pools offense and IDP, so a franchise that drafts IDP early can be penalized if defenders in those slots score less than offensive players; check the Defense filter.</p>`;
+      <p><strong>Treat these as an early read until the oldest class has at least three seasons of data.</strong> These are <strong>relative, model-based grades</strong>, not verified profits or scouting grades. With only a few drafts, the leave-one-out curve and every franchise&rsquo;s result are noisy, and a few big hits can dominate a team&rsquo;s total. The resampling ranges treat picks as independent and are approximate for small samples. Market quotes are today&rsquo;s snapshot, not the price at draft time. Replacement level is estimated from rostered players only (free agents are not in matchup data). Games played are inferred from non-zero scores. The pick curve pools offense and IDP, so a franchise that drafts IDP early can be penalized if defenders in those slots score less than offensive players; check the Defense filter.</p>`;
     }
   })();
 
@@ -2957,6 +3018,8 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
   $('draftRankYear').addEventListener('change',renderDraftRankings);
   $('draftRankPosition').addEventListener('change',renderDraftRankings);
   $('draftRankMode').addEventListener('change',renderDraftRankings);
+  $('draftRankBasis').addEventListener('change',function(){if(this.value==='blend')draftEnsureMarket();renderDraftRankings();});
+  $('draftRankDetailsBtn').addEventListener('click',function(){var tbl=$('draftRankTable'),on=!tbl.classList.contains('show-details');tbl.classList.toggle('show-details',on);this.setAttribute('aria-pressed',String(on));this.textContent=on?'Hide detailed columns':'Show detailed columns';applyDraftRankOpen();});
   $('draftValueFormat').addEventListener('change',function(){setTimeout(renderDraftRankings,0);});
   $('draftValueTep').addEventListener('change',function(){setTimeout(renderDraftRankings,400);});
   $('draftValuesRefresh').addEventListener('click',function(){setTimeout(renderDraftRankings,2500);});
