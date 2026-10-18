@@ -965,6 +965,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 .section-page-head h2{font-family:var(--display);font-size:clamp(34px,4.6vw,54px);letter-spacing:-.035em;line-height:1.12;margin:0 0 18px;color:var(--text)}
 .section-page-head p{font-size:clamp(15px,1.5vw,18px);color:var(--muted);max-width:690px;line-height:1.55;margin:0}
 .section-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0 30px}
+#history .section-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}
 .section-tab{border:1px solid var(--line);border-radius:13px;background:var(--panel);color:var(--text);padding:17px 12px;font:inherit;font-size:16px;font-weight:750;cursor:pointer;text-align:center;transition:background .15s}
 .section-tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 5px 16px rgba(35,87,166,.17)}
 .section-tab-panel{display:none;min-width:0;border:1px solid var(--line);border-radius:17px;background:var(--panel);padding:clamp(16px,2.3vw,28px);margin-bottom:24px}
@@ -976,7 +977,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 #analytics .section-tab-panel #rosPanel{margin:0}
 #analytics .section-tab-panel .analytics-topic-panel{margin-bottom:16px}
 #analytics .section-tab-panel .profile-hero{margin-top:0}
-@media(max-width:650px){.section-tabs{gap:7px;margin:16px 0 20px}.section-tab{padding:12px 5px;font-size:12px;line-height:1.3}.section-tab-panel{padding:15px 12px}.section-page-head{margin-bottom:12px}}
+@media(max-width:650px){#history .section-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.section-tabs{gap:7px;margin:16px 0 20px}.section-tab{padding:12px 5px;font-size:12px;line-height:1.3}.section-tab-panel{padding:15px 12px}.section-page-head{margin-bottom:12px}}
 
 
 /* Draft audit: explicit minimum widths keep numeric column headings separate. */
@@ -998,6 +999,9 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 #draftRankTable tr.dr-detail-row:hover td{background:var(--bg)}
 #draftRankTable tr.is-open>td{background:var(--tint)}
 #draftRankTable tr.is-open .draft-rank-chevron{display:inline-block;transform:rotate(90deg)}
+
+/* Team Hub */
+.hub-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:12px}.hub-toolbar label,.hub-filters label{font-weight:750}.hub-toolbar select,.hub-filters select,.hub-toolbar button{background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:9px;padding:11px 14px;font:inherit}.hub-toolbar select{min-width:min(320px,100%)}.hub-toolbar button{cursor:pointer}.hub-overview{background:linear-gradient(115deg,var(--surface),var(--tint));border:1px solid var(--line);border-radius:16px;padding:25px;display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}.hub-eyebrow{font-size:12px;color:var(--accent);font-weight:850;letter-spacing:.12em}.hub-overview h3{font:750 clamp(24px,3vw,36px)/1.2 var(--display);margin:8px 0}.hub-overview p{margin:0;color:var(--muted)}.hub-overview-stats{display:flex;gap:28px;align-items:center}.hub-overview-stats div{display:grid;gap:2px}.hub-overview-stats strong{font-size:25px}.hub-overview-stats span{color:var(--muted);font-size:13px}.hub-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}.hub-panel{background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:23px;min-width:0}.hub-panel h3{font:750 23px/1.3 var(--display);margin:0 0 8px}.hub-roster-group{margin-top:24px}.hub-roster-group h4{display:flex;justify-content:space-between;border-bottom:2px solid var(--line);padding-bottom:9px;margin:0 0 6px;font-size:16px}.hub-roster-group h4 span{color:var(--muted)}.hub-player{display:grid;grid-template-columns:45px 1fr auto;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}.hub-player small{color:var(--muted)}.hub-pos{color:var(--accent);font-size:12px;font-weight:800}.hub-news-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}.hub-filters{display:flex;align-items:center;gap:10px;margin:20px 0}.hub-filters select{min-width:0;max-width:100%}.hub-story{padding:17px 0;border-top:1px solid var(--line)}.hub-story-meta{font-size:12.5px;color:var(--muted);margin-bottom:7px}.hub-story-meta span{color:var(--accent);font-weight:750}.hub-story a{font-size:16px;font-weight:750;line-height:1.45;text-decoration:none;color:var(--fg)}.hub-story a:hover{text-decoration:underline;color:var(--accent)}.hub-empty{padding:20px;background:var(--bg);border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:15px}@media(max-width:850px){.hub-columns{grid-template-columns:1fr}}@media(max-width:500px){.hub-overview-stats{gap:18px}.hub-panel{padding:16px}}
 </style>
 </head>
 <body>
@@ -1011,16 +1015,15 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
         <a href="#standings">Headquarters</a>
         <a href="#matchups">🏈 Matchups</a>
         <a href="#analytics">Analytics</a>
+        <a href="#teamhub">Team Hub</a>
         <a href="#players">Players</a>
         <a href="#picks">Draft Center</a>
         <a href="#history">League History</a>
-        <a href="#hall">Hall of Fame</a>
         <a href="#dispatch">Dynasty Dispatch</a>
         <div class="nav-more" id="leagueMenu">
           <button type="button" id="leagueMenuBtn" class="nav-more-button" aria-haspopup="true" aria-expanded="false" aria-controls="leagueMenuItems">League <span aria-hidden="true">▾</span></button>
           <div class="nav-more-items" id="leagueMenuItems" hidden>
             <a href="#matchups">Scores</a>
-            <a href="#rosters">Rosters</a>
             <a href="#moves">Moves</a>
             <a href="#rules">Rules</a>
             <a href="#settings">⚙ Season Settings</a>
@@ -1151,6 +1154,14 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     <div class="pending" id="pending" hidden></div>
   </section>
 
+  <section id="teamhub" aria-labelledby="h-teamhub" hidden>
+    <div class="section-page-head"><h2 id="h-teamhub">Team Hub</h2><p>Every franchise's live Sleeper roster and recent real-world NFL player news, in one place.</p></div>
+    <div class="hub-toolbar"><label for="hubTeam">Franchise</label><select id="hubTeam" aria-label="Choose franchise"><option value="">Loading teams…</option></select><button type="button" id="hubReload">Refresh news</button></div>
+    <div id="hubOverview" class="hub-overview"></div>
+    <div class="hub-columns"><div class="hub-panel"><h3>Current roster</h3><p class="softnote">Automatically synced from Sleeper.</p><div id="hubRoster"></div></div>
+    <div class="hub-panel"><div class="hub-news-head"><h3>Latest player news</h3><span id="hubUpdated" class="softnote"></span></div><p class="softnote">Real article headlines from external publishers. Select a headline to read the original story.</p><div class="hub-filters"><label for="hubNewsPlayer">Player</label><select id="hubNewsPlayer"><option value="all">All players</option></select></div><div id="hubNews" aria-live="polite">Loading news…</div></div></div>
+  </section>
+
   <section id="rosters" aria-labelledby="h-rosters" hidden>
     <div class="shead">
       <h2 id="h-rosters">Rosters</h2>
@@ -1216,6 +1227,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
       <button type="button" class="section-tab" data-panel="hist-seasons" aria-selected="true">📚 Season archive</button>
       <button type="button" class="section-tab" data-panel="hist-records" aria-selected="false">🏆 League records</button>
       <button type="button" class="section-tab" data-panel="hist-rivalries" aria-selected="false">⚔️ Head-to-head</button>
+      <button type="button" class="section-tab" data-panel="hist-hall" aria-selected="false">🏅 Hall of Fame</button>
     </div>
     <div class="section-tab-panel is-active" id="hist-seasons" role="tabpanel">
       <h3 class="section-panel-heading">Season archive</h3><p class="note" id="historyNote">Retrieving linked Sleeper seasons…</p>
@@ -1232,8 +1244,12 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
       <div class="picker"><label for="h2hA">Team</label><select id="h2hA"></select><label for="h2hB">Opponent</label><select id="h2hB"></select></div>
       <div id="h2hResult" class="status"></div>
     </div>
+    <div class="section-tab-panel" id="hist-hall" role="tabpanel">
+      <h3 class="section-panel-heading">Hall of Fame</h3>
+      <p class="note">Championships, podium finishes and franchise history — verified against completed Sleeper seasons.</p>
+      <div class="stack" id="hallContent"><p>Loading history…</p></div>
+    </div>
   </section>
-  <section id="hall" hidden><div class="shead"><h2>Hall of Fame</h2><p class="note">Championships, podium finishes and franchise history — verified against completed Sleeper seasons.</p></div><div class="stack" id="hallContent"><p>Loading history…</p></div></section>
   <section id="settings" aria-labelledby="h-settings" hidden>
     <div class="shead"><h2 id="h-settings">⚙ Season Management</h2><p class="note">Commissioner · league-wide settings</p></div>
     <div class="season-settings-card">
@@ -1312,7 +1328,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
   var IDPPOS = { LB: 1, DB: 1, DL: 1, DE: 1, DT: 1 };
   var POSORD = ["QB", "RB", "WR", "TE", "K", "DL", "DE", "DT", "LB", "DB"];
   var SLOTLABEL = { QB: "QB", RB: "RB", WR: "WR", TE: "TE", FLEX: "Flex", REC_FLEX: "Flex", WRRB_FLEX: "Flex", SUPER_FLEX: "SFlx", K: "K", DEF: "DEF", DL: "DL", LB: "LB", DB: "DB", IDP_FLEX: "IDP" };
-  var VIEWS = ["matchups", "standings", "analytics", "dispatch", "scores", "rosters", "moves", "picks", "players", "history", "hall", "rules", "settings"];
+  var VIEWS = ["matchups", "standings", "analytics", "dispatch", "scores", "teamhub", "rosters", "moves", "picks", "players", "history", "rules", "settings"];
 
   function setStatus(msg, retry) {
     var el = $("status");
@@ -1331,6 +1347,8 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
   function route(scroll) {
     var h = (location.hash || "").replace("#", "");
     if (h === "scores") h = "matchups";
+    if (h === "hall") { h = "history"; showHistoryPanel("hist-hall"); }
+    if (h === "rosters") h = "teamhub";
     if (VIEWS.indexOf(h) < 0) h = "standings";
     VIEWS.forEach(function (v) { $(v).hidden = v !== h; });
     $("liveHQ").hidden = true;
@@ -1392,8 +1410,9 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     }).then(function () {
       buildTeams();
       renderCore();
+      renderTeamHub();
       setStatus("");
-      return loadNames().then(function () { renderNamed(); return refreshNFLGameStatus(); }).catch(function () { renderNamed(); $("namesNote").hidden = false; return refreshNFLGameStatus(); });
+      return loadNames().then(function () { renderNamed(); renderTeamHub(); return refreshNFLGameStatus(); }).catch(function () { renderNamed(); renderTeamHub(); $("namesNote").hidden = false; return refreshNFLGameStatus(); });
     }).catch(function (e) {
       setStatus("Could not load the league from Sleeper (" + e.message + ").", true);
     });
@@ -3176,6 +3195,55 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
   $('h2hA').addEventListener('change',renderH2H);
   $('h2hB').addEventListener('change',renderH2H);
 
+  /* ---------- Team Hub: current rosters + static scheduled news feed ---------- */
+  var HUB_NEWS=null, HUB_NEWS_ERROR='', HUB_NEWS_LOADED=false;
+  function hubDate(iso){try{return new Date(iso).toLocaleString(undefined,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});}catch(e){return 'Unknown date';}}
+  function loadHubNews(force){
+    if(HUB_NEWS_LOADED&&!force)return Promise.resolve();
+    var u='data/team-news.json'+(force?'?t='+Date.now():'');
+    return fetch(u,{cache:force?'no-store':'default'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(function(d){
+      if(!d||!Array.isArray(d.articles))throw Error('Invalid news data');
+      if(d.league_id && String(d.league_id)!==String(LEAGUE_ID))throw Error('News feed belongs to another league');
+      HUB_NEWS=d;HUB_NEWS_ERROR='';HUB_NEWS_LOADED=true;drawHubNews();
+    }).catch(function(e){HUB_NEWS_ERROR=e.message;drawHubNews();});
+  }
+  function renderTeamHub(){
+    if(!S.ids||!S.ids.length)return;
+    var sel=$('hubTeam'),keep=sel.value||String(myTeam()||S.ids[0]);
+    sel.innerHTML=S.ids.map(function(id){return '<option value="'+id+'">'+esc(tname(id))+'</option>';}).join('');
+    sel.value=S.T[keep]?keep:String(S.ids[0]);
+    drawTeamHub();loadHubNews(false);
+  }
+  function drawTeamHub(){
+    if(!S.T)return;
+    var id=Number($('hubTeam').value),team=S.T[id];if(!team)return;
+    var r=team.r||{},starters=r.starters||[],taxi=r.taxi||[],reserve=r.reserve||[],all=r.players||[];
+    var occupied=new Set(starters.concat(taxi,reserve));
+    var bench=all.filter(function(pid){return !occupied.has(pid);}).sort(function(a,b){return pname(a).localeCompare(pname(b));});
+    $('hubOverview').innerHTML='<div><span class="hub-eyebrow">FRANCHISE HEADQUARTERS</span><h3>'+esc(team.name)+'</h3><p>'+esc(team.handle||'Fantasy franchise')+'</p></div><div class="hub-overview-stats"><div><strong>'+esc(recStr(team))+'</strong><span>Record</span></div><div><strong>'+all.length+'</strong><span>Players</span></div><div><strong>'+starters.length+'</strong><span>Starters</span></div></div>';
+    function rows(title,ids){return '<div class="hub-roster-group"><h4>'+esc(title)+' <span>'+ids.length+'</span></h4>'+(ids.length?ids.map(function(pid){var n=NAMES[pid]||[];return '<div class="hub-player"><span class="hub-pos">'+esc(ppos(pid))+'</span><span>'+esc(pname(pid))+'</span><small>'+esc(n[2]||'')+'</small></div>';}).join(''):'<p class="softnote">None</p>')+'</div>';}
+    $('hubRoster').innerHTML=rows('Starters',starters)+rows('Bench',bench)+rows('Taxi squad',taxi)+rows('Injured reserve',reserve);
+    var keep=$('hubNewsPlayer').value;
+    $('hubNewsPlayer').innerHTML='<option value="all">All players</option>'+all.filter(function(pid){return NAMES[pid];}).sort(function(a,b){return pname(a).localeCompare(pname(b));}).map(function(pid){return '<option value="'+esc(pid)+'">'+esc(pname(pid))+'</option>';}).join('');
+    $('hubNewsPlayer').value=all.some(function(x){return String(x)===keep;})?keep:'all';
+    drawHubNews();
+  }
+  function drawHubNews(){
+    if(!S.T||!$('hubTeam').value)return;
+    var team=S.T[Number($('hubTeam').value)];if(!team)return;
+    var ids=new Set((team.r.players||[]).map(String)),selected=$('hubNewsPlayer').value;
+    var articles=(HUB_NEWS&&HUB_NEWS.articles||[]).filter(function(a){return ids.has(String(a.player_id))&&(selected==='all'||String(a.player_id)===selected);}).slice(0,30);
+    $('hubUpdated').textContent=HUB_NEWS&&HUB_NEWS.updated_at?'Updated '+hubDate(HUB_NEWS.updated_at):'Not updated yet';
+    if(!articles.length){$('hubNews').innerHTML='<div class="hub-empty">'+(HUB_NEWS_ERROR?'News feed unavailable: '+esc(HUB_NEWS_ERROR)+'. ':HUB_NEWS_LOADED?'No recent matching articles for this roster. ':'News feed has not been loaded. ')+'The scheduled GitHub Actions workflow populates this section after deployment.</div>';return;}
+    $('hubNews').innerHTML=articles.map(function(a){
+      var url=String(a.url||'');if(!/^https:\/\//i.test(url))return '';
+      return '<article class="hub-story"><div class="hub-story-meta"><span>'+esc(a.player||'Player')+'</span> · '+esc(a.source||'News')+' · '+esc(hubDate(a.published))+'</div><a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(a.title||'Read article')+' ↗</a></article>';
+    }).join('');
+  }
+  $('hubTeam').addEventListener('change',drawTeamHub);
+  $('hubNewsPlayer').addEventListener('change',drawHubNews);
+  $('hubReload').addEventListener('click',function(){HUB_NEWS_LOADED=false;loadHubNews(true);});
+
   /* ---------- events ---------- */
   $("weekSeg").addEventListener("click", function (e) { var b = e.target.closest("button[data-w]"); if (!b) return; curWeek = Number(b.dataset.w); renderScores(); });
   $("pickSeg").addEventListener("click", function (e) { var b = e.target.closest("button[data-s]"); if (!b) return; curSeason = Number(b.dataset.s); renderPicks(); });
@@ -3271,6 +3339,16 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 <script>
 
 /* Clean Analytics / History tab navigation; no data recalculation. */
+function showHistoryPanel(id){
+  var section=document.getElementById('history');
+  if(!section) return;
+  var nav=section.querySelector('.section-tabs');
+  var target=section.querySelector('#'+id);
+  if(!target) return;
+  nav.querySelectorAll('button[data-panel]').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.panel===id));});
+  section.querySelectorAll('.section-tab-panel').forEach(function(panel){panel.classList.toggle('is-active',panel===target);});
+}
+
 document.querySelectorAll('#analytics .section-tabs, #history .section-tabs').forEach(function(nav){
   nav.addEventListener('click',function(event){
     var btn=event.target.closest('button[data-panel]');
