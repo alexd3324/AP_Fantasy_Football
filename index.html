@@ -1258,6 +1258,70 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 #history #historyNote{max-width:none;margin:0 0 10px;font-size:14px;line-height:1.5}
 #history #seasonArchive{margin-top:10px}
 @media(max-width:650px){#history .section-tabs{gap:7px;margin:6px 0 12px}#history .section-tab{font-size:13px;padding:11px 7px}#history .section-tab-panel{padding:16px}#history .section-page-head{margin-bottom:12px}}
+
+/* Dynasty Dispatch — compact editorial dashboard */
+#dispatch{gap:16px}
+#dispatch>.shead{align-items:center;margin:0;gap:12px}
+#dispatch>.shead h2{margin:0}
+#dispatch #dpSeg{gap:6px}
+#dispatch #dpSeg button{padding:8px 12px;font-size:13px}
+#dispatch .dispatch{grid-template-columns:minmax(0,1fr) 244px;gap:20px;align-items:start}
+#dispatch .article{gap:17px}
+#dispatch .dispatch-data-section{margin-top:18px}
+#dispatch .dispatch-data-section:first-child{margin-top:0}
+#dispatch .dispatch-data-section h4{font-size:22px;margin:0 0 9px}
+#dispatch .dispatch-data-note{font-size:13px!important;line-height:1.45;margin:0 0 14px!important;max-width:75ch}
+#dispatch .dispatch-awards-grid{gap:10px;margin-top:0}
+#dispatch .dispatch-award{position:relative;overflow:hidden;padding:17px 16px 15px;background:var(--surface);border-radius:12px;border:1px solid var(--line);border-top:3px solid var(--award-color,var(--accent));min-height:156px;display:flex;flex-direction:column}
+#dispatch .dispatch-award[data-award="king"]{--award-color:#e2ad38}
+#dispatch .dispatch-award[data-award="disaster"]{--award-color:#dd737b}
+#dispatch .dispatch-award[data-award="sniper"]{--award-color:#5b9dec}
+#dispatch .dispatch-award[data-award="heartbreak"]{--award-color:#db8b9d}
+#dispatch .dispatch-award[data-award="statement"]{--award-color:#65b9a2}
+#dispatch .dispatch-award[data-award="mvp"]{--award-color:#d4a955}
+#dispatch .dispatch-award-icon{font-size:25px;margin:0 0 8px}
+#dispatch .dispatch-award-label{font-size:10.5px;letter-spacing:.07em;margin-bottom:6px}
+#dispatch .dispatch-award-winner{font-size:clamp(16px,1.4vw,19px);line-height:1.24}
+#dispatch .dispatch-award-detail{font-size:12.5px;line-height:1.38;margin-top:auto;padding-top:9px}
+#dispatch .dispatch aside{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:17px 17px 8px;gap:4px}
+#dispatch .dispatch aside .sub{font-size:16px;margin:0 0 3px;padding:0 0 11px;border-bottom:1px solid var(--line)}
+#dispatch .dispatch aside .strip{display:grid;grid-template-columns:1fr;border:0}
+#dispatch .dispatch aside .strip>div{padding:10px 0;border-bottom:1px solid var(--line)}
+#dispatch .dispatch aside .strip>div:last-child{border-bottom:0}
+#dispatch .dispatch aside .strip .k{font-size:12px}
+#dispatch .dispatch aside .strip .v{font-size:23px;line-height:1.18}
+#dispatch .dispatch aside .strip .s{font-size:12px;line-height:1.35}
+@media(max-width:900px){#dispatch .dispatch{grid-template-columns:minmax(0,1fr)}#dispatch .dispatch aside .strip{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 14px}}
+@media(max-width:650px){#dispatch .dispatch-awards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#dispatch .dispatch aside .strip{grid-template-columns:repeat(2,minmax(0,1fr))}#dispatch>.shead{align-items:flex-start}}
+@media(max-width:420px){#dispatch .dispatch-awards-grid{grid-template-columns:minmax(0,1fr)}#dispatch .dispatch-award{min-height:0}}
+
+/* Dispatch editorial polish: recap belongs below the awards and stat rail. */
+#dispatch .dispatch-below{display:flex;flex-direction:column;gap:24px;margin-top:6px;min-width:0}
+#dispatch .dispatch-recap{background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:26px 30px;display:flex;flex-direction:column;gap:13px}
+#dispatch .dispatch-recap .kicker{font-size:12px;letter-spacing:.06em;font-weight:800;color:var(--accent);text-transform:uppercase}
+#dispatch .dispatch-recap h3{font-family:var(--display);font-size:clamp(24px,2.9vw,34px);line-height:1.24;letter-spacing:-.025em;margin:0;max-width:36ch}
+#dispatch .dispatch-recap .dek{font-size:16px;line-height:1.55;color:var(--muted);margin:0 0 5px;max-width:85ch}
+#dispatch .dispatch-recap p:not(.dek){font-size:15.5px;line-height:1.7;margin:0;max-width:90ch}
+#dispatch .dispatch-below>.dispatch-data-section{margin-top:0}
+@media(max-width:650px){#dispatch .dispatch-recap{padding:20px 17px}#dispatch .dispatch-recap h3{font-size:24px}}
+
+/* Dispatch alignment and full-width editorial copy */
+#dispatch .dispatch{align-items:stretch}
+#dispatch .dispatch > article{min-width:0}
+#dispatch .dispatch > aside{height:100%;box-sizing:border-box;display:flex;flex-direction:column}
+#dispatch .dispatch > aside .strip{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+#dispatch .dispatch > aside .strip > div{flex:1;display:flex;flex-direction:column;justify-content:center;padding:7px 0}
+#dispatch .dispatch-recap{width:100%;box-sizing:border-box}
+#dispatch .dispatch-recap h3,
+#dispatch .dispatch-recap .dek,
+#dispatch .dispatch-recap p:not(.dek){max-width:none;width:100%;box-sizing:border-box}
+@media(max-width:900px){
+  #dispatch .dispatch > aside{height:auto}
+  #dispatch .dispatch > aside .strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+  #dispatch .dispatch > aside .strip > div{padding:10px 0}
+}
+@media(max-width:650px){#dispatch .dispatch > aside .strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 </style>
 <style>
 .dynasty-trade-filters{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin:20px 0}
@@ -1514,6 +1578,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
         <div class="strip" id="dpFacts"></div>
       </aside>
     </div>
+    <div id="dpBelow" class="dispatch-below"></div>
   </section>
 
   <div id="matchupOverlay" class="matchup-overlay" hidden role="presentation">
@@ -2433,10 +2498,11 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     if(weekMvp)award('⭐','Starter MVP',pname(weekMvp.id),f2(weekMvp.pts)+' starter points · '+tname(weekMvp.team));
     var awardsHtml='<section class="dispatch-data-section"><h4>🏆 Week '+dispWeek+' · League Awards</h4>'+ 
       '<p class="dispatch-data-note">Automatically awarded from completed Sleeper matchup scores and starting-lineup performances. Heartbreak goes to the closest loss; Sniper to the corresponding winner.</p>'+ 
-      '<div class="dispatch-awards-grid">'+awards.map(function(a){return '<div class="dispatch-award"><div class="dispatch-award-icon">'+a.icon+'</div><div class="dispatch-award-label">'+esc(a.label)+'</div><div class="dispatch-award-winner">'+esc(a.winner)+'</div><div class="dispatch-award-detail">'+esc(a.detail)+'</div></div>';}).join('')+'</div></section>';
-    $("dpArticle").innerHTML = awardsHtml + '<div class="kicker">Week ' + dispWeek + " recap · " + (feat ? "Feature" : "Auto recap") + "</div>" +
+      '<div class="dispatch-awards-grid">'+awards.map(function(a){return '<div class="dispatch-award" data-award="'+(['king','disaster','sniper','heartbreak','statement','mvp'][awards.indexOf(a)]||'mvp')+'"><div class="dispatch-award-icon">'+a.icon+'</div><div class="dispatch-award-label">'+esc(a.label)+'</div><div class="dispatch-award-winner">'+esc(a.winner)+'</div><div class="dispatch-award-detail">'+esc(a.detail)+'</div></div>';}).join('')+'</div></section>';
+    $("dpArticle").innerHTML = awardsHtml;
+    $("dpBelow").innerHTML = '<div class="dispatch-recap"><div class="kicker">Week ' + dispWeek + " recap · " + (feat ? "Feature" : "Auto recap") + "</div>" +
       "<h3>" + esc(art.headline) + "</h3><p class=\"dek\">" + esc(art.dek) + "</p>" +
-      art.paras.filter(function(p){return !/^(FULL SCOREBOARD|TOP STARTER PERFORMANCES|PLAYOFF RACE)\s*[—-]/i.test(p);}).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") +
+      art.paras.filter(function(p){return !/^(FULL SCOREBOARD|TOP STARTER PERFORMANCES|PLAYOFF RACE)\s*[—-]/i.test(p);}).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + '</div>' +
       '<section class="dispatch-data-section"><h4>Week '+dispWeek+' · Final scoreboard</h4><div class="dispatch-score-grid">'+scoreCards+'</div></section>'+
       '<section class="dispatch-data-section"><h4>Top starter at each position</h4><p class="dispatch-data-note">Highest-scoring starting player in each position group, using AP Fantasy Football scoring.</p><div class="dispatch-leader-grid">'+leadersHtml+'</div></section>'+
       (feat ? "" : '<p class="softnote">This recap is generated from recorded matchup results; editorial features can be added for any week.</p>');
