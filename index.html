@@ -1002,6 +1002,27 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 
 /* Team Hub */
 .hub-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:12px}.hub-toolbar label,.hub-filters label{font-weight:750}.hub-toolbar select,.hub-filters select,.hub-toolbar button{background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:9px;padding:11px 14px;font:inherit}.hub-toolbar select{min-width:min(320px,100%)}.hub-toolbar button{cursor:pointer}.hub-overview{background:linear-gradient(115deg,var(--surface),var(--tint));border:1px solid var(--line);border-radius:16px;padding:25px;display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}.hub-eyebrow{font-size:12px;color:var(--accent);font-weight:850;letter-spacing:.12em}.hub-overview h3{font:750 clamp(24px,3vw,36px)/1.2 var(--display);margin:8px 0}.hub-overview p{margin:0;color:var(--muted)}.hub-overview-stats{display:flex;gap:28px;align-items:center}.hub-overview-stats div{display:grid;gap:2px}.hub-overview-stats strong{font-size:25px}.hub-overview-stats span{color:var(--muted);font-size:13px}.hub-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}.hub-panel{background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:23px;min-width:0}.hub-panel h3{font:750 23px/1.3 var(--display);margin:0 0 8px}.hub-roster-group{margin-top:24px}.hub-roster-group h4{display:flex;justify-content:space-between;border-bottom:2px solid var(--line);padding-bottom:9px;margin:0 0 6px;font-size:16px}.hub-roster-group h4 span{color:var(--muted)}.hub-player{display:grid;grid-template-columns:45px 1fr auto;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}.hub-player small{color:var(--muted)}.hub-pos{color:var(--accent);font-size:12px;font-weight:800}.hub-news-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}.hub-filters{display:flex;align-items:center;gap:10px;margin:20px 0}.hub-filters select{min-width:0;max-width:100%}.hub-story{padding:17px 0;border-top:1px solid var(--line)}.hub-story-meta{font-size:12.5px;color:var(--muted);margin-bottom:7px}.hub-story-meta span{color:var(--accent);font-weight:750}.hub-story a{font-size:16px;font-weight:750;line-height:1.45;text-decoration:none;color:var(--fg)}.hub-story a:hover{text-decoration:underline;color:var(--accent)}.hub-empty{padding:20px;background:var(--bg);border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:15px}@media(max-width:850px){.hub-columns{grid-template-columns:1fr}}@media(max-width:500px){.hub-overview-stats{gap:18px}.hub-panel{padding:16px}}
+
+/* Expandable league record book: top five individual performances. */
+#recordRows .record-toggle{display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;color:inherit;font:inherit;font-weight:700;text-align:left;cursor:pointer;padding:2px 0}
+#recordRows .record-chevron{display:inline-block;color:var(--accent);font-size:13px;transition:transform .18s ease}
+#recordRows .record-toggle[aria-expanded="true"] .record-chevron{transform:rotate(90deg)}
+#recordRows .record-main{cursor:pointer}
+#recordRows .record-main:hover{background:var(--tint)}
+#recordRows .record-detail > td{padding:0!important;background:var(--surface)}
+#recordRows .record-detail-inner{padding:16px 18px 20px;border-left:4px solid var(--accent)}
+#recordRows .record-detail-title{font-weight:700;font-size:14px;margin-bottom:10px;color:var(--muted)}
+#recordRows .record-top-table{width:100%;border-collapse:collapse;table-layout:fixed;min-width:540px}
+#recordRows .record-top-table th,#recordRows .record-top-table td{padding:14px 18px!important;font-size:15px;line-height:1.45;vertical-align:middle}
+#recordRows .record-top-table th:nth-child(1),#recordRows .record-top-table td:nth-child(1){width:76px;text-align:center}
+#recordRows .record-top-table th:nth-child(2),#recordRows .record-top-table td:nth-child(2){width:auto;overflow-wrap:break-word}
+#recordRows .record-top-table th:nth-child(3),#recordRows .record-top-table td:nth-child(3){width:125px;text-align:right;white-space:nowrap}
+#recordRows .record-top-table th:nth-child(4),#recordRows .record-top-table td:nth-child(4){width:135px;text-align:left;white-space:nowrap;padding-left:25px!important}
+#recordRows .record-top-table tbody tr:not(:last-child) td{border-bottom:1px solid var(--line)}
+#recordRows .record-top-table th{background:var(--bg)}
+#recordRows .record-top-table tbody tr:first-child td{background:color-mix(in srgb,var(--flag-tint) 65%,var(--surface));font-weight:700}
+#recordRows .record-rank{color:var(--accent);font-weight:750}
+@media(max-width:650px){#recordRows .record-detail-inner{padding:14px 10px}#recordRows .record-top-table th,#recordRows .record-top-table td{padding:12px 10px!important;font-size:13px}#recordRows .record-top-table th:nth-child(4),#recordRows .record-top-table td:nth-child(4){padding-left:14px!important}}
 </style>
 </head>
 <body>
@@ -3091,14 +3112,42 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     $('h2hA').innerHTML=select;$('h2hB').innerHTML=select;
     $('h2hA').value=F[oldA]?oldA:keys[0];$('h2hB').value=F[oldB]?oldB:(keys[1]||keys[0]);renderH2H();
     var regs=D.games.filter(function(g){return g.reg;});
-    function rec(kind,arr,score,desc){if(!arr.length)return null;var x=arr.slice().sort(function(a,b){return score(b)-score(a);})[0];return {kind:kind,who:desc(x),value:f2(score(x)),when:x.year+' W'+x.week};}
+    // Rank individual completed regular-season performances; the same team can appear more than once.
     var scores=[];regs.forEach(function(g){scores.push({year:g.year,week:g.week,team:g.fa,pts:g.a,opp:g.b});scores.push({year:g.year,week:g.week,team:g.fb,pts:g.b,opp:g.a});});
-    var recs=[rec('Highest team score',scores,function(x){return x.pts;},function(x){return F[x.team].name;}),rec('Lowest team score',scores,function(x){return -x.pts;},function(x){return F[x.team].name;}),rec('Biggest blowout',regs,function(x){return Math.abs(x.a-x.b);},function(x){return F[x.a>x.b?x.fa:x.fb].name+' over '+F[x.a>x.b?x.fb:x.fa].name;}),rec('Closest matchup',regs,function(x){return -Math.abs(x.a-x.b);},function(x){return F[x.fa].name+' vs '+F[x.fb].name;}),rec('Most points in a loss',scores.filter(function(x){return x.pts<x.opp;}),function(x){return x.pts;},function(x){return F[x.team].name;}),rec('Fewest points in a win',scores.filter(function(x){return x.pts>x.opp;}),function(x){return -x.pts;},function(x){return F[x.team].name;})].filter(Boolean);
-    recs.forEach(function(r){if(r.kind==='Lowest team score'||r.kind==='Closest matchup'||r.kind==='Fewest points in a win')r.value=f2(-Number(r.value));});
-    $('recordRows').innerHTML=recs.map(function(r){return '<tr><td>'+esc(r.kind)+'</td><td>'+esc(r.who)+'</td><td class="num">'+r.value+'</td><td>'+esc(r.when)+'</td></tr>';}).join('');
+    function topRecords(kind,arr,metric,holder,ascending){
+      return {kind:kind,items:arr.slice().sort(function(a,b){
+        var diff=metric(a)-metric(b);
+        return (ascending?diff:-diff)||Number(b.year)-Number(a.year)||b.week-a.week;
+      }).slice(0,5).map(function(x){return {who:holder(x),value:f2(metric(x)),when:x.year+' W'+x.week};})};
+    }
+    var recs=[
+      topRecords('Highest team score',scores,function(x){return x.pts;},function(x){return F[x.team].name;},false),
+      topRecords('Lowest team score',scores,function(x){return x.pts;},function(x){return F[x.team].name;},true),
+      topRecords('Biggest blowout',regs,function(x){return Math.abs(x.a-x.b);},function(x){return F[x.a>x.b?x.fa:x.fb].name+' over '+F[x.a>x.b?x.fb:x.fa].name;},false),
+      topRecords('Closest matchup',regs,function(x){return Math.abs(x.a-x.b);},function(x){return F[x.fa].name+' vs '+F[x.fb].name;},true),
+      topRecords('Most points in a loss',scores.filter(function(x){return x.pts<x.opp;}),function(x){return x.pts;},function(x){return F[x.team].name;},false),
+      topRecords('Fewest points in a win',scores.filter(function(x){return x.pts>x.opp;}),function(x){return x.pts;},function(x){return F[x.team].name;},true)
+    ].filter(function(r){return r.items.length;});
+    $('recordRows').innerHTML=recs.map(function(r,i){
+      var first=r.items[0],id='record-top-'+i;
+      var main='<tr class="record-main" data-record-index="'+i+'"><td><button type="button" class="record-toggle" aria-expanded="false" aria-controls="'+id+'"><span class="record-chevron" aria-hidden="true">▶</span>'+esc(r.kind)+'</button></td><td>'+esc(first.who)+'</td><td class="num">'+first.value+'</td><td>'+esc(first.when)+'</td></tr>';
+      var rows=r.items.map(function(x,j){return '<tr><td class="record-rank">'+(j+1)+'</td><td>'+esc(x.who)+'</td><td class="num">'+x.value+'</td><td>'+esc(x.when)+'</td></tr>';}).join('');
+      return main+'<tr class="record-detail" id="'+id+'" hidden><td colspan="4"><div class="record-detail-inner"><div class="record-detail-title">All-time top '+r.items.length+' · '+esc(r.kind)+'</div><div class="scroll"><table class="record-top-table"><thead><tr><th>Rank</th><th>Franchise / matchup</th><th class="num">Value</th><th>When</th></tr></thead><tbody>'+rows+'</tbody></table></div></div></td></tr>';
+    }).join('');
     renderHallOfFame(D);
 
   }
+
+  document.addEventListener('click',function(event){
+    var row=event.target.closest('#recordRows tr.record-main');
+    if(!row)return;
+    var btn=row.querySelector('.record-toggle'),detail=row.nextElementSibling;
+    if(!btn||!detail)return;
+    var open=btn.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('#recordRows .record-toggle[aria-expanded="true"]').forEach(function(b){b.setAttribute('aria-expanded','false');});
+    document.querySelectorAll('#recordRows .record-detail').forEach(function(d){d.hidden=true;});
+    if(!open){btn.setAttribute('aria-expanded','true');detail.hidden=false;}
+  });
   function renderHallOfFame(D){
     var F=D.franchise, totals={}, seasonsChecked=0, verifiedFinals=0, skipped=[];
     Object.keys(F).forEach(function(id){totals[id]={id:id,name:F[id].name,champ:0,runner:0,third:0,fourth:0,fifth:0,top3:0,top5:0,last:0,years:[],titles:[],podiums:[],fifths:[],lastYears:[]};});
