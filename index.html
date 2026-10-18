@@ -1317,6 +1317,54 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 #draftPaneTrades .trade-load-actions button{background:var(--surface);border:1px solid var(--line);color:var(--fg);border-radius:9px;padding:10px 20px;cursor:pointer;font:700 14px var(--body)}
 @media(max-width:680px){#draftPaneTrades .impact-grid{grid-template-columns:1fr}#draftPaneTrades .trade-toggle{grid-template-columns:1fr}#draftPaneTrades .trade-toggle-action{font-size:12px}#picks .draft-tabs button{font-size:12px!important}}
 </style>
+
+<style>
+/* Unified AP Fantasy Football palette: crisp cards, consistent blue interactions,
+   restrained green/red performance cues, and warm championship gold. */
+:root, :root[data-theme="light"] {
+  --bg:#edf2f9;
+  --surface:#ffffff;
+  --card:#ffffff;
+  --fg:#17263d;
+  --muted:#4a5e79;
+  --line:#bdcde2;
+  --accent:#205fc0;
+  --accent-ink:#ffffff;
+  --tint:#e3edfb;
+  --flag:#906000;
+  --flag-tint:#f8ecc8;
+  --loss:#ac3644;
+  --loss-tint:#f9e6e9;
+  --success:#18764e;
+  --success-tint:#e1f3e9;
+  color-scheme:light;
+}
+:root[data-theme="dark"] {
+  --bg:#0b1527;
+  --surface:#17243c;
+  --card:#17243c;
+  --fg:#f0f5ff;
+  --muted:#bac9e2;
+  --line:#354762;
+  --accent:#6aaaff;
+  --accent-ink:#08142b;
+  --tint:#213655;
+  --flag:#f0c45e;
+  --flag-tint:#3b321b;
+  --loss:#f08a92;
+  --loss-tint:#40262e;
+  --success:#77d9a7;
+  --success-tint:#173a2c;
+  color-scheme:dark;
+}
+/* Keep interactive elements recognizably blue, not every informational card. */
+a:hover { color:var(--accent); }
+button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { outline:2px solid var(--accent);outline-offset:3px; }
+.scroll,.section-tab-panel,.draft-tab-panel,.dynasty-trade-card { background:var(--surface); }
+.tag.champ,tr.cut td { background:var(--flag-tint);color:var(--flag); }
+.form .w { background:var(--success-tint);color:var(--success); }
+.form .l { background:var(--loss-tint);color:var(--loss); }
+</style>
 </head>
 <body>
 <div class="wrap">
