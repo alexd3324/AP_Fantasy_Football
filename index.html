@@ -1023,6 +1023,23 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 #recordRows .record-top-table tbody tr:first-child td{background:color-mix(in srgb,var(--flag-tint) 65%,var(--surface));font-weight:700}
 #recordRows .record-rank{color:var(--accent);font-weight:750}
 @media(max-width:650px){#recordRows .record-detail-inner{padding:14px 10px}#recordRows .record-top-table th,#recordRows .record-top-table td{padding:12px 10px!important;font-size:13px}#recordRows .record-top-table th:nth-child(4),#recordRows .record-top-table td:nth-child(4){padding-left:14px!important}}
+.wp-box{padding:13px 18px 15px;border-top:1px solid var(--line)}
+.wp-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:11px;font-weight:850;letter-spacing:.09em;color:var(--muted);margin-bottom:9px}
+.wp-upset{color:var(--flag);letter-spacing:.02em;font-size:12px;font-weight:800}
+.wp-row{display:flex;justify-content:space-between;gap:12px;font-size:14px;margin-bottom:8px}
+.wp-row span{min-width:0;overflow-wrap:anywhere}
+.wp-meter{height:10px;border-radius:20px;overflow:hidden;background:var(--line);display:flex}
+.wp-meter span:first-child{background:var(--accent)}
+.wp-meter span:last-child{flex:1;background:var(--muted);opacity:.5}
+.wp-proj{margin-top:9px;font-size:13px;color:var(--muted)}
+.matchup-analysis-shell{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:24px;margin-top:24px}
+.matchup-analysis-shell .sub{margin-top:28px}
+.matchup-analysis-shell .strip{margin-top:16px}
+@media(max-width:650px){.matchup-analysis-shell{padding:14px}}
+@media all{.mp-proj{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-top:4px;white-space:nowrap}
+.matchup-lineup h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.mp-teamproj{font-size:13px;font-weight:700;color:var(--muted)}
+.matchup-player .mp-pts{line-height:1.2}}
 </style>
 </head>
 <body>
@@ -1083,6 +1100,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     <div class="matchups-page-head"><span class="matchups-kicker">AP FANTASY FOOTBALL · GAME DAY</span><h2 id="h-matchups">Matchup Center</h2><p>Every weekly matchup, every starter, every score. Select a game to view its full lineup below.</p></div>
     <div class="matchups-board-shell"><div class="matchups-board-head"><h3 class="matchups-subhead">Weekly scoreboard</h3><div class="matchups-week-controls"><button id="matchupPrev" type="button" aria-label="Previous week">← Previous</button><div class="seg" id="matchupWeekSeg" role="group" aria-label="Matchup week"></div><button id="matchupNext" type="button" aria-label="Next week">Next →</button></div></div><div class="games" id="matchupGames"></div><p class="note" id="matchupPageNote"></p></div>
     <div id="matchupPageDetail" class="matchup-page-detail" hidden></div>
+    <div id="matchupAnalysis"></div>
   </section>
   <section id="analytics" aria-labelledby="h-analytics" hidden>
     <div class="section-page-head"><h2 id="h-analytics">Analytics</h2><p>Explore season projections, league-wide performance, and individual franchise statistics.</p></div>
@@ -2066,10 +2084,10 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
           if(score==null&&e.players_points)score=e.players_points[id];
           var value=score==null?'—':f2(Number(score)||0);
           var nfl=(NAMES[id]&&NAMES[id][2])||'';
-          return '<div class="matchup-player"><span class="mp-pos">'+esc(ppos(id))+'</span><div class="mp-main"><div class="mp-name">'+esc(pname(id))+'</div><div class="mp-nfl">'+esc(nfl||'NFL team unavailable')+'</div><div class="mp-game" data-nfl-team="'+esc(nfl)+'">Loading NFL matchup…</div></div><span class="mp-pts">'+value+'</span></div>';
+          return '<div class="matchup-player"><span class="mp-pos">'+esc(ppos(id))+'</span><div class="mp-main"><div class="mp-name">'+esc(pname(id))+'</div><div class="mp-nfl">'+esc(nfl||'NFL team unavailable')+'</div><div class="mp-game" data-nfl-team="'+esc(nfl)+'">Loading NFL matchup…</div></div><span class="mp-pts">'+value+'<small class="mp-proj" data-proj-pid="'+esc(id)+'"></small></span></div>';
         }).join('');
-        return '<section class="matchup-lineup"><h3>'+esc(tname(e.roster_id))+' · Starters</h3>'+(rows||'<p class="matchup-footnote">Starter lineup not yet available from Sleeper.</p>')+'</section>';
-      }).join('')+'</div><div class="matchup-schedule-note">Loading NFL opponents, kickoff times and locations…</div><p class="matchup-footnote">Player points are taken from Sleeper matchup data for this week. Live figures update when the website refreshes; team totals may include scoring adjustments not visible in individual starter rows.</p>';
+        return '<section class="matchup-lineup" data-roster="'+e.roster_id+'"><h3><span>'+esc(tname(e.roster_id))+' · Starters</span><span class="mp-teamproj" data-proj-team="'+e.roster_id+'"></span></h3>'+(rows||'<p class="matchup-footnote">Starter lineup not yet available from Sleeper.</p>')+'</section>';
+      }).join('')+'</div><div class="matchup-schedule-note">Loading NFL opponents, kickoff times and locations…</div><p class="matchup-footnote">Player points are taken from Sleeper matchup data for this week. Live figures update when the website refreshes; team totals may include scoring adjustments not visible in individual starter rows. The “Proj” figure under each score is Sleeper’s player projection, recalculated with this league’s scoring settings.</p>';
     if(inline){
       var target=$('matchupPageDetail');
       target.innerHTML='<div class="matchup-inline-title"><span>WEEK '+w+' · STARTING LINEUPS</span><button type="button" id="closeInlineMatchup">Close breakdown ✕</button></div>'+$('matchupDetail').innerHTML;
@@ -2080,10 +2098,12 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
       overlay.hidden=true;
       document.body.style.overflow='';
       fillMatchupScheduleInto(w,target);
+      fillProjections(w,target);
       target.scrollIntoView({behavior:'smooth',block:'start'});
     }else{
       overlay.hidden=false;document.body.style.overflow='hidden';$('matchupClose').focus();
       fillMatchupSchedule(w);
+      fillProjections(w,$('matchupDetail'));
     }
   }
   function closeMatchup(){$('matchupOverlay').hidden=true;document.body.style.overflow='';}
@@ -2100,6 +2120,245 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
   $('matchupOverlay').addEventListener('click',function(ev){if(ev.target===this)closeMatchup();});
 
   var matchupPageWeek=null;
+
+  /* WINPROB-START */
+  /* ===== Matchup win probability and weekly scoreboard analysis ===== */
+  var STARTER_HIST_CACHE={};
+  function normCdf(z){
+    var x=Math.abs(z),k=1/(1+0.2316419*x),d=0.3989423*Math.exp(-x*x/2);
+    var p=d*k*(0.3193815+k*(-0.3565638+k*(1.781478+k*(-1.821256+k*1.330274))));
+    return z>0?1-p:p;
+  }
+  // Each starter's scoring history from weeks BEFORE the selected week (never leaks the result into the odds).
+  function starterHistory(week){
+    var key=LEAGUE_ID+':'+week+':'+S.lastScored;
+    if(STARTER_HIST_CACHE[key])return STARTER_HIST_CACHE[key];
+    var past={},tot=0,n=0;
+    for(var w=1;w<week&&w<=S.lastScored;w++)(S.weeks[w]||[]).forEach(function(e){
+      if(e.matchup_id==null)return;
+      (e.starters||[]).forEach(function(pid,k){
+        if(!pid||pid==='0')return;
+        var v=Number((e.starters_points||[])[k]||0);
+        (past[pid]=past[pid]||[]).push(v);tot+=v;n++;
+      });
+    });
+    return STARTER_HIST_CACHE[key]={past:past,avg:n?tot/n:0,n:n};
+  }
+  // Normal approximation: each unfinished starter contributes his average (never less than points already scored)
+  // with a spread proportional to that average. Starters whose NFL game is final are locked in with zero variance.
+  function matchupWinProb(week,e,o){
+    var H=starterHistory(week),pst=PROJ_STATE[week],hasProj=!!(pst&&pst.map);
+    if(!H.n&&!hasProj)return null;
+    var isFinal=week<=S.lastScored;
+    var done=(!isFinal&&week===currentNFLWeek&&completedNFLTeams)?completedNFLTeams:null;
+    function side(x){
+      var any=false,mean=0,varc=0;
+      (x.starters||[]).forEach(function(pid,k){
+        if(!pid||pid==='0')return;
+        any=true;
+        var pts=isFinal?0:Number((x.starters_points||[])[k]||0);
+        var hist=H.past[pid],cnt=hist?hist.length:0;
+        var pj=projFor(week,pid);
+        var avg=pj!=null?pj:(H.n?((hist?hist.reduce(function(a,b){return a+b;},0):0)+H.avg*2)/(cnt+2):8);
+        var nfl=NAMES[pid]&&String(NAMES[pid][2]||'').toUpperCase();
+        if(done&&nfl&&done[nfl]){mean+=pts;}
+        else{mean+=Math.max(pts,avg);var sd=Math.max(5,avg*0.75);varc+=sd*sd;}
+      });
+      return any?{mean:mean,varc:varc}:null;
+    }
+    var A=side(e),B=side(o);
+    if(!A||!B)return null;
+    var sd=Math.sqrt(A.varc+B.varc),diff=A.mean-B.mean,p;
+    if(sd<0.01)p=diff>0?1:diff<0?0:0.5;else p=normCdf(diff/sd);
+    return {pa:p*100,pb:(1-p)*100,ma:A.mean,mb:B.mean,final:isFinal};
+  }
+  function wpHtml(wp,e,o,isFinal,aPts,bPts){
+    if(!wp)return '';
+    var pa=Math.round(wp.pa),pb=100-pa,upset='';
+    if(isFinal&&aPts!==bPts){
+      var wprob=aPts>bPts?wp.pa:wp.pb;
+      if(wprob<40)upset='<span class="wp-upset">⚡ Upset · winner was a '+Math.round(wprob)+'% pick</span>';
+    }
+    var label=isFinal?'PRE-GAME ODDS':'WIN PROBABILITY';
+    return '<div class="wp-box"><div class="wp-head"><span>'+label+'</span>'+upset+'</div>'+
+      '<div class="wp-row"><span>'+esc(tname(e.roster_id))+' <b>'+pa+'%</b></span><span><b>'+pb+'%</b> '+esc(tname(o.roster_id))+'</span></div>'+
+      '<div class="wp-meter" role="img" aria-label="'+esc(tname(e.roster_id))+' '+pa+' percent, '+esc(tname(o.roster_id))+' '+pb+' percent"><span style="width:'+wp.pa.toFixed(1)+'%"></span><span></span></div>'+
+      '<div class="wp-proj">'+(isFinal?'Pre-game projection':'Projected totals')+': '+f1(wp.ma)+' – '+f1(wp.mb)+'</div></div>';
+  }
+  var SLOT_ELIG={QB:['QB'],RB:['RB'],WR:['WR'],TE:['TE'],K:['K'],DEF:['DEF'],DL:['DL'],LB:['LB'],DB:['DB'],FLEX:['RB','WR','TE'],SUPER_FLEX:['QB','RB','WR','TE'],REC_FLEX:['WR','TE'],WRRB_FLEX:['RB','WR'],IDP_FLEX:['DL','LB','DB']};
+  function anPos(pid){
+    if(/^[A-Z]{2,3}$/.test(String(pid)))return 'DEF';
+    var p=String(ppos(pid)||'').toUpperCase();
+    if(['DE','DT','NT'].indexOf(p)>=0)return 'DL';
+    if(['CB','S','FS','SS'].indexOf(p)>=0)return 'DB';
+    if(p==='PK')return 'K';
+    return p;
+  }
+  // Best possible lineup from everyone on that week's roster. Most restrictive slots fill first, then flex slots take the best remaining eligible player.
+  // Greedy, so it can differ slightly from a perfect optimizer in rare flex overlaps.
+  function optimalLineup(e){
+    var slots=((S.league&&S.league.roster_positions)||[]).filter(function(s){return s!=='BN'&&SLOT_ELIG[s];}).slice().sort(function(a,b){return SLOT_ELIG[a].length-SLOT_ELIG[b].length;});
+    var pool=Object.keys(e.players_points||{}).map(function(pid){return {id:pid,pos:anPos(pid),pts:Number(e.players_points[pid])||0};}).sort(function(a,b){return b.pts-a.pts;});
+    var used={},total=0;
+    slots.forEach(function(s){
+      var el=SLOT_ELIG[s];
+      for(var i=0;i<pool.length;i++){var q=pool[i];if(used[q.id]||el.indexOf(q.pos)<0)continue;used[q.id]=1;total+=q.pts;break;}
+    });
+    return total;
+  }
+  function renderMatchupAnalysis(week,isFinal){
+    var box=$('matchupAnalysis');
+    if(!box)return;
+    var F=weekFacts(week);
+    if(!F){box.innerHTML='';return;}
+    var ents=F.ents,n=ents.length;
+    var sorted=ents.slice().sort(function(a,b){return (Number(b.points)||0)-(Number(a.points)||0);});
+    var pts=sorted.map(function(e){return Number(e.points)||0;});
+    var median=n%2?pts[(n-1)/2]:(pts[n/2-1]+pts[n/2])/2;
+    function tile(k,v,s){return '<div><span class="k">'+esc(k)+'</span><span class="v">'+esc(v)+'</span><span class="s">'+esc(s)+'</span></div>';}
+    var tiles=[
+      tile('Highest score',f2(F.hi.points),tname(F.hi.roster_id)),
+      tile('Lowest score',f2(F.lo.points),tname(F.lo.roster_id)),
+      tile('League average',f1(F.avg),'Median '+f1(median)+' · '+n+' teams')
+    ];
+    if(F.close)tiles.push(tile('Closest game',f2(F.close.m),tname(F.close.win.roster_id)+' over '+tname(F.close.lose.roster_id)));
+    if(F.blow)tiles.push(tile('Biggest blowout',f2(F.blow.m),tname(F.blow.win.roster_id)+' over '+tname(F.blow.lose.roster_id)));
+    // Per-team analysis (final weeks only: lineups and bench points are complete).
+    var rows=[],regretMax=null,effBest=null;
+    if(isFinal){
+      var res={};F.gms.forEach(function(g){res[g.win.roster_id]={won:true,opp:g.lose.roster_id,m:g.m};res[g.lose.roster_id]={won:false,opp:g.win.roster_id,m:g.m};});
+      sorted.forEach(function(e,i){
+        var starters=(e.starters||[]).filter(function(x){return x&&x!=='0';});
+        var inLineup={};starters.forEach(function(x){inLineup[x]=1;});
+        var startSum=0;(e.starters||[]).forEach(function(pid,k){if(pid&&pid!=='0')startSum+=Number((e.starters_points||[])[k]||0);});
+        var best=Math.max(optimalLineup(e),startSum),left=Math.max(0,best-startSum),eff=best>0?startSum/best*100:100;
+        var bench=Object.keys(e.players_points||{}).filter(function(pid){return !inLineup[pid];}).map(function(pid){return {id:pid,pts:Number(e.players_points[pid])||0};}).sort(function(a,b){return b.pts-a.pts;})[0];
+        var beat=0;ents.forEach(function(o){if(o===e)return;var op=Number(o.points)||0,mp=Number(e.points)||0;if(mp>op)beat+=1;else if(mp===op)beat+=0.5;});
+        var share=n>1?beat/(n-1):0,r=res[e.roster_id],flag='';
+        if(r&&r.won&&share<=0.4)flag='Lucky win';
+        if(r&&!r.won&&share>=0.6)flag='Unlucky loss';
+        var row={id:e.roster_id,rank:i+1,score:Number(e.points)||0,best:best,left:left,eff:eff,bench:bench&&bench.pts>0?bench:null,beat:beat,all:n-1,won:r?r.won:null,flag:flag};
+        rows.push(row);
+        if(!regretMax||row.left>regretMax.left)regretMax=row;
+        if(!effBest||row.eff>effBest.eff)effBest=row;
+      });
+      if(effBest)tiles.push(tile('Most efficient lineup',f1(effBest.eff)+'%',tname(effBest.id)+' · '+f1(effBest.score)+' of '+f1(effBest.best)+' possible'));
+      if(regretMax&&regretMax.left>0.05)tiles.push(tile('Most left on bench',f1(regretMax.left)+' pts',tname(regretMax.id)));
+    }
+    // Biggest upset (final) or closest odds (current week), from the same pre-game model shown on the cards.
+    var pairs=pairsOf(week).filter(function(g){return g.length===2;}),upset=null,tight=null;
+    pairs.forEach(function(g){
+      var wp=matchupWinProb(week,g[0],g[1]);if(!wp)return;
+      var a=Number(g[0].points)||0,b=Number(g[1].points)||0;
+      if(isFinal&&a!==b){var win=a>b?g[0]:g[1],lose=win===g[0]?g[1]:g[0],prob=a>b?wp.pa:wp.pb;if(prob<50&&(!upset||prob<upset.prob))upset={prob:prob,win:win,lose:lose};}
+      var gap=Math.abs(wp.pa-50);if(!tight||gap<tight.gap)tight={gap:gap,g:g,wp:wp};
+    });
+    if(isFinal&&upset)tiles.push(tile('Biggest upset',Math.round(upset.prob)+'% pre-game',tname(upset.win.roster_id)+' beat '+tname(upset.lose.roster_id)));
+    if(!isFinal&&tight)tiles.push(tile('Closest odds',Math.round(tight.wp.pa)+'% – '+Math.round(tight.wp.pb)+'%',tname(tight.g[0].roster_id)+' vs '+tname(tight.g[1].roster_id)));
+    var table='';
+    if(isFinal){
+      table='<h4 class="sub">Team performance</h4><p class="note">Ranked by score. Optimal is the best lineup possible from each team’s whole roster that week; efficiency is points scored divided by optimal. All-play is how many other teams each score would have beaten. A lucky win scored below roughly the league’s 40th percentile and still won; an unlucky loss scored above roughly the 60th percentile and still lost.</p>'+
+        '<div class="scroll"><table style="min-width:900px"><thead><tr><th>#</th><th>Team</th><th>Result</th><th class="num">Score</th><th class="num">Optimal</th><th class="num">Efficiency</th><th class="num">Left on bench</th><th>Best benched player</th><th class="num">All-play</th></tr></thead><tbody>'+
+        rows.map(function(r){
+          var res=r.won===null?'—':(r.won?'<span class="up">Win</span>':'<span class="down">Loss</span>')+(r.flag?'<div class="th">'+esc(r.flag)+'</div>':'');
+          return '<tr><td class="rank">'+r.rank+'</td><td class="tn">'+esc(tname(r.id))+'</td><td>'+res+'</td><td class="num">'+f2(r.score)+'</td><td class="num">'+f2(r.best)+'</td><td class="num">'+f1(r.eff)+'%</td><td class="num '+(r.left>=15?'down':'')+'">'+f1(r.left)+'</td><td>'+(r.bench?esc(pname(r.bench.id))+' <span class="th">'+esc(ppos(r.bench.id))+' · '+f1(r.bench.pts)+'</span>':'<span class="dash">—</span>')+'</td><td class="num">'+num(r.beat)+'–'+num(r.all-r.beat)+'</td></tr>';
+        }).join('')+'</tbody></table></div>';
+    }else{
+      table='<p class="note">Lineup efficiency, bench points and all-play records appear once the week is final, because they need complete scoring.</p>';
+    }
+    var top=topPerformers(week,6);
+    var topHtml=top.length?'<h4 class="sub">Top starters of the week</h4><div class="scroll"><table><thead><tr><th>#</th><th>Player</th><th>Pos</th><th>NFL</th><th>Fantasy team</th><th class="num">Points</th></tr></thead><tbody>'+top.map(function(x,i){return '<tr><td class="rank">'+(i+1)+'</td><td class="tn">'+esc(pname(x.id))+'</td><td>'+esc(ppos(x.id))+'</td><td>'+esc(NAMES[x.id]?NAMES[x.id][2]:'—')+'</td><td>'+esc(tname(x.team))+'</td><td class="num">'+f2(x.pts)+'</td></tr>';}).join('')+'</tbody></table></div>':'';
+    box.innerHTML='<div class="matchup-analysis-shell"><h3 class="matchups-subhead">Week '+week+' analysis</h3>'+
+      '<p class="note">'+(isFinal?'What the scoreboard doesn’t show: who left points on the bench, who got lucky and who got robbed.':'Live snapshot of the week so far; final-week analysis fills in once every game is scored.')+'</p>'+
+      '<div class="strip">'+tiles.join('')+'</div>'+table+topHtml+'</div>';
+  }
+  /* ===== Sleeper player projections (unofficial endpoint; always degrades gracefully) ===== */
+  var PROJ_STATE={},PROJ_INFLIGHT={};
+  function projPos(x){
+    var pid=String(x.player_id);
+    if(/^[A-Z]{2,3}$/.test(pid))return 'DEF';
+    var p=String((x.player&&x.player.position)||ppos(pid)||'').toUpperCase();
+    if(['DE','DT','NT'].indexOf(p)>=0)return 'DL';
+    if(['CB','S','FS','SS'].indexOf(p)>=0)return 'DB';
+    return p;
+  }
+  // Sleeper projects raw stats. Points are rebuilt with THIS league's scoring settings, not Sleeper's generic PPR number.
+  function projPoints(stats,pos){
+    var sc=(S.league&&S.league.scoring_settings)||{},total=0,any=false;
+    Object.keys(stats||{}).forEach(function(k){
+      if(k.indexOf('pts_')===0||k.indexOf('adp')>=0||k==='gp'||k==='cmp_pct'||k.indexOf('bonus_rec_')===0)return;
+      var w=Number(sc[k]),v=Number(stats[k]);
+      if(!w||!isFinite(v))return;
+      total+=v*w;any=true;
+    });
+    var rec=Number(stats&&stats.rec)||0;
+    if(rec){
+      if(pos==='TE'&&sc.bonus_rec_te){total+=rec*Number(sc.bonus_rec_te);any=true;}
+      if(pos==='RB'&&sc.bonus_rec_rb){total+=rec*Number(sc.bonus_rec_rb);any=true;}
+      if(pos==='WR'&&sc.bonus_rec_wr){total+=rec*Number(sc.bonus_rec_wr);any=true;}
+    }
+    return any?total:null;
+  }
+  function projFor(week,pid){
+    var st=PROJ_STATE[week],v=st&&st.map?st.map[String(pid)]:undefined;
+    return v==null?null:v;
+  }
+  function loadProjections(week){
+    var st=PROJ_STATE[week],age=st?Date.now()-st.at:Infinity;
+    if(st&&age<(st.status==='ok'?10*60*1000:5*60*1000))return Promise.resolve(st.map||null);
+    if(PROJ_INFLIGHT[week])return PROJ_INFLIGHT[week];
+    var season=S.league&&S.league.season;
+    if(!season)return Promise.resolve(null);
+    var prev=st&&st.map||null;
+    var url='https://api.sleeper.app/projections/nfl/'+season+'/'+week+'?season_type=regular&position[]=QB&position[]=RB&position[]=WR&position[]=TE&position[]=K&position[]=DEF&position[]=DL&position[]=LB&position[]=DB';
+    PROJ_INFLIGHT[week]=fetch(url).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(function(arr){
+      var map={},n=0;
+      (Array.isArray(arr)?arr:[]).forEach(function(x){
+        if(!x||x.player_id==null||!x.stats)return;
+        var pts=projPoints(x.stats,projPos(x));
+        if(pts===null)return;
+        map[String(x.player_id)]=Math.max(0,pts);n++;
+      });
+      if(!n)throw new Error('No usable projections');
+      PROJ_STATE[week]={status:'ok',map:map,at:Date.now()};
+      return map;
+    }).catch(function(){
+      PROJ_STATE[week]={status:'fail',map:prev,at:Date.now()};
+      return prev;
+    }).finally(function(){delete PROJ_INFLIGHT[week];});
+    return PROJ_INFLIGHT[week];
+  }
+  function ensureProjections(week){
+    var st=PROJ_STATE[week];
+    if(st&&Date.now()-st.at<(st.status==='ok'?10*60*1000:5*60*1000))return;
+    if(PROJ_INFLIGHT[week])return;
+    var before=st&&st.status;
+    loadProjections(week).then(function(){
+      var now=PROJ_STATE[week]&&PROJ_STATE[week].status;
+      if(now==='ok'&&matchupPageWeek===week)renderMatchupsPage();
+    });
+  }
+  function winNote(week){
+    var st=PROJ_STATE[week];
+    if(st&&st.map)return ' Win probabilities are estimates built from Sleeper’s player projections (converted with this league’s scoring), falling back to a starter’s past scoring when no projection exists. They are not a calibrated betting line; finished games show pre-game odds from the lineups actually played.';
+    if(st&&st.status==='fail')return ' Sleeper projections could not be loaded, so win probabilities use each starter’s past scoring. They are rough estimates, not a calibrated betting line.';
+    return ' Loading Sleeper projections…';
+  }
+  function fillProjections(week,root){
+    loadProjections(week).then(function(map){
+      if(!root||root.dataset.week!==String(week))return;
+      root.querySelectorAll('.matchup-lineup').forEach(function(sec){
+        var sum=0,seen=0;
+        sec.querySelectorAll('[data-proj-pid]').forEach(function(el){
+          var v=map?map[el.dataset.projPid]:undefined;
+          if(v!=null){el.textContent='Proj '+v.toFixed(1);sum+=v;seen++;}else el.textContent=map?'Proj —':'';
+        });
+        var tot=sec.querySelector('[data-proj-team]');
+        if(tot)tot.textContent=seen?'Projected '+sum.toFixed(1):'';
+      });
+    });
+  }
+  /* WINPROB-END */
   function renderMatchupsPage(){
     if(!S.league)return;
     if(matchupPageWeek==null)matchupPageWeek=S.leg;
@@ -2115,13 +2374,18 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     var statusClass=isFinal?'is-final':isCurrent?'is-live':'';
     $('matchupGames').innerHTML=games.map(function(g){
       var a=Number(g[0].points)||0,b=Number(g[1].points)||0;
+      var wpBlock=wpHtml(matchupWinProb(matchupPageWeek,g[0],g[1]),g[0],g[1],isFinal,a,b);
       var selected=$('matchupPageDetail').hidden===false&&$('matchupPageDetail').dataset.week===String(matchupPageWeek)&&$('matchupPageDetail').dataset.matchup===String(g[0].matchup_id);
       return '<article class="game matchup-page-card'+(selected?' is-selected':'')+'" role="button" tabindex="0" aria-label="View '+esc(tname(g[0].roster_id))+' versus '+esc(tname(g[1].roster_id))+' lineups" data-week="'+matchupPageWeek+'" data-matchup="'+esc(String(g[0].matchup_id))+'">'+
         '<div class="matchup-card-top"><span class="matchup-card-week">WEEK '+matchupPageWeek+' · MATCHUP</span><span class="matchup-status '+statusClass+'">'+status+'</span></div>'+
         g.map(function(e,i){var score=i===0?a:b;var lead=(a!==b&&score===Math.max(a,b));return '<div class="matchup-score-row'+(lead?' is-leading':'')+'"><span class="matchup-team">'+esc(tname(e.roster_id))+'</span><strong class="matchup-score">'+f2(score)+'</strong></div>';}).join('')+
+        wpBlock+
         '<div class="matchup-card-footer">View full starting lineups →</div></article>';
     }).join('')||'<div class="pending">Matchups have not been published for this week.</div>';
     $('matchupPageNote').textContent=isFinal?'Final scores from Sleeper.':isCurrent?'Current-week scores reflect the latest Sleeper data loaded; refreshes occur every 60 seconds while the site is open.':'Upcoming matchup pairings from Sleeper; scores will appear when available.';
+    $('matchupPageNote').textContent+=winNote(matchupPageWeek);
+    ensureProjections(matchupPageWeek);
+    renderMatchupAnalysis(matchupPageWeek,isFinal);
   }
   $('matchupWeekSeg').addEventListener('click',function(ev){var btn=ev.target.closest('[data-mw]');if(!btn)return;matchupPageWeek=Number(btn.dataset.mw);$('matchupPageDetail').hidden=true;renderMatchupsPage();});
   ['matchupPrev','matchupNext'].forEach(function(id){$(id).addEventListener('click',function(){matchupPageWeek+=id==='matchupPrev'?-1:1;$('matchupPageDetail').hidden=true;renderMatchupsPage();});});
@@ -2308,7 +2572,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
     sel.value = String(start);
     drawRoster(start);
     renderMoves();
-    renderDispatch(); renderPlayers(); renderProfiles();
+    renderDispatch(); renderPlayers(); renderProfiles(); renderMatchupsPage();
   }
 
   /* ---------- additional league tools ---------- */
@@ -2370,6 +2634,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
       completedNFLTeams=finished;
       playerStatusMessage='Current-week appearances count only after the player’s NFL game is final.';
       renderPlayers();
+      renderMatchupsPage();
     }).catch(function(){
       completedNFLTeams=null;
       playerStatusMessage='NFL game status could not be verified. Current-week appearances are excluded from game counts until verification succeeds.';
