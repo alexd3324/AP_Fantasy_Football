@@ -3964,7 +3964,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
   });
   function renderHallOfFame(D){
     var F=D.franchise, totals={}, seasonsChecked=0, verifiedFinals=0, skipped=[];
-    Object.keys(F).forEach(function(id){totals[id]={id:id,name:F[id].name,champ:0,runner:0,third:0,fourth:0,fifth:0,top3:0,top5:0,last:0,years:[],titles:[],podiums:[],fifths:[],lastYears:[]};});
+    Object.keys(F).forEach(function(id){totals[id]={id:id,name:F[id].name,champ:0,runner:0,third:0,fourth:0,fifth:0,top3:0,top5:0,playoffs:0,last:0,years:[],titles:[],podiums:[],fifths:[],lastYears:[]};});
     HISTORY.forEach(function(H){
       var year=String(H.league.season),settings=H.league.settings||{};
       // An active season must never be counted as a completed championship/last-place finish.
@@ -3979,6 +3979,20 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
         if([1,3,5].indexOf(p)<0||win==null||lose==null||win===lose)return;
         if(!owners[win]||!owners[lose])return;
         finals[p]={winner:owners[win],loser:owners[lose]};
+      });
+      // Playoff appearances: count each franchise once per completed season when
+      // its roster is explicitly present in Sleeper's WINNERS bracket.
+      // Never infer playoff qualification from regular-season standings.
+      var playoffRosterIds=new Set();
+      (H.bracket||[]).forEach(function(m){
+        ['t1','t2','w','l'].forEach(function(key){
+          var rid=m[key];
+          if(rid!=null&&owners[rid])playoffRosterIds.add(String(rid));
+        });
+      });
+      playoffRosterIds.forEach(function(rid){
+        var owner=owners[rid];
+        if(totals[owner])totals[owner].playoffs++;
       });
       var title=finals[1];
       if(title&&totals[title.winner]&&totals[title.loser]){
@@ -4012,20 +4026,20 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     var arr=Object.keys(totals).map(function(id){
       var x=totals[id];
       // Exclusive finish points: a championship counts once, not again as top 3/top 5.
-      x.score=100*x.champ+55*x.runner+30*x.third+15*x.fourth+8*x.fifth-12*x.last;
+      x.score=100*x.champ+55*x.runner+30*x.third+15*x.fourth+8*x.fifth+10*x.playoffs-12*x.last;
       return x;
     });
     arr.sort(function(a,b){return b.score-a.score||b.champ-a.champ||b.runner-a.runner||b.top3-a.top3||a.name.localeCompare(b.name);});
     var champions=arr.filter(function(x){return x.champ>0;});
     function metric(icon,value,label,detail){return '<div class="hof-metric"><div class="icon" aria-hidden="true">'+icon+'</div><div class="value">'+value+'</div><div class="label">'+label+'</div><div class="detail">'+esc(detail)+'</div></div>';}
     var mostTitles=champions.length?champions[0].name:'Not yet verified';
-    var metrics='<div class="hof-metrics">'+metric('🏆',verifiedFinals,'Verified championships','Across '+seasonsChecked+' completed seasons')+metric('🥈',arr.reduce(function(s,x){return s+x.runner;},0),'Runner-up finishes','Verified championship-game losses')+metric('🥉',arr.reduce(function(s,x){return s+x.top3;},0),'Top-three finishes','Confirmed playoff placements')+metric('⭐',arr.reduce(function(s,x){return s+x.top5;},0),'Top-five finishes','Confirmed playoff placements')+'</div>';
-    var rows=arr.map(function(x,i){return '<tr><td class="rank">'+(i+1)+'</td><td class="tn">'+esc(x.name)+'</td><td class="num hof-score">'+x.score+'</td><td class="num champ-col">'+x.champ+'</td><td class="num">'+x.runner+'</td><td class="num">'+x.top3+'</td><td class="num">'+x.top5+'</td><td class="num">'+x.last+'</td></tr>';}).join('');
+    var metrics='<div class="hof-metrics">'+metric('🏆',verifiedFinals,'Verified championships','Across '+seasonsChecked+' completed seasons')+metric('🥈',arr.reduce(function(s,x){return s+x.runner;},0),'Runner-up finishes','Verified championship-game losses')+metric('🥉',arr.reduce(function(s,x){return s+x.top3;},0),'Top-three finishes','Confirmed playoff placements')+metric('🎟️',arr.reduce(function(s,x){return s+x.playoffs;},0),'Playoff appearances','Verified winners-bracket berths')+'</div>';
+    var rows=arr.map(function(x,i){return '<tr><td class="rank">'+(i+1)+'</td><td class="tn">'+esc(x.name)+'</td><td class="num hof-score">'+x.score+'</td><td class="num champ-col">'+x.champ+'</td><td class="num">'+x.runner+'</td><td class="num">'+x.top3+'</td><td class="num">'+x.top5+'</td><td class="num">'+x.playoffs+'</td><td class="num">'+x.last+'</td></tr>';}).join('');
     var titleRows=champions.map(function(x){return '<tr><td class="tn">'+esc(x.name)+'</td><td class="num champ-col">'+x.champ+'</td><td>'+x.titles.slice().sort().reverse().map(function(y){return '<span class="hof-badge">'+esc(y)+'</span>';}).join('')+'</td></tr>';}).join('');
     $('hallContent').innerHTML='<div class="hof-hero"><h3>AP Fantasy Football · Trophy Room</h3><p>Championships lead the way, but runner-up finishes and consistent playoff success also earn recognition. Only completed seasons and verifiable playoff placements count.</p></div>'+metrics+
-      '<h3 class="hof-section-title">All-time franchise honors</h3><div class="scroll"><table class="hof-table" style="min-width:870px"><thead><tr><th>#</th><th>Franchise</th><th class="num">HOF points</th><th class="num">🏆 Titles</th><th class="num">🥈 Runner-up</th><th class="num">Top 3</th><th class="num">Top 5</th><th class="num">Last place</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+      '<h3 class="hof-section-title">All-time franchise honors</h3><div class="scroll"><table class="hof-table" style="min-width:870px"><thead><tr><th>#</th><th>Franchise</th><th class="num">HOF points</th><th class="num">🏆 Titles</th><th class="num">🥈 Runner-up</th><th class="num">Top 3</th><th class="num">Top 5</th><th class="num">Playoffs</th><th class="num">Last place</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
       '<h3 class="hof-section-title">Championship banner wall</h3>'+(titleRows?'<div class="scroll"><table><thead><tr><th>Franchise</th><th class="num">Titles</th><th>Championship seasons</th></tr></thead><tbody>'+titleRows+'</tbody></table></div>':'<div class="hof-note">No championship games could be verified from the linked Sleeper winners brackets.</div>')+
-      '<div class="hof-note"><strong>How this is counted:</strong> Rankings use exclusive finishing-position points: champion +100, runner-up +55, third +30, fourth +15, fifth +8, last in regular season −12. A finish earns only its highest applicable placement award (no double counting for top-three/top-five). Runner-up = loser of the verified championship game. Championships = winner of the Sleeper title game. Top 3 = first, second or third in verified playoff placement games. Top 5 = first through fifth in verified playoff placement games. Last place = last in completed regular-season standings (wins, then points scored as a fallback tiebreaker), not the consolation-bracket loser. Missing placement games are never guessed. '+esc(skipped.length?'Incomplete results: '+skipped.join('; ')+'.':'All available completed seasons were evaluated.')+'</div>';
+      '<div class="hof-note"><strong>How this is counted:</strong> Rankings use exclusive finishing-position points: champion +100, runner-up +55, third +30, fourth +15, fifth +8, verified playoff appearance +10, last in regular season −12. Finishing-position awards are exclusive; playoff qualification is a separate bonus earned once per season, including by champions. Runner-up = loser of the verified championship game. Championships = winner of the Sleeper title game. Top 3 = first, second or third in verified playoff placement games. Top 5 = first through fifth in verified playoff placement games. Last place = last in completed regular-season standings (wins, then points scored as a fallback tiebreaker), not the consolation-bracket loser. Playoff appearances are verified from the Sleeper winners bracket, not regular-season ranking. Missing placement games are never guessed. '+esc(skipped.length?'Incomplete results: '+skipped.join('; ')+'.':'All available completed seasons were evaluated.')+'</div>';
   }
   function renderH2H(){
     if(!HISTORY.length)return;
