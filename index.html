@@ -1334,6 +1334,23 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 .age-dot{position:absolute;top:3px;width:14px;height:14px;transform:translateX(-50%);border-radius:50%;background:var(--accent);border:2px solid var(--surface);box-shadow:0 0 0 1px var(--accent)}
 .age-mean{position:absolute;top:0;bottom:0;border-left:2px dashed var(--muted);opacity:.75}.age-value{text-align:right;font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}.age-axis{display:flex;justify-content:space-between;margin:10px 52px 0 0;padding-left:min(232px,30%);color:var(--muted);font-size:11px}
 @media(max-width:650px){.age-panel{padding:15px}.age-row{grid-template-columns:minmax(90px,120px) minmax(100px,1fr) 42px;gap:8px}.age-name{font-size:11px}.age-axis{padding-left:128px;margin-right:42px}}
+
+/* Team Hub: position-first roster navigation */
+.hub-tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:thin}
+.hub-tabs button{flex:0 0 auto;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--fg);padding:11px 18px;font:700 15px var(--body);cursor:pointer}
+.hub-tabs button:hover{border-color:var(--accent)}
+.hub-tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.hub-position-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:18px}
+.hub-position-card{border:1px solid var(--line);border-radius:12px;background:var(--bg);padding:15px 17px;text-align:left;color:var(--fg);cursor:pointer}
+.hub-position-card:hover{border-color:var(--accent)}
+.hub-position-card strong{display:block;font:750 22px var(--display);color:var(--accent)}
+.hub-position-card span{display:block;color:var(--muted);font-size:13px;margin-top:5px}
+.hub-position-meta{display:flex;gap:9px;flex-wrap:wrap;margin:10px 0 15px;color:var(--muted);font-size:14px}
+.hub-player{grid-template-columns:45px minmax(0,1fr) auto}
+.hub-player small{text-align:right}
+@media(max-width:450px){.hub-position-grid{grid-template-columns:1fr}.hub-tabs button{padding:10px 14px}}
+
+.wildcard-race{margin:20px 0 24px;padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:15px}.wildcard-race[hidden]{display:none}.race-title{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:18px}.race-title h3{margin:5px 0;font-size:19px}.race-title p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}.race-kicker{font-size:10px;letter-spacing:1.3px;font-weight:800;color:var(--accent)}.race-pill{border:1px solid var(--line);padding:8px 10px;border-radius:30px;font-size:11px;white-space:nowrap;color:var(--muted)}.race-list{display:grid;gap:9px}.race-row{display:grid;grid-template-columns:26px minmax(120px,1.5fr) minmax(65px,2fr) 78px 75px;gap:12px;align-items:center;font-size:12px;padding:10px 8px;border-bottom:1px solid var(--line)}.race-row:last-child{border-bottom:0}.race-rank{color:var(--muted);font-weight:800}.race-row .team-jump{text-align:left}.race-track{height:8px;background:var(--line);border-radius:20px;overflow:hidden}.race-track span{display:block;height:100%;background:var(--accent);border-radius:20px}.race-row strong,.race-gap{text-align:right;font-variant-numeric:tabular-nums}.race-gap{color:var(--muted);font-size:11px}@media(max-width:650px){.race-row{grid-template-columns:18px minmax(95px,1fr) 62px 65px;gap:7px}.race-track{display:none}.wildcard-race{padding:14px}.race-pill{display:none}}
 </style>
 <style>
 .dynasty-trade-filters{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin:20px 0}
@@ -1528,7 +1545,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
         <button type="button" data-stand-view="advanced" aria-pressed="false">Advanced stats</button>
         <button type="button" data-stand-view="playoffs" aria-pressed="false">Playoff race</button>
       </div>
-      <label class="stand-odds"><input type="checkbox" id="standOddsToggle"> Show simulated playoff odds</label>
+      <label class="stand-odds" id="standOddsLabel"><input type="checkbox" id="standOddsToggle"> Show simulated playoff odds</label>
     </div>
     <p class="stand-view-note" id="standViewNote"></p>
     <div class="scroll stand-table-wrap">
@@ -1538,6 +1555,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
       </table>
     </div>
 
+    <div id="wildcardRace" class="wildcard-race" hidden></div>
     <p class="legend" id="standLegend">Rankings follow your league's playoff rules. Click a column heading to sort, or a franchise to open Team Hub.</p>
     <span id="faabLegend" hidden></span><span id="standOddsTh" hidden></span>
     <div class="bracket-shell" id="projectedBracket"><div class="bracket-top"><div><span class="bracket-eyebrow">ROAD TO THE CHAMPIONSHIP</span><h2>Projected Playoff Bracket</h2></div><span class="bracket-provisional">PROVISIONAL · CURRENT STANDINGS</span></div><p class="bracket-desc">If the regular season ended today. Seeds 1–5 follow record (points for breaks ties); the sixth seed goes to the highest-scoring remaining franchise. Future results can change every seed.</p><div class="bracket-actions"><button type="button" id="simulatePlayoffsBtn" class="bracket-sim-btn">🎲 Simulate playoffs</button><span id="bracketSimStatus" class="bracket-sim-status" aria-live="polite">Run a sample postseason using each team’s scoring history.</span></div><div id="bracketContent"></div></div>
@@ -1663,7 +1681,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     <div class="section-page-head"><h2 id="h-teamhub">Team Hub</h2><p>Every franchise's live Sleeper roster and recent real-world NFL player news, in one place.</p></div>
     <div class="hub-toolbar"><label for="hubTeam">Franchise</label><select id="hubTeam" aria-label="Choose franchise"><option value="">Loading teams…</option></select><button type="button" id="hubReload">Refresh news</button></div>
     <div id="hubOverview" class="hub-overview"></div>
-    <div class="hub-columns"><div class="hub-panel"><h3>Current roster</h3><p class="softnote">Automatically synced from Sleeper.</p><div id="hubRoster"></div></div>
+    <div class="hub-tabs" id="hubPositionTabs" role="tablist" aria-label="Team Hub position groups"><button type="button" data-hubpos="OVERVIEW" role="tab" aria-selected="true">Overview</button><button type="button" data-hubpos="QB" role="tab" aria-selected="false">QB</button><button type="button" data-hubpos="RB" role="tab" aria-selected="false">RB</button><button type="button" data-hubpos="WR" role="tab" aria-selected="false">WR</button><button type="button" data-hubpos="TE" role="tab" aria-selected="false">TE</button><button type="button" data-hubpos="IDP" role="tab" aria-selected="false">IDP</button><button type="button" data-hubpos="OTHER" role="tab" aria-selected="false">Other</button></div><div class="hub-columns"><div class="hub-panel"><h3 id="hubRosterTitle">Roster overview</h3><p class="softnote" id="hubRosterNote">Automatically synced from Sleeper.</p><div id="hubRoster"></div></div>
     <div class="hub-panel"><div class="hub-news-head"><h3>Latest player news</h3><span id="hubUpdated" class="softnote"></span></div><p class="softnote">Real article headlines from external publishers. Select a headline to read the original story.</p><div class="hub-filters"><label for="hubNewsPlayer">Player</label><select id="hubNewsPlayer"><option value="all">All players</option></select></div><div id="hubNews" aria-live="polite">Loading news…</div></div></div>
   </section>
 
@@ -2111,9 +2129,30 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     el.innerHTML=teams.map(function(t){return '<div class="age-row"><button class="age-name" type="button" data-team-jump="'+t.id+'" title="Open '+esc(t.name)+' in Team Hub">'+esc(t.name)+'</button><div class="age-track"><span class="age-mean" style="left:'+pos(avg)+'" title="League average: '+avg.toFixed(1)+' years"></span><span class="age-dot" style="left:'+pos(t.age)+'" title="'+esc(t.name)+': '+t.age.toFixed(1)+' years ('+t.count+' of '+t.total+' players with known ages)"></span></div><span class="age-value">'+t.age.toFixed(1)+'</span></div>';}).join('')+'<div class="age-axis"><span>'+low+' yrs</span><span>League avg '+avg.toFixed(1)+'</span><span>'+high+' yrs</span></div>';
   }
 
+  // Conservative wins-only clinch threshold. The points-for wildcard cannot be
+  // mathematically eliminated from W/L alone while games remain.
+  function playoffMagic(id,cut){
+    if(!cut)return {magic:null,elimination:null,clinched:false};
+    var direct=Math.max(0,cut-1),end=regEnd(),team=S.T[id];
+    if(!direct)return {magic:null,elimination:null,clinched:false};
+    var others=S.ids.filter(function(x){return x!==id;}).map(function(x){
+      var t=S.T[x],played=Number(t.w||0)+Number(t.l||0)+Number(t.t||0);
+      return Number(t.w||0)+Number(t.t||0)*.5+Math.max(0,end-played);
+    }).sort(function(a,b){return b-a;});
+    var threshold=others[direct-1];
+    var own=Number(team.w||0)+Number(team.t||0)*.5;
+    var left=Math.max(0,end-(Number(team.w||0)+Number(team.l||0)+Number(team.t||0)));
+    // Require a strictly higher win total than the possible direct-seed rival.
+    var need=Math.max(0,Math.floor(threshold-own+1e-8)+1);
+    var clinched=need===0;
+    return {magic:clinched?0:need<=left?need:null,elimination:null,clinched:clinched};
+  }
+
   function renderStandings() {
     var st=S.league.settings||{},cut=Number(st.playoff_teams||0),form=formFor(),mine=myTeam();
-    var faab=st.waiver_type===2&&st.waiver_budget,showOdds=$('standOddsToggle').checked;
+    var faab=st.waiver_type===2&&st.waiver_budget;
+    var showOdds=standView==='playoffs' || $('standOddsToggle').checked;
+    $('standOddsLabel').hidden=standView!=='playoffs';
     var champ=S.league.metadata&&S.league.metadata.latest_league_winner_roster_id;
     var ordered=S.order.slice(),leader=S.T[S.order[0]],bubble=cut?S.T[S.order[Math.min(cut-1,S.order.length-1)]]:null;
     var streaks=S.ids.map(function(id){var a=form[id]||[],n=0;for(var j=a.length-1;j>=0&&a[j]==='W';j--)n++;return {id:id,n:n};}).sort(function(a,b){return b.n-a.n||S.order.indexOf(a.id)-S.order.indexOf(b.id);});
@@ -2123,15 +2162,23 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
       '<div class="stand-highlight"><span class="label">⚔️ Playoff cutoff</span><strong>'+esc(bubble?bubble.name:'Not configured')+'</strong><small>'+(bubble?'Seed '+cut+' · '+recStr(bubble):'Playoff teams not set')+'</small></div>';
     document.querySelectorAll('[data-stand-view]').forEach(function(btn){btn.setAttribute('aria-pressed',String(btn.dataset.standView===standView));});
     $('standNote').textContent=cut?'Top '+cut+' qualify · Seed '+cut+' is the points-for wildcard':'Ranked by wins, then points for';
-    $('standViewNote').textContent=standView==='standings'?'Official seeds, record, scoring, and recent form.':standView==='advanced'?'Lineup efficiency, points allowed, potential points, and waiver budget.':'Current playoff position and estimated odds when simulations are available.';
-    var cols=standView==='advanced'?[['seed','Seed'],['name','Franchise'],['pf','PF'],['pa','PA'],['max','Max PF'],['eff','Efficiency']].concat(faab?[['faab','FAAB']]:[]):standView==='playoffs'?[['seed','Seed'],['name','Franchise'],['wins','Record'],['pf','PF'],['status','Playoff status']]:[['seed','Seed'],['name','Franchise'],['wins','W–L'],['pf','PF'],['max','Max PF'],['eff','Efficiency'],['form','Last 5']];
-    if(showOdds)cols.push(['odds','Playoff odds']);
-    var sortable={seed:1,name:1,wins:1,pf:1,pa:1,max:1,eff:1,faab:1};
-    $('standHead').innerHTML=cols.map(function(c){return '<th'+(['seed','name','form','status'].indexOf(c[0])<0?' class="num"':'')+'>'+(sortable[c[0]]?'<button class="table-sort" data-stand-sort="'+c[0]+'">'+c[1]+' <span class="sort-arrow">'+(standSort===c[0]?(standSort==='seed'?'↕':standDesc?'↓':'↑'):'↕')+'</span></button>':c[1])+'</th>';}).join('');
+    $('standViewNote').textContent=standView==='standings'?'Official seeds, record, scoring, and recent form.':standView==='advanced'?'Scoring efficiency, points allowed, potential points, scoring differential, and waiver budget.':'Games behind the league leader, simulated qualification odds, and the points wildcard chase.';
+    var cols=standView==='advanced'?[['seed','Seed'],['name','Franchise'],['pa','PA'],['max','Max PF'],['eff','Efficiency'],['diff','Point diff.'],['ppg','PF / game']].concat(faab?[['faab','FAAB']]:[]):standView==='playoffs'?[['seed','Seed'],['name','Franchise'],['wins','Record'],['gb','GB to 1st'],['pf','PF'],['odds','Playoff odds'],['status','Playoff status']]:[['seed','Seed'],['name','Franchise'],['wins','W–L'],['pf','PF'],['form','Last 5']];
+    var sortable={seed:1,name:1,wins:1,pf:1,pa:1,max:1,eff:1,faab:1,diff:1,ppg:1,gb:1,odds:1};
+    $('standHead').innerHTML=cols.map(function(c){return '<th'+(['seed','name','form','status'].indexOf(c[0])<0?' class="num"':'')+'>'+(sortable[c[0]]?'<button class="table-sort" data-stand-sort="'+c[0]+'">'+c[1]+' <span class="sort-arrow">'+(standSort===c[0]?(standDesc?'↓':'↑'):'↕')+'</span></button>':c[1])+'</th>';}).join('');
+    var directCut=Math.max(0,cut-1),recordCutId=S.pure[Math.min(directCut-1,S.pure.length-1)];
+    var recordCut=recordCutId?S.T[recordCutId]:null;
+    var recordScore=function(t){return Number(t.w||0)+Number(t.t||0)*.5;};
+    var gap=function(id){var first=S.T[S.order[0]];return first?Math.max(0,recordScore(first)-recordScore(S.T[id])):0;};
+    var simOdds=function(id){return scenarioBaseline&&scenarioBaseline[id]?scenarioBaseline[id].pct:null;};
     if(standSort!=='seed')ordered.sort(function(a,b){var x=S.T[a],y=S.T[b],vx,vy;
       if(standSort==='name')return (standDesc?-1:1)*x.name.localeCompare(y.name);
-      if(standSort==='wins'){vx=Number(x.wins||0)+Number(x.ties||0)*.5;vy=Number(y.wins||0)+Number(y.ties||0)*.5;}
+      if(standSort==='wins'){vx=recordScore(x);vy=recordScore(y);}
       else if(standSort==='eff'){vx=x.max?x.pf/x.max:0;vy=y.max?y.pf/y.max:0;}
+      else if(standSort==='diff'){vx=x.pf-x.pa;vy=y.pf-y.pa;}
+      else if(standSort==='ppg'){vx=x.pf/Math.max(1,x.w+x.l+x.t);vy=y.pf/Math.max(1,y.w+y.l+y.t);}
+      else if(standSort==='gb'){vx=gap(a);vy=gap(b);}
+      else if(standSort==='odds'){vx=simOdds(a)??-1;vy=simOdds(b)??-1;}
       else if(standSort==='faab'){vx=(st.waiver_budget||0)-(x.faabUsed||0);vy=(st.waiver_budget||0)-(y.faabUsed||0);}
       else{vx=Number(x[standSort]||0);vy=Number(y[standSort]||0);}
       return (standDesc?-1:1)*(vx-vy)||S.order.indexOf(a)-S.order.indexOf(b);
@@ -2139,13 +2186,23 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     var rows='';
     ordered.forEach(function(id,idx){var seed=S.order.indexOf(id)+1,t=S.T[id];
       var tags='';if(t.owner)tags+='<span class="tag">Commissioner</span>';if(champ&&Number(champ)===id)tags+='<span class="tag champ">Defending champ</span>';if(cut&&S.wild===id)tags+='<span class="tag">Points wildcard</span>';if(mine===id)tags+='<span class="tag you">You</span>';
+
       var pips=(form[id]||[]).slice(-5).map(function(x){return '<b class="'+x.toLowerCase()+'" title="'+(x==='W'?'Win':x==='L'?'Loss':'Tie')+'">'+x+'</b>';}).join('');
-      var values={seed:'<span class="'+(seed<=3?'top-rank':'')+'">'+seed+'</span>',name:'<div class="tn"><button type="button" class="team-jump" data-team-jump="'+id+'" title="Open '+esc(t.name)+' in Team Hub">'+esc(t.name)+'</button>'+tags+'</div><div class="th">'+esc(t.handle)+'</div>',wins:recStr(t),pf:f2(t.pf),pa:f2(t.pa),max:t.max?f2(t.max):'—',eff:t.max?(t.pf/t.max*100).toFixed(1)+'%':'—',faab:'$'+(st.waiver_budget-t.faabUsed),form:'<span class="form">'+pips+'</span>',status:cut?(seed<=cut?'<span class="up">In playoff position</span>':'<span class="th">Outside playoff picture</span>'):'—',odds:scenarioBaseline&&scenarioBaseline[id]?'<span class="odds-value">'+scenarioBaseline[id].pct.toFixed(1)+'%</span>':'—'};
+      var played=t.w+t.l+t.t,odds=simOdds(id);
+      var values={seed:'<span class="'+(seed<=3?'top-rank':'')+'">'+seed+'</span>',name:'<div class="tn"><button type="button" class="team-jump" data-team-jump="'+id+'" title="Open '+esc(t.name)+' in Team Hub">'+esc(t.name)+'</button>'+tags+'</div><div class="th">'+esc(t.handle)+'</div>',wins:recStr(t),pf:f2(t.pf),pa:f2(t.pa),max:t.max?f2(t.max):'—',eff:t.max?(t.pf/t.max*100).toFixed(1)+'%':'—',diff:(t.pf-t.pa>=0?'+':'')+f2(t.pf-t.pa),ppg:f2(t.pf/Math.max(1,played)),faab:'$'+(st.waiver_budget-t.faabUsed),form:'<span class="form">'+pips+'</span>',gb:gap(id).toFixed(1),status:cut?(seed<=directCut?'<span class="up">Record berth position</span>':S.wild===id?'<span class="up">Points wildcard position</span>':'<span class="th">In the hunt</span>'):'—',odds:odds!==null?'<span class="odds-value">'+odds.toFixed(1)+'%</span>':'<span class="th" title="Run Playoff Scenario Explorer for projections">Not available</span>'};
       rows+='<tr class="'+(cut&&seed<=cut?'in':'out')+(cut&&seed===cut?' bubble':'')+'">'+cols.map(function(c){var key=c[0];return '<td'+(key==='seed'?' class="rank"':['name','form','status'].indexOf(key)<0?' class="num"':'')+'>'+values[key]+'</td>';}).join('')+'</tr>';
       if(standSort==='seed'&&cut&&idx===cut-1&&idx<ordered.length-1)rows+='<tr class="cut"><td colspan="'+cols.length+'"><span class="cut-label">Playoff cutoff · Top '+cut+'</span></td></tr>';
     });
     $('standBody').innerHTML=rows;
-    $('standLegend').textContent='Seeds always show the official league order, even when sorted. Select a franchise to open Team Hub. PF = points scored; Max PF = best possible lineup; Efficiency = PF ÷ Max PF. Playoff odds appear only when simulation results are available.';
+    $('standLegend').textContent=standView==='playoffs'?'GB to 1st measures wins behind the league leader (ties count as half a win). The sixth berth goes to the highest-scoring remaining team. Playoff odds come from 3,000 simulated seasons when complete future Sleeper matchups are available; otherwise they are unavailable. Status describes the current position, not mathematical clinching.':'Seeds remain the official league order when sorted. Select a franchise to open Team Hub. Advanced stats contains scoring and efficiency details.';
+    var race=$('wildcardRace');
+    race.hidden=standView!=='playoffs'||cut<2;
+    if(!race.hidden){
+      var directIds=new Set(S.pure.slice(0,directCut));
+      var contenders=S.ids.filter(function(id){return !directIds.has(id);}).sort(function(a,b){return S.T[b].pf-S.T[a].pf;});
+      var top=contenders.length?S.T[contenders[0]].pf:0;
+      race.innerHTML='<div class="race-title"><div><span class="race-kicker">THE SIXTH PLAYOFF BERTH</span><h3>🎯 Points Wildcard Race</h3><p>Highest points for among teams outside the five record-based berths. The eligible pool changes as standings change.</p></div><span class="race-pill">'+contenders.length+' eligible teams</span></div><div class="race-list">'+contenders.map(function(id,i){var t=S.T[id],behind=top-t.pf;return '<div class="race-row"><span class="race-rank">'+(i+1)+'</span><button class="team-jump" type="button" data-team-jump="'+id+'">'+esc(t.name)+'</button><div class="race-track"><span style="width:'+(top?Math.max(2,t.pf/top*100):0).toFixed(1)+'%"></span></div><strong>'+f2(t.pf)+'</strong><span class="race-gap">'+(i===0?'LEADER':'−'+f2(behind))+'</span></div>';}).join('')+'</div>';
+    }
     renderProjectedBracket();
     renderRosterAges();
   }
@@ -2397,7 +2454,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     $('scenarioGames').innerHTML=future.filter(function(g){return g.week===next;}).map(function(g,i){return '<div class="scenario-game"><label for="scenarioGame'+i+'">'+esc(tname(g.a))+' vs. '+esc(tname(g.b))+'</label><select id="scenarioGame'+i+'" data-scenario-pair="'+g.a+'-'+g.b+'"><option value="">No prediction — simulate game</option><option value="'+g.a+'">'+esc(tname(g.a))+' wins</option><option value="'+g.b+'">'+esc(tname(g.b))+' wins</option></select></div>';}).join('');
     $('scenarioRun').disabled=false;
     if(!scenarioReady){scenarioReady=true;teamSelect.addEventListener('change',function(){renderScenarioView();});$('scenarioRun').addEventListener('click',function(){runScenario();});$('scenarioReset').addEventListener('click',function(){document.querySelectorAll('[data-scenario-pair]').forEach(function(el){el.value='';});runScenario();});$('scenarioGames').addEventListener('change',function(){ $('scenarioStatus').textContent='Predictions changed. Recalculate to update the odds.';});}
-    scenarioBaseline=simulateScenario({});renderScenarioView();
+    scenarioBaseline=simulateScenario({});renderScenarioView();if(S&&S.T)renderStandings();
   }
   function simulateScenario(locks){
     var ctx=scenarioContext;if(!ctx)return null;
@@ -4165,8 +4222,28 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     var occupied=new Set(starters.concat(taxi,reserve));
     var bench=all.filter(function(pid){return !occupied.has(pid);}).sort(function(a,b){return pname(a).localeCompare(pname(b));});
     $('hubOverview').innerHTML='<div><span class="hub-eyebrow">FRANCHISE HEADQUARTERS</span><h3>'+esc(team.name)+'</h3><p>'+esc(team.handle||'Fantasy franchise')+'</p></div><div class="hub-overview-stats"><div><strong>'+esc(recStr(team))+'</strong><span>Record</span></div><div><strong>'+all.length+'</strong><span>Players</span></div><div><strong>'+starters.length+'</strong><span>Starters</span></div></div>';
-    function rows(title,ids){return '<div class="hub-roster-group"><h4>'+esc(title)+' <span>'+ids.length+'</span></h4>'+(ids.length?ids.map(function(pid){var n=NAMES[pid]||[];return '<div class="hub-player"><span class="hub-pos">'+esc(ppos(pid))+'</span><span>'+esc(pname(pid))+'</span><small>'+esc(n[2]||'')+'</small></div>';}).join(''):'<p class="softnote">None</p>')+'</div>';}
-    $('hubRoster').innerHTML=rows('Starters',starters)+rows('Bench',bench)+rows('Taxi squad',taxi)+rows('Injured reserve',reserve);
+    var group=window.APFF_HUB_POSITION||'OVERVIEW';
+    function hubGroup(pid){var p=String(ppos(pid)||'').toUpperCase();if(['QB','RB','WR','TE'].indexOf(p)>=0)return p;if(['DL','DE','DT','NT','EDGE','LB','ILB','OLB','DB','CB','S','FS','SS'].indexOf(p)>=0)return 'IDP';return 'OTHER';}
+    function hubStatus(pid){if(starters.some(function(x){return String(x)===String(pid);}))return 'Starter';if(taxi.some(function(x){return String(x)===String(pid);}))return 'Taxi';if(reserve.some(function(x){return String(x)===String(pid);}))return 'IR';return 'Bench';}
+    function hubRows(title,ids){return '<div class="hub-roster-group"><h4>'+esc(title)+' <span>'+ids.length+'</span></h4>'+(ids.length?ids.map(function(pid){var n=NAMES[pid]||[],a=Number(n[3]);return '<div class="hub-player"><span class="hub-pos">'+esc(ppos(pid))+'</span><span>'+esc(pname(pid))+'</span><small>'+esc(n[2]||'—')+' · '+(a>15&&a<55?a.toFixed(1)+'y · ':'')+esc(hubStatus(pid))+'</small></div>';}).join(''):'<p class="softnote">No players in this group.</p>')+'</div>';}
+    var groups=['QB','RB','WR','TE','IDP','OTHER'];
+    var titles={QB:'Quarterbacks',RB:'Running backs',WR:'Wide receivers',TE:'Tight ends',IDP:'Individual defensive players',OTHER:'Kickers & other positions'};
+    var tabs=$('hubPositionTabs');tabs.querySelectorAll('button[data-hubpos]').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.hubpos===group));});
+    if(group==='OVERVIEW'){
+      $('hubRosterTitle').textContent='Position group overview';
+      $('hubRosterNote').textContent='Choose a position to see its players, roster status and age. All groups reflect the current Sleeper roster.';
+      $('hubRoster').innerHTML='<div class="hub-position-grid">'+groups.map(function(g){var ids=all.filter(function(pid){return hubGroup(pid)===g;}),ages=ids.map(function(pid){return Number((NAMES[pid]||[])[3]);}).filter(function(a){return a>15&&a<55;});return '<button type="button" class="hub-position-card" data-hubgoto="'+g+'"><strong>'+g+' · '+ids.length+'</strong><span>'+esc(titles[g])+'</span><span>'+(ages.length?'Average age '+(ages.reduce(function(a,b){return a+b;},0)/ages.length).toFixed(1):'Age unavailable')+'</span></button>';}).join('')+'</div>';
+    }else{
+      var ids=all.filter(function(pid){return hubGroup(pid)===group;}),ages=ids.map(function(pid){return Number((NAMES[pid]||[])[3]);}).filter(function(a){return a>15&&a<55;});
+      $('hubRosterTitle').textContent=titles[group]||group;
+      $('hubRosterNote').textContent='Current roster · '+ids.length+' players · '+(ages.length?'Average age '+(ages.reduce(function(a,b){return a+b;},0)/ages.length).toFixed(1)+' years':'Average age unavailable');
+      if(group==='IDP'){
+        var subs=[['DL',['DL','DE','DT','NT','EDGE']],['LB',['LB','ILB','OLB']],['DB',['DB','CB','S','FS','SS']]];
+        $('hubRoster').innerHTML=subs.map(function(sub){return hubRows(sub[0],ids.filter(function(pid){return sub[1].indexOf(String(ppos(pid)).toUpperCase())>=0;}).sort(function(a,b){return pname(a).localeCompare(pname(b));}));}).join('');
+      }else{
+        $('hubRoster').innerHTML=hubRows(titles[group],ids.slice().sort(function(a,b){var order={Starter:0,Bench:1,Taxi:2,IR:3};return order[hubStatus(a)]-order[hubStatus(b)]||pname(a).localeCompare(pname(b));}));
+      }
+    }
     var keep=$('hubNewsPlayer').value;
     $('hubNewsPlayer').innerHTML='<option value="all">All players</option>'+all.filter(function(pid){return NAMES[pid];}).sort(function(a,b){return pname(a).localeCompare(pname(b));}).map(function(pid){return '<option value="'+esc(pid)+'">'+esc(pname(pid))+'</option>';}).join('');
     $('hubNewsPlayer').value=all.some(function(x){return String(x)===keep;})?keep:'all';
@@ -4184,6 +4261,8 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
       return '<article class="hub-story"><div class="hub-story-meta"><span>'+esc(a.player||'Player')+'</span> · '+esc(a.source||'News')+' · '+esc(hubDate(a.published))+'</div><a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(a.title||'Read article')+' ↗</a></article>';
     }).join('');
   }
+  $('hubPositionTabs').addEventListener('click',function(e){var b=e.target.closest('[data-hubpos]');if(!b)return;window.APFF_HUB_POSITION=b.dataset.hubpos;drawTeamHub();});
+  $('hubRoster').addEventListener('click',function(e){var b=e.target.closest('[data-hubgoto]');if(!b)return;window.APFF_HUB_POSITION=b.dataset.hubgoto;drawTeamHub();});
   $('hubTeam').addEventListener('change',drawTeamHub);
   $('hubNewsPlayer').addEventListener('change',drawHubNews);
   $('hubReload').addEventListener('click',function(){HUB_NEWS_LOADED=false;loadHubNews(true);});
@@ -4366,18 +4445,31 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     $team.addEventListener('change',function(){filterTeam=this.value;visibleCount=25;render();});
     $search.addEventListener('input',function(){query=this.value;visibleCount=25;render();});
   })();
+  document.addEventListener('click',function(ev){
+    var b=ev.target.closest('[data-stand-sort]');
+    if(b){
+      var k=b.dataset.standSort;
+      if(standSort===k){standDesc=!standDesc;}
+      else{standSort=k;standDesc=k!=="name"&&k!=="seed";}
+      if(standSort==="seed")standDesc=false;
+      if(S&&S.league)renderStandings();
+      return;
+    }
+    b=ev.target.closest('[data-cap-sort]');
+    if(b){
+      var c=b.dataset.capSort;
+      if(capitalSort===c){capitalDesc=!capitalDesc;}
+      else{capitalSort=c;capitalDesc=c!=="name"&&c!=="rank";}
+      if(capitalSort==="rank")capitalDesc=false;
+      if(S&&S.ids&&S.ids.length&&lastCapitalYears.length)renderCapital(lastCapitalYears,lastCapitalRounds);
+    }
+  });
   setInterval(function(){ if (!document.hidden && S.league) {
     getJSON("/league/"+LEAGUE_ID+"/matchups/"+S.leg).then(function(d){S.weeks[S.leg]=d||[]; renderScores(); renderLive(); renderMatchupsPage(); renderPlayers(); refreshNFLGameStatus();}).catch(function(){});
   }},60000);
 })();
 
 
-  document.addEventListener('click',function(ev){
-    var b=ev.target.closest('[data-stand-sort]');
-    if(b){var k=b.dataset.standSort;if(standSort===k){standDesc=!standDesc;}else{standSort=k;standDesc=k!=="name"&&k!=="seed";}if(standSort==="seed")standDesc=false;if(S&&S.league)renderStandings();return;}
-    b=ev.target.closest('[data-cap-sort]');
-    if(b){var c=b.dataset.capSort;if(capitalSort===c){capitalDesc=!capitalDesc;}else{capitalSort=c;capitalDesc=c!=="name"&&c!=="rank";}if(capitalSort==="rank")capitalDesc=false;if(S&&S.ids&&S.ids.length){if(lastCapitalYears.length)renderCapital(lastCapitalYears,lastCapitalRounds);}return;}
-  });
 </script>
 <script>
 
