@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
+<meta name="description" content="Standings, matchups, analytics, rosters and dynasty draft tools for our Sleeper fantasy football league.">
+<meta property="og:title" content="League Hub">
+<meta property="og:description" content="Live standings, matchups, analytics and dynasty tools from Sleeper.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f5fbf'/%3E%3Cellipse cx='32' cy='32' rx='20' ry='12' transform='rotate(-35 32 32)' fill='%23fff'/%3E%3C/svg%3E">
 <title>League Hub</title>
 <script>var t="dark";try{var s=localStorage.getItem("apff_theme");if(s)t=s}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -432,7 +437,7 @@ tbody tr:hover { background:var(--tint); }
 .hof-metric .detail { color:var(--muted); font-size:13px; margin-top:3px; }
 .hof-table td:first-child { font-weight:700; }
 .hof-table td.num { font-size:17px; }
-.hof-table .hof-score { color:#91c3ff; font-weight:800; font-size:19px; }
+.hof-table .hof-score { color:var(--accent); font-weight:800; font-size:19px; }
 .hof-table .champ-col { color:var(--flag); font-weight:700; }
 .hof-section-title { margin:10px 0 0; font:700 22px/1.3 var(--display); }
 .hof-badge { display:inline-block; border:1px solid var(--line); border-radius:7px; padding:3px 9px; font-size:13px; margin:3px 6px 3px 0; background:var(--surface); }
@@ -692,8 +697,8 @@ html,body,button,input,select,textarea,table,td,th,strong,b,.num,.rank,.side,.st
 .matchup-card-top{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line);gap:12px}
 .matchup-card-week{font-size:11px;font-weight:850;letter-spacing:.1em;color:var(--muted)}
 .matchup-status{border-radius:20px;padding:5px 10px;font-size:11px;font-weight:850;letter-spacing:.08em;background:rgba(95,119,151,.12);color:var(--muted)}
-.matchup-status.is-live{color:#b42332;background:rgba(214,53,68,.12)}
-.matchup-status.is-final{color:#187348;background:rgba(24,130,79,.11)}
+.matchup-status.is-live{color:var(--loss);background:var(--loss-tint)}
+.matchup-status.is-final{color:var(--success);background:var(--success-tint)}
 .matchup-score-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 18px;min-height:63px}
 .matchup-score-row+.matchup-score-row{border-top:1px solid var(--line)}
 .matchup-score-row .matchup-team{font-size:17px;font-weight:650;line-height:1.25;min-width:0;overflow-wrap:anywhere}
@@ -852,7 +857,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 .draft-minor-fold>.scroll,.draft-minor-fold>.draft-evaluation,.draft-minor-fold>.note,.draft-minor-fold>.draft-method{margin-bottom:16px}
 .draft-method p{line-height:1.65}
 .draft-ranking-content .draft-eval-highlights{margin-top:20px}
-.draft-rank-positive{color:#139b6a;font-weight:850}.draft-rank-negative{color:#d96b67;font-weight:850}
+.draft-rank-positive{color:var(--success);font-weight:850}.draft-rank-negative{color:var(--loss);font-weight:850}
 .draft-ranking-content table{width:100%}
 @media(max-width:700px){.draft-main-inner{padding:0 10px 14px}.draft-main-accordion>summary{padding:17px;font-size:18px}.draft-sub-accordion>summary{padding:14px}.draft-ranking-content{padding:6px 10px 14px}}
 
@@ -1154,7 +1159,7 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 .scenario-note{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
 .scenario-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
 .scenario-table-wrap table{min-width:560px}
-.scenario-positive{color:#218651;font-weight:700}.scenario-negative{color:var(--loss);font-weight:700}
+.scenario-positive{color:var(--success);font-weight:700}.scenario-negative{color:var(--loss);font-weight:700}
 @media(max-width:850px){.scenario-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.scenario-game-list{grid-template-columns:1fr}}
 @media(max-width:480px){.scenario-inner{padding:0 15px 18px}.scenario-shell>summary{padding:17px}.scenario-metrics{grid-template-columns:1fr 1fr}.scenario-metric{padding:11px}}
 
@@ -1674,6 +1679,13 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
 #picks .draft-proj-intro{color:var(--muted);font-size:14px;margin:0 0 12px}
 @media(max-width:650px){#picks .draft-tabs{gap:7px}#picks .draft-tabs button{padding:13px 7px;font-size:12px}#picks .draft-center-nav button{font-size:12px;padding:10px 12px}}
 </style>
+<style>
+/* Aliases for tokens referenced throughout the stylesheet but never defined. */
+:root{--panel:var(--surface);--text:var(--fg)}
+#hubMineBtn{background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font:inherit;cursor:pointer}
+#hubMineBtn:hover{border-color:var(--accent)}
+#hubMineBtn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -1698,7 +1710,6 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
             <a href="#hall">Hall of Fame</a>
             <a href="#moves">Moves</a>
             <a href="#rules">Rules</a>
-            <a href="#settings">Season Settings</a>
             <div class="league-info" id="leagueInfo" aria-label="League information"></div>
           </div>
         </div>
@@ -1855,7 +1866,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
 
   <section id="teamhub" aria-labelledby="h-teamhub" hidden>
     <div class="section-page-head"><h2 id="h-teamhub">Team Hub</h2><p>Franchise profiles, full rosters, and position-by-position scouting.</p></div>
-    <div class="hub-toolbar"><label for="hubTeam">Franchise</label><select id="hubTeam" aria-label="Choose franchise"><option value="">Loading teams…</option></select></div>
+    <div class="hub-toolbar"><label for="hubTeam">Franchise</label><select id="hubTeam" aria-label="Choose franchise"><option value="">Loading teams…</option></select><button type="button" id="hubMineBtn" aria-pressed="false">Make this my team</button></div>
     <div id="hubOverview" class="hub-overview"></div>
     <div class="hub-tabs" id="hubPositionTabs" role="tablist" aria-label="Team Hub position groups"><button type="button" data-hubpos="OVERVIEW" role="tab" aria-selected="true">Overview</button><button type="button" data-hubpos="QB" role="tab" aria-selected="false">QB</button><button type="button" data-hubpos="RB" role="tab" aria-selected="false">RB</button><button type="button" data-hubpos="WR" role="tab" aria-selected="false">WR</button><button type="button" data-hubpos="TE" role="tab" aria-selected="false">TE</button><button type="button" data-hubpos="IDP" role="tab" aria-selected="false">IDP</button><button type="button" data-hubpos="OTHER" role="tab" aria-selected="false">K / Other</button></div><div class="hub-columns"><div class="hub-panel" id="hubRosterPanel"><h3 id="hubRosterTitle">Roster overview</h3><p class="softnote" id="hubRosterNote">Automatically synced from Sleeper.</p><div id="hubRoster"></div></div>
     <aside class="hub-panel" id="hubNewsPanel"><div class="hub-news-head"><h3>Latest player news</h3><span id="hubUpdated" class="softnote"></span></div><p class="softnote">Real article headlines from external publishers. Select a headline to read the original story.</p><button type="button" id="hubReload" class="hub-news-refresh">Refresh news</button><div class="hub-filters"><label for="hubNewsPlayer">Player</label><select id="hubNewsPlayer"><option value="all">All players</option></select></div><div id="hubNews" aria-live="polite">Loading news…</div></aside></div>
@@ -2038,8 +2049,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
         "The only close game of the week was also the one that matters most for the last playoff spot. Green and Golden beat McCaffuckers 214.31 to 212.86, a margin of 1.45 points, with Jaylen Warren's 38.3 leading the way. McCaffuckers got 34.5 from Bucky Irving and 32.8 from Christian Watson and still fell to 3-2. They now hold the sixth seed only on points scored, ahead of Next Man Up, who are also 3-2 but have scored 857.99 to McCaffuckers' 926.15.",
         "Goffenheimer are the only unbeaten team at 5-0. Jared Goff's 34.19 and C.J. Stroud's 25.69 powered a 212.58-point win over BoJob Lover, and Goffenheimer lead the league with 1,013.42 points scored.",
         "Pulham Bluecocks, last year's champions, beat TrevoQuavo4 by 167.21 points, the widest margin of the season so far. Joe Burrow (32.1) and Jacoby Brissett (31.53) gave them 63.6 from two quarterback spots. They are still only 3-2, and that is where the numbers get strange. Pulham and Goffenheimer share the best all-play record in the league at 46-9, meaning each would have beaten 46 of 55 possible opponents across five weeks. Pulham's scoring suggests about 4.2 wins. They have 3.",
-        "Luck has been kinder to TLaw and Order Ft. Burden, who are 4-1 with a 20-35 all-play record. That is the biggest gap between wins and expected wins in the league, at 2.2, for a team that ranks eighth in points scored. At the bottom, Great Depression and TrevoQuavo4 are both winless. TrevoQuavo4 posted 59.7, the lowest score of the season, and Patrick Mahomes, Mitch Tinsley and Derwin James all finished with zero.",
-        "Week 6 is under way. The trade deadline is Week 11, and with two winless teams and a tight race for the final playoff spots, the next few weeks of moves should be worth watching."
+        "Luck has been kinder to TLaw and Order Ft. Burden, who are 4-1 with a 20-35 all-play record. That is the biggest gap between wins and expected wins in the league, at 2.2, for a team that ranks eighth in points scored. At the bottom, Great Depression and TrevoQuavo4 are both winless. TrevoQuavo4 posted 59.7, the lowest score of the season, and Patrick Mahomes, Mitch Tinsley and Derwin James all finished with zero."
       ]
     }
   };
@@ -4513,6 +4523,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     $('hubNewsPlayer').innerHTML='<option value="all">All players</option>'+all.filter(function(pid){return NAMES[pid]&&(group==='OVERVIEW'||grp(pid)===group);}).sort(function(a,b){return pname(a).localeCompare(pname(b));}).map(function(pid){return '<option value="'+esc(pid)+'">'+esc(pname(pid))+'</option>';}).join('');
     $('hubNewsPlayer').value=all.includes(keep)&&Array.from($('hubNewsPlayer').options).some(function(o){return o.value===keep;})?keep:'all';
     drawHubNews();
+    syncHubMine(id);
     try{sessionStorage.setItem('apff_hub_team',String(id));sessionStorage.setItem('apff_hub_pos',group);}catch(e){}
   }
   function drawHubNews(){
@@ -4531,6 +4542,15 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
   }
   $('hubPositionTabs').addEventListener('click',function(e){var b=e.target.closest('[data-hubpos]');if(!b)return;window.APFF_HUB_POSITION=b.dataset.hubpos;drawTeamHub();});
   $('hubRoster').addEventListener('click',function(e){var b=e.target.closest('[data-hubgoto]');if(!b)return;window.APFF_HUB_POSITION=b.dataset.hubgoto;drawTeamHub();});$('hubRoster').addEventListener('keydown',function(e){if(e.key!=='Enter'&&e.key!==' ')return;var b=e.target.closest('[data-hubgoto]');if(!b)return;e.preventDefault();window.APFF_HUB_POSITION=b.dataset.hubgoto;drawTeamHub();});
+  function syncHubMine(id){
+    var b=$('hubMineBtn');if(!b)return;var mine=myTeam()===id;
+    b.textContent=mine?'This is your team ✓':'Make this my team';b.setAttribute('aria-pressed',String(mine));
+  }
+  $('hubMineBtn').addEventListener('click',function(){
+    var id=Number($('hubTeam').value);if(!S.T||!S.T[id])return;
+    store.set('apff_my_'+LEAGUE_ID,String(id));
+    renderStandings();renderAnalytics();renderROS();drawTeamHub();
+  });
   $('hubTeam').addEventListener('change',drawTeamHub);
   $('hubNewsPlayer').addEventListener('change',drawHubNews);
   $('hubReload').addEventListener('click',function(){HUB_NEWS_LOADED=false;loadHubNews(true);});
@@ -4600,20 +4620,34 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
   });
   $("seasonDownload").addEventListener("click", function () {
     if (!seasonVerified) return;
-    // Serialize the full running document, changing only the single published ID.
-    var html = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-    var marker = /var PUBLISHED_LEAGUE_ID = "\d+";/;
-    if (!marker.test(html)) { $("seasonVerifyResult").textContent = "Unable to locate the published league configuration."; return; }
-    html = html.replace(marker, 'var PUBLISHED_LEAGUE_ID = "' + seasonVerified.id + '";');
-    var url = URL.createObjectURL(new Blob([html], {type:"text/html;charset=utf-8"}));
-    var link = document.createElement("a"); link.href = url; link.download = "index.html";
-    document.body.appendChild(link); link.click(); link.remove();
-    setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
-    $("seasonVerifyResult").textContent = "Downloaded index.html for " + seasonVerified.season + ". Publish it to GitHub Pages to update everyone.";
+    // Re-fetch the ORIGINAL source (not the live, script-modified DOM) and change only the published ID.
+    var verified = seasonVerified;
+    $("seasonVerifyResult").textContent = "Preparing file…";
+    fetch(location.href.split("#")[0].split("?")[0], { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.text();
+    }).then(function (html) {
+      var marker = /var PUBLISHED_LEAGUE_ID = "\d+";/;
+      if (!marker.test(html)) throw new Error("Unable to locate the published league configuration.");
+      html = html.replace(marker, 'var PUBLISHED_LEAGUE_ID = "' + verified.id + '";');
+      var url = URL.createObjectURL(new Blob([html], {type:"text/html;charset=utf-8"}));
+      var link = document.createElement("a"); link.href = url; link.download = "index.html";
+      document.body.appendChild(link); link.click(); link.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+      $("seasonVerifyResult").textContent = "Downloaded index.html for " + verified.season + ". Publish it to GitHub Pages to update everyone.";
+    }).catch(function (err) { $("seasonVerifyResult").textContent = "Could not prepare the file: " + err.message + ". Open the site from its published URL (not a local file) and try again."; });
   });
   $("slink").href = "https://sleeper.com/leagues/" + LEAGUE_ID;
   route(false);
-  init().then(function(){ return loadHistory(); }).then(loadHistoricalDrafts);
+  /* Optional weekly editorial features: data/features.json, e.g. {"6":{"headline":"…","dek":"…","paras":["…"]}} */
+  function loadFeatures(){
+    return fetch("data/features.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+      if(!d||typeof d!=="object")return;
+      Object.keys(d).forEach(function(k){var f=d[k];if(f&&f.headline&&Array.isArray(f.paras))FEATURES[k]=f;});
+      if(S.league)renderDispatch();
+    }).catch(function(){});
+  }
+  init().then(function(){ loadFeatures(); return loadHistory(); }).then(loadHistoricalDrafts);
   /* Dynasty Center trade tracker — read-only Sleeper transactions. */
   (function setupDynastyTrades(){
     var loaded=false, tradeRows=[], filterYear='all', filterTeam='all', query='';
