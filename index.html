@@ -1322,6 +1322,18 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 }
 @media(max-width:650px){#dispatch .dispatch > aside .strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+
+/* Analytics: roster age dot comparison */
+.age-panel{margin:22px 0 28px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.age-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.age-heading h3{margin:0 0 5px;font-size:21px}.age-heading p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+.age-legend{font-size:12px;color:var(--muted);white-space:nowrap}.age-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:5px}
+.age-row{display:grid;grid-template-columns:minmax(120px,220px) minmax(160px,1fr) 52px;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.age-row:last-child{border-bottom:0}.age-name{background:none;border:0;color:var(--text);text-align:left;cursor:pointer;font:700 13px var(--body);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0}.age-name:hover{text-decoration:underline}
+.age-track{position:relative;height:20px}.age-track:before{content:'';position:absolute;left:0;right:0;top:9px;height:2px;background:var(--line)}
+.age-dot{position:absolute;top:3px;width:14px;height:14px;transform:translateX(-50%);border-radius:50%;background:var(--accent);border:2px solid var(--surface);box-shadow:0 0 0 1px var(--accent)}
+.age-mean{position:absolute;top:0;bottom:0;border-left:2px dashed var(--muted);opacity:.75}.age-value{text-align:right;font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}.age-axis{display:flex;justify-content:space-between;margin:10px 52px 0 0;padding-left:min(232px,30%);color:var(--muted);font-size:11px}
+@media(max-width:650px){.age-panel{padding:15px}.age-row{grid-template-columns:minmax(90px,120px) minmax(100px,1fr) 42px;gap:8px}.age-name{font-size:11px}.age-axis{padding-left:128px;margin-right:42px}}
 </style>
 <style>
 .dynasty-trade-filters{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin:20px 0}
@@ -1525,6 +1537,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
         <tbody id="standBody"></tbody>
       </table>
     </div>
+
     <p class="legend" id="standLegend">Rankings follow your league's playoff rules. Click a column heading to sort, or a franchise to open Team Hub.</p>
     <span id="faabLegend" hidden></span><span id="standOddsTh" hidden></span>
     <div class="bracket-shell" id="projectedBracket"><div class="bracket-top"><div><span class="bracket-eyebrow">ROAD TO THE CHAMPIONSHIP</span><h2>Projected Playoff Bracket</h2></div><span class="bracket-provisional">PROVISIONAL · CURRENT STANDINGS</span></div><p class="bracket-desc">If the regular season ended today. Seeds 1–5 follow record (points for breaks ties); the sixth seed goes to the highest-scoring remaining franchise. Future results can change every seed.</p><div class="bracket-actions"><button type="button" id="simulatePlayoffsBtn" class="bracket-sim-btn">🎲 Simulate playoffs</button><span id="bracketSimStatus" class="bracket-sim-status" aria-live="polite">Run a sample postseason using each team’s scoring history.</span></div><div id="bracketContent"></div></div>
@@ -1559,6 +1572,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
       <button type="button" class="section-tab" data-panel="an-forecast" aria-selected="true">📈 Season forecast</button>
       <button type="button" class="section-tab" data-panel="an-league" aria-selected="false">📊 League performance</button>
       <button type="button" class="section-tab" data-panel="an-profiles" aria-selected="false">🏈 Team profiles</button>
+      <button type="button" class="section-tab" data-panel="an-age" aria-selected="false">🎂 Roster age</button>
     </div>
     <div class="section-tab-panel is-active" id="an-forecast" role="tabpanel">
     <p class="softnote" id="anEmpty" hidden>Analytics appear once the first week is scored.</p>
@@ -1608,6 +1622,9 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     </div>
     <div class="section-tab-panel" id="an-profiles" role="tabpanel">
     <div class="stack" id="teamProfiles"><div class="profile-hero"><span class="profile-hero-kicker">ANALYTICS / FRANCHISE BREAKDOWN</span><h3>Team Statistical Profiles</h3><p>Explore a franchise’s season at a glance</p><div class="picker profile-hero-picker"><label for="profileTeam">Choose a franchise</label><select id="profileTeam"><option value="">Select a franchise…</option></select></div><p class="profile-hero-help">Select a team to see its record, weekly scoring trends, consistency, positional efficiency, and top starters.</p></div><div class="profile-report-box" id="profileReportBox"><div id="profileContent"></div></div></div>
+    </div>
+    <div class="section-tab-panel" id="an-age" role="tabpanel">
+    <div class="age-panel" id="rosterAgePanel"><div class="age-heading"><div><h3>Roster age comparison</h3><p>Average age of players on each franchise’s active roster, including bench players. Taxi and injured reserve are excluded.</p></div><span class="age-legend"><i></i> Team average · dashed line = league average</span></div><div id="rosterAgeChart" role="group" aria-label="Average roster age by franchise">Loading player ages…</div></div>
     </div>
   </section>
 
@@ -1912,7 +1929,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
       renderCore();
       renderTeamHub();
       setStatus("");
-      return loadNames().then(function () { renderNamed(); renderTeamHub(); return refreshNFLGameStatus(); }).catch(function () { renderNamed(); renderTeamHub(); $("namesNote").hidden = false; return refreshNFLGameStatus(); });
+      return loadNames().then(function () { renderRosterAges(); renderNamed(); renderTeamHub(); return refreshNFLGameStatus(); }).catch(function () { renderRosterAges(); renderNamed(); renderTeamHub(); $("namesNote").hidden = false; return refreshNFLGameStatus(); });
     }).catch(function (e) {
       setStatus("Could not load the league from Sleeper (" + e.message + ").", true);
     });
@@ -2079,6 +2096,21 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     return f;
   }
 
+  function renderRosterAges() {
+    var el=$('rosterAgeChart'); if(!el||!S||!S.T)return;
+    var teams=S.ids.map(function(id){
+      var r=S.T[id].r||{},excluded=new Set([].concat(r.taxi||[],r.reserve||[]));
+      var ids=(r.players||[]).filter(function(pid){return !excluded.has(pid);});
+      var ages=ids.map(function(pid){var a=NAMES[pid]&&Number(NAMES[pid][3]);return a>15&&a<55?a:null;}).filter(function(a){return a!==null;});
+      return {id:id,name:S.T[id].name,age:ages.length?ages.reduce(function(a,b){return a+b;},0)/ages.length:null,count:ages.length,total:ids.length};
+    }).filter(function(t){return t.age!==null;}).sort(function(a,b){return a.age-b.age;});
+    if(!teams.length){el.textContent='Player ages are loading or unavailable from Sleeper.';return;}
+    var avg=teams.reduce(function(a,t){return a+t.age;},0)/teams.length;
+    var low=Math.floor(Math.min.apply(null,teams.map(function(t){return t.age;}).concat([avg]))-1),high=Math.ceil(Math.max.apply(null,teams.map(function(t){return t.age;}).concat([avg]))+1);
+    var pos=function(x){return ((x-low)/(high-low)*100).toFixed(2)+'%';};
+    el.innerHTML=teams.map(function(t){return '<div class="age-row"><button class="age-name" type="button" data-team-jump="'+t.id+'" title="Open '+esc(t.name)+' in Team Hub">'+esc(t.name)+'</button><div class="age-track"><span class="age-mean" style="left:'+pos(avg)+'" title="League average: '+avg.toFixed(1)+' years"></span><span class="age-dot" style="left:'+pos(t.age)+'" title="'+esc(t.name)+': '+t.age.toFixed(1)+' years ('+t.count+' of '+t.total+' players with known ages)"></span></div><span class="age-value">'+t.age.toFixed(1)+'</span></div>';}).join('')+'<div class="age-axis"><span>'+low+' yrs</span><span>League avg '+avg.toFixed(1)+'</span><span>'+high+' yrs</span></div>';
+  }
+
   function renderStandings() {
     var st=S.league.settings||{},cut=Number(st.playoff_teams||0),form=formFor(),mine=myTeam();
     var faab=st.waiver_type===2&&st.waiver_budget,showOdds=$('standOddsToggle').checked;
@@ -2115,6 +2147,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     $('standBody').innerHTML=rows;
     $('standLegend').textContent='Seeds always show the official league order, even when sorted. Select a franchise to open Team Hub. PF = points scored; Max PF = best possible lineup; Efficiency = PF ÷ Max PF. Playoff odds appear only when simulation results are available.';
     renderProjectedBracket();
+    renderRosterAges();
   }
 
   document.querySelectorAll('[data-stand-view]').forEach(function(btn){btn.addEventListener('click',function(){standView=btn.dataset.standView;standSort='seed';standDesc=false;if(S&&S.T)renderStandings();});});
@@ -2122,7 +2155,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
   $("standOddsToggle").addEventListener("change", function(){
     if(S.T) renderStandings();
   });
-  $("standBody").addEventListener("click",function(e){
+  $("standings").addEventListener("click",function(e){
     var btn=e.target.closest("[data-team-jump]");if(!btn)return;
     var id=btn.getAttribute("data-team-jump");
     location.hash="teamhub";
