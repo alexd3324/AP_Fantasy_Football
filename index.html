@@ -1358,6 +1358,156 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 .pick-projection-table{min-width:690px}.pick-projection-table td:nth-child(2){color:var(--muted)}.pick-projection-table .num{font-weight:700}.pick-projection-table .pick-lead{color:var(--accent)}
 .pick-dist-card{border-top:1px solid var(--line);padding-top:18px;display:grid;gap:12px}.pick-dist-chart{display:grid;gap:9px}.pick-dist-row{display:grid;grid-template-columns:90px minmax(0,1fr) 65px;gap:12px;align-items:center;font-size:14px}.pick-dist-track{height:15px;background:var(--bg);border:1px solid var(--line);border-radius:20px;overflow:hidden}.pick-dist-track span{display:block;height:100%;background:var(--accent);border-radius:20px}.pick-dist-row strong{text-align:right}.pick-dist-row.muted span{background:var(--muted)}
 @media(max-width:650px){.pick-projection-module{padding:15px}.pick-projection-head{flex-wrap:wrap}.pick-dist-row{grid-template-columns:78px minmax(0,1fr) 54px;gap:8px}}
+
+/* Compact masthead: single brand row and sticky underline navigation */
+.mast { gap:0 !important; margin-bottom:12px; }
+.mast-brandrow { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:12px 0 15px; }
+.mast-identity { min-width:0; }
+.mast #title { font:800 clamp(23px,3.3vw,38px)/1.1 var(--display) !important; letter-spacing:-.035em; text-transform:none; margin:0 0 5px; }
+.mast #eyebrow { font:600 11px/1.3 var(--body); letter-spacing:.045em; text-transform:none; }
+.mast-actions { display:flex; align-items:center; gap:10px; flex:0 0 auto; }
+.season-pill { background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:8px 12px; font:700 12px/1.2 var(--body); color:var(--fg); white-space:nowrap; }
+.mast-actions .themebtn { margin:0 !important; min-height:0 !important; padding:8px 11px !important; font:600 12px/1.2 var(--body) !important; border-radius:20px !important; }
+.mast .ruler { display:none !important; }
+.mast .facts { display:none !important; }
+.mast .site-nav-shell { position:sticky; top:0; z-index:90; display:block !important; margin:0 !important; padding:0 !important; background:var(--bg); border-bottom:1px solid var(--line); }
+.mast .site-nav-shell .nav { display:flex !important; flex-wrap:nowrap !important; align-items:stretch; gap:16px !important; overflow-x:auto !important; overflow-y:hidden !important; width:100% !important; margin:0 !important; padding:0 !important; scrollbar-width:thin; }
+.mast .site-nav-shell .nav > a, .mast .site-nav-shell .nav-more-button { display:inline-flex !important; align-items:center; padding:13px 3px 12px !important; border:0 !important; border-bottom:3px solid transparent !important; border-radius:0 !important; background:transparent !important; color:var(--muted) !important; font:700 13px/1.2 var(--body) !important; white-space:nowrap; }
+.mast .site-nav-shell .nav > a:hover, .mast .site-nav-shell .nav-more-button:hover { color:var(--fg) !important; }
+.mast .site-nav-shell .nav > a[aria-current="page"], .mast .site-nav-shell .nav-more-button[aria-current="page"] { color:var(--accent) !important; border-bottom-color:var(--accent) !important; }
+.mast .nav-more { position:static; }
+.mast .nav-more-items { position:absolute; top:100%; right:0; width:min(310px,90vw); max-height:75vh; overflow:auto; z-index:110; }
+.league-info { border-top:1px solid var(--line); padding:9px 10px 3px; margin-top:6px; }
+.league-info div { display:flex; justify-content:space-between; gap:12px; padding:6px 0; font-size:12px; }
+.league-info span { color:var(--muted); }
+.league-info strong { text-align:right; }
+@media(max-width:650px) { .mast-brandrow { align-items:flex-start; padding:8px 0 12px; gap:8px; } .mast #title { font-size:clamp(20px,5vw,28px) !important; } .mast-actions { gap:5px; flex-wrap:wrap; justify-content:flex-end; } .season-pill,.mast-actions .themebtn { font-size:10px !important; padding:6px 8px !important; } .mast .site-nav-shell .nav { gap:13px !important; } .mast .site-nav-shell .nav > a,.mast .site-nav-shell .nav-more-button { font-size:12px !important; padding:12px 2px !important; } }
+
+.mast { position:sticky; top:0; z-index:90; background:var(--bg); }
+
+/* Header scale refresh: slightly larger brand, navigation, and controls. */
+.mast #title { font-size:clamp(29px,3.8vw,46px) !important; }
+.mast #eyebrow { font-size:12.5px !important; }
+.mast .site-nav-shell .nav > a,
+.mast .site-nav-shell .nav-more-button { font-size:15px !important; padding:15px 4px 14px !important; border-bottom-width:4px !important; }
+.mast .site-nav-shell .nav { gap:19px !important; }
+.season-pill { font-size:13px !important; padding:10px 14px !important; }
+.mast-actions .themebtn { font-size:13px !important; padding:10px 14px !important; }
+@media(max-width:650px) {
+  .mast #title { font-size:clamp(24px,5.7vw,33px) !important; }
+  .mast #eyebrow { font-size:11.5px !important; }
+  .mast .site-nav-shell .nav > a,
+  .mast .site-nav-shell .nav-more-button { font-size:13.5px !important; padding:13px 3px !important; }
+  .mast .site-nav-shell .nav { gap:15px !important; }
+  .season-pill,.mast-actions .themebtn { font-size:11px !important; padding:7px 9px !important; }
+}
+
+/* Team Hub: compact full-franchise scouting dashboard */
+#teamhub .section-page-head{margin-bottom:10px}#teamhub .section-page-head h2{font-size:clamp(29px,3.4vw,39px)}
+#teamhub .hub-toolbar{margin:0 0 12px}#teamhub .hub-overview{padding:16px 22px;margin-bottom:14px;align-items:center}
+#teamhub .hub-overview h3{font-size:clamp(22px,2.7vw,29px);margin:3px 0}#teamhub .hub-overview-stats{gap:22px;flex-wrap:wrap}#teamhub .hub-overview-stats strong{font-size:21px}
+#teamhub .hub-tabs{border-bottom:1px solid var(--line);padding:0;gap:5px;margin-bottom:16px}#teamhub .hub-tabs button{border:0;border-radius:0;background:transparent;color:var(--muted);padding:11px 16px;border-bottom:3px solid transparent}
+#teamhub .hub-tabs button[aria-selected="true"]{background:transparent;color:var(--accent);border-bottom-color:var(--accent)}
+#teamhub .hub-columns{display:block}#teamhub .hub-panel{padding:20px 23px}#teamhub .hub-panel[hidden]{display:none!important}
+#teamhub .hub-metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0 22px}
+#teamhub .hub-metric{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:13px 15px;display:flex;flex-direction:column;gap:6px}
+#teamhub .hub-metric span{font-size:12px;color:var(--muted);font-weight:700}#teamhub .hub-metric strong{font:750 23px var(--display)}
+#teamhub .hub-overview-section{margin-top:23px}#teamhub .hub-section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+#teamhub .hub-section-heading h4{font:750 18px var(--display);margin:0}#teamhub .hub-section-heading span{color:var(--muted);font-size:13px}
+#teamhub .hub-player-table{width:100%;border-collapse:collapse;min-width:480px}#teamhub .hub-player-table th,#teamhub .hub-player-table td{padding:11px 13px;border-bottom:1px solid var(--line);text-align:left}#teamhub .hub-player-table th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}#teamhub .hub-player-table .num{text-align:right}#teamhub .hub-breakdown tr[data-hubgoto]{cursor:pointer}#teamhub .hub-breakdown tr[data-hubgoto]:hover{background:var(--tint)}#teamhub .hub-status{font-size:12px;color:var(--muted)}#teamhub .hub-news-refresh{border:1px solid var(--line);border-radius:9px;padding:9px 13px;background:var(--surface);color:var(--fg);cursor:pointer;margin-top:12px}
+@media(max-width:650px){#teamhub .hub-metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#teamhub .hub-overview-stats{gap:14px}#teamhub .hub-panel{padding:15px}#teamhub .hub-tabs button{padding:10px 12px}}
+
+/* Team Hub: roster-first layout with a persistent, contextual news rail. */
+#teamhub .hub-columns{display:grid;grid-template-columns:minmax(0,1.95fr) minmax(275px,1fr);align-items:start;gap:16px}
+#teamhub #hubNewsPanel{position:sticky;top:110px;max-height:calc(100vh - 130px);overflow-y:auto}
+#teamhub #hubNewsPanel h3{font-size:19px}
+#teamhub #hubNewsPanel .hub-story{padding:13px 0}
+#teamhub #hubNewsPanel .hub-story a{font-size:14px}
+#teamhub #hubNewsPanel .hub-filters{margin:12px 0}
+.age-filter{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 22px}
+.age-filter>span{font-size:13px;font-weight:800;color:var(--muted)}
+.age-position-tabs{display:flex;gap:5px;flex-wrap:wrap}
+.age-position-tabs button{font:700 13px var(--body);border:1px solid var(--line);border-radius:8px;padding:8px 12px;color:var(--fg);background:var(--surface);cursor:pointer}
+.age-position-tabs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:white}
+@media(max-width:950px){#teamhub .hub-columns{grid-template-columns:minmax(0,1fr)}#teamhub #hubNewsPanel{position:static;max-height:none}}
+
+/* 2026 visual refresh — Analytics + Matchup Center; presentation only. */
+#analytics .section-page-head{margin:0 0 12px;padding:0}
+#analytics .section-page-head h2{font-size:clamp(32px,3.6vw,45px);margin:0 0 6px;letter-spacing:-.035em}
+#analytics .section-page-head p{font-size:15px;max-width:800px}
+#analytics > .shead{margin:0 0 16px}
+#analytics > .shead .note{font-size:13px;color:var(--muted)}
+#analytics .section-tabs{display:flex;align-items:center;flex-wrap:wrap;gap:5px;padding:5px;margin:0 0 18px;border:1px solid var(--line);border-radius:13px;background:color-mix(in srgb,var(--surface) 70%,var(--bg));width:fit-content;max-width:100%}
+#analytics .section-tab{flex:0 1 auto;min-width:0;border:1px solid transparent;border-radius:9px;background:transparent;box-shadow:none;padding:11px 16px;font-size:14px;font-weight:800;white-space:nowrap;transition:background .15s,box-shadow .15s,color .15s}
+#analytics .section-tab:hover{background:color-mix(in srgb,var(--accent) 9%,var(--surface))}
+#analytics .section-tab[aria-selected="true"]{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 3px 10px rgba(24,76,148,.15)}
+#analytics .section-tab-panel{border:0;background:transparent;padding:0;margin:0 0 24px;border-radius:0}
+#analytics .section-tab-panel>.stack{gap:16px}
+#analytics .analytics-topic-panel,#analytics #rosPanel,#analytics #an-age>.stack,#analytics #an-age>.analytics-topic-panel{background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:clamp(16px,2vw,24px);box-shadow:0 3px 14px rgba(15,42,78,.035)}
+#analytics #rosPanel .shead{margin-bottom:13px}
+#analytics #rosPanel .sub{font-size:21px}
+#analytics .legend{font-size:12px;line-height:1.55;color:var(--muted)}
+#analytics .scroll{border-radius:10px}
+#analytics .age-filter{margin:12px 0 17px}
+#analytics .age-position-tabs button{padding:7px 11px}
+/* Matchups: slimmer introduction, denser game-day controls, elevated scoreboard. */
+#matchups .matchups-page-head{border:0;border-radius:0;border-left:0;background:transparent;padding:0;margin:0 0 18px}
+#matchups .matchups-kicker{font-size:11px;letter-spacing:.12em}
+#matchups .matchups-page-head h2{font-size:clamp(32px,3.6vw,45px);letter-spacing:-.035em;margin:6px 0 5px;line-height:1.12}
+#matchups .matchups-page-head p{font-size:15px;line-height:1.5}
+#matchups .matchups-board-shell{background:transparent;border:0;padding:0;margin:0}
+#matchups .matchups-board-head{display:flex;gap:12px;align-items:center;justify-content:space-between;margin:0 0 14px}
+#matchups .matchups-subhead{font-size:20px;letter-spacing:-.02em}
+#matchups .matchups-week-controls{gap:5px}
+#matchups .matchups-week-controls>button,#matchups #matchupWeekSeg button{border-radius:9px;padding:8px 11px;font-size:13px}
+#matchups #matchupGames{gap:13px}
+#matchups #matchupGames .matchup-page-card{border-radius:13px;box-shadow:0 4px 17px rgba(13,38,76,.055);transition:box-shadow .15s,border-color .15s,transform .15s}
+#matchups #matchupGames .matchup-page-card:hover{box-shadow:0 9px 24px rgba(13,38,76,.11);transform:translateY(-2px)}
+#matchups .matchup-card-top{padding:11px 17px;background:color-mix(in srgb,var(--surface) 88%,var(--accent))}
+#matchups .matchup-score-row{padding:12px 17px;min-height:60px}
+#matchups .matchup-score-row .matchup-team{font-size:15px}
+#matchups .matchup-score-row .matchup-score{font-size:25px}
+#matchups .matchup-card-footer{padding:10px 17px;font-size:12px}
+#matchups .matchup-page-detail{margin-top:19px}
+#matchups #matchupPageNote{font-size:12px}
+@media(max-width:760px){
+ #analytics .section-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;box-sizing:border-box}
+ #analytics .section-tab{white-space:normal;padding:10px 7px;font-size:12px}
+ #matchups .matchups-board-head{align-items:flex-start;flex-direction:column}
+ #matchups .matchups-week-controls{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px}
+ #matchups #matchupWeekSeg{flex-wrap:nowrap}
+ #matchups #matchupWeekSeg button{white-space:nowrap}
+ #matchups .matchup-score-row .matchup-score{font-size:23px}
+}
+
+/* Compact, cohesive Player Rankings layout */
+#players{gap:16px!important}
+#players .players-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:2px 0 8px}
+#players .players-heading h2{font-size:clamp(28px,3.1vw,38px)!important;line-height:1.18;margin:5px 0 7px!important;letter-spacing:-.035em}
+#players .players-heading p{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
+#players .players-kicker{font-size:11px;letter-spacing:.13em;font-weight:850;color:var(--accent)}
+#players .players-season-badge{white-space:nowrap;font-size:12px;font-weight:750;color:var(--accent);border:1px solid var(--line);background:var(--surface);padding:7px 11px;border-radius:99px}
+#players .players-workspace{border:1px solid var(--line);border-radius:16px;background:var(--surface);padding:18px;min-width:0}
+#players .players-toolbar{display:grid;grid-template-columns:1.2fr .8fr 1.1fr 1.3fr;gap:12px;align-items:end;margin-bottom:18px}
+#players .players-field{min-width:0;display:flex;flex-direction:column;gap:6px}
+#players .players-field label{font-size:12px;color:var(--muted);font-weight:800}
+#players .players-field select,#players .players-field input{width:100%;min-width:0;box-sizing:border-box;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:9px;padding:10px 12px;font-family:var(--body);font-size:14px;font-weight:600;min-height:42px}
+#players .players-field :is(select,input):focus{outline:2px solid var(--accent);outline-offset:1px}
+#players .players-table-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 10px}
+#players .players-table-meta>strong{font-size:17px;letter-spacing:-.01em}
+#players .players-method-details{position:relative;font-size:12px;color:var(--muted)}
+#players .players-method-details summary{cursor:pointer;list-style:none;font-weight:750;color:var(--accent)}
+#players .players-method-details summary::-webkit-details-marker{display:none}
+#players .players-method-content{position:absolute;z-index:5;right:0;top:calc(100% + 9px);width:min(420px,80vw);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:0 12px 30px #0002;line-height:1.55}
+#players .players-method-content p{margin:0 0 8px;font-size:12px;line-height:1.55}
+#players #playerLeaderboard{border-radius:10px;overflow-x:auto}
+#players #playerLeaderboard th{padding:12px 13px;font-size:12px;letter-spacing:0;text-transform:none}
+#players #playerLeaderboard td{padding:12px 13px;font-size:14px}
+#players #playerLeaderboard tbody tr:hover{background:color-mix(in srgb,var(--accent) 5%,transparent)}
+#players #playerLeaderboard td:nth-child(2){font-weight:750}
+#players #ktcRankings{margin:0 0 12px!important;padding:16px!important}
+@media(max-width:850px){#players .players-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){#players .players-toolbar{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}#players .players-search{grid-column:1/-1}#players .players-workspace{padding:12px}#players .players-season-badge{display:none}#players .players-heading h2{font-size:29px!important}#players .players-table-meta>strong{font-size:15px}}
 </style>
 <style>
 .dynasty-trade-filters{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin:20px 0}
@@ -1528,32 +1678,33 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
 <body>
 <div class="wrap">
   <header class="mast">
-    <div class="eyebrow" id="eyebrow">Fantasy football league</div>
-    <h1 id="title">Loading league</h1>
-    <div class="ruler" aria-hidden="true"></div>
+    <div class="mast-brandrow">
+      <div class="mast-identity"><h1 id="title">Loading league</h1><div class="eyebrow" id="eyebrow">Fantasy football league</div></div>
+      <div class="mast-actions"><span class="season-pill" id="seasonPill">Season loading</span><button type="button" class="themebtn" id="themeBtn" aria-label="Change color theme" title="Change color theme">Theme: Auto</button></div>
+    </div>
     <div class="site-nav-shell">
       <nav class="nav" id="nav" aria-label="Main navigation">
         <a href="#standings">Headquarters</a>
-        <a href="#matchups">🏈 Matchups</a>
+        <a href="#matchups">Matchups</a>
         <a href="#analytics">Analytics</a>
         <a href="#teamhub">Team Hub</a>
         <a href="#players">Players</a>
         <a href="#picks">Dynasty Center</a>
-        <a href="#history">League History</a>
-        <a href="#dispatch">Dynasty Dispatch</a>
         <div class="nav-more" id="leagueMenu">
           <button type="button" id="leagueMenuBtn" class="nav-more-button" aria-haspopup="true" aria-expanded="false" aria-controls="leagueMenuItems">League <span aria-hidden="true">▾</span></button>
           <div class="nav-more-items" id="leagueMenuItems" hidden>
-            <a href="#matchups">Scores</a>
+            <a href="#history">League History</a>
+            <a href="#dispatch">Dynasty Dispatch</a>
+            <a href="#hall">Hall of Fame</a>
             <a href="#moves">Moves</a>
             <a href="#rules">Rules</a>
-            <a href="#settings">⚙ Season Settings</a>
+            <a href="#settings">Season Settings</a>
+            <div class="league-info" id="leagueInfo" aria-label="League information"></div>
           </div>
         </div>
       </nav>
-      <div class="theme-controls"><button type="button" class="themebtn" id="themeBtn" aria-label="Change color theme">Theme: Auto</button></div>
     </div>
-    <dl class="facts" id="facts"></dl>
+    <dl class="facts" id="facts" hidden></dl>
   </header>
   <div class="status" id="status" role="status">Loading league from Sleeper...</div>
   <noscript><div class="status">This page needs JavaScript to load the league from Sleeper.</div></noscript>
@@ -1667,7 +1818,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     <div class="stack" id="teamProfiles"><div class="profile-hero"><span class="profile-hero-kicker">ANALYTICS / FRANCHISE BREAKDOWN</span><h3>Team Statistical Profiles</h3><p>Explore a franchise’s season at a glance</p><div class="picker profile-hero-picker"><label for="profileTeam">Choose a franchise</label><select id="profileTeam"><option value="">Select a franchise…</option></select></div><p class="profile-hero-help">Select a team to see its record, weekly scoring trends, consistency, positional efficiency, and top starters.</p></div><div class="profile-report-box" id="profileReportBox"><div id="profileContent"></div></div></div>
     </div>
     <div class="section-tab-panel" id="an-age" role="tabpanel">
-    <div class="age-panel" id="rosterAgePanel"><div class="age-heading"><div><h3>Roster age comparison</h3><p>Average age of players on each franchise’s active roster, including bench players. Taxi and injured reserve are excluded.</p></div><span class="age-legend"><i></i> Team average · dashed line = league average</span></div><div id="rosterAgeChart" role="group" aria-label="Average roster age by franchise">Loading player ages…</div></div>
+    <div class="age-panel" id="rosterAgePanel"><div class="age-heading"><div><h3>Roster age comparison</h3><p>Average age of players on each franchise’s active roster, including bench players. Taxi and injured reserve are excluded.</p></div><span class="age-legend"><i></i> Team average · dashed line = league average</span></div><div class="age-filter" role="group" aria-label="Roster age position filter"><span>Position</span><div id="agePositionTabs" class="age-position-tabs"><button type="button" data-agepos="ALL" aria-pressed="true">All</button><button type="button" data-agepos="QB" aria-pressed="false">QB</button><button type="button" data-agepos="RB" aria-pressed="false">RB</button><button type="button" data-agepos="WR" aria-pressed="false">WR</button><button type="button" data-agepos="TE" aria-pressed="false">TE</button><button type="button" data-agepos="IDP" aria-pressed="false">IDP</button><button type="button" data-agepos="DL" aria-pressed="false">DL</button><button type="button" data-agepos="LB" aria-pressed="false">LB</button><button type="button" data-agepos="DB" aria-pressed="false">DB</button></div></div><div id="rosterAgeChart" role="group" aria-label="Average roster age by franchise">Loading player ages…</div></div>
     </div>
   </section>
 
@@ -1703,11 +1854,11 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
   </section>
 
   <section id="teamhub" aria-labelledby="h-teamhub" hidden>
-    <div class="section-page-head"><h2 id="h-teamhub">Team Hub</h2><p>Every franchise's live Sleeper roster and recent real-world NFL player news, in one place.</p></div>
-    <div class="hub-toolbar"><label for="hubTeam">Franchise</label><select id="hubTeam" aria-label="Choose franchise"><option value="">Loading teams…</option></select><button type="button" id="hubReload">Refresh news</button></div>
+    <div class="section-page-head"><h2 id="h-teamhub">Team Hub</h2><p>Franchise profiles, full rosters, and position-by-position scouting.</p></div>
+    <div class="hub-toolbar"><label for="hubTeam">Franchise</label><select id="hubTeam" aria-label="Choose franchise"><option value="">Loading teams…</option></select></div>
     <div id="hubOverview" class="hub-overview"></div>
-    <div class="hub-tabs" id="hubPositionTabs" role="tablist" aria-label="Team Hub position groups"><button type="button" data-hubpos="OVERVIEW" role="tab" aria-selected="true">Overview</button><button type="button" data-hubpos="QB" role="tab" aria-selected="false">QB</button><button type="button" data-hubpos="RB" role="tab" aria-selected="false">RB</button><button type="button" data-hubpos="WR" role="tab" aria-selected="false">WR</button><button type="button" data-hubpos="TE" role="tab" aria-selected="false">TE</button><button type="button" data-hubpos="IDP" role="tab" aria-selected="false">IDP</button><button type="button" data-hubpos="OTHER" role="tab" aria-selected="false">Other</button></div><div class="hub-columns"><div class="hub-panel"><h3 id="hubRosterTitle">Roster overview</h3><p class="softnote" id="hubRosterNote">Automatically synced from Sleeper.</p><div id="hubRoster"></div></div>
-    <div class="hub-panel"><div class="hub-news-head"><h3>Latest player news</h3><span id="hubUpdated" class="softnote"></span></div><p class="softnote">Real article headlines from external publishers. Select a headline to read the original story.</p><div class="hub-filters"><label for="hubNewsPlayer">Player</label><select id="hubNewsPlayer"><option value="all">All players</option></select></div><div id="hubNews" aria-live="polite">Loading news…</div></div></div>
+    <div class="hub-tabs" id="hubPositionTabs" role="tablist" aria-label="Team Hub position groups"><button type="button" data-hubpos="OVERVIEW" role="tab" aria-selected="true">Overview</button><button type="button" data-hubpos="QB" role="tab" aria-selected="false">QB</button><button type="button" data-hubpos="RB" role="tab" aria-selected="false">RB</button><button type="button" data-hubpos="WR" role="tab" aria-selected="false">WR</button><button type="button" data-hubpos="TE" role="tab" aria-selected="false">TE</button><button type="button" data-hubpos="IDP" role="tab" aria-selected="false">IDP</button><button type="button" data-hubpos="OTHER" role="tab" aria-selected="false">K / Other</button></div><div class="hub-columns"><div class="hub-panel" id="hubRosterPanel"><h3 id="hubRosterTitle">Roster overview</h3><p class="softnote" id="hubRosterNote">Automatically synced from Sleeper.</p><div id="hubRoster"></div></div>
+    <aside class="hub-panel" id="hubNewsPanel"><div class="hub-news-head"><h3>Latest player news</h3><span id="hubUpdated" class="softnote"></span></div><p class="softnote">Real article headlines from external publishers. Select a headline to read the original story.</p><button type="button" id="hubReload" class="hub-news-refresh">Refresh news</button><div class="hub-filters"><label for="hubNewsPlayer">Player</label><select id="hubNewsPlayer"><option value="all">All players</option></select></div><div id="hubNews" aria-live="polite">Loading news…</div></aside></div>
   </section>
 
   <section id="rosters" aria-labelledby="h-rosters" hidden>
@@ -1780,7 +1931,19 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     </div></details>
   </section>
 
-  <section id="players" hidden><div class="shead"><h2>Player rankings</h2><p class="note">Sleeper fantasy points, including the current live week when available. Game counts only include weeks with evidence of participation; current-week games count after the NFL game finishes.</p></div><div class="picker"><label for="playerMode">Rankings</label><select id="playerMode"><option value="fantasy">Fantasy points</option><option value="dynasty">Dynasty value (KeepTradeCut)</option></select><label for="playerPos">Position</label><select id="playerPos"><option value="ALL">All positions</option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option>DL</option><option>LB</option><option>DB</option></select><label for="playerSort">Sort</label><select id="playerSort"><option value="pts">Total points</option><option value="ppg">Points per counted game</option></select><label for="playerQuery">Search</label><input id="playerQuery" placeholder="Player name" class="input"></div><p class="softnote">Current-week games count only after the NFL game is final. Past games require recorded fantasy production. These are estimated fantasy appearances, not independently verified official NFL games played; zero-stat appearances may be missed. Dynasty market values are not supplied by Sleeper.</p><p class="softnote" id="playerMethod"></p><p class="softnote" id="playerStatus" role="status">Checking NFL game results…</p><div id="ktcRankings" hidden class="profile-section" style="margin:18px 0;padding:26px"><h3 style="margin:0 0 12px">Dynasty player values · KeepTradeCut</h3><p class="note" style="margin:0 0 18px">For dynasty trade values and long-term player rankings, visit KeepTradeCut. Choose Superflex for a closer match to this league. KTC rankings are maintained by KeepTradeCut and open on their website; they are not reproduced or automatically imported here. KTC does not cover this league’s IDP values.</p><a href="https://keeptradecut.com/dynasty-rankings" target="_blank" rel="noopener noreferrer" class="ktc-link">View live dynasty rankings on KeepTradeCut ↗</a></div><div id="playerLeaderboard" class="scroll"><table><thead id="playerTableHead"><tr><th>#</th><th>Player</th><th>Pos</th><th>NFL</th><th>Fantasy franchise</th><th class="num">Points</th><th class="num">Games counted</th><th class="num">Pts / game</th></tr></thead><tbody id="playerRows"></tbody></table></div></section>
+  <section id="players" hidden>
+  <div class="players-heading"><div><div class="players-kicker">LEAGUE PLAYER DATA</div><h2>Player rankings</h2><p>Explore fantasy production across all 12 franchises.</p></div><span class="players-season-badge">Live Sleeper stats</span></div>
+  <div class="players-workspace">
+    <div class="players-toolbar">
+      <div class="players-field"><label for="playerMode">Rankings</label><select id="playerMode"><option value="fantasy">Fantasy points</option><option value="dynasty">Dynasty value (KeepTradeCut)</option></select></div>
+      <div class="players-field"><label for="playerPos">Position</label><select id="playerPos"><option value="ALL">All positions</option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option>DL</option><option>LB</option><option>DB</option></select></div>
+      <div class="players-field"><label for="playerSort">Sort by</label><select id="playerSort"><option value="pts">Total points</option><option value="ppg">Points per counted game</option></select></div>
+      <div class="players-field players-search"><label for="playerQuery">Find a player</label><input id="playerQuery" placeholder="Search player name…" class="input" type="search"></div>
+    </div>
+    <div class="players-table-meta"><strong>Player leaderboard</strong><details class="players-method-details"><summary>About these stats ⓘ</summary><div class="players-method-content"><p>Fantasy points come from Sleeper, including the live week when available. Games counted are inferred fantasy appearances, not verified NFL games played. Current-week games count after the NFL game finishes; zero-stat appearances may be missed. Sleeper does not provide dynasty market values.</p><p id="playerMethod"></p><p id="playerStatus" role="status">Checking NFL game results…</p></div></details></div>
+    <div id="ktcRankings" hidden class="profile-section" style="margin:18px 0;padding:26px"><h3 style="margin:0 0 12px">Dynasty player values · KeepTradeCut</h3><p class="note" style="margin:0 0 18px">For dynasty trade values and long-term player rankings, visit KeepTradeCut. Choose Superflex for a closer match to this league. KTC rankings are maintained by KeepTradeCut and open on their website; they are not reproduced or automatically imported here. KTC does not cover this league’s IDP values.</p><a href="https://keeptradecut.com/dynasty-rankings" target="_blank" rel="noopener noreferrer" class="ktc-link">View live dynasty rankings on KeepTradeCut ↗</a></div><div id="playerLeaderboard" class="scroll"><table><thead id="playerTableHead"><tr><th>#</th><th>Player</th><th>Pos</th><th>NFL</th><th>Fantasy franchise</th><th class="num">Points</th><th class="num">Games counted</th><th class="num">Pts / game</th></tr></thead><tbody id="playerRows"></tbody></table></div></section>
+  </div>
+  </section>
   <section id="history" hidden>
     <div class="section-page-head"><h2>League History</h2><p>Explore past seasons, all-time franchise records, and head-to-head rivalries.</p></div>
     <div class="section-tabs" role="tablist" aria-label="League history sections">
@@ -1915,7 +2078,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     Array.prototype.forEach.call(document.querySelectorAll("#nav a"), function (a) {
       if (a.getAttribute("href") === "#" + h) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
-    var leagueActive = ["scores", "rosters", "moves", "rules", "settings"].indexOf(h) !== -1;
+    var leagueActive = ["history", "dispatch", "moves", "rules", "settings"].indexOf(h) !== -1;
     if (leagueActive) $("leagueMenuBtn").setAttribute("aria-current", "page"); else $("leagueMenuBtn").removeAttribute("aria-current");
     $("leagueMenuItems").hidden = true;
     $("leagueMenuBtn").setAttribute("aria-expanded", "false");
@@ -2111,6 +2274,8 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     if (st.trade_deadline) facts.push(["Trade deadline", "Week " + st.trade_deadline]);
     if (st.playoff_week_start) facts.push(["Playoffs start", "Week " + st.playoff_week_start]);
     $("facts").innerHTML = facts.map(function (f) { return "<div><dt>" + esc(f[0]) + "</dt><dd>" + esc(f[1]) + "</dd></div>"; }).join("");
+    $("seasonPill").textContent = L.season + " · Week " + S.leg;
+    $("leagueInfo").innerHTML = facts.slice(1).map(function (f) { return "<div><span>" + esc(f[0]) + "</span><strong>" + esc(f[1]) + "</strong></div>"; }).join("");
     renderStandings();
     renderAnalytics();
     renderROS();
@@ -2141,18 +2306,24 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
 
   function renderRosterAges() {
     var el=$('rosterAgeChart'); if(!el||!S||!S.T)return;
+    var selected=window.APFF_AGE_POSITION||'ALL';
+    var idp=['DL','DE','DT','NT','EDGE','LB','ILB','OLB','DB','CB','S','FS','SS'], dl=['DL','DE','DT','NT','EDGE'],lb=['LB','ILB','OLB'],db=['DB','CB','S','FS','SS'];
+    function ageGroup(pid){var p=String(ppos(pid)||'').toUpperCase();return selected==='ALL'||p===selected||(selected==='IDP'&&idp.includes(p))||(selected==='DL'&&dl.includes(p))||(selected==='LB'&&lb.includes(p))||(selected==='DB'&&db.includes(p));}
+    var tabs=$('agePositionTabs');if(tabs)tabs.querySelectorAll('[data-agepos]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.agepos===selected));});
     var teams=S.ids.map(function(id){
-      var r=S.T[id].r||{},excluded=new Set([].concat(r.taxi||[],r.reserve||[]));
-      var ids=(r.players||[]).filter(function(pid){return !excluded.has(pid);});
+      var r=S.T[id].r||{},excluded=new Set([].concat(r.taxi||[],r.reserve||[]).map(String));
+      var ids=(r.players||[]).map(String).filter(function(pid){return !excluded.has(pid)&&ageGroup(pid);});
       var ages=ids.map(function(pid){var a=NAMES[pid]&&Number(NAMES[pid][3]);return a>15&&a<55?a:null;}).filter(function(a){return a!==null;});
       return {id:id,name:S.T[id].name,age:ages.length?ages.reduce(function(a,b){return a+b;},0)/ages.length:null,count:ages.length,total:ids.length};
     }).filter(function(t){return t.age!==null;}).sort(function(a,b){return a.age-b.age;});
-    if(!teams.length){el.textContent='Player ages are loading or unavailable from Sleeper.';return;}
+    if(!teams.length){el.textContent='No eligible players with known ages for this position group.';return;}
     var avg=teams.reduce(function(a,t){return a+t.age;},0)/teams.length;
     var low=Math.floor(Math.min.apply(null,teams.map(function(t){return t.age;}).concat([avg]))-1),high=Math.ceil(Math.max.apply(null,teams.map(function(t){return t.age;}).concat([avg]))+1);
     var pos=function(x){return ((x-low)/(high-low)*100).toFixed(2)+'%';};
     el.innerHTML=teams.map(function(t){return '<div class="age-row"><button class="age-name" type="button" data-team-jump="'+t.id+'" title="Open '+esc(t.name)+' in Team Hub">'+esc(t.name)+'</button><div class="age-track"><span class="age-mean" style="left:'+pos(avg)+'" title="League average: '+avg.toFixed(1)+' years"></span><span class="age-dot" style="left:'+pos(t.age)+'" title="'+esc(t.name)+': '+t.age.toFixed(1)+' years ('+t.count+' of '+t.total+' players with known ages)"></span></div><span class="age-value">'+t.age.toFixed(1)+'</span></div>';}).join('')+'<div class="age-axis"><span>'+low+' yrs</span><span>League avg '+avg.toFixed(1)+'</span><span>'+high+' yrs</span></div>';
   }
+
+  $('agePositionTabs').addEventListener('click',function(e){var b=e.target.closest('[data-agepos]');if(!b)return;window.APFF_AGE_POSITION=b.dataset.agepos;renderRosterAges();});
 
   // Conservative wins-only clinch threshold. The points-for wildcard cannot be
   // mathematically eliminated from W/L alone while games remain.
@@ -4296,7 +4467,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
   }
   function renderTeamHub(){
     if(!S.ids||!S.ids.length)return;
-    var sel=$('hubTeam'),keep=sel.value||String(myTeam()||S.ids[0]);
+    var sel=$('hubTeam'),saved='';try{saved=sessionStorage.getItem('apff_hub_team')||'';window.APFF_HUB_POSITION=window.APFF_HUB_POSITION||sessionStorage.getItem('apff_hub_pos')||'OVERVIEW';}catch(e){}var keep=sel.value||saved||String(myTeam()||S.ids[0]);
     sel.innerHTML=S.ids.map(function(id){return '<option value="'+id+'">'+esc(tname(id))+'</option>';}).join('');
     sel.value=S.T[keep]?keep:String(S.ids[0]);
     drawTeamHub();loadHubNews(false);
@@ -4304,41 +4475,52 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
   function drawTeamHub(){
     if(!S.T)return;
     var id=Number($('hubTeam').value),team=S.T[id];if(!team)return;
-    var r=team.r||{},starters=r.starters||[],taxi=r.taxi||[],reserve=r.reserve||[],all=r.players||[];
-    var occupied=new Set(starters.concat(taxi,reserve));
-    var bench=all.filter(function(pid){return !occupied.has(pid);}).sort(function(a,b){return pname(a).localeCompare(pname(b));});
-    $('hubOverview').innerHTML='<div><span class="hub-eyebrow">FRANCHISE HEADQUARTERS</span><h3>'+esc(team.name)+'</h3><p>'+esc(team.handle||'Fantasy franchise')+'</p></div><div class="hub-overview-stats"><div><strong>'+esc(recStr(team))+'</strong><span>Record</span></div><div><strong>'+all.length+'</strong><span>Players</span></div><div><strong>'+starters.length+'</strong><span>Starters</span></div></div>';
+    var r=team.r||{},starters=(r.starters||[]).map(String),taxi=(r.taxi||[]).map(String),reserve=(r.reserve||[]).map(String),all=(r.players||[]).map(String);
     var group=window.APFF_HUB_POSITION||'OVERVIEW';
-    function hubGroup(pid){var p=String(ppos(pid)||'').toUpperCase();if(['QB','RB','WR','TE'].indexOf(p)>=0)return p;if(['DL','DE','DT','NT','EDGE','LB','ILB','OLB','DB','CB','S','FS','SS'].indexOf(p)>=0)return 'IDP';return 'OTHER';}
-    function hubStatus(pid){if(starters.some(function(x){return String(x)===String(pid);}))return 'Starter';if(taxi.some(function(x){return String(x)===String(pid);}))return 'Taxi';if(reserve.some(function(x){return String(x)===String(pid);}))return 'IR';return 'Bench';}
-    function hubRows(title,ids){return '<div class="hub-roster-group"><h4>'+esc(title)+' <span>'+ids.length+'</span></h4>'+(ids.length?ids.map(function(pid){var n=NAMES[pid]||[],a=Number(n[3]);return '<div class="hub-player"><span class="hub-pos">'+esc(ppos(pid))+'</span><span>'+esc(pname(pid))+'</span><small>'+esc(n[2]||'—')+' · '+(a>15&&a<55?a.toFixed(1)+'y · ':'')+esc(hubStatus(pid))+'</small></div>';}).join(''):'<p class="softnote">No players in this group.</p>')+'</div>';}
-    var groups=['QB','RB','WR','TE','IDP','OTHER'];
-    var titles={QB:'Quarterbacks',RB:'Running backs',WR:'Wide receivers',TE:'Tight ends',IDP:'Individual defensive players',OTHER:'Kickers & other positions'};
-    var tabs=$('hubPositionTabs');tabs.querySelectorAll('button[data-hubpos]').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.hubpos===group));});
+    function pos(pid){return String(ppos(pid)||'').toUpperCase();}
+    function grp(pid){var p=pos(pid);if(['QB','RB','WR','TE'].includes(p))return p;if(['DL','DE','DT','NT','EDGE','LB','ILB','OLB','DB','CB','S','FS','SS'].includes(p))return 'IDP';return 'OTHER';}
+    function status(pid){return starters.includes(pid)?'Starter':taxi.includes(pid)?'Taxi':reserve.includes(pid)?'IR':'Bench';}
+    function age(pid){var a=Number((NAMES[pid]||[])[3]);return a>15&&a<55?a:null;}
+    function mean(ids){var ages=ids.map(age).filter(function(x){return x!==null;});return ages.length?(ages.reduce(function(a,b){return a+b;},0)/ages.length).toFixed(1):'—';}
+    var groups=['QB','RB','WR','TE','IDP','OTHER'],titles={QB:'Quarterbacks',RB:'Running backs',WR:'Wide receivers',TE:'Tight ends',IDP:'Defensive players',OTHER:'Kickers / Other'};
+    var played=Math.max(1,Number(team.w||0)+Number(team.l||0)+Number(team.t||0));
+    var scoringRank=S.ids.slice().sort(function(a,b){return S.T[b].pf-S.T[a].pf;}).indexOf(id)+1;
+    $('hubOverview').innerHTML='<div class="hub-identity"><span class="hub-eyebrow">FRANCHISE PROFILE</span><h3>'+esc(team.name)+'</h3><p>'+esc(team.handle||'Fantasy franchise')+'</p></div><div class="hub-overview-stats">'+
+      [['Record',recStr(team)],['Players',all.length],['Avg. age',mean(all)],['PF rank','#'+scoringRank]].map(function(x){return '<div><strong>'+esc(String(x[1]))+'</strong><span>'+esc(x[0])+'</span></div>';}).join('')+'</div>';
+    $('hubPositionTabs').querySelectorAll('[data-hubpos]').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.hubpos===group));});
+    $('hubRosterPanel').hidden=false;$('hubNewsPanel').hidden=false;
+    function playerTable(ids){
+      var order={Starter:0,Bench:1,Taxi:2,IR:3};ids=ids.slice().sort(function(a,b){return order[status(a)]-order[status(b)]||pname(a).localeCompare(pname(b));});
+      if(!ids.length)return '<p class="softnote">No players in this group.</p>';
+      return '<div class="scroll hub-table-wrap"><table class="hub-player-table"><thead><tr><th>Player</th><th>Pos.</th><th>NFL</th><th class="num">Age</th><th>Status</th></tr></thead><tbody>'+ids.map(function(pid){var n=NAMES[pid]||[];return '<tr><td><strong>'+esc(pname(pid))+'</strong></td><td>'+esc(pos(pid)||'—')+'</td><td>'+esc(n[2]||'—')+'</td><td class="num">'+(age(pid)===null?'—':age(pid).toFixed(1))+'</td><td><span class="hub-status">'+esc(status(pid))+'</span></td></tr>';}).join('')+'</tbody></table></div>';
+    }
     if(group==='OVERVIEW'){
-      $('hubRosterTitle').textContent='Position group overview';
-      $('hubRosterNote').textContent='Choose a position to see its players, roster status and age. All groups reflect the current Sleeper roster.';
-      $('hubRoster').innerHTML='<div class="hub-position-grid">'+groups.map(function(g){var ids=all.filter(function(pid){return hubGroup(pid)===g;}),ages=ids.map(function(pid){return Number((NAMES[pid]||[])[3]);}).filter(function(a){return a>15&&a<55;});return '<button type="button" class="hub-position-card" data-hubgoto="'+g+'"><strong>'+g+' · '+ids.length+'</strong><span>'+esc(titles[g])+'</span><span>'+(ages.length?'Average age '+(ages.reduce(function(a,b){return a+b;},0)/ages.length).toFixed(1):'Age unavailable')+'</span></button>';}).join('')+'</div>';
+      $('hubRosterTitle').textContent='Full team overview';
+      $('hubRosterNote').textContent='Season performance, positional depth, and complete live roster.';
+      var stats=[['Points for',f2(team.pf)],['Points against',f2(team.pa)],['PF / game',f2(team.pf/played)],['Scoring rank','#'+scoringRank]];
+      $('hubRoster').innerHTML='<div class="hub-metric-grid">'+stats.map(function(x){return '<div class="hub-metric"><span>'+esc(x[0])+'</span><strong>'+esc(x[1])+'</strong></div>';}).join('')+'</div><div class="hub-overview-section"><div class="hub-section-heading"><h4>Complete roster</h4><span>'+all.length+' players · select a position tab for a focused view</span></div>'+playerTable(all)+'</div>';
     }else{
-      var ids=all.filter(function(pid){return hubGroup(pid)===group;}),ages=ids.map(function(pid){return Number((NAMES[pid]||[])[3]);}).filter(function(a){return a>15&&a<55;});
-      $('hubRosterTitle').textContent=titles[group]||group;
-      $('hubRosterNote').textContent='Current roster · '+ids.length+' players · '+(ages.length?'Average age '+(ages.reduce(function(a,b){return a+b;},0)/ages.length).toFixed(1)+' years':'Average age unavailable');
+      var ids=all.filter(function(pid){return grp(pid)===group;});
+      $('hubRosterTitle').textContent=titles[group]+' · '+team.name;
+      $('hubRosterNote').textContent='Live Sleeper roster and player details.';
+      var summary='<div class="hub-metric-grid">'+[['Players',ids.length],['Avg. age',mean(ids)],['Starters',ids.filter(function(pid){return status(pid)==='Starter';}).length],['Depth',ids.filter(function(pid){return status(pid)!=='Starter';}).length]].map(function(x){return '<div class="hub-metric"><span>'+esc(x[0])+'</span><strong>'+esc(String(x[1]))+'</strong></div>';}).join('')+'</div>';
       if(group==='IDP'){
         var subs=[['DL',['DL','DE','DT','NT','EDGE']],['LB',['LB','ILB','OLB']],['DB',['DB','CB','S','FS','SS']]];
-        $('hubRoster').innerHTML=subs.map(function(sub){return hubRows(sub[0],ids.filter(function(pid){return sub[1].indexOf(String(ppos(pid)).toUpperCase())>=0;}).sort(function(a,b){return pname(a).localeCompare(pname(b));}));}).join('');
-      }else{
-        $('hubRoster').innerHTML=hubRows(titles[group],ids.slice().sort(function(a,b){var order={Starter:0,Bench:1,Taxi:2,IR:3};return order[hubStatus(a)]-order[hubStatus(b)]||pname(a).localeCompare(pname(b));}));
-      }
+        $('hubRoster').innerHTML=summary+subs.map(function(sub){var subset=ids.filter(function(pid){return sub[1].includes(pos(pid));});return '<div class="hub-overview-section"><div class="hub-section-heading"><h4>'+sub[0]+'</h4><span>'+subset.length+' players</span></div>'+playerTable(subset)+'</div>';}).join('');
+      }else $('hubRoster').innerHTML=summary+'<div class="hub-overview-section">'+playerTable(ids)+'</div>';
     }
     var keep=$('hubNewsPlayer').value;
-    $('hubNewsPlayer').innerHTML='<option value="all">All players</option>'+all.filter(function(pid){return NAMES[pid];}).sort(function(a,b){return pname(a).localeCompare(pname(b));}).map(function(pid){return '<option value="'+esc(pid)+'">'+esc(pname(pid))+'</option>';}).join('');
-    $('hubNewsPlayer').value=all.some(function(x){return String(x)===keep;})?keep:'all';
+    $('hubNewsPlayer').innerHTML='<option value="all">All players</option>'+all.filter(function(pid){return NAMES[pid]&&(group==='OVERVIEW'||grp(pid)===group);}).sort(function(a,b){return pname(a).localeCompare(pname(b));}).map(function(pid){return '<option value="'+esc(pid)+'">'+esc(pname(pid))+'</option>';}).join('');
+    $('hubNewsPlayer').value=all.includes(keep)&&Array.from($('hubNewsPlayer').options).some(function(o){return o.value===keep;})?keep:'all';
     drawHubNews();
+    try{sessionStorage.setItem('apff_hub_team',String(id));sessionStorage.setItem('apff_hub_pos',group);}catch(e){}
   }
   function drawHubNews(){
     if(!S.T||!$('hubTeam').value)return;
     var team=S.T[Number($('hubTeam').value)];if(!team)return;
-    var ids=new Set((team.r.players||[]).map(String)),selected=$('hubNewsPlayer').value;
+    var group=window.APFF_HUB_POSITION||'OVERVIEW';
+    function newsGroup(pid){var p=String(ppos(pid)||'').toUpperCase();if(['QB','RB','WR','TE'].includes(p))return p;if(['DL','DE','DT','NT','EDGE','LB','ILB','OLB','DB','CB','S','FS','SS'].includes(p))return 'IDP';return 'OTHER';}
+    var ids=new Set((team.r.players||[]).map(String).filter(function(pid){return group==='OVERVIEW'||newsGroup(pid)===group;})),selected=$('hubNewsPlayer').value;
     var articles=(HUB_NEWS&&HUB_NEWS.articles||[]).filter(function(a){return ids.has(String(a.player_id))&&(selected==='all'||String(a.player_id)===selected);}).slice(0,30);
     $('hubUpdated').textContent=HUB_NEWS&&HUB_NEWS.updated_at?'Updated '+hubDate(HUB_NEWS.updated_at):'Not updated yet';
     if(!articles.length){$('hubNews').innerHTML='<div class="hub-empty">'+(HUB_NEWS_ERROR?'News feed unavailable: '+esc(HUB_NEWS_ERROR)+'. ':HUB_NEWS_LOADED?'No recent matching articles for this roster. ':'News feed has not been loaded. ')+'The scheduled GitHub Actions workflow populates this section after deployment.</div>';return;}
@@ -4348,7 +4530,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     }).join('');
   }
   $('hubPositionTabs').addEventListener('click',function(e){var b=e.target.closest('[data-hubpos]');if(!b)return;window.APFF_HUB_POSITION=b.dataset.hubpos;drawTeamHub();});
-  $('hubRoster').addEventListener('click',function(e){var b=e.target.closest('[data-hubgoto]');if(!b)return;window.APFF_HUB_POSITION=b.dataset.hubgoto;drawTeamHub();});
+  $('hubRoster').addEventListener('click',function(e){var b=e.target.closest('[data-hubgoto]');if(!b)return;window.APFF_HUB_POSITION=b.dataset.hubgoto;drawTeamHub();});$('hubRoster').addEventListener('keydown',function(e){if(e.key!=='Enter'&&e.key!==' ')return;var b=e.target.closest('[data-hubgoto]');if(!b)return;e.preventDefault();window.APFF_HUB_POSITION=b.dataset.hubgoto;drawTeamHub();});
   $('hubTeam').addEventListener('change',drawTeamHub);
   $('hubNewsPlayer').addEventListener('change',drawHubNews);
   $('hubReload').addEventListener('click',function(){HUB_NEWS_LOADED=false;loadHubNews(true);});
