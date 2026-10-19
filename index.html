@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="Standings, matchups, analytics, rosters and dynasty draft tools for our Sleeper fantasy football league.">
-<meta property="og:title" content="League Hub">
+<meta property="og:title" content="AP Fantasy Football">
 <meta property="og:description" content="Live standings, matchups, analytics and dynasty tools from Sleeper.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f5fbf'/%3E%3Cellipse cx='32' cy='32' rx='20' ry='12' transform='rotate(-35 32 32)' fill='%23fff'/%3E%3C/svg%3E">
-<title>League Hub</title>
+<title>AP Fantasy Football</title>
 <script>var t="dark";try{var s=localStorage.getItem("apff_theme");if(s)t=s}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1513,6 +1513,95 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 #players #ktcRankings{margin:0 0 12px!important;padding:16px!important}
 @media(max-width:850px){#players .players-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){#players .players-toolbar{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}#players .players-search{grid-column:1/-1}#players .players-workspace{padding:12px}#players .players-season-badge{display:none}#players .players-heading h2{font-size:29px!important}#players .players-table-meta>strong{font-size:15px}}
+
+/* Headquarters desktop split: compact standings beside live playoff bracket */
+#standings .hq-split-layout{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:20px;align-items:start}
+#standings .hq-standings-column,#standings .hq-bracket-column{min-width:0}
+#standings .hq-bracket-column .bracket-shell{margin-top:0;padding:19px;border-radius:16px}
+#standings .hq-bracket-column .bracket-top h2{font-size:clamp(19px,2vw,25px);margin-top:4px}
+#standings .hq-bracket-column .bracket-provisional{font-size:10px;padding:6px 9px}
+#standings .hq-bracket-column .bracket-desc{font-size:12.5px;line-height:1.5;margin:9px 0 13px}
+#standings .hq-bracket-column .bracket-actions{margin:0 0 12px;gap:8px}
+#standings .hq-bracket-column .bracket-sim-status{font-size:11px}
+#standings .hq-bracket-column .bracket-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-height:0}
+#standings .hq-bracket-column .bracket-connector{display:none}
+#standings .hq-bracket-column .bracket-round{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:26px 0 0;justify-content:initial;align-items:start}
+#standings .hq-bracket-column .bracket-round h3{top:0;text-align:left;font-size:12px}
+#standings .hq-bracket-column .bracket-round.final-round{grid-template-columns:minmax(0,1fr)}
+#standings .hq-bracket-column .bracket-game-label{padding:7px 9px;font-size:9px}
+#standings .hq-bracket-column .bracket-team{padding:8px 7px;gap:6px;min-height:39px}
+#standings .hq-bracket-column .bracket-team strong{font-size:11px;line-height:1.25}
+#standings .hq-bracket-column .bracket-team small{display:none}
+#standings .hq-bracket-column .bracket-seed{width:21px;height:21px;font-size:10px}
+#standings .hq-bracket-column .bracket-placeholder{min-height:39px;padding:10px 8px;font-size:11px}
+#standings .hq-bracket-column .bracket-game-sub{padding:6px 8px;font-size:10px}
+#standings .hq-bracket-column .bracket-footnote{font-size:11px;margin-top:12px}
+#standings .hq-standings-column #standTable{min-width:0!important;table-layout:fixed}
+#standings .hq-standings-column #standTable th,#standings .hq-standings-column #standTable td{padding:11px 7px;font-size:12px}
+#standings .hq-standings-column #standTable .tn{font-size:12.5px;line-height:1.2}
+#standings .hq-standings-column #standTable .rank{font-size:16px}
+#standings .hq-standings-column #standTable .form{gap:2px}
+#standings .hq-standings-column #standTable .form b{width:17px;height:20px;font-size:10px}
+#standings .hq-standings-column #standTable th:nth-child(1),#standings .hq-standings-column #standTable td:nth-child(1){width:9%!important}
+#standings .hq-standings-column #standTable th:nth-child(2),#standings .hq-standings-column #standTable td:nth-child(2){width:40%!important}
+#standings .hq-standings-column #standTable th:nth-child(3),#standings .hq-standings-column #standTable td:nth-child(3){width:12%!important}
+#standings .hq-standings-column #standTable th:nth-child(4),#standings .hq-standings-column #standTable td:nth-child(4){width:15%!important}
+#standings .hq-standings-column #standTable th:nth-child(5),#standings .hq-standings-column #standTable td:nth-child(5){width:24%!important}
+#standings .hq-standings-column .stand-view-note{font-size:12px}
+#standings .hq-standings-column .stand-table-wrap{overflow-x:auto}
+#standings .hq-standings-column .tag{font-size:9px;padding:2px 4px}
+@media(max-width:1150px){
+ #standings .hq-split-layout{grid-template-columns:minmax(0,1fr)}
+ #standings .hq-standings-column #standTable{min-width:700px!important}
+ #standings .hq-standings-column #standTable th,#standings .hq-standings-column #standTable td{padding:12px 11px;font-size:14px}
+ #standings .hq-standings-column #standTable .tn{font-size:15px}
+ #standings .hq-bracket-column .bracket-round{gap:12px}
+ #standings .hq-bracket-column .bracket-team strong{font-size:13px}
+}
+@media(max-width:580px){
+ #standings .hq-bracket-column .bracket-shell{padding:14px}
+ #standings .hq-bracket-column .bracket-round{grid-template-columns:minmax(0,1fr)}
+ #standings .hq-bracket-column .bracket-team strong{font-size:13px}
+}
+
+/* Compact, stronger postseason panel */
+#standings .hq-bracket-column .bracket-shell{padding:16px 17px 17px}
+#standings .hq-bracket-column .bracket-top{gap:7px;align-items:center}
+#standings .hq-bracket-column .bracket-top h2{font-size:22px;margin:2px 0 0}
+#standings .hq-bracket-column .bracket-desc{margin:7px 0 10px;font-size:12px;line-height:1.35}
+#standings .hq-bracket-column .bracket-actions{margin:0 0 10px;gap:9px}
+#standings .hq-bracket-column .bracket-sim-btn{padding:8px 12px;font-size:12px}
+#standings .hq-bracket-column .bracket-sim-status{font-size:11px;max-width:240px;line-height:1.25}
+#standings .hq-bracket-column .bracket-grid{gap:8px}
+#standings .hq-bracket-column .bracket-round{gap:7px;padding-top:23px}
+#standings .hq-bracket-column .bracket-round h3{font-size:12px;font-weight:850}
+#standings .hq-bracket-column .bracket-game{border-radius:10px}
+#standings .hq-bracket-column .bracket-game-label{padding:6px 8px;font-size:9px}
+#standings .hq-bracket-column .bracket-team{min-height:38px;padding:7px 8px}
+#standings .hq-bracket-column .bracket-team strong{font-size:12px;font-weight:800;line-height:1.22}
+#standings .hq-bracket-column .bracket-team .bracket-score{font-size:12px;font-weight:850}
+#standings .hq-bracket-column .bracket-game-sub{padding:5px 8px;font-size:10px}
+#standings .hq-bracket-column .final-round .bracket-game{border:2px solid color-mix(in srgb,var(--accent) 65%,#d7a94d);box-shadow:0 3px 14px rgba(30,90,180,.10)}
+#standings .hq-bracket-column .final-round .bracket-game-label{background:color-mix(in srgb,var(--surface) 80%,#edc66d);color:var(--fg);font-weight:900}
+#standings .hq-bracket-column .final-round .bracket-champion{color:var(--accent);font-size:12px}
+.bracket-progress{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 10px;border-radius:9px;background:color-mix(in srgb,var(--surface) 86%,var(--accent));border:1px solid var(--line);font-size:10px;font-weight:800;color:var(--muted)}
+.bracket-progress b{color:var(--accent);font-size:15px}
+.bracket-progress-title{color:var(--accent)}
+.bracket-title-odds{margin-top:13px;border:1px solid var(--line);border-radius:12px;padding:12px;background:color-mix(in srgb,var(--surface) 97%,var(--accent))}
+.bracket-title-odds-heading{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:9px}
+.bracket-title-odds-heading strong{font-size:13px;color:var(--fg)}
+.bracket-title-odds-heading span{font-size:10px;color:var(--muted)}
+.bracket-odds-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
+.bracket-odds-row{display:grid;grid-template-columns:minmax(0,1fr) 48px 42px;gap:5px;align-items:center;font-size:10px}
+.bracket-odds-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700;color:var(--fg)}
+.bracket-odds-track{height:7px;border-radius:5px;background:color-mix(in srgb,var(--surface) 77%,var(--accent));overflow:hidden}
+.bracket-odds-track i{display:block;height:100%;border-radius:5px;background:var(--accent)}
+.bracket-odds-row strong{text-align:right;font-size:11px;color:var(--accent)}
+.bracket-title-odds>p{font-size:10px;color:var(--muted);line-height:1.4;margin:9px 0 0}
+.bracket-method{margin-top:9px;color:var(--muted);font-size:11px}
+.bracket-method summary{cursor:pointer;font-weight:750}
+.bracket-method .bracket-footnote{margin:7px 0 0}
+@media(max-width:580px){.bracket-odds-list{grid-template-columns:1fr}.bracket-odds-row{grid-template-columns:minmax(0,1fr) 90px 46px}}
 </style>
 <style>
 .dynasty-trade-filters{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin:20px 0}
@@ -1680,11 +1769,216 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
 @media(max-width:650px){#picks .draft-tabs{gap:7px}#picks .draft-tabs button{padding:13px 7px;font-size:12px}#picks .draft-center-nav button{font-size:12px;padding:10px 12px}}
 </style>
 <style>
+/* Chart readability refinement: substantial, easy-to-scan diverging bars. */
+.dchart {gap:2px}
+.drow {min-height:55px;padding:10px 0;gap:16px;border-bottom:1px solid var(--line)}
+.drow .dn {font-size:15px;font-weight:650;line-height:1.35}
+.drow .dv {font-size:15px;font-weight:750;font-variant-numeric:tabular-nums}
+.dtrack {height:24px;border-radius:5px;background:color-mix(in srgb,var(--surface) 94%,var(--accent) 6%)}
+.dtrack::before {left:50%;width:2px;background:var(--muted);opacity:.65;z-index:2}
+.dtrack i {top:4px;bottom:4px;border-radius:4px;min-height:16px}
+.dtrack .bpos {background:#2261c6}
+.dtrack .bneg {background:#b0384a}
+@media(max-width:650px){.drow{min-height:51px;gap:9px;padding:9px 0}.drow .dn{font-size:13px}.drow .dv{font-size:13px}.dtrack{height:22px}.dtrack i{top:4px;bottom:4px;min-height:14px}}
+</style>
+<style>
 /* Aliases for tokens referenced throughout the stylesheet but never defined. */
 :root{--panel:var(--surface);--text:var(--fg)}
 #hubMineBtn{background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:9px;padding:9px 14px;font:inherit;cursor:pointer}
 #hubMineBtn:hover{border-color:var(--accent)}
 #hubMineBtn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+</style>
+<style>
+
+/* AP Fantasy Football · unified visual polish · October 2026
+   Presentation-only overrides: no Sleeper data, simulation, or navigation logic changed. */
+:root {
+  --ap-radius:16px;
+  --ap-shadow:0 3px 12px rgba(17,42,85,.045),0 16px 38px rgba(17,42,85,.035);
+  --ap-shadow-hover:0 10px 30px rgba(17,42,85,.12);
+}
+:root[data-theme="dark"] {--ap-shadow:0 5px 22px rgba(0,0,0,.14);--ap-shadow-hover:0 12px 32px rgba(0,0,0,.27)}
+html {scroll-behavior:smooth;scroll-padding-top:150px}
+body {line-height:1.58;-webkit-font-smoothing:antialiased}
+.wrap {max-width:1280px;gap:42px}
+section {gap:17px}
+.stack {gap:24px}
+/* Brand and global navigation */
+.mast {box-shadow:0 6px 22px rgba(12,33,70,.035);border-bottom:1px solid var(--line);margin-bottom:4px!important}
+.mast-brandrow {padding:16px 0 17px;gap:18px}
+.mast #title {font-size:clamp(33px,4vw,51px)!important;letter-spacing:-.048em;line-height:1.09!important;font-weight:800!important}
+.mast #eyebrow {font-size:12px!important;letter-spacing:.015em!important;color:var(--muted)}
+.mast .site-nav-shell {border-bottom:0!important}
+.mast .site-nav-shell .nav {gap:22px!important}
+.mast .site-nav-shell .nav>a,.mast .site-nav-shell .nav-more-button {font-size:15px!important;letter-spacing:-.012em;padding:14px 3px 15px!important;transition:color .18s,border-color .18s,background-color .18s}
+.mast .site-nav-shell .nav>a[aria-current="page"],.mast .site-nav-shell .nav-more-button[aria-current="page"] {font-weight:800!important}
+.season-pill,.mast-actions .themebtn {box-shadow:0 2px 8px rgba(16,42,82,.04)}
+/* Page-level hierarchy */
+section>.shead {align-items:end;gap:12px 24px;margin:0 0 7px}
+section>.shead h2,.section-page-head h2 {font-size:clamp(28px,3.25vw,39px)!important;letter-spacing:-.035em;line-height:1.16!important;font-weight:750!important}
+section>.shead .note {max-width:62ch;font-size:14px;line-height:1.5}
+.section-page-head {margin-bottom:14px!important}
+.section-page-head p {font-size:15px!important;line-height:1.55!important;max-width:72ch}
+.sub {font-size:19px!important;letter-spacing:-.02em;margin-top:10px!important;border-bottom:1px solid var(--line)!important;padding-bottom:10px!important}
+/* Consistent cards and surfaces */
+.scroll,.section-tab-panel,.profile-section,.hub-panel,.hub-overview,.pick-projection-module,.scenario-shell,.hof-hero,.story-card,.dispatch-game,.dispatch-leader,.dispatch-award,.game,.matchup-page-card,.players-workspace,.analytics-topic-panel,.profile-metric,.hof-metric,.scenario-metric {border-radius:var(--ap-radius)!important}
+.scroll,.section-tab-panel,.profile-section,.hub-panel,.hub-overview,.pick-projection-module,.scenario-shell,.hof-hero,.story-card,.dispatch-game,.dispatch-leader,.dispatch-award,.game,.matchup-page-card,.players-workspace {box-shadow:var(--ap-shadow)}
+/* Tables: consistent rhythm and scanability */
+.scroll {overflow-x:auto;overscroll-behavior-x:contain}
+table {font-variant-numeric:tabular-nums}
+th {font-size:12px!important;font-weight:800!important;letter-spacing:.025em!important;text-transform:none!important;color:var(--muted)!important;background:color-mix(in srgb,var(--surface) 82%,var(--accent) 18%)!important}
+td {font-size:15px;line-height:1.45}
+th,td {padding:13px 15px}
+tbody tr:nth-child(even) {background:color-mix(in srgb,var(--surface) 94%,var(--accent) 6%)}
+tbody tr:hover {background:color-mix(in srgb,var(--surface) 88%,var(--accent) 12%)}
+td.num,th.num {font-variant-numeric:tabular-nums}
+/* Stats: strong values, quiet labels */
+.strip {border-top:1px solid var(--line);gap:10px}
+.strip>div {padding:14px 12px!important;background:var(--surface);border:1px solid var(--line);border-radius:12px;min-width:0}
+.strip .k {font-size:12px!important;color:var(--muted);font-weight:750}
+.strip .v {font-size:clamp(23px,2.7vw,31px)!important;letter-spacing:-.035em;line-height:1.2}
+.strip .s {font-size:12px;line-height:1.45}
+/* Controls and buttons */
+button,select,input {font-family:var(--body)}
+button {transition:background-color .15s,border-color .15s,color .15s,box-shadow .15s}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible {outline:3px solid var(--accent)!important;outline-offset:2px}
+.section-tab,.draft-tabs button,.hub-tabs button,.stand-viewtabs button {font-weight:750!important}
+.section-tab[aria-selected="true"],.draft-tabs button[aria-selected="true"],.hub-tabs button[aria-selected="true"] {box-shadow:inset 0 -2px 0 var(--accent)}
+/* Headquarters: balanced summary and race */
+#standings .stand-summary {gap:12px}
+#standings .stand-table-wrap {border-radius:14px!important}
+#standings .stand-viewbar {gap:12px}
+#standings .stand-view-note {font-size:13px;line-height:1.5;color:var(--muted)}
+/* Matchups: consistent score cards and readable scores */
+#matchups .matchups-page-head h2 {font-size:clamp(29px,3.2vw,39px)!important}
+#matchups #matchupGames {gap:15px}
+#matchups #matchupGames .matchup-page-card {box-shadow:var(--ap-shadow)!important;overflow:hidden}
+#matchups #matchupGames .matchup-page-card:hover {box-shadow:var(--ap-shadow-hover)!important}
+#matchups .matchup-score-row .matchup-score {font-variant-numeric:tabular-nums;letter-spacing:-.035em}
+#matchups .matchup-card-top {background:color-mix(in srgb,var(--surface) 92%,var(--accent))}
+/* Analytics: clear workspace tabs and less nested visual noise */
+#analytics .section-tabs {box-shadow:none;gap:6px!important}
+#analytics .section-tab {font-size:13px!important;min-height:43px;border-radius:9px!important}
+#analytics .analytics-topic-panel,#analytics #rosPanel,#analytics #an-age>.stack {box-shadow:var(--ap-shadow)!important}
+#analytics .age-position-tabs {gap:6px}
+#analytics .age-position-tabs button {min-height:36px}
+/* Team Hub: franchise identity, permanent right-side news, neat position tabs */
+#teamhub .hub-overview {border-left:4px solid var(--accent);background:linear-gradient(115deg,var(--surface),color-mix(in srgb,var(--surface) 92%,var(--accent)))}
+#teamhub .hub-overview h3 {letter-spacing:-.035em}
+#teamhub .hub-panel {box-shadow:var(--ap-shadow)}
+#teamhub .hub-tabs button {font-size:14px}
+#teamhub .hub-metric {border-radius:12px}
+/* Dynasty Center: consistent drafting workspace */
+#picks .draft-tabs {gap:7px}
+#picks .draft-tabs button {border-radius:10px}
+#picks .pick-projection-module {gap:15px}
+#picks .board .rnd {border-radius:14px;box-shadow:var(--ap-shadow)}
+/* History and editorial views */
+#history .section-tabs {gap:8px}
+#hall .hof-metric {background:var(--surface)}
+.story-card,.dispatch-award,.dispatch-leader {transition:box-shadow .18s,border-color .18s}
+.story-card:hover,.dispatch-award:hover,.dispatch-leader:hover {box-shadow:var(--ap-shadow-hover);border-color:color-mix(in srgb,var(--line) 60%,var(--accent))}
+/* Player rankings: compact and intentional */
+#players .players-heading h2 {font-size:clamp(28px,3.2vw,39px)!important}
+#players .players-workspace {padding:20px}
+#players .players-toolbar {gap:12px}
+#players #playerLeaderboard th,#players #playerLeaderboard td {padding:12px 14px}
+/* Mobile: no cramped two-column headers or overflowing controls */
+@media(max-width:900px) {.wrap{gap:32px}.mast .site-nav-shell .nav{gap:15px!important}.strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px) {
+ body {font-size:16px}
+ .wrap {gap:25px}
+ .mast-brandrow {align-items:flex-start;flex-wrap:wrap;gap:9px;padding:12px 0}
+ .mast #title {font-size:clamp(27px,6.4vw,37px)!important}
+ .mast-actions {margin-left:0;gap:6px}
+ .mast .site-nav-shell .nav>a,.mast .site-nav-shell .nav-more-button {font-size:13px!important;padding:11px 2px 12px!important}
+ section>.shead {align-items:flex-start}
+ section>.shead h2,.section-page-head h2 {font-size:clamp(26px,6vw,32px)!important}
+ .strip {gap:8px}
+ .strip>div {padding:12px!important}
+ th,td {padding:11px 12px}
+ #players .players-workspace {padding:12px}
+ #teamhub .hub-panel {padding:15px}
+}
+@media(prefers-reduced-motion:reduce) {html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+
+/* Chart readability refinement: substantial, easy-to-scan diverging bars. */
+.dchart {gap:2px}
+.drow {min-height:55px;padding:10px 0;gap:16px;border-bottom:1px solid var(--line)}
+.drow .dn {font-size:15px;font-weight:650;line-height:1.35}
+.drow .dv {font-size:15px;font-weight:750;font-variant-numeric:tabular-nums}
+.dtrack {height:24px;border-radius:5px;background:color-mix(in srgb,var(--surface) 94%,var(--accent) 6%)}
+.dtrack::before {left:50%;width:2px;background:var(--muted);opacity:.65;z-index:2}
+.dtrack i {top:4px;bottom:4px;border-radius:4px;min-height:16px}
+.dtrack .bpos {background:#2261c6}
+.dtrack .bneg {background:#b0384a}
+@media(max-width:650px){.drow{min-height:51px;gap:9px;padding:9px 0}.drow .dn{font-size:13px}.drow .dv{font-size:13px}.dtrack{height:22px}.dtrack i{top:4px;bottom:4px;min-height:14px}}
+
+</style>
+<style>
+/* APFF confident-density pass: fuller, tighter layouts and stronger hierarchy. */
+:root {--ap-shadow:0 3px 12px rgba(16,45,93,.075),0 10px 25px rgba(16,45,93,.035)}
+.wrap {max-width:1180px;gap:28px}
+section {gap:13px}
+.stack {gap:17px}
+body {line-height:1.5}
+section>.shead {margin-bottom:3px;gap:8px 18px}
+section>.shead h2,.section-page-head h2 {font-weight:800!important}
+section>.shead .note {font-size:14px;color:var(--muted)}
+.sub {font-size:19px!important;font-weight:800!important;margin-top:7px!important;padding-bottom:8px!important;border-bottom:2px solid var(--line)!important}
+/* Solid surface definition instead of thin floating outlines. */
+.scroll,.hub-panel,.players-workspace,.analytics-topic-panel,.pick-projection-module,.matchup-page-card,.profile-section {border:1px solid var(--line)!important;box-shadow:var(--ap-shadow)!important}
+.scroll {background:var(--surface)}
+/* Denser, higher-contrast tables: use space for information rather than air. */
+th {font-size:13px!important;color:var(--fg)!important;font-weight:800!important;background:color-mix(in srgb,var(--surface) 73%,var(--accent) 27%)!important}
+th,td {padding:10px 13px}
+td {font-size:15px;line-height:1.32}
+tbody tr {border-bottom:1px solid var(--line)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--accent) 9%)}
+/* Standings: shorter rows, stronger table header, more compact column widths. */
+#standings #standTable {table-layout:fixed;min-width:700px}
+#standings #standTable th,#standings #standTable td {padding:10px 12px!important}
+#standings #standTable th:nth-child(1),#standings #standTable td:nth-child(1){width:6%!important;min-width:0!important}
+#standings #standTable th:nth-child(2),#standings #standTable td:nth-child(2){width:43%!important;min-width:0!important}
+#standings #standTable th:nth-child(3),#standings #standTable td:nth-child(3){width:11%!important;min-width:0!important}
+#standings #standTable th:nth-child(4),#standings #standTable td:nth-child(4){width:14%!important;min-width:0!important}
+#standings #standTable th:nth-child(5),#standings #standTable td:nth-child(5){width:26%!important;min-width:0!important}
+#standings #standTable th {background:color-mix(in srgb,var(--surface) 76%,var(--accent) 24%)!important;font-size:13px!important}
+#standings #standTable .tn {font-size:16px;font-weight:800;gap:5px}
+#standings #standTable .th {font-size:12px;margin-top:1px}
+#standings #standTable .rank {font-size:19px}
+#standings #standTable .form b {width:23px;height:23px}
+#standings #standTable tbody tr:nth-child(even) {background:color-mix(in srgb,var(--surface) 92%,var(--accent) 8%)!important}
+#standings #standTable tbody tr:hover {background:var(--tint)!important}
+#standings .stand-viewbar {margin-top:0}
+#standings .stand-view-note {font-size:13px}
+/* Fill charts and metrics with clearer marks and labels. */
+.drow {min-height:49px;padding:7px 0;gap:12px}
+.drow .dn {font-weight:750;font-size:15px}
+.drow .dv {font-size:15px;font-weight:800}
+.dtrack {height:26px}
+.dtrack i {top:3px;bottom:3px;min-height:18px}
+.strip {gap:9px}
+.strip>div {padding:12px 14px!important;border-top:3px solid var(--accent);box-shadow:0 2px 8px rgba(16,45,93,.045)}
+.strip .k {font-size:13px!important;font-weight:800}
+.strip .v {font-size:clamp(25px,2.8vw,33px)!important;font-weight:800}
+/* Make tabs feel substantial without turning them into oversized cards. */
+#analytics .section-tab,#picks .draft-tabs button,#teamhub .hub-tabs button,#standings .stand-viewtabs button {font-size:14px!important;font-weight:800!important}
+#analytics .analytics-topic-panel,#analytics #rosPanel,#analytics #an-age>.stack {padding:18px!important}
+#players .players-workspace {padding:16px}
+#players #playerLeaderboard th,#players #playerLeaderboard td {padding:10px 12px}
+#matchups #matchupGames {gap:12px}
+#matchups .matchup-score-row {min-height:54px;padding:10px 15px}
+#matchups .matchup-score-row .matchup-score {font-weight:800}
+#teamhub .hub-panel {padding:18px}
+#teamhub .hub-metric {background:color-mix(in srgb,var(--surface) 88%,var(--accent) 12%);border-top:3px solid var(--accent)}
+#teamhub .hub-metric strong {font-weight:800}
+/* Dark mode keeps definition without adding heavy shadows. */
+:root[data-theme="dark"] {--ap-shadow:0 3px 14px rgba(0,0,0,.17)}
+@media(max-width:900px){.wrap{gap:24px}#standings #standTable{table-layout:auto}}
+@media(max-width:650px){.wrap{gap:20px}section{gap:12px}.stack{gap:14px}th,td{padding:9px 10px}#standings #standTable th,#standings #standTable td{padding:9px 10px!important}.drow{min-height:47px}.drow .dn,.drow .dv{font-size:13px}#analytics .analytics-topic-panel,#analytics #rosPanel,#analytics #an-age>.stack{padding:13px!important}}
+
 </style>
 </head>
 <body>
@@ -1735,6 +2029,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
       <label class="stand-odds" id="standOddsLabel"><input type="checkbox" id="standOddsToggle"> Show simulated playoff odds</label>
     </div>
     <p class="stand-view-note" id="standViewNote"></p>
+    <div class="hq-split-layout"><div class="hq-standings-column">
     <div class="scroll stand-table-wrap">
       <table id="standTable">
         <thead><tr id="standHead"></tr></thead>
@@ -1745,7 +2040,9 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     <div id="wildcardRace" class="wildcard-race" hidden></div>
     <p class="legend" id="standLegend">Rankings follow your league's playoff rules. Click a column heading to sort, or a franchise to open Team Hub.</p>
     <span id="faabLegend" hidden></span><span id="standOddsTh" hidden></span>
-    <div class="bracket-shell" id="projectedBracket"><div class="bracket-top"><div><span class="bracket-eyebrow">ROAD TO THE CHAMPIONSHIP</span><h2>Projected Playoff Bracket</h2></div><span class="bracket-provisional">PROVISIONAL · CURRENT STANDINGS</span></div><p class="bracket-desc">If the regular season ended today. Seeds 1–5 follow record (points for breaks ties); the sixth seed goes to the highest-scoring remaining franchise. Future results can change every seed.</p><div class="bracket-actions"><button type="button" id="simulatePlayoffsBtn" class="bracket-sim-btn">🎲 Simulate playoffs</button><span id="bracketSimStatus" class="bracket-sim-status" aria-live="polite">Run a sample postseason using each team’s scoring history.</span></div><div id="bracketContent"></div></div>
+    </div><div class="hq-bracket-column">
+    <div class="bracket-shell" id="projectedBracket"><div class="bracket-top"><div><span class="bracket-eyebrow">ROAD TO THE CHAMPIONSHIP</span><h2>Projected Playoff Bracket</h2></div><span class="bracket-provisional">PROVISIONAL · CURRENT STANDINGS</span></div><p class="bracket-desc">If the season ended today: five record-based seeds + one points wildcard. Seeds may change.</p><div class="bracket-actions"><button type="button" id="simulatePlayoffsBtn" class="bracket-sim-btn">🎲 Simulate playoffs</button><span id="bracketSimStatus" class="bracket-sim-status" aria-live="polite">One sample postseason · not a forecast.</span></div><div id="bracketContent"></div></div>
+    </div></div>
     <details id="scenarioExplorer" class="scenario-shell">
       <summary>🎯 Playoff Scenario Explorer</summary>
       <div class="scenario-inner">
@@ -2425,6 +2722,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
   });
 
   var bracketSimulation=null;
+  var bracketOddsCache={key:'',odds:null};
   function bracketScoreModel(ids){
     var last=Math.min(S.lastScored,regEnd()), leagueMean=ids.reduce(function(total,id){return total+Number(S.T[id].pf||0)/Math.max(1,last);},0)/ids.length,models={};
     ids.forEach(function(id){
@@ -2448,8 +2746,25 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     var finalGame=play(semiA.winner,semiB.winner);
     bracketSimulation={wildA:wildA,wildB:wildB,semiA:semiA,semiB:semiB,finalGame:finalGame};
     renderProjectedBracket();
-    var status=$('bracketSimStatus');if(status)status.textContent='Sample postseason generated · Scores are simulated, not actual results. Click again to rerun.';
+    var status=$('bracketSimStatus');if(status)status.textContent='One simulated postseason · rerun for a new outcome.';
     var btn=$('simulatePlayoffsBtn');if(btn)btn.textContent='🎲 Simulate again';
+  }
+  function bracketTitleOdds(ids){
+    // Conditional championship chances among the six CURRENT seeds, not playoff qualification odds.
+    var key=ids.join('|')+'|'+S.lastScored+'|'+ids.map(function(id){return Number(S.T[id].pf||0).toFixed(1);}).join('|');
+    if(bracketOddsCache.key===key)return bracketOddsCache.odds;
+    var model=bracketScoreModel(ids),wins={},N=1800;
+    ids.forEach(function(id){wins[id]=0;});
+    function normal(){return Math.sqrt(-2*Math.log(Math.max(1e-8,Math.random())))*Math.cos(2*Math.PI*Math.random());}
+    function play(a,b){return Math.max(0,model[a].mu+normal()*model[a].sd)>=Math.max(0,model[b].mu+normal()*model[b].sd)?a:b;}
+    for(var n=0;n<N;n++){
+      var wa=play(ids[2],ids[5]),wb=play(ids[3],ids[4]);
+      var sorted=[wa,wb].sort(function(a,b){return ids.indexOf(a)-ids.indexOf(b);});
+      var sa=play(ids[0],sorted[1]),sb=play(ids[1],sorted[0]);
+      wins[play(sa,sb)]++;
+    }
+    var odds={};ids.forEach(function(id){odds[id]=wins[id]/N*100;});
+    bracketOddsCache={key:key,odds:odds};return odds;
   }
   function renderProjectedBracket(){
     var el=$('bracketContent'),cut=Number((S.league.settings||{}).playoff_teams||6),btn=$('simulatePlayoffsBtn');
@@ -2460,17 +2775,19 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     if(btn)btn.disabled=false;
     function team(id,game){var seed=ids.indexOf(id)+1,score=game?(game.a===id?game.sa:game.sb):null,win=game&&game.winner===id;return '<div class="bracket-team'+(win?' bracket-winner':'')+'"><span class="bracket-seed">'+seed+'</span><strong>'+esc(tname(id))+'</strong>'+(game?'<span class="bracket-score">'+score.toFixed(1)+'</span>':'<small>'+esc(recStr(S.T[id]))+'</small>')+'</div>';}
     function slot(label,content,sub){return '<div class="bracket-game"><span class="bracket-game-label">'+label+'</span>'+content+(sub?'<div class="bracket-game-sub">'+sub+'</div>':'')+'</div>';}
+    var titleOdds=bracketTitleOdds(ids);
     var sim=bracketSimulation;
     var wildA=sim?team(sim.wildA.a,sim.wildA)+team(sim.wildA.b,sim.wildA):team(ids[2])+team(ids[5]);
     var wildB=sim?team(sim.wildB.a,sim.wildB)+team(sim.wildB.b,sim.wildB):team(ids[3])+team(ids[4]);
     var semiA=sim?team(sim.semiA.a,sim.semiA)+team(sim.semiA.b,sim.semiA):team(ids[0])+'<div class="bracket-placeholder">Lowest remaining seed</div>';
     var semiB=sim?team(sim.semiB.a,sim.semiB)+team(sim.semiB.b,sim.semiB):team(ids[1])+'<div class="bracket-placeholder">Other wild-card winner</div>';
     var title=sim?team(sim.finalGame.a,sim.finalGame)+team(sim.finalGame.b,sim.finalGame):'<div class="bracket-placeholder">Semifinal 1 winner</div><div class="bracket-placeholder">Semifinal 2 winner</div>';
-    el.innerHTML='<div class="bracket-grid">'+
+    var titleOddsHtml='<div class="bracket-title-odds"><div class="bracket-title-odds-heading"><strong>🏆 Championship chances</strong><span>Current six seeds · 1,800 simulations</span></div><div class="bracket-odds-list">'+ids.slice().sort(function(a,b){return titleOdds[b]-titleOdds[a];}).map(function(id){return '<div class="bracket-odds-row"><span class="bracket-odds-name">'+esc(tname(id))+'</span><span class="bracket-odds-track"><i style="width:'+titleOdds[id].toFixed(1)+'%"></i></span><strong>'+titleOdds[id].toFixed(1)+'%</strong></div>';}).join('')+'</div><p>Odds are conditional on today’s six seeds qualifying. They do not include the chance of missing the playoffs.</p></div>';
+    el.innerHTML='<div class="bracket-progress" aria-label="Playoff rounds"><span>1 · Wild Card</span><b>→</b><span>2 · Semifinals</span><b>→</b><span class="bracket-progress-title">🏆 Championship</span></div><div class="bracket-grid">'+
       '<div class="bracket-round wild-round"><h3>Wild Card · Week 15</h3>'+slot('MATCHUP A',wildA,sim?'Winner advances':'Winner advances')+slot('MATCHUP B',wildB,'Winner advances')+'</div><div class="bracket-connector" aria-hidden="true"></div>'+
       '<div class="bracket-round semi-round"><h3>Semifinals · Week 16</h3>'+slot('SEMIFINAL 1',semiA,sim?'Winner advances':'No. 1 seed has a first-round bye')+slot('SEMIFINAL 2',semiB,sim?'Winner advances':'No. 2 seed has a first-round bye')+'</div><div class="bracket-connector second" aria-hidden="true"></div>'+
       '<div class="bracket-round final-round"><h3>Championship · Week 17</h3>'+slot('AP TITLE GAME',title,sim?'<span class="bracket-champion">🏆 Simulated champion: '+esc(tname(sim.finalGame.winner))+'</span>':'Projected participants TBD')+'</div></div>'+
-      '<p class="bracket-footnote">'+(sim?'One randomly simulated postseason using historical weekly scoring, shrunk toward the league average. Winners are highlighted; scores are illustrative, not predictions or live results. Assumes higher seeds host lower remaining seeds in the semifinals (reseeding); verify your league rules in Sleeper.':'Bracket lines show progression between rounds, not guaranteed semifinal pairings. The semifinal opponents are placeholders, not predicted winners. The highest remaining seed faces the lowest remaining seed if the league reseeds; verify bracket rules in Sleeper.')+'</p>';
+      titleOddsHtml+'<details class="bracket-method"><summary>How the simulation works</summary><p class="bracket-footnote">'+(sim?'One randomly simulated postseason using historical weekly scoring, shrunk toward the league average. Winners are highlighted; scores are illustrative, not predictions or live results. Assumes higher seeds host lower remaining seeds in the semifinals (reseeding); verify your league rules in Sleeper.':'Bracket lines show progression between rounds, not guaranteed semifinal pairings. The semifinal opponents are placeholders, not predicted winners. The highest remaining seed faces the lowest remaining seed if the league reseeds; verify bracket rules in Sleeper.')+'</p></details>';
   }
 
   /* ---------- analytics ---------- */
