@@ -1602,6 +1602,83 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 .bracket-method summary{cursor:pointer;font-weight:750}
 .bracket-method .bracket-footnote{margin:7px 0 0}
 @media(max-width:580px){.bracket-odds-list{grid-template-columns:1fr}.bracket-odds-row{grid-template-columns:minmax(0,1fr) 90px 46px}}
+
+/* Headquarters: calm, uncluttered bracket with standings kept intact */
+#standings .hq-bracket-column .bracket-shell{padding:17px 17px 19px}
+#standings .hq-bracket-column .bracket-top h2{font-size:22px;margin:0}
+#standings .hq-bracket-column .bracket-desc{margin:4px 0 10px;color:var(--muted);font-size:11px}
+#standings .hq-bracket-column .bracket-actions{margin-bottom:13px}
+#standings .hq-bracket-column .bracket-sim-btn{padding:7px 11px;font-size:11px}
+#standings .hq-bracket-column .bracket-round{gap:9px}
+#standings .hq-bracket-column .bracket-round h3{font-size:12px}
+#standings .hq-bracket-column .bracket-game-label{padding:6px 9px}
+#standings .hq-bracket-column .bracket-team{min-height:40px}
+#standings .hq-bracket-column .bracket-game-sub{padding:5px 9px}
+#standings .hq-bracket-column .final-round .bracket-game{border:1.5px solid #c5a461;box-shadow:none}
+#standings .hq-bracket-column .final-round .bracket-game-label{background:color-mix(in srgb,var(--surface) 88%,#e8c978)}
+#standings .hq-bracket-column .bracket-method{margin-top:12px}
+.playoff-race-title-odds{margin-top:18px}
+
+/* Headquarters: full-width standings above projected playoff bracket */
+#standings .hq-split-layout{display:flex;flex-direction:column;gap:22px;align-items:stretch}
+#standings .hq-standings-column,#standings .hq-bracket-column{width:100%;min-width:0}
+#standings .hq-standings-column #standTable{width:100%;min-width:0!important;table-layout:fixed}
+#standings .hq-standings-column #standTable th,#standings .hq-standings-column #standTable td{padding:10px 15px;font-size:14px}
+#standings .hq-standings-column #standTable .tn{font-size:14px}
+#standings .hq-standings-column #standTable .rank{font-size:17px}
+#standings .hq-standings-column #standTable .form{gap:5px}
+#standings .hq-standings-column #standTable .form b{width:24px;height:24px;font-size:11px}
+#standings .hq-standings-column #standTable th:nth-child(1),#standings .hq-standings-column #standTable td:nth-child(1){width:7%!important}
+#standings .hq-standings-column #standTable th:nth-child(2),#standings .hq-standings-column #standTable td:nth-child(2){width:44%!important}
+#standings .hq-standings-column #standTable th:nth-child(3),#standings .hq-standings-column #standTable td:nth-child(3){width:12%!important}
+#standings .hq-standings-column #standTable th:nth-child(4),#standings .hq-standings-column #standTable td:nth-child(4){width:14%!important}
+#standings .hq-standings-column #standTable th:nth-child(5),#standings .hq-standings-column #standTable td:nth-child(5){width:23%!important}
+#standings .hq-bracket-column .bracket-shell{padding:22px 24px}
+#standings .hq-bracket-column .bracket-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+#standings .hq-bracket-column .bracket-round{grid-template-columns:minmax(0,1fr);gap:12px;padding-top:29px}
+#standings .hq-bracket-column .bracket-round.final-round{grid-template-columns:minmax(0,1fr)}
+#standings .hq-bracket-column .bracket-round h3{font-size:14px}
+#standings .hq-bracket-column .bracket-team strong{font-size:13px}
+#standings .hq-bracket-column .bracket-team{min-height:43px}
+@media(max-width:900px){
+ #standings .hq-bracket-column .bracket-grid{grid-template-columns:minmax(0,1fr);gap:8px}
+ #standings .hq-bracket-column .bracket-round{grid-template-columns:repeat(2,minmax(0,1fr));padding-top:25px}
+ #standings .hq-bracket-column .bracket-round.final-round{grid-template-columns:minmax(0,1fr)}
+ #standings .hq-standings-column #standTable{min-width:650px!important}
+}
+@media(max-width:580px){
+ #standings .hq-bracket-column .bracket-shell{padding:15px}
+ #standings .hq-bracket-column .bracket-round{grid-template-columns:minmax(0,1fr)}
+}
+
+/* Fixed six-team playoff tree: visible advancement paths, round alignment, and no reseeding. */
+#standings .hq-bracket-column .bracket-grid,.bracket-grid{
+  position:relative;display:grid;grid-template-columns:minmax(0,1fr) 54px minmax(0,1fr) 54px minmax(0,1fr);
+  gap:0;align-items:stretch;min-height:415px;
+}
+#standings .hq-bracket-column .bracket-round,.bracket-round{
+  display:flex;flex-direction:column;justify-content:space-around;gap:16px;position:relative;
+  padding:38px 0 10px;min-width:0;
+}
+#standings .hq-bracket-column .bracket-round h3,.bracket-round h3{position:absolute;top:3px;left:0;right:0;text-align:left;font-size:16px;margin:0}
+#standings .hq-bracket-column .bracket-connector,.bracket-connector{display:block;visibility:hidden;pointer-events:none}
+#standings .hq-bracket-column .bracket-round.final-round,.bracket-round.final-round{justify-content:center}
+.bracket-grid .fixed-bracket-lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+.bracket-grid .bracket-round{z-index:1}
+.bracket-grid .bracket-game{box-shadow:0 4px 12px rgba(14,36,70,.07)}
+@media(max-width:700px){
+ #standings .hq-bracket-column .bracket-grid,.bracket-grid{display:flex;flex-direction:column;gap:12px;min-height:0}
+ #standings .hq-bracket-column .bracket-round,.bracket-round{padding:30px 0 0;gap:10px}
+ #standings .hq-bracket-column .bracket-connector,.bracket-connector{display:none}
+ #standings .hq-bracket-column .bracket-round h3,.bracket-round h3{font-size:15px}
+}
+
+/* Standings: blue left rail is the only playoff qualification marker. */
+#standings #standTable tr.in td:first-child{box-shadow:inset 5px 0 0 #2262c4!important}
+#standings #standTable tr.bubble td:first-child{box-shadow:inset 5px 0 0 #2262c4!important}
+/* A restrained amber divider replaces the oversized solid cutoff bar. */
+#standings #standTable tr.cut td{height:3px!important;min-height:3px!important;padding:0!important;border:0!important;background:linear-gradient(90deg,#d9a74b,#e8c880 55%,#d9a74b)!important;position:relative;overflow:visible!important}
+#standings #standTable tr.cut .cut-label{position:absolute;right:13px;top:50%;transform:translateY(-50%);background:#fff9ed!important;color:#81540d!important;border:1px solid #d9a74b!important;border-radius:999px;padding:3px 10px;font-size:10px;letter-spacing:.045em;line-height:1.2;white-space:nowrap;box-shadow:0 1px 3px rgba(40,50,80,.08)}
 </style>
 <style>
 .dynasty-trade-filters{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin:20px 0}
@@ -1979,6 +2056,62 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
 @media(max-width:900px){.wrap{gap:24px}#standings #standTable{table-layout:auto}}
 @media(max-width:650px){.wrap{gap:20px}section{gap:12px}.stack{gap:14px}th,td{padding:9px 10px}#standings #standTable th,#standings #standTable td{padding:9px 10px!important}.drow{min-height:47px}.drow .dn,.drow .dv{font-size:13px}#analytics .analytics-topic-panel,#analytics #rosPanel,#analytics #an-age>.stack{padding:13px!important}}
 
+
+/* Headquarters table: dynamic column widths and correct sizing for every tab. */
+#standings .hq-standings-column #standTable,
+#standings #standTable{width:100%!important;table-layout:fixed!important;min-width:0!important}
+#standings #standTable col{min-width:0}
+/* Remove stale 5-column width rules that were breaking Advanced Stats and Playoff Race. */
+#standings #standTable th:nth-child(n),#standings #standTable td:nth-child(n){width:auto!important;min-width:0!important}
+#standings #standTable th,#standings #standTable td{box-sizing:border-box;padding:12px 10px!important;overflow-wrap:normal}
+#standings #standTable th{white-space:normal;line-height:1.3;vertical-align:middle}
+#standings #standTable th .table-sort{white-space:normal;display:inline-flex;align-items:center;gap:3px;text-align:left;justify-content:flex-start}
+#standings #standTable td.num,#standings #standTable th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+#standings #standTable td:nth-child(2){overflow-wrap:anywhere}
+#standings #standTable .tn{gap:5px}
+#standings #standTable[data-view="advanced"] td,#standings #standTable[data-view="playoffs"] td{font-size:13px}
+#standings #standTable[data-view="advanced"] th,#standings #standTable[data-view="playoffs"] th{font-size:11px!important}
+#standings #standTable .hq-playoff-badge{display:inline-flex;align-items:center;gap:3px;padding:3px 6px;border-radius:6px;background:color-mix(in srgb,#16845c 13%,var(--surface));color:#08744d;font-size:10px;font-weight:850;white-space:nowrap}
+#standings #standTable tr.cut td{background:#c89130!important;height:5px!important;padding:0!important;border:0!important}
+#standings #standTable tr.cut .cut-label{background:#fff6dd!important;border:1px solid #c89130!important;color:#83510c!important;font-weight:850}
+#standings #standTable tr.bubble td:first-child{box-shadow:inset 5px 0 0 #c89130!important}
+#standings #standTable tr.in td:first-child{box-shadow:inset 4px 0 0 #148a62}
+#standings #standTable .rank{font-weight:850}
+/* Keep all three bracket rounds and final winner area the same height before/after simulation. */
+#standings .bracket-grid .bracket-team,#standings .bracket-grid .bracket-placeholder{height:54px!important;min-height:54px!important;box-sizing:border-box;display:flex;align-items:center;padding:8px 12px}
+#standings .bracket-grid .bracket-team strong{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#standings .bracket-grid .bracket-game-sub{min-height:37px;display:flex;align-items:center}
+#standings .bracket-grid .bracket-champion{display:block;width:100%;min-height:19px}
+@media(max-width:950px){#standings #standTable[data-view="advanced"],#standings #standTable[data-view="playoffs"]{min-width:880px!important}#standings .stand-table-wrap{overflow-x:auto!important}}
+@media(max-width:650px){#standings #standTable[data-view="standings"]{min-width:660px!important}#standings #standTable .hq-playoff-badge{font-size:9px}}
+</style>
+
+<style id="apff-bracket-uniform-fix">
+/* One uninterrupted blue playoff rail; amber belongs only on the horizontal cutoff. */
+#standings #standTable tr.in td:first-child,
+#standings #standTable tr.bubble td:first-child{box-shadow:inset 5px 0 0 #2262c4!important}
+#standings #standTable tr.cut td{height:3px!important;min-height:3px!important;padding:0!important;border:0!important;background:linear-gradient(90deg,#d9a74b,#e8c880 55%,#d9a74b)!important}
+/* Each round gets the same card width. Fixed row geometry survives simulations. */
+#standings .hq-bracket-column .bracket-grid,
+#standings .bracket-grid{grid-template-columns:minmax(0,1fr) clamp(26px,3.2vw,52px) minmax(0,1fr) clamp(26px,3.2vw,52px) minmax(0,1fr)!important;min-height:490px}
+#standings .bracket-grid .bracket-round{min-width:0}
+#standings .bracket-grid .bracket-game{width:100%;min-width:0;box-sizing:border-box;min-height:174px;display:flex;flex-direction:column}
+#standings .bracket-grid .bracket-game-label{height:38px;min-height:38px;display:flex;align-items:center;padding:8px 12px;box-sizing:border-box}
+#standings .bracket-grid .bracket-team,
+#standings .bracket-grid .bracket-placeholder{height:68px!important;min-height:68px!important;box-sizing:border-box;padding:9px 12px!important;display:flex;align-items:center;gap:8px}
+#standings .bracket-grid .bracket-team strong{font-size:clamp(12px,1.1vw,15px)!important;line-height:1.3!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere;min-width:0;flex:1}
+#standings .bracket-grid .bracket-score{flex:none;font-size:12px}
+#standings .bracket-grid .bracket-team small{display:none}
+#standings .bracket-grid .bracket-game-sub{height:38px;min-height:38px;box-sizing:border-box;display:flex;align-items:center;padding:7px 12px}
+#standings .bracket-grid .final-round .bracket-game{min-height:212px}
+#standings .bracket-grid .bracket-champion{display:flex!important;align-items:center;min-height:38px!important;height:38px;box-sizing:border-box;font-size:12px;overflow-wrap:anywhere}
+@media(max-width:760px){
+ #standings .hq-bracket-column .bracket-grid,#standings .bracket-grid{display:flex!important;flex-direction:column;gap:14px;min-height:0}
+ #standings .bracket-grid .bracket-round{gap:12px;padding:32px 0 0}
+ #standings .bracket-grid .bracket-connector{display:none!important}
+ #standings .bracket-grid .bracket-game{min-height:174px}
+ #standings .bracket-grid .final-round .bracket-game{min-height:212px}
+}
 </style>
 </head>
 <body>
@@ -2041,7 +2174,7 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
     <p class="legend" id="standLegend">Rankings follow your league's playoff rules. Click a column heading to sort, or a franchise to open Team Hub.</p>
     <span id="faabLegend" hidden></span><span id="standOddsTh" hidden></span>
     </div><div class="hq-bracket-column">
-    <div class="bracket-shell" id="projectedBracket"><div class="bracket-top"><div><span class="bracket-eyebrow">ROAD TO THE CHAMPIONSHIP</span><h2>Projected Playoff Bracket</h2></div><span class="bracket-provisional">PROVISIONAL · CURRENT STANDINGS</span></div><p class="bracket-desc">If the season ended today: five record-based seeds + one points wildcard. Seeds may change.</p><div class="bracket-actions"><button type="button" id="simulatePlayoffsBtn" class="bracket-sim-btn">🎲 Simulate playoffs</button><span id="bracketSimStatus" class="bracket-sim-status" aria-live="polite">One sample postseason · not a forecast.</span></div><div id="bracketContent"></div></div>
+    <div class="bracket-shell" id="projectedBracket"><div class="bracket-top"><div><h2>Projected Playoff Bracket</h2></div></div><p class="bracket-desc">Current top six · provisional seeds</p><div class="bracket-actions"><button type="button" id="simulatePlayoffsBtn" class="bracket-sim-btn">🎲 Simulate playoffs</button><span id="bracketSimStatus" class="bracket-sim-status" aria-live="polite"></span></div><div id="bracketContent"></div></div>
     </div></div>
     <details id="scenarioExplorer" class="scenario-shell">
       <summary>🎯 Playoff Scenario Explorer</summary>
@@ -2664,7 +2797,13 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
     document.querySelectorAll('[data-stand-view]').forEach(function(btn){btn.setAttribute('aria-pressed',String(btn.dataset.standView===standView));});
     $('standNote').textContent=cut?'Top '+cut+' qualify · Seed '+cut+' is the points-for wildcard':'Ranked by wins, then points for';
     $('standViewNote').textContent=standView==='standings'?'Official seeds, record, scoring, and recent form.':standView==='advanced'?'Scoring efficiency, points allowed, potential points, scoring differential, and waiver budget.':'Games behind the league leader, simulated qualification odds, and the points wildcard chase.';
-    var cols=standView==='advanced'?[['seed','Seed'],['name','Franchise'],['pa','PA'],['max','Max PF'],['eff','Efficiency'],['diff','Point diff.'],['ppg','PF / game']].concat(faab?[['faab','FAAB']]:[]):standView==='playoffs'?[['seed','Seed'],['name','Franchise'],['wins','Record'],['gb','GB to 1st'],['pf','PF'],['odds','Playoff odds'],['status','Playoff status']]:[['seed','Seed'],['name','Franchise'],['wins','W–L'],['pf','PF'],['form','Last 5']];
+    var cols=standView==='advanced'?[['seed','Rank'],['name','Franchise'],['pa','PA'],['max','Max PF'],['eff','Efficiency'],['diff','Point diff.'],['ppg','PF / game']].concat(faab?[['faab','FAAB']]:[]):standView==='playoffs'?[['seed','Rank'],['name','Franchise'],['wins','Record'],['gb','GB to 1st'],['pf','PF'],['odds','Playoff odds'],['status','Playoff status']]:[['seed','Rank'],['name','Franchise'],['wins','W–L'],['pf','PF'],['form','Last 5']];
+    // Dynamic columns: advanced and playoff views have more metrics than the five-column standings view.
+    var widths=standView==='advanced'?(faab?[7,29,10,11,12,12,11,8]:[7,32,11,13,12,13,12]):standView==='playoffs'?[7,30,11,12,10,14,16]:[7,43,12,14,24];
+    var table=$('standTable'),colgroup=table.querySelector('colgroup');
+    if(!colgroup){colgroup=document.createElement('colgroup');table.insertBefore(colgroup,table.firstChild);}
+    colgroup.innerHTML=widths.map(function(w){return '<col style="width:'+w+'%">';}).join('');
+    table.dataset.view=standView;
     var sortable={seed:1,name:1,wins:1,pf:1,pa:1,max:1,eff:1,faab:1,diff:1,ppg:1,gb:1,odds:1};
     $('standHead').innerHTML=cols.map(function(c){return '<th'+(['seed','name','form','status'].indexOf(c[0])<0?' class="num"':'')+'>'+(sortable[c[0]]?'<button class="table-sort" data-stand-sort="'+c[0]+'">'+c[1]+' <span class="sort-arrow">'+(standSort===c[0]?(standDesc?'↓':'↑'):'↕')+'</span></button>':c[1])+'</th>';}).join('');
     var directCut=Math.max(0,cut-1),recordCutId=S.pure[Math.min(directCut-1,S.pure.length-1)];
@@ -2704,6 +2843,10 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
       var top=contenders.length?S.T[contenders[0]].pf:0;
       race.innerHTML='<div class="race-title"><div><span class="race-kicker">THE SIXTH PLAYOFF BERTH</span><h3>🎯 Points Wildcard Race</h3><p>Highest points for among teams outside the five record-based berths. The eligible pool changes as standings change.</p></div><span class="race-pill">'+contenders.length+' eligible teams</span></div><div class="race-list">'+contenders.map(function(id,i){var t=S.T[id],behind=top-t.pf;return '<div class="race-row"><span class="race-rank">'+(i+1)+'</span><button class="team-jump" type="button" data-team-jump="'+id+'">'+esc(t.name)+'</button><div class="race-track"><span style="width:'+(top?Math.max(2,t.pf/top*100):0).toFixed(1)+'%"></span></div><strong>'+f2(t.pf)+'</strong><span class="race-gap">'+(i===0?'LEADER':'−'+f2(behind))+'</span></div>';}).join('')+'</div>';
     }
+    if(!race.hidden && S.order.length>=6 && Number((S.league.settings||{}).playoff_teams||6)===6){
+      var contenders6=S.order.slice(0,6), odds6=bracketTitleOdds(contenders6);
+      race.insertAdjacentHTML('beforeend','<div class="bracket-title-odds playoff-race-title-odds"><div class="bracket-title-odds-heading"><strong>🏆 Championship chances</strong><span>Conditional on current six seeds · 1,800 simulations</span></div><div class="bracket-odds-list">'+contenders6.slice().sort(function(a,b){return odds6[b]-odds6[a];}).map(function(id){return '<div class="bracket-odds-row"><span class="bracket-odds-name">'+esc(tname(id))+'</span><span class="bracket-odds-track"><i style="width:'+odds6[id].toFixed(1)+'%"></i></span><strong>'+odds6[id].toFixed(1)+'%</strong></div>';}).join('')+'</div><p>Assumes today’s six seeds qualify; does not include the probability of missing the playoffs.</p></div>');
+    }
     renderProjectedBracket();
     renderRosterAges();
   }
@@ -2740,13 +2883,12 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
     function normal(){return Math.sqrt(-2*Math.log(Math.max(1e-8,Math.random())))*Math.cos(2*Math.PI*Math.random());}
     function play(a,b){var sa=Math.max(0,model[a].mu+normal()*model[a].sd),sb=Math.max(0,model[b].mu+normal()*model[b].sd),winner=sa>=sb?a:b;return {a:a,b:b,sa:sa,sb:sb,winner:winner};}
     var wildA=play(ids[2],ids[5]),wildB=play(ids[3],ids[4]);
-    var winners=[wildA.winner,wildB.winner].sort(function(a,b){return ids.indexOf(a)-ids.indexOf(b);});
-    // Highest remaining seed faces the lowest remaining seed (reseeding assumed).
-    var semiA=play(ids[0],winners[1]),semiB=play(ids[1],winners[0]);
+    // Fixed NFL-style bracket: winner of 4/5 faces seed 1; winner of 3/6 faces seed 2. No reseeding.
+    var semiA=play(ids[0],wildB.winner),semiB=play(ids[1],wildA.winner);
     var finalGame=play(semiA.winner,semiB.winner);
     bracketSimulation={wildA:wildA,wildB:wildB,semiA:semiA,semiB:semiB,finalGame:finalGame};
     renderProjectedBracket();
-    var status=$('bracketSimStatus');if(status)status.textContent='One simulated postseason · rerun for a new outcome.';
+    var status=$('bracketSimStatus');if(status)status.textContent='Illustrative simulation';
     var btn=$('simulatePlayoffsBtn');if(btn)btn.textContent='🎲 Simulate again';
   }
   function bracketTitleOdds(ids){
@@ -2759,13 +2901,35 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
     function play(a,b){return Math.max(0,model[a].mu+normal()*model[a].sd)>=Math.max(0,model[b].mu+normal()*model[b].sd)?a:b;}
     for(var n=0;n<N;n++){
       var wa=play(ids[2],ids[5]),wb=play(ids[3],ids[4]);
-      var sorted=[wa,wb].sort(function(a,b){return ids.indexOf(a)-ids.indexOf(b);});
-      var sa=play(ids[0],sorted[1]),sb=play(ids[1],sorted[0]);
+      var sa=play(ids[0],wb),sb=play(ids[1],wa);
       wins[play(sa,sb)]++;
     }
     var odds={};ids.forEach(function(id){odds[id]=wins[id]/N*100;});
     bracketOddsCache={key:key,odds:odds};return odds;
   }
+  // Draw actual advancement connectors between each game (not decorative generic brackets).
+  function drawFixedBracketLines(){
+    var grid=document.querySelector('#bracketContent .bracket-grid');
+    if(!grid)return;
+    var old=grid.querySelector('.fixed-bracket-lines');if(old)old.remove();
+    if(window.matchMedia('(max-width:700px)').matches)return;
+    var rounds=grid.querySelectorAll('.bracket-round');if(rounds.length!==3)return;
+    var wild=rounds[0].querySelectorAll('.bracket-game'),semi=rounds[1].querySelectorAll('.bracket-game'),final=rounds[2].querySelector('.bracket-game');
+    if(wild.length!==2||semi.length!==2||!final)return;
+    var bounds=grid.getBoundingClientRect();if(bounds.width<1||bounds.height<1)return;
+    var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.setAttribute('class','fixed-bracket-lines');svg.setAttribute('viewBox','0 0 '+bounds.width+' '+bounds.height);
+    svg.setAttribute('aria-hidden','true');
+    function point(el,right){var r=el.getBoundingClientRect();return [Math.round((right?r.right:r.left)-bounds.left),Math.round(r.top+r.height/2-bounds.top)];}
+    function connect(a,b){var p=point(a,true),q=point(b,false),middle=(p[0]+q[0])/2;
+      var path=document.createElementNS('http://www.w3.org/2000/svg','path');
+      path.setAttribute('d','M '+p[0]+' '+p[1]+' H '+middle+' V '+q[1]+' H '+q[0]);
+      path.setAttribute('fill','none');path.setAttribute('stroke','var(--accent)');path.setAttribute('stroke-width','2.5');path.setAttribute('stroke-linecap','round');path.setAttribute('stroke-linejoin','round');path.setAttribute('opacity','.7');svg.appendChild(path);
+    }
+    connect(wild[0],semi[0]);connect(wild[1],semi[1]);connect(semi[0],final);connect(semi[1],final);
+    grid.prepend(svg);
+  }
+  window.addEventListener('resize',function(){requestAnimationFrame(drawFixedBracketLines);});
   function renderProjectedBracket(){
     var el=$('bracketContent'),cut=Number((S.league.settings||{}).playoff_teams||6),btn=$('simulatePlayoffsBtn');
     if(cut!==6){el.innerHTML='<p class="note">This preview currently supports the league’s six-team playoff format.</p>';if(btn)btn.disabled=true;return;}
@@ -2775,19 +2939,18 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
     if(btn)btn.disabled=false;
     function team(id,game){var seed=ids.indexOf(id)+1,score=game?(game.a===id?game.sa:game.sb):null,win=game&&game.winner===id;return '<div class="bracket-team'+(win?' bracket-winner':'')+'"><span class="bracket-seed">'+seed+'</span><strong>'+esc(tname(id))+'</strong>'+(game?'<span class="bracket-score">'+score.toFixed(1)+'</span>':'<small>'+esc(recStr(S.T[id]))+'</small>')+'</div>';}
     function slot(label,content,sub){return '<div class="bracket-game"><span class="bracket-game-label">'+label+'</span>'+content+(sub?'<div class="bracket-game-sub">'+sub+'</div>':'')+'</div>';}
-    var titleOdds=bracketTitleOdds(ids);
     var sim=bracketSimulation;
     var wildA=sim?team(sim.wildA.a,sim.wildA)+team(sim.wildA.b,sim.wildA):team(ids[2])+team(ids[5]);
     var wildB=sim?team(sim.wildB.a,sim.wildB)+team(sim.wildB.b,sim.wildB):team(ids[3])+team(ids[4]);
-    var semiA=sim?team(sim.semiA.a,sim.semiA)+team(sim.semiA.b,sim.semiA):team(ids[0])+'<div class="bracket-placeholder">Lowest remaining seed</div>';
-    var semiB=sim?team(sim.semiB.a,sim.semiB)+team(sim.semiB.b,sim.semiB):team(ids[1])+'<div class="bracket-placeholder">Other wild-card winner</div>';
+    var semiA=sim?team(sim.semiA.a,sim.semiA)+team(sim.semiA.b,sim.semiA):team(ids[0])+'<div class="bracket-placeholder">Winner of 4 vs 5</div>';
+    var semiB=sim?team(sim.semiB.a,sim.semiB)+team(sim.semiB.b,sim.semiB):team(ids[1])+'<div class="bracket-placeholder">Winner of 3 vs 6</div>';
     var title=sim?team(sim.finalGame.a,sim.finalGame)+team(sim.finalGame.b,sim.finalGame):'<div class="bracket-placeholder">Semifinal 1 winner</div><div class="bracket-placeholder">Semifinal 2 winner</div>';
-    var titleOddsHtml='<div class="bracket-title-odds"><div class="bracket-title-odds-heading"><strong>🏆 Championship chances</strong><span>Current six seeds · 1,800 simulations</span></div><div class="bracket-odds-list">'+ids.slice().sort(function(a,b){return titleOdds[b]-titleOdds[a];}).map(function(id){return '<div class="bracket-odds-row"><span class="bracket-odds-name">'+esc(tname(id))+'</span><span class="bracket-odds-track"><i style="width:'+titleOdds[id].toFixed(1)+'%"></i></span><strong>'+titleOdds[id].toFixed(1)+'%</strong></div>';}).join('')+'</div><p>Odds are conditional on today’s six seeds qualifying. They do not include the chance of missing the playoffs.</p></div>';
-    el.innerHTML='<div class="bracket-progress" aria-label="Playoff rounds"><span>1 · Wild Card</span><b>→</b><span>2 · Semifinals</span><b>→</b><span class="bracket-progress-title">🏆 Championship</span></div><div class="bracket-grid">'+
-      '<div class="bracket-round wild-round"><h3>Wild Card · Week 15</h3>'+slot('MATCHUP A',wildA,sim?'Winner advances':'Winner advances')+slot('MATCHUP B',wildB,'Winner advances')+'</div><div class="bracket-connector" aria-hidden="true"></div>'+
-      '<div class="bracket-round semi-round"><h3>Semifinals · Week 16</h3>'+slot('SEMIFINAL 1',semiA,sim?'Winner advances':'No. 1 seed has a first-round bye')+slot('SEMIFINAL 2',semiB,sim?'Winner advances':'No. 2 seed has a first-round bye')+'</div><div class="bracket-connector second" aria-hidden="true"></div>'+
-      '<div class="bracket-round final-round"><h3>Championship · Week 17</h3>'+slot('AP TITLE GAME',title,sim?'<span class="bracket-champion">🏆 Simulated champion: '+esc(tname(sim.finalGame.winner))+'</span>':'Projected participants TBD')+'</div></div>'+
-      titleOddsHtml+'<details class="bracket-method"><summary>How the simulation works</summary><p class="bracket-footnote">'+(sim?'One randomly simulated postseason using historical weekly scoring, shrunk toward the league average. Winners are highlighted; scores are illustrative, not predictions or live results. Assumes higher seeds host lower remaining seeds in the semifinals (reseeding); verify your league rules in Sleeper.':'Bracket lines show progression between rounds, not guaranteed semifinal pairings. The semifinal opponents are placeholders, not predicted winners. The highest remaining seed faces the lowest remaining seed if the league reseeds; verify bracket rules in Sleeper.')+'</p></details>';
+    el.innerHTML='<div class="bracket-grid">'+
+      '<div class="bracket-round wild-round"><h3>Wild Card · Week 15</h3>'+slot('4 vs 5',wildB,'')+slot('3 vs 6',wildA,'')+'</div><div class="bracket-connector" aria-hidden="true"></div>'+ 
+      '<div class="bracket-round semi-round"><h3>Semifinals · Week 16</h3>'+slot('SEMIFINAL 1',semiA,'')+slot('SEMIFINAL 2',semiB,'')+'</div><div class="bracket-connector second" aria-hidden="true"></div>'+
+      '<div class="bracket-round final-round"><h3>Championship · Week 17</h3>'+slot('AP TITLE GAME',title,'<span class="bracket-champion">'+(sim?'🏆 '+esc(tname(sim.finalGame.winner)):'Champion to be determined')+'</span>')+'</div></div>'+
+      '<details class="bracket-method"><summary>How the simulation works</summary><p class="bracket-footnote">'+(sim?'One illustrative postseason using historical weekly scoring, shrunk toward the league average. This is a fixed bracket: 4/5 winner plays seed 1, 3/6 winner plays seed 2; there is no reseeding. Scores are simulated, not live.':'Fixed bracket: 4/5 winner advances to face seed 1; 3/6 winner advances to face seed 2. No reseeding. Semifinal placeholders update when you simulate.')+'</p></details>';
+    requestAnimationFrame(drawFixedBracketLines);
   }
 
   /* ---------- analytics ---------- */
