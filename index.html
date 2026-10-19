@@ -1351,6 +1351,13 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 @media(max-width:450px){.hub-position-grid{grid-template-columns:1fr}.hub-tabs button{padding:10px 14px}}
 
 .wildcard-race{margin:20px 0 24px;padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:15px}.wildcard-race[hidden]{display:none}.race-title{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:18px}.race-title h3{margin:5px 0;font-size:19px}.race-title p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}.race-kicker{font-size:10px;letter-spacing:1.3px;font-weight:800;color:var(--accent)}.race-pill{border:1px solid var(--line);padding:8px 10px;border-radius:30px;font-size:11px;white-space:nowrap;color:var(--muted)}.race-list{display:grid;gap:9px}.race-row{display:grid;grid-template-columns:26px minmax(120px,1.5fr) minmax(65px,2fr) 78px 75px;gap:12px;align-items:center;font-size:12px;padding:10px 8px;border-bottom:1px solid var(--line)}.race-row:last-child{border-bottom:0}.race-rank{color:var(--muted);font-weight:800}.race-row .team-jump{text-align:left}.race-track{height:8px;background:var(--line);border-radius:20px;overflow:hidden}.race-track span{display:block;height:100%;background:var(--accent);border-radius:20px}.race-row strong,.race-gap{text-align:right;font-variant-numeric:tabular-nums}.race-gap{color:var(--muted);font-size:11px}@media(max-width:650px){.race-row{grid-template-columns:18px minmax(95px,1fr) 62px 65px;gap:7px}.race-track{display:none}.wildcard-race{padding:14px}.race-pill{display:none}}
+
+/* Pick projections: one focused forecasting module, separate from ownership and capital */
+.pick-projection-module{border:1px solid var(--line);border-radius:15px;background:var(--surface);padding:22px;display:grid;gap:18px}
+.pick-projection-head{display:flex;justify-content:space-between;gap:16px;align-items:start}.pick-projection-head h3{font:750 24px/1.3 var(--display);margin:4px 0 7px}.pick-projection-head p{margin:0}
+.pick-projection-table{min-width:690px}.pick-projection-table td:nth-child(2){color:var(--muted)}.pick-projection-table .num{font-weight:700}.pick-projection-table .pick-lead{color:var(--accent)}
+.pick-dist-card{border-top:1px solid var(--line);padding-top:18px;display:grid;gap:12px}.pick-dist-chart{display:grid;gap:9px}.pick-dist-row{display:grid;grid-template-columns:90px minmax(0,1fr) 65px;gap:12px;align-items:center;font-size:14px}.pick-dist-track{height:15px;background:var(--bg);border:1px solid var(--line);border-radius:20px;overflow:hidden}.pick-dist-track span{display:block;height:100%;background:var(--accent);border-radius:20px}.pick-dist-row strong{text-align:right}.pick-dist-row.muted span{background:var(--muted)}
+@media(max-width:650px){.pick-projection-module{padding:15px}.pick-projection-head{flex-wrap:wrap}.pick-dist-row{grid-template-columns:78px minmax(0,1fr) 54px;gap:8px}}
 </style>
 <style>
 .dynasty-trade-filters{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin:20px 0}
@@ -1498,6 +1505,24 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
 #standings #standTable .odds-value { color:var(--accent); font-weight:800; }
 #standings #standLegend { margin:0; font-size:12.5px; }
 @media(max-width:700px) { #standings .stand-summary { grid-template-columns:1fr; gap:8px; } #standings .stand-highlight { padding:12px 15px; } #standings .stand-viewtabs { width:100%; } #standings .stand-viewtabs button { flex:1; padding:9px 8px; font-size:12px; } #standings #standTable td,#standings #standTable th { padding:11px 12px; } }
+</style>
+<style>
+/* Dynasty Center: one decision at a time */
+#picks .draft-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0 22px}
+#picks .draft-tabs button{padding:19px 12px;border-radius:14px;font-size:16px}
+#picks .draft-quick-nav,#picks>.draft-main-accordion,#picks #draftTabRankings,#picks #draftTabArchive{display:none!important}
+#picks .draft-tab-panel{padding:clamp(15px,2.5vw,26px)}
+#picks .draft-center-nav{display:flex;gap:8px;overflow-x:auto;padding:4px 0 15px;margin:12px 0 14px;scrollbar-width:thin}
+#picks .draft-center-nav button{flex:0 0 auto;border:1px solid var(--line);border-radius:10px;padding:11px 16px;background:var(--surface);color:var(--fg);font:700 14px var(--body);cursor:pointer}
+#picks .draft-center-nav button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+#picks .draft-center-view{display:none;min-width:0}
+#picks .draft-center-view.is-active{display:block}
+#picks .draft-center-view>.sub:first-child{margin-top:4px}
+#picks .draft-center-view>.scroll{margin:14px 0 20px}
+#picks #draftPaneArchive,#picks #draftPaneRankings{border:0;background:transparent;padding:0;margin:0;display:block}
+#picks .draft-future-controls{margin-bottom:16px}
+#picks .draft-proj-intro{color:var(--muted);font-size:14px;margin:0 0 12px}
+@media(max-width:650px){#picks .draft-tabs{gap:7px}#picks .draft-tabs button{padding:13px 7px;font-size:12px}#picks .draft-center-nav button{font-size:12px;padding:10px 12px}}
 </style>
 </head>
 <body>
@@ -1736,7 +1761,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
   <p class="note trade-method-note">Open any trade for a franchise impact report. Draft-capital scores are round-based estimates, not market values; historical roster changes cannot be reconstructed from current rosters.</p><div id="tradeTrackerList" class="dynasty-trade-list"></div><div class="trade-load-actions"><button type="button" id="tradeShowMore" hidden>Show 25 more trades</button></div>
 </div>
 <div class="draft-quick-nav" aria-label="Draft Center sections"><button type="button" data-draft-go="historicalDraftPanel" data-draft-child="draftFranchiseFold">🏆 Drafting rankings <span>Compare teams &amp; audit picks</span></button><button type="button" data-draft-go="historicalDraftPanel" data-draft-child="draftBoardFold">📚 Rookie draft archive <span>Boards by season</span></button><button type="button" data-draft-go="futureDraftPanel">📈 Future picks <span>Capital &amp; projections</span></button></div>
-    <details class="draft-main-accordion draft-primary" id="futureDraftPanel"><summary><span>📈 Future draft capital</span><small>Power rankings, pick ownership &amp; projected draft board</small></summary><div class="stack" style="padding:0 18px 18px"><div class="draft-future-controls"><div class="picker"><label for="pickTeam">Highlight franchise</label><select id="pickTeam"></select></div><p class="pickfocus" id="pickFocus"></p></div><h3 class="sub">Draft capital power rankings</h3><div class="scroll"><table><thead><tr><th><button class="table-sort" data-cap-sort="rank">Rank <span class="sort-arrow"></span></button></th><th><button class="table-sort" data-cap-sort="name">Team <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="score">Capital score <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="count">Picks <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="firsts">Firsts <span class="sort-arrow"></span></button></th></tr></thead><tbody id="capitalRows"></tbody></table></div><h3 class="sub">Future pick ownership</h3><div class="scroll"><table><thead><tr><th>Franchise</th><th>2027</th><th>2028</th><th>2029</th></tr></thead><tbody id="capitalByYear"></tbody></table></div><details class="draft-sub-accordion future-methodology"><summary>ⓘ How draft capital is calculated</summary><div class="future-methodology-content"><p>Capital score weights rounds 1–4 at 100, 45, 20 and 8 points, discounted for later years. Only the upcoming draft uses projected pick slots; future years are valued by round, without speculative positions.</p><p id="pickNote"></p><p>Upcoming draft: non-playoff picks are projected from reverse Max PF. Playoff slots require final bracket placement. Future drafts show the round and original franchise, not speculative pick numbers.</p></div></details><details class="draft-sub-accordion"><summary>🗓️ Projected future draft board</summary><div style="padding:0 18px 18px"><div class="board" id="pickBoard"></div><p class="legend">Non-playoff draft slots are projected from reverse Max PF. Playoff-team slots are provisional until postseason results are final. A green “from” label marks a traded pick.</p></div></details></div></details>
+    <details class="draft-main-accordion draft-primary" id="futureDraftPanel"><summary><span>📈 Future draft capital</span><small>Power rankings, pick ownership &amp; projected draft board</small></summary><div class="stack" style="padding:0 18px 18px"><div class="draft-future-controls"><div class="picker"><label for="pickTeam">Highlight franchise</label><select id="pickTeam"></select></div><p class="pickfocus" id="pickFocus"></p></div><div class="pick-projection-module" id="pickProjectionModule"><div class="pick-projection-head"><div><span class="race-kicker">UPCOMING ROOKIE DRAFT</span><h3>🎯 Pick projections</h3><p class="note">Odds for the original franchise’s pick — traded picks are credited to their current owner. Non-playoff order uses reverse Max PF.</p></div><span class="race-pill" id="pickProjectionYear">—</span></div><div id="pickProjectionStatus" class="softnote" role="status">Loading projections…</div><div id="pickProjectionContent" hidden><div class="scroll"><table class="pick-projection-table"><thead><tr><th>Original franchise</th><th>Current owner</th><th class="num">1.01</th><th class="num">Top 3</th><th class="num">Top 6</th><th class="num">Projected Draft Slot</th></tr></thead><tbody id="pickProjectionRows"></tbody></table></div><div class="pick-dist-card"><div class="picker"><label for="pickDistTeam">Pick outcome breakdown</label><select id="pickDistTeam" aria-label="Original franchise for pick outcome chart"></select></div><div id="pickDistChart" class="pick-dist-chart" aria-label="Pick outcome probability chart"></div></div><details class="draft-sub-accordion"><summary>ⓘ Projection methodology &amp; limitations</summary><div class="future-methodology-content"><p>3,000 simulated regular seasons using completed matchup scores, the actual remaining Sleeper schedule, and the same record-based berths plus points wildcard used by playoff forecasts. Weekly scoring is sampled from a shrunk normal distribution.</p><p><strong>Max PF estimate:</strong> Sleeper does not provide future optimal lineups. We estimate future Max PF from simulated weekly scores multiplied by each franchise’s current season Max PF / actual PF ratio, shrunk toward the league average. This is an approximation, not an official future Max PF forecast.</p><p><strong>Projected Draft Slot:</strong> teams more likely to make the playoffs (over 50% playoff probability) display <strong>7–12</strong>, since their exact slot depends on postseason results. Other teams display the expected non-playoff slot to two decimal places, conditional on missing the playoffs. Top 6 is the probability of missing the playoffs. The chart separates non-playoff pick positions from the playoff-pick bucket. These estimates are not guarantees.</p></div></details></div></div><h3 class="sub">Draft capital power rankings</h3><div class="scroll"><table><thead><tr><th><button class="table-sort" data-cap-sort="rank">Rank <span class="sort-arrow"></span></button></th><th><button class="table-sort" data-cap-sort="name">Team <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="score">Capital score <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="count">Picks <span class="sort-arrow"></span></button></th><th class="num"><button class="table-sort" data-cap-sort="firsts">Firsts <span class="sort-arrow"></span></button></th></tr></thead><tbody id="capitalRows"></tbody></table></div><h3 class="sub">Future pick ownership</h3><div class="scroll"><table><thead><tr><th>Franchise</th><th>2027</th><th>2028</th><th>2029</th></tr></thead><tbody id="capitalByYear"></tbody></table></div><details class="draft-sub-accordion future-methodology"><summary>ⓘ How draft capital is calculated</summary><div class="future-methodology-content"><p>Capital score weights rounds 1–4 at 100, 45, 20 and 8 points, discounted for later years. Only the upcoming draft uses projected pick slots; future years are valued by round, without speculative positions.</p><p id="pickNote"></p><p>Upcoming draft: non-playoff picks are projected from reverse Max PF. Playoff slots require final bracket placement. Future drafts show the round and original franchise, not speculative pick numbers.</p></div></details><details class="draft-sub-accordion"><summary>🗓️ Projected future draft board</summary><div style="padding:0 18px 18px"><div class="board" id="pickBoard"></div><p class="legend">Non-playoff draft slots are projected from reverse Max PF. Playoff-team slots are provisional until postseason results are final. A green “from” label marks a traded pick.</p></div></details></div></details>
     <details class="draft-main-accordion draft-primary" id="historicalDraftPanel"><summary><span>📚 Rookie drafts &amp; franchise drafting rankings</span><small>Browse boards, compare draft classes, and evaluate managers</small></summary><div class="draft-main-inner">
       <details class="draft-sub-accordion" id="draftFranchiseFold"><summary>🏆 Who drafts best? · Rookie draft rankings</summary><div class="draft-ranking-content"><div class="draft-history-controls"><label for="draftRankYear">Season</label><select id="draftRankYear"><option value="all">All years · Cumulative</option></select><label for="draftRankMode">Ranking</label><select id="draftRankMode"><option value="evaluator">Per-pick talent evaluation</option><option value="class">Total draft haul</option></select><label for="draftRankPosition">Positions</label><select id="draftRankPosition"><option value="all">All positions · including IDP</option><option value="offense">Offense · QB / RB / WR / TE</option><option value="defense">Defense · DL / LB / DB</option></select><label for="draftRankBasis">Value basis</label><select id="draftRankBasis"><option value="production" selected>Production only · same for all positions</option><option value="blend">Production + market · offense only</option></select><button type="button" id="draftRankDetailsBtn" class="draft-method-button" aria-pressed="false">Show detailed columns</button></div><div id="draftRankBanner" role="note"></div><div class="draft-rank-results-head"><strong>Franchise leaderboard</strong><span>Click a franchise to inspect its draft picks</span></div><div id="draftRankTable" class="scroll"></div><div id="draftRankDetail" class="draft-rank-detail" aria-live="polite"></div><div class="draft-rank-insights-label">Draft insights</div><div id="draftRankCards" class="draft-eval-highlights"></div><details class="draft-rank-data-fold"><summary>Data coverage &amp; evaluation notes</summary><div id="draftRankStatus" class="note" role="status">Loading historical selections…</div></details><details class="draft-minor-fold"><summary>How these rankings are calculated</summary><div class="draft-method"><p><strong>1 · Value each selection:</strong> For QB, RB, WR and TE, fantasy production percentile is converted to a nonlinear 0–100 production score and current Stats Guy Fantasy value to a separate 0–100 market score. With a market quote, the player score is 50% production and 50% market. Without a quote, the clearly labeled production-only score is used; a missing quote is not assumed to be zero. Players below the 50th production percentile get no production credit.</p><p><strong>2 · Include IDP fairly:</strong> Defensive players use the same position-relative production scoring, then receive a 0.40 player-value multiplier. This is a disclosed assumption, not an IDP market price.</p><p><strong>3 · Recalibrate pick cost:</strong> Within each historical draft, observed player scores form the reference distribution. Earlier slots carry a smoothly declining cost curve, blended with the observed class outcomes; late-round costs are never artificially flattened. Crucially, expected values and actual values now use <em>the same scale</em>. A complete draft therefore has approximately zero total surplus across all managers.</p><p><strong>4 · Rank franchises:</strong> Each pick contributes player value minus calibrated pick expectation. Best Draft Class adds these differences; Best Talent Evaluator averages with four neutral picks of sample-size shrinkage. Click any franchise to audit its contributions.</p><p><strong>Read carefully:</strong> Scores are <em>relative to the other selections in the same draft</em>, not a claim that a manager generated an absolute financial gain. The within-class benchmark is descriptive, not a historical success-probability model. Missing market values, incomplete historical scoring, and recent rookies make some comparisons provisional. Filtering positions preserves the original all-position baseline.</p></div></details></div></details>
 
@@ -3108,7 +3133,68 @@ button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible { 
     }
     $("pickBoard").innerHTML = (isUpcomingDraft ? '<p class="note">Pick slots are provisional. Non-playoff teams use reverse Max PF; playoff slots require final postseason placement.</p>' : '<p class="note">Future-year pick order is unknown. Picks are listed by round and original franchise, not by projected slot.</p>') + html;
     renderCapital(seasons, rounds);
+    renderPickProjections();
     $("pickFocus").textContent = pickFocus ? tname(pickFocus) + " holds " + held.length + " pick" + (held.length === 1 ? "" : "s") + " in " + curSeason + (held.length ? ": " + held.join(", ") : ".") : "";
+  }
+
+
+  /* Draft pick probability forecasts — distinct from the existing deterministic draft board. */
+  var PICK_PROJECTION_CACHE=null;
+  function normalPick(){var a=Math.max(1e-9,Math.random()),b=Math.random();return Math.sqrt(-2*Math.log(a))*Math.cos(2*Math.PI*b);}
+  function renderPickProjections(){
+    var root=$('pickProjectionModule');if(!root||!S.T)return;
+    var year=Number(S.league.season)+(S.draftDone===false?0:1);
+    $('pickProjectionYear').textContent=year+' draft';
+    var last=Math.min(S.lastScored,regEnd()),end=regEnd(),cut=Number((S.league.settings||{}).playoff_teams||6),ids=S.ids.slice(),nonPlayoff=ids.length-cut;
+    var key=[year,last,ids.map(function(id){return [id,S.T[id].pf,S.T[id].max,S.T[id].w].join(':');}).join('|')].join('/');
+    if(PICK_PROJECTION_CACHE&&PICK_PROJECTION_CACHE.key===key){displayPickProjections(PICK_PROJECTION_CACHE);return;}
+    if(!nonPlayoff||last<1){$('pickProjectionContent').hidden=true;$('pickProjectionStatus').textContent='Projections require at least one completed regular-season week and a configured playoff field.';return;}
+    var future=[],missing=[];
+    for(var w=last+1;w<=end;w++){
+      var groups={};(S.futureWeeks[w]||S.weeks[w]||[]).forEach(function(e){if(e.matchup_id!=null&&S.T[e.roster_id])(groups[e.matchup_id]=groups[e.matchup_id]||[]).push(Number(e.roster_id));});
+      var pairs=Object.keys(groups).map(function(k){return groups[k];}).filter(function(g){return g.length===2;});
+      if(pairs.length!==Math.floor(ids.length/2))missing.push(w);else future=future.concat(pairs);
+    }
+    if(missing.length){$('pickProjectionContent').hidden=true;$('pickProjectionStatus').textContent='Pick probabilities unavailable: Sleeper has not supplied complete remaining matchups for week(s) '+missing.join(', ')+'. Current projected draft board is still available below.';return;}
+    var current=cum(last),n=3000,models={},leagueAvg=ids.reduce(function(a,id){return a+S.T[id].pf/Math.max(1,last);},0)/ids.length;
+    var ratioList=ids.map(function(id){return S.T[id].pf>0?S.T[id].max/S.T[id].pf:1;}).filter(function(x){return isFinite(x)&&x>=1&&x<3;});
+    var leagueRatio=ratioList.length?ratioList.reduce(function(a,b){return a+b;},0)/ratioList.length:1.15;
+    ids.forEach(function(id){
+      var scores=[];for(var w=1;w<=last;w++)(S.weeks[w]||[]).forEach(function(e){if(Number(e.roster_id)===id&&e.matchup_id!=null)scores.push(Number(e.points)||0);});
+      var mean=scores.length?scores.reduce(function(a,b){return a+b;},0)/scores.length:leagueAvg,shrink=scores.length/(scores.length+3);
+      var mu=mean*shrink+leagueAvg*(1-shrink),variance=scores.length>1?scores.reduce(function(a,b){return a+Math.pow(b-mean,2);},0)/(scores.length-1):0;
+      var raw=S.T[id].pf>0?S.T[id].max/S.T[id].pf:leagueRatio;
+      var ratio=Math.max(1,Math.min(2.5,(isFinite(raw)?raw:leagueRatio)*.7+leagueRatio*.3));
+      models[id]={mu:mu,sd:Math.max(20,Math.sqrt(variance)*shrink+mu*.18*(1-shrink)),ratio:ratio,dist:Array(ids.length+1).fill(0),non:0,slotSum:0};
+    });
+    for(var sim=0;sim<n;sim++){
+      var st={};ids.forEach(function(id){st[id]={w:current[id].w,t:current[id].t,pf:current[id].pf,max:S.T[id].max};});
+      future.forEach(function(pair){var a=pair[0],b=pair[1],pa=Math.max(0,models[a].mu+normalPick()*models[a].sd),pb=Math.max(0,models[b].mu+normalPick()*models[b].sd);
+        st[a].pf+=pa;st[b].pf+=pb;st[a].max+=pa*models[a].ratio;st[b].max+=pb*models[b].ratio;
+        if(pa>pb)st[a].w++;else if(pb>pa)st[b].w++;else{st[a].t++;st[b].t++;}
+      });
+      var sd=seeding(st,ids,cut),playoff=new Set(sd.order.slice(0,cut));
+      var outside=ids.filter(function(id){return !playoff.has(id);}).sort(function(a,b){return st[a].max-st[b].max||st[a].pf-st[b].pf;});
+      outside.forEach(function(id,i){models[id].dist[i+1]++;models[id].non++;models[id].slotSum+=i+1;});
+      ids.forEach(function(id){if(playoff.has(id))models[id].dist[ids.length]++;});
+    }
+    PICK_PROJECTION_CACHE={key:key,year:year,n:n,models:models,nonPlayoff:nonPlayoff};displayPickProjections(PICK_PROJECTION_CACHE);
+  }
+  function displayPickProjections(result){
+    var ids=S.ids.slice(),n=result.n,m=result.models,year=result.year;
+    var sorted=ids.slice().sort(function(a,b){return m[b].dist[1]-m[a].dist[1]||m[b].non-m[a].non;});
+    $('pickProjectionRows').innerHTML=sorted.map(function(id){var d=m[id].dist,owner=holder(year,1,id),pct=function(x){return (100*x/n).toFixed(1)+'%';};
+      var top3=d.slice(1,Math.min(4,result.nonPlayoff+1)).reduce(function(a,b){return a+b;},0);
+      return '<tr><td class="tn">'+esc(tname(id))+'</td><td>'+esc(tname(owner))+(owner!==id?' <span class="tag">Traded</span>':'')+'</td><td class="num pick-lead">'+pct(d[1])+'</td><td class="num">'+pct(top3)+'</td><td class="num">'+pct(m[id].non)+'</td><td class="num">'+(m[id].non/n<0.5?'7–12':(m[id].non?(m[id].slotSum/m[id].non).toFixed(2):'—'))+'</td></tr>';
+    }).join('');
+    var sel=$('pickDistTeam'),previous=sel.value;sel.innerHTML=sorted.map(function(id){return '<option value="'+id+'">'+esc(tname(id))+' → '+esc(tname(holder(year,1,id)))+'</option>';}).join('');
+    sel.value=m[previous]?previous:String(sorted[0]);
+    function draw(){var d=m[Number(sel.value)].dist;var html='';for(var i=1;i<=result.nonPlayoff;i++){var pct=100*d[i]/n;html+='<div class="pick-dist-row"><span>1.'+String(i).padStart(2,'0')+'</span><div class="pick-dist-track"><span style="width:'+pct.toFixed(2)+'%"></span></div><strong>'+pct.toFixed(1)+'%</strong></div>';}
+      var other=100*d[ids.length]/n;html+='<div class="pick-dist-row muted"><span>Playoff pick</span><div class="pick-dist-track"><span style="width:'+other.toFixed(2)+'%"></span></div><strong>'+other.toFixed(1)+'%</strong></div>';
+      $('pickDistChart').innerHTML=html;
+    }
+    sel.onchange=draw;draw();$('pickProjectionContent').hidden=false;
+    $('pickProjectionStatus').textContent='3,000 simulated seasons · '+(Math.max(0,regEnd()-Math.min(S.lastScored,regEnd())))+' regular-season weeks remaining · probabilities are estimates, not official draft slots.';
   }
 
   /* ---------- rules ---------- */
@@ -4498,6 +4584,45 @@ document.querySelectorAll('#analytics .section-tabs, #history .section-tabs').fo
 
 
 
+</script>
+<script>
+/* Progressive organization only: retain all original calculators, selectors, data IDs and handlers. */
+(function(){
+ var root=document.getElementById('picks'),future=document.getElementById('draftPaneFuture'),archive=document.getElementById('draftPaneArchive');
+ if(!root||!future||!archive)return;
+ var tabArchive=document.getElementById('draftTabArchive'),tabRank=document.getElementById('draftTabRankings'),tabFuture=document.getElementById('draftTabFuture'),tabTrades=document.getElementById('draftTabTrades');
+ tabArchive.hidden=true;tabRank.hidden=true;
+ tabFuture.textContent='🎯 Draft Center';tabTrades.textContent='🔄 Trade Center';
+ root.querySelector('.draft-intro').textContent='Choose a workspace. Detailed tools stay out of the way until you need them.';
+ var heading=future.querySelector('.draft-tab-title');if(heading)heading.remove();
+ var intro=future.querySelector(':scope > .note');if(intro)intro.remove();
+ var stack=future.querySelector(':scope > .stack');if(!stack)return;
+ var controls=stack.querySelector('.draft-future-controls'),proj=stack.querySelector('#pickProjectionModule');
+ var titles=Array.from(stack.querySelectorAll(':scope > h3.sub'));
+ var tables=Array.from(stack.querySelectorAll(':scope > .scroll'));
+ var methods=Array.from(stack.querySelectorAll(':scope > details'));
+ var nav=document.createElement('div');nav.className='draft-center-nav';nav.setAttribute('role','tablist');nav.setAttribute('aria-label','Draft Center tools');
+ var items=[['projections','🎯 Pick Projections'],['board','📋 Draft Board'],['capital','💰 Draft Capital'],['rankings','🏆 Franchise Rankings'],['history','📚 Draft History']];
+ var views={};items.forEach(function(pair){var b=document.createElement('button');b.type='button';b.dataset.draftView=pair[0];b.textContent=pair[1];b.setAttribute('role','tab');b.setAttribute('aria-selected','false');nav.appendChild(b);var v=document.createElement('div');v.className='draft-center-view';v.id='draftView-'+pair[0];v.setAttribute('role','tabpanel');views[pair[0]]=v;});
+ future.insertBefore(nav,stack);items.forEach(function(pair){future.insertBefore(views[pair[0]],stack);});
+ if(controls)views.projections.appendChild(controls);
+ if(proj)views.projections.appendChild(proj);
+ if(titles[0])views.capital.appendChild(titles[0]);if(tables[0])views.capital.appendChild(tables[0]);
+ if(titles[1])views.capital.appendChild(titles[1]);if(tables[1])views.capital.appendChild(tables[1]);
+ methods.forEach(function(d){if(d.querySelector('#pickBoard')){d.open=true;var board=d.querySelector('#pickBoard');var legend=d.querySelector('.legend');var title=document.createElement('h3');title.className='sub';title.textContent='Projected rookie draft board';views.board.appendChild(title);if(board)views.board.appendChild(board);if(legend)views.board.appendChild(legend);}else views.capital.appendChild(d);});
+ archive.classList.remove('draft-tab-panel');archive.classList.remove('is-active');archive.removeAttribute('role');archive.removeAttribute('aria-labelledby');views.history.appendChild(archive);
+ var rankingPane=document.getElementById('draftPaneRankings');
+ if(rankingPane){rankingPane.classList.remove('draft-tab-panel','is-active');rankingPane.removeAttribute('role');rankingPane.removeAttribute('aria-labelledby');views.rankings.appendChild(rankingPane);}
+ stack.remove();
+ function showView(key){if(!views[key])key='projections';Object.keys(views).forEach(function(k){views[k].classList.toggle('is-active',k===key);});nav.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.draftView===key));});try{localStorage.setItem('apff_draft_subview',key)}catch(e){}}
+ nav.addEventListener('click',function(e){var b=e.target.closest('button[data-draft-view]');if(b)showView(b.dataset.draftView);});
+ var saved='projections';try{saved=localStorage.getItem('apff_draft_subview')||saved}catch(e){}showView(saved);
+ // Existing top-level tab handlers still own switching; remember the user's workspace.
+ [tabRank,tabFuture,tabTrades].forEach(function(b){b.addEventListener('click',function(){try{localStorage.setItem('apff_draft_main',b.dataset.draftTab)}catch(e){}});});
+ var main='future';try{main=localStorage.getItem('apff_draft_main')||main}catch(e){}
+ if(main==='rankings'){showView('rankings');main='future';}
+ document.querySelector('[data-draft-tab="'+(main==='trades'?'trades':'future')+'"]').click();
+})();
 </script>
 </body>
 </html>
