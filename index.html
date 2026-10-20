@@ -2113,6 +2113,18 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
  #standings .bracket-grid .final-round .bracket-game{min-height:212px}
 }
 </style>
+
+<style id="apff-standings-final-alignment">
+/* Keep these tweaks limited to the five-column Standings view. */
+#standings #standTable[data-view="standings"] tbody tr:not(.cut) td:nth-child(3){font-weight:850!important;font-size:16px!important}
+#standings #standTable[data-view="standings"] th:nth-child(5),
+#standings #standTable[data-view="standings"] td:nth-child(5){padding-left:18px!important;text-align:left!important}
+#standings #standTable[data-view="standings"] td:nth-child(5) .form{justify-content:flex-start}
+@media(max-width:650px){
+ #standings #standTable[data-view="standings"] th:nth-child(5),
+ #standings #standTable[data-view="standings"] td:nth-child(5){padding-left:12px!important}
+}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -2799,7 +2811,7 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
     $('standViewNote').textContent=standView==='standings'?'Official seeds, record, scoring, and recent form.':standView==='advanced'?'Scoring efficiency, points allowed, potential points, scoring differential, and waiver budget.':'Games behind the league leader, simulated qualification odds, and the points wildcard chase.';
     var cols=standView==='advanced'?[['seed','Rank'],['name','Franchise'],['pa','PA'],['max','Max PF'],['eff','Efficiency'],['diff','Point diff.'],['ppg','PF / game']].concat(faab?[['faab','FAAB']]:[]):standView==='playoffs'?[['seed','Rank'],['name','Franchise'],['wins','Record'],['gb','GB to 1st'],['pf','PF'],['odds','Playoff odds'],['status','Playoff status']]:[['seed','Rank'],['name','Franchise'],['wins','W–L'],['pf','PF'],['form','Last 5']];
     // Dynamic columns: advanced and playoff views have more metrics than the five-column standings view.
-    var widths=standView==='advanced'?(faab?[7,29,10,11,12,12,11,8]:[7,32,11,13,12,13,12]):standView==='playoffs'?[7,30,11,12,10,14,16]:[7,43,12,14,24];
+    var widths=standView==='advanced'?(faab?[7,29,10,11,12,12,11,8]:[7,32,11,13,12,13,12]):standView==='playoffs'?[7,30,11,12,10,14,16]:[7,47,12,14,20];
     var table=$('standTable'),colgroup=table.querySelector('colgroup');
     if(!colgroup){colgroup=document.createElement('colgroup');table.insertBefore(colgroup,table.firstChild);}
     colgroup.innerHTML=widths.map(function(w){return '<col style="width:'+w+'%">';}).join('');
