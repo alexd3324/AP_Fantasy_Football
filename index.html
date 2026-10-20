@@ -2489,6 +2489,211 @@ tbody tr:hover { background: var(--tint); }
 }
 
 </style>
+<style id="apff-broadcast-ui-2026">
+
+/* ============================================================
+   APFF 2026 — Broadcast UI refinement
+   Single-file visual layer. No data logic or markup rewritten.
+   ============================================================ */
+:root{
+  --ui-radius:16px;
+  --ui-radius-sm:11px;
+  --ui-border:color-mix(in srgb,var(--line) 82%,transparent);
+  --ui-elevation:0 3px 10px rgba(7,23,49,.045),0 18px 48px rgba(7,23,49,.055);
+  --ui-elevation-hover:0 8px 20px rgba(7,23,49,.09),0 24px 52px rgba(7,23,49,.10);
+}
+:root[data-theme="dark"]{
+  --ui-elevation:0 4px 16px rgba(0,0,0,.20),0 22px 55px rgba(0,0,0,.12);
+  --ui-elevation-hover:0 8px 22px rgba(0,0,0,.30),0 24px 55px rgba(0,0,0,.19);
+}
+body{
+  background-image:radial-gradient(ellipse 80% 380px at 50% -110px,
+    color-mix(in srgb,var(--accent) 13%,transparent),transparent 80%);
+  background-attachment:fixed;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{width:min(100% - 36px,1180px);margin-inline:auto}
+.mast{
+  position:relative;
+  isolation:isolate;
+  padding:28px 30px 22px;
+  border:1px solid var(--ui-border);
+  border-radius:22px;
+  background:linear-gradient(135deg,
+    color-mix(in srgb,var(--surface) 94%,var(--accent) 6%),var(--surface) 70%);
+  box-shadow:var(--ui-elevation);
+  overflow:visible;
+}
+.mast::before{
+  content:"";position:absolute;inset:0 0 auto;height:5px;
+  background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 35%,#b8d7ff),var(--accent));
+  border-radius:22px 22px 0 0;pointer-events:none;
+}
+.mast h1{letter-spacing:-.045em;line-height:1.08}
+.mast .eyebrow{letter-spacing:.025em}
+.mast .facts{margin-top:12px}
+.site-nav-shell .nav>a,.site-nav-shell .nav-more-button{
+  border-radius:11px;
+  transition:background .16s ease,color .16s ease,border-color .16s ease,box-shadow .16s ease;
+}
+.site-nav-shell .nav>a[aria-current="page"],
+.site-nav-shell .nav-more-button[aria-current="page"]{
+  box-shadow:0 5px 16px color-mix(in srgb,var(--accent) 25%,transparent);
+}
+section>.shead h2{letter-spacing:-.035em}
+section>.shead .note{max-width:58ch}
+.shead{padding-bottom:10px;border-bottom:1px solid var(--ui-border)}
+.sub{letter-spacing:-.02em}
+.scroll{
+  border:1px solid var(--ui-border);
+  border-radius:var(--ui-radius);
+  box-shadow:0 4px 18px rgba(6,25,55,.035);
+}
+table{font-variant-numeric:tabular-nums}
+thead th{border-bottom:2px solid var(--line);white-space:nowrap}
+tbody tr{transition:background-color .14s ease}
+tbody tr:hover{background:var(--tint)}
+td:first-child,th:first-child{padding-left:20px}
+td:last-child,th:last-child{padding-right:20px}
+button,select,input{accent-color:var(--accent)}
+button,a,select{ -webkit-tap-highlight-color:transparent }
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
+[tabindex="0"]:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.seg button,.btnrow button,.stand-viewtabs button,
+.matchups-week-controls>button,.themebtn{
+  border-radius:10px;
+  transition:transform .15s ease,border-color .15s ease,background .15s ease;
+}
+@media(hover:hover){
+  .seg button:hover,.btnrow button:hover,.stand-viewtabs button:hover,
+  .matchups-week-controls>button:hover:not(:disabled){transform:translateY(-1px)}
+}
+.game,.matchup-page-card,.hof-metric,.hof-hero,.profile-metric,
+.profile-section,.story-card,.dispatch-award,.dispatch-leader,.h2h-stat,
+.board .rnd,.dispatch-game,.stand-summary>*,.hq-split-layout>*{
+  border-radius:var(--ui-radius);
+}
+.game,.hof-metric,.profile-metric,.story-card,.dispatch-award,
+.dispatch-leader,.board .rnd,.dispatch-game{
+  box-shadow:0 3px 12px rgba(7,23,49,.035);
+}
+.hof-hero,.profile-hero{
+  background:linear-gradient(120deg,
+    color-mix(in srgb,var(--surface) 92%,var(--accent) 8%),var(--surface));
+}
+.hof-metric .value,.strip .v,.profile-metric strong{
+  letter-spacing:-.035em;
+}
+.hof-metric,.profile-metric,.dispatch-award,.story-card{
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+@media(hover:hover){
+  .hof-metric:hover,.profile-metric:hover,.dispatch-award:hover,.story-card:hover{
+    transform:translateY(-2px);box-shadow:var(--ui-elevation);
+    border-color:color-mix(in srgb,var(--accent) 28%,var(--line));
+  }
+}
+.matchup-dialog{
+  border-radius:20px;
+  box-shadow:0 24px 85px rgba(0,0,0,.25);
+}
+.matchup-dialog-head{border-radius:20px 20px 0 0}
+.matchup-player .mp-name{letter-spacing:-.01em}
+.matchup-player .mp-pts{font-variant-numeric:tabular-nums}
+.status{border-radius:var(--ui-radius-sm)}
+.foot{padding-bottom:10px}
+@media(max-width:760px){
+  .wrap{width:calc(100% - 24px)}
+  .mast{padding:22px 18px 18px;border-radius:17px}
+  .mast::before{border-radius:17px 17px 0 0}
+  .mast h1{letter-spacing:-.035em}
+  .shead{padding-bottom:8px}
+  .site-nav-shell .nav{scroll-snap-type:x proximity}
+  .site-nav-shell .nav>a{scroll-snap-align:start}
+  td:first-child,th:first-child{padding-left:13px}
+  td:last-child,th:last-child{padding-right:13px}
+  .matchup-overlay{padding:10px}
+  .matchup-dialog{max-height:95dvh;border-radius:14px}
+}
+@media(max-width:420px){
+  .mast{padding:19px 14px 15px}
+  .wrap{width:calc(100% - 20px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .hof-metric,.profile-metric,.dispatch-award,.story-card,
+  .seg button,.btnrow button,.stand-viewtabs button,
+  .matchups-week-controls>button{transition:none!important;transform:none!important}
+}
+
+/* APFF franchise command center — single-file enhancement */
+#teamhub .hub-overview{display:block;padding:0;border:0;background:transparent;box-shadow:none;margin:4px 0 24px}
+#teamhub .command-hero{display:flex;align-items:stretch;justify-content:space-between;gap:24px;padding:32px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(120deg,color-mix(in srgb,var(--accent) 15%,var(--surface)),var(--surface) 65%);overflow:hidden}
+#teamhub .command-hero-copy{min-width:0;flex:1}
+#teamhub .command-kicker{display:block;font-size:12px;font-weight:800;letter-spacing:.11em;color:var(--accent)}
+#teamhub .command-hero h3{font:750 clamp(29px,4vw,48px)/1.1 var(--display);letter-spacing:-.04em;margin:12px 0 8px;overflow-wrap:anywhere;color:var(--fg)}
+#teamhub .command-hero p{margin:0;color:var(--muted);font-size:15px}
+#teamhub .command-record{display:flex;flex-wrap:wrap;align-items:center;gap:9px 18px;margin-top:24px;color:var(--muted);font-size:14px;font-weight:700}
+#teamhub .command-record-badge{border-radius:9px;background:var(--accent);color:var(--accent-ink);padding:7px 13px;font-weight:800}
+#teamhub .command-rank{display:flex;flex-direction:column;justify-content:center;align-items:center;min-width:180px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--surface);text-align:center}
+#teamhub .command-rank span{font-size:11px;letter-spacing:.09em;font-weight:800;color:var(--muted)}
+#teamhub .command-rank strong{font:800 clamp(50px,6vw,78px)/1.2 var(--display);color:var(--accent)}
+#teamhub .command-rank small{font-size:13px;color:var(--muted)}
+#teamhub .command-stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+#teamhub .command-stat{padding:19px 20px;border:1px solid var(--line);border-radius:14px;background:var(--surface);min-width:0}
+#teamhub .command-stat span{display:block;font-size:13px;color:var(--muted);font-weight:700}
+#teamhub .command-stat strong{display:block;font:750 clamp(21px,2.5vw,31px)/1.25 var(--display);margin-top:8px;overflow-wrap:anywhere;color:var(--fg)}
+#teamhub .command-insights,#teamhub .command-depth{padding:22px 24px;margin-top:14px;border:1px solid var(--line);border-radius:15px;background:var(--surface)}
+#teamhub .command-insight-head,#teamhub .command-depth-title{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+#teamhub .command-insight-head strong,#teamhub .command-depth-title strong{font-size:17px}
+#teamhub .command-insight-head span,#teamhub .command-depth-title span{font-size:13px;color:var(--muted)}
+#teamhub .command-track{height:12px;border-radius:20px;background:var(--line);overflow:hidden;margin:15px 0 8px}
+#teamhub .command-track i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 60%,white))}
+#teamhub .command-insights p{margin:0;color:var(--muted);font-size:12px}
+#teamhub .command-depth-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:16px}
+#teamhub .command-depth-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:13px 8px;border:1px solid var(--line);border-radius:11px;background:var(--bg)}
+#teamhub .command-depth-item span{font-size:12px;font-weight:800;color:var(--accent)}
+#teamhub .command-depth-item strong{font:750 27px var(--display)}
+#teamhub .command-depth-item small{font-size:11px;color:var(--muted)}
+@media(max-width:750px){#teamhub .command-hero{padding:22px;flex-direction:column}#teamhub .command-rank{min-width:0;flex-direction:row;gap:14px;justify-content:flex-start;text-align:left}#teamhub .command-rank strong{font-size:45px}#teamhub .command-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#teamhub .command-depth-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:430px){#teamhub .command-stat-grid{grid-template-columns:1fr 1fr}#teamhub .command-stat{padding:14px}#teamhub .command-depth-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#teamhub .command-insights,#teamhub .command-depth{padding:17px}}
+
+</style>
+<style id="apff-headquarters-design">
+/* Compact league snapshot: existing Sleeper-powered standings highlights. */
+#standings .league-pulse-heading{display:flex;justify-content:space-between;align-items:end;gap:12px 24px;flex-wrap:wrap;margin:0 0 -12px}
+#standings .league-pulse-kicker{display:block;color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.11em}
+#standings .league-pulse-heading h3{font:750 clamp(22px,3vw,29px)/1.2 var(--display);margin:4px 0 0;color:var(--fg)}
+#standings .league-pulse-heading p{font-size:14px;color:var(--muted);margin:0}
+#standings #standSummary{margin-top:0}
+@media(max-width:600px){#standings .league-pulse-heading{align-items:start}#standings .league-pulse-heading p{font-size:13px}}
+</style>
+
+<style id="apff-standings-playoffs-unified">
+/* Unified standings and playoff picture */
+#standings .stand-table-wrap th,#standings .stand-table-wrap td{padding:12px 12px!important}
+#standings #standTable[data-view="standings"] th:nth-child(6),
+#standings #standTable[data-view="standings"] td:nth-child(6){text-align:left!important;padding-left:12px!important}
+#standings #standTable[data-view="standings"] td:nth-child(5){text-align:right!important;padding-left:10px!important}
+#standings #standTable[data-view="standings"] .form{gap:4px}
+#standings .wildcard-details{margin:20px 0 10px;border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden}
+#standings .wildcard-details[hidden]{display:none!important}
+#standings .wildcard-details>summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 19px;font-weight:800;font-size:17px;list-style:none}
+#standings .wildcard-details>summary::-webkit-details-marker{display:none}
+#standings .wildcard-details>summary:after{content:"▾";color:var(--accent);margin-left:8px}
+#standings .wildcard-details:not([open])>summary:after{content:"▸"}
+#standings .wildcard-details>summary span{font-size:12px;font-weight:500;color:var(--muted);margin-left:auto}
+#standings .wildcard-race{margin:0;padding:12px 19px 18px;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
+#standings .race-title{margin-bottom:10px}
+#standings .race-title h3{font-size:16px}
+#standings .race-row{min-height:39px;padding:7px 4px}
+#standings .race-track{height:8px}
+#standings .race-title .race-kicker{display:none}
+#standings .playoff-race-title-odds{margin-top:16px;padding-top:14px}
+@media(max-width:760px){
+ #standings .wildcard-details>summary span{display:none}
+ #standings #standTable[data-view="standings"]{min-width:620px!important}
+}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -2528,12 +2733,15 @@ tbody tr:hover { background: var(--tint); }
       <h2 id="h-standings">Standings</h2>
       <p class="note" id="standNote"></p>
     </div>
+    <div class="league-pulse-heading">
+      <div><span class="league-pulse-kicker">LIVE LEAGUE SNAPSHOT</span><h3>League Pulse</h3></div>
+      <p>Who's leading, who's hot, and where the playoff line stands.</p>
+    </div>
     <div class="stand-summary" id="standSummary" aria-label="League standings highlights"></div>
     <div class="stand-viewbar">
       <div class="stand-viewtabs" role="group" aria-label="Standings view">
-        <button type="button" data-stand-view="standings" aria-pressed="true">Standings</button>
+        <button type="button" data-stand-view="standings" aria-pressed="true">Standings &amp; Playoffs</button>
         <button type="button" data-stand-view="advanced" aria-pressed="false">Advanced stats</button>
-        <button type="button" data-stand-view="playoffs" aria-pressed="false">Playoff race</button>
       </div>
       <label class="stand-odds" id="standOddsLabel"><input type="checkbox" id="standOddsToggle"> Show simulated playoff odds</label>
     </div>
@@ -2546,8 +2754,8 @@ tbody tr:hover { background: var(--tint); }
       </table>
     </div>
 
-    <div id="wildcardRace" class="wildcard-race" hidden></div>
     <p class="legend" id="standLegend">Rankings follow your league's playoff rules. Click a column heading to sort, or a franchise to open Team Hub.</p>
+    <details id="wildcardDetails" class="wildcard-details" open><summary>🎯 Points wildcard race <span>Sixth playoff berth · expand / collapse</span></summary><div id="wildcardRace" class="wildcard-race"></div></details>
     <span id="faabLegend" hidden></span><span id="standOddsTh" hidden></span>
     </div><div class="hq-bracket-column">
     <div class="bracket-shell" id="projectedBracket"><div class="bracket-top"><div><h2>Projected Playoff Bracket</h2></div></div><p class="bracket-desc">Current top six · provisional seeds</p><div class="bracket-actions"><button type="button" id="simulatePlayoffsBtn" class="bracket-sim-btn">🎲 Simulate playoffs</button><span id="bracketSimStatus" class="bracket-sim-status" aria-live="polite"></span></div><div id="bracketContent"></div></div>
@@ -3172,10 +3380,10 @@ tbody tr:hover { background: var(--tint); }
       '<div class="stand-highlight"><span class="label">⚔️ Playoff cutoff</span><strong>'+esc(bubble?bubble.name:'Not configured')+'</strong><small>'+(bubble?'Seed '+cut+' · '+recStr(bubble):'Playoff teams not set')+'</small></div>';
     document.querySelectorAll('[data-stand-view]').forEach(function(btn){btn.setAttribute('aria-pressed',String(btn.dataset.standView===standView));});
     $('standNote').textContent=cut?'Top '+cut+' qualify · Seed '+cut+' is the points-for wildcard':'Ranked by wins, then points for';
-    $('standViewNote').textContent=standView==='standings'?'Official seeds, record, scoring, and recent form.':standView==='advanced'?'Scoring efficiency, points allowed, potential points, scoring differential, and waiver budget.':'Games behind the league leader, simulated qualification odds, and the points wildcard chase.';
-    var cols=standView==='advanced'?[['seed','Rank'],['name','Franchise'],['pa','PA'],['max','Max PF'],['eff','Efficiency'],['diff','Point diff.'],['ppg','PF / game']].concat(faab?[['faab','FAAB']]:[]):standView==='playoffs'?[['seed','Rank'],['name','Franchise'],['wins','Record'],['gb','GB to 1st'],['pf','PF'],['odds','Playoff odds'],['status','Playoff status']]:[['seed','Rank'],['name','Franchise'],['wins','W–L'],['pf','PF'],['form','Last 5']];
+    $('standViewNote').textContent=standView==='standings'?'Official seeds, games behind, recent form, and the points wildcard race.':standView==='advanced'?'Scoring efficiency, points allowed, potential points, scoring differential, and waiver budget.':'Games behind the league leader, simulated qualification odds, and the points wildcard chase.';
+    var cols=standView==='advanced'?[['seed','Rank'],['name','Franchise'],['pa','PA'],['max','Max PF'],['eff','Efficiency'],['diff','Point diff.'],['ppg','PF / game']].concat(faab?[['faab','FAAB']]:[]):standView==='playoffs'?[['seed','Rank'],['name','Franchise'],['wins','Record'],['gb','GB to 1st'],['pf','PF'],['odds','Playoff odds'],['status','Playoff status']]:[['seed','Rank'],['name','Franchise'],['wins','W–L'],['pf','PF'],['gb','GB'],['form','Last 5']];
     // Dynamic columns: advanced and playoff views have more metrics than the five-column standings view.
-    var widths=standView==='advanced'?(faab?[7,29,10,11,12,12,11,8]:[7,32,11,13,12,13,12]):standView==='playoffs'?[7,30,11,12,10,14,16]:[7,47,12,14,20];
+    var widths=standView==='advanced'?(faab?[7,29,10,11,12,12,11,8]:[7,32,11,13,12,13,12]):standView==='playoffs'?[7,30,11,12,10,14,16]:[7,38,11,13,9,22];
     var table=$('standTable'),colgroup=table.querySelector('colgroup');
     if(!colgroup){colgroup=document.createElement('colgroup');table.insertBefore(colgroup,table.firstChild);}
     colgroup.innerHTML=widths.map(function(w){return '<col style="width:'+w+'%">';}).join('');
@@ -3210,9 +3418,10 @@ tbody tr:hover { background: var(--tint); }
       if(standSort==='seed'&&cut&&idx===cut-1&&idx<ordered.length-1)rows+='<tr class="cut"><td colspan="'+cols.length+'"><span class="cut-label">Playoff cutoff · Top '+cut+'</span></td></tr>';
     });
     $('standBody').innerHTML=rows;
-    $('standLegend').textContent=standView==='playoffs'?'GB to 1st measures wins behind the league leader (ties count as half a win). The sixth berth goes to the highest-scoring remaining team. Playoff odds come from 3,000 simulated seasons when complete future Sleeper matchups are available; otherwise they are unavailable. Status describes the current position, not mathematical clinching.':'Seeds remain the official league order when sorted. Select a franchise to open Team Hub. Advanced stats contains scoring and efficiency details.';
+    $('standLegend').textContent=standView==='playoffs'?'GB to 1st measures wins behind the league leader (ties count as half a win). The sixth berth goes to the highest-scoring remaining team. Playoff odds come from 3,000 simulated seasons when complete future Sleeper matchups are available; otherwise they are unavailable. Status describes the current position, not mathematical clinching.':'GB is games behind the league leader (ties count as half a win). Seeds follow the league’s five record berths plus one points-for wildcard. Select a franchise to open Team Hub.';
     var race=$('wildcardRace');
-    race.hidden=standView!=='playoffs'||cut<2;
+    race.hidden=standView==='advanced'||cut<2;
+    $('wildcardDetails').hidden=race.hidden;
     if(!race.hidden){
       var directIds=new Set(S.pure.slice(0,directCut));
       var contenders=S.ids.filter(function(id){return !directIds.has(id);}).sort(function(a,b){return S.T[b].pf-S.T[a].pf;});
@@ -5362,8 +5571,18 @@ tbody tr:hover { background: var(--tint); }
     var groups=['QB','RB','WR','TE','IDP','OTHER'],titles={QB:'Quarterbacks',RB:'Running backs',WR:'Wide receivers',TE:'Tight ends',IDP:'Defensive players',OTHER:'Kickers / Other'};
     var played=Math.max(1,Number(team.w||0)+Number(team.l||0)+Number(team.t||0));
     var scoringRank=S.ids.slice().sort(function(a,b){return S.T[b].pf-S.T[a].pf;}).indexOf(id)+1;
-    $('hubOverview').innerHTML='<div class="hub-identity"><span class="hub-eyebrow">FRANCHISE PROFILE</span><h3>'+esc(team.name)+'</h3><p>'+esc(team.handle||'Fantasy franchise')+'</p></div><div class="hub-overview-stats">'+
-      [['Record',recStr(team)],['Players',all.length],['Avg. age',mean(all)],['PF rank','#'+scoringRank]].map(function(x){return '<div><strong>'+esc(String(x[1]))+'</strong><span>'+esc(x[0])+'</span></div>';}).join('')+'</div>';
+    var leagueSize=S.ids.length, wins=Number(team.w||0), losses=Number(team.l||0), ties=Number(team.t||0);
+    var winPct=(wins+losses+ties)?Math.round((wins+ties*.5)/(wins+losses+ties)*100):0;
+    var pointsRankPct=leagueSize>1?Math.round((leagueSize-scoringRank)/(leagueSize-1)*100):100;
+    var depthGroups=['QB','RB','WR','TE','IDP'];
+    var depthMarkup=depthGroups.map(function(g){
+      var count=all.filter(function(pid){return grp(pid)===g;}).length;
+      return '<div class="command-depth-item"><span>'+g+'</span><strong>'+count+'</strong><small>players</small></div>';
+    }).join('');
+    $('hubOverview').innerHTML='<div class="command-hero"><div class="command-hero-copy"><span class="command-kicker">APFF / FRANCHISE COMMAND CENTER</span><h3>'+esc(team.name)+'</h3><p>'+esc(team.handle||'Fantasy franchise')+'</p><div class="command-record"><span class="command-record-badge">'+esc(recStr(team))+'</span><span>'+winPct+'% win rate</span><span>Scoring rank '+scoringRank+' of '+leagueSize+'</span></div></div><div class="command-rank"><span>LEAGUE SCORING RANK</span><strong>#'+scoringRank+'</strong><small>of '+leagueSize+' franchises</small></div></div>'+
+      '<div class="command-stat-grid">'+[['Points scored',f2(team.pf)],['Points allowed',f2(team.pa)],['Points / game',f2(team.pf/played)],['Active roster',all.length],['Average age',mean(all)],['Starting lineup',starters.length]].map(function(x){return '<div class="command-stat"><span>'+esc(x[0])+'</span><strong>'+esc(String(x[1]))+'</strong></div>';}).join('')+'</div>'+
+      '<div class="command-insights"><div class="command-insight-head"><strong>League scoring position</strong><span>Rank '+scoringRank+' / '+leagueSize+'</span></div><div class="command-track" role="img" aria-label="Scoring rank '+scoringRank+' of '+leagueSize+'"><i style="width:'+pointsRankPct+'%"></i></div><p>Relative standing by season points scored. Higher is better.</p></div>'+
+      '<div class="command-depth"><div class="command-depth-title"><strong>Roster composition</strong><span>Tap a position tab below for player details</span></div><div class="command-depth-grid">'+depthMarkup+'</div></div>';
     $('hubPositionTabs').querySelectorAll('[data-hubpos]').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.hubpos===group));});
     $('hubRosterPanel').hidden=false;$('hubNewsPanel').hidden=false;
     function playerTable(ids){
