@@ -4441,6 +4441,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
 
   /* Draft pick probability forecasts — distinct from the existing deterministic draft board. */
   var PICK_PROJECTION_CACHE=null;
+  var UPCOMING_PROJECTED_ORDER=null;
   function normalPick(){var a=Math.max(1e-9,Math.random()),b=Math.random();return Math.sqrt(-2*Math.log(a))*Math.cos(2*Math.PI*b);}
   function renderPickProjections(){
     var root=$('pickProjectionModule');if(!root||!S.T)return;
@@ -4486,6 +4487,8 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     var sorted=ids.slice().sort(function(a,b){return (m[a].slotSum-m[b].slotSum)||String(tname(a)).localeCompare(String(tname(b)));});
     // Display a unique projected draft order; simulation averages remain the sorting key.
     var projectedRank={};sorted.forEach(function(id,i){projectedRank[id]='1.'+String(i+1).padStart(2,'0');});
+    UPCOMING_PROJECTED_ORDER={year:year,ids:sorted.slice()};
+    if(lastCapitalYears.length)renderCapital(lastCapitalYears,lastCapitalRounds);
     $('pickProjectionRows').innerHTML=sorted.map(function(id){var d=m[id].dist,owner=holder(year,1,id),pct=function(x){return (100*x/n).toFixed(1)+'%';};
       var top3=d.slice(1,Math.min(4,result.nonPlayoff+1)).reduce(function(a,b){return a+b;},0);
       return '<tr><td class="tn">'+esc(tname(id))+'</td><td>'+esc(tname(owner))+(owner!==id?' <span class="tag">Traded</span>':'')+'</td><td class="num pick-lead">'+pct(d[1])+'</td><td class="num">'+pct(top3)+'</td><td class="num">'+pct(m[id].non)+'</td><td class="num">'+projectedRank[id]+'</td></tr>';
@@ -4632,7 +4635,10 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     var totals = {}, yearly = {};
     S.ids.forEach(function(id){totals[id]={score:0,count:0,firsts:0};yearly[id]={};years.forEach(function(y){yearly[id][y]=[];});});
     years.forEach(function(y,yi){
-      for(var r=1;r<=rounds;r++) S.proj.forEach(function(original,slot){
+      var upcomingYear=Number(S.league.season)+(S.draftDone===false?0:1);
+      var useProjection=Number(y)===upcomingYear && UPCOMING_PROJECTED_ORDER && UPCOMING_PROJECTED_ORDER.year===upcomingYear && UPCOMING_PROJECTED_ORDER.ids.length===S.ids.length;
+      var order=useProjection?UPCOMING_PROJECTED_ORDER.ids:S.proj;
+      for(var r=1;r<=rounds;r++) order.forEach(function(original,slot){
         var owner=holder(y,r,original);if(!totals[owner])return;
         var value=({1:100,2:45,3:20,4:8}[r]||4)* (yi===0 ? (1+(S.ids.length-1-slot)/S.ids.length*.25) : 1);
         totals[owner].score+=value * (yi===0?1:yi===1?.85:.7);
