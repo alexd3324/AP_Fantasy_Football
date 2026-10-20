@@ -1679,6 +1679,72 @@ body, button, input, select, textarea { font-family: Arial, Helvetica, sans-seri
 /* A restrained amber divider replaces the oversized solid cutoff bar. */
 #standings #standTable tr.cut td{height:3px!important;min-height:3px!important;padding:0!important;border:0!important;background:linear-gradient(90deg,#d9a74b,#e8c880 55%,#d9a74b)!important;position:relative;overflow:visible!important}
 #standings #standTable tr.cut .cut-label{position:absolute;right:13px;top:50%;transform:translateY(-50%);background:#fff9ed!important;color:#81540d!important;border:1px solid #d9a74b!important;border-radius:999px;padding:3px 10px;font-size:10px;letter-spacing:.045em;line-height:1.2;white-space:nowrap;box-shadow:0 1px 3px rgba(40,50,80,.08)}
+
+/* APFF Matchup breakdown refresh — scoped to the two existing detail views. */
+#matchupPageDetail, #matchupDetail { --matchup-soft:color-mix(in srgb,var(--surface) 90%,var(--accent)); }
+#matchupPageDetail .matchup-summary,#matchupDetail .matchup-summary{
+  background:linear-gradient(115deg,var(--surface),var(--matchup-soft));
+  padding:25px 28px;gap:22px;border-bottom:1px solid var(--line);
+}
+#matchupPageDetail .matchup-summary>div:first-child,
+#matchupDetail .matchup-summary>div:first-child,
+#matchupPageDetail .matchup-summary>div:last-child,
+#matchupDetail .matchup-summary>div:last-child{min-width:0}
+#matchupPageDetail .matchup-summary span,#matchupDetail .matchup-summary span{
+  font-size:clamp(15px,1.8vw,19px);font-weight:750;line-height:1.35;overflow-wrap:anywhere;
+}
+#matchupPageDetail .matchup-summary strong,#matchupDetail .matchup-summary strong{
+  margin-top:8px;font-size:clamp(29px,4vw,46px);line-height:1.05;letter-spacing:-.035em;
+}
+#matchupPageDetail .matchup-vs,#matchupDetail .matchup-vs{
+  border:1px solid var(--line);background:var(--surface);border-radius:100px;
+  width:42px;height:42px;display:grid;place-items:center;font-size:12px;letter-spacing:.05em;
+}
+#matchupPageDetail .matchup-lineups,#matchupDetail .matchup-lineups{
+  gap:14px;padding:18px;align-items:start;
+}
+#matchupPageDetail .matchup-lineup,#matchupDetail .matchup-lineup{
+  border-radius:14px;background:var(--surface);box-shadow:0 4px 18px #0000000a;
+}
+#matchupPageDetail .matchup-lineup h3,#matchupDetail .matchup-lineup h3{
+  padding:16px 18px;font-size:17px;gap:8px;background:var(--matchup-soft);
+}
+#matchupPageDetail .mp-teamproj,#matchupDetail .mp-teamproj{font-size:12px;white-space:nowrap}
+#matchupPageDetail .matchup-player,#matchupDetail .matchup-player{
+  grid-template-columns:38px minmax(0,1fr) 91px;gap:11px;
+  min-height:77px;padding:12px 14px;align-items:center;
+}
+#matchupPageDetail .matchup-player .mp-pos,#matchupDetail .matchup-player .mp-pos{
+  display:grid;place-items:center;background:var(--tint);border-radius:7px;
+  min-height:29px;padding:4px 2px;font-size:11px;letter-spacing:0;
+}
+#matchupPageDetail .mp-name,#matchupDetail .mp-name{font-size:15px;line-height:1.3}
+#matchupPageDetail .mp-nfl,#matchupDetail .mp-nfl{margin-top:4px;font-size:12px}
+#matchupPageDetail .mp-game,#matchupDetail .mp-game{display:none}
+#matchupPageDetail .matchup-player .mp-pts,#matchupDetail .matchup-player .mp-pts{
+  font-size:20px;line-height:1.15;text-align:right;
+}
+#matchupPageDetail .mp-proj,#matchupDetail .mp-proj{font-size:11px;margin-top:4px}
+#matchupPageDetail .mp-delta,#matchupDetail .mp-delta{
+  display:block;font-size:11px;font-weight:750;white-space:nowrap;margin-top:4px;
+}
+#matchupPageDetail .mp-delta.positive,#matchupDetail .mp-delta.positive{color:var(--accent)}
+#matchupPageDetail .mp-delta.negative,#matchupDetail .mp-delta.negative{color:var(--loss)}
+#matchupPageDetail .mp-delta.neutral,#matchupDetail .mp-delta.neutral{color:var(--muted)}
+#matchupPageDetail .matchup-schedule-note,#matchupDetail .matchup-schedule-note{display:none}
+#matchupPageDetail .matchup-footnote,#matchupDetail .matchup-footnote{font-size:12px;line-height:1.55}
+@media(max-width:760px){
+  #matchupPageDetail .matchup-lineups,#matchupDetail .matchup-lineups{grid-template-columns:1fr;padding:12px}
+  #matchupPageDetail .matchup-summary,#matchupDetail .matchup-summary{padding:18px 12px;gap:8px}
+}
+@media(max-width:400px){
+  #matchupPageDetail .matchup-player,#matchupDetail .matchup-player{
+    grid-template-columns:32px minmax(0,1fr) 80px;padding:11px 9px;gap:7px;
+  }
+  #matchupPageDetail .mp-name,#matchupDetail .mp-name{font-size:13px}
+  #matchupPageDetail .matchup-player .mp-pts,#matchupDetail .matchup-player .mp-pts{font-size:17px}
+}
+
 </style>
 <style>
 .dynasty-trade-filters{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin:20px 0}
@@ -2124,6 +2190,304 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
  #standings #standTable[data-view="standings"] th:nth-child(5),
  #standings #standTable[data-view="standings"] td:nth-child(5){padding-left:12px!important}
 }
+</style>
+<style id="apff-visual-polish">
+
+/* APFF visual polish — additive, single-file, no changes to application logic. */
+:root {
+  --apff-shadow: 0 8px 28px rgba(4, 17, 38, .075);
+  --apff-shadow-hover: 0 12px 32px rgba(4, 17, 38, .12);
+  --apff-radius: 14px;
+}
+:root[data-theme="dark"] {
+  --apff-shadow: 0 8px 28px rgba(0, 0, 0, .19);
+  --apff-shadow-hover: 0 12px 32px rgba(0, 0, 0, .29);
+}
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; }
+.wrap { width: 100%; }
+.mast { padding-bottom: 10px; }
+.mast h1 { letter-spacing: -.035em; }
+.ruler { border-radius: 2px; }
+.shead h2 { letter-spacing: -.025em; }
+.note, .legend, .softnote { max-width: 76ch; }
+.site-nav-shell .nav > a,
+.site-nav-shell .nav-more-button,
+.site-nav-shell .themebtn {
+  transition: background-color .18s ease, border-color .18s ease,
+              box-shadow .18s ease, transform .18s ease;
+}
+.site-nav-shell .nav > a:hover,
+.site-nav-shell .nav-more-button:hover,
+.site-nav-shell .themebtn:hover { transform: translateY(-1px); }
+.site-nav-shell .nav > a[aria-current="page"] {
+  box-shadow: 0 3px 12px rgba(31, 95, 191, .19);
+}
+.scroll, .game, .matchups-board-shell, .hof-hero, .hof-metric,
+.h2h-stat, .profile-section, .story-card, .dispatch-game,
+.dispatch-award, .dispatch-leader {
+  border-radius: var(--apff-radius);
+}
+.game, .hof-metric, .h2h-stat, .story-card, .dispatch-game,
+.dispatch-award, .dispatch-leader {
+  box-shadow: var(--apff-shadow);
+}
+.game, .hof-metric, .h2h-stat, .story-card, .dispatch-game,
+.dispatch-award, .dispatch-leader {
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+.game:hover, .hof-metric:hover, .h2h-stat:hover,
+.story-card:hover, .dispatch-game:hover, .dispatch-award:hover,
+.dispatch-leader:hover {
+  border-color: var(--accent);
+  box-shadow: var(--apff-shadow-hover);
+}
+.scroll { box-shadow: var(--apff-shadow); }
+th { position: relative; }
+tbody tr { transition: background-color .12s ease; }
+.seg button, .btnrow button, .matchups-week-controls > button,
+.picker select {
+  border-radius: 9px;
+}
+.seg button, .btnrow button, .matchups-week-controls > button {
+  transition: background-color .16s ease, border-color .16s ease;
+}
+button:focus-visible, a:focus-visible, select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.profile-hero, .hof-hero { box-shadow: var(--apff-shadow); }
+.profile-metric { border-radius: 12px; }
+.article .dek { max-width: 64ch; }
+.foot { margin-top: 4px; }
+@media (max-width: 700px) {
+  .wrap { gap: 48px; }
+  .mast h1 { letter-spacing: -.025em; }
+  .site-nav-shell .nav > a,
+  .site-nav-shell .nav-more-button { min-height: 44px; }
+  .hof-hero { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .site-nav-shell .nav > a,
+  .site-nav-shell .nav-more-button,
+  .site-nav-shell .themebtn,
+  .game, .hof-metric, .h2h-stat, .story-card, .dispatch-game,
+  .dispatch-award, .dispatch-leader, tbody tr,
+  .seg button, .btnrow button, .matchups-week-controls > button {
+    transition: none;
+  }
+  .site-nav-shell .nav > a:hover,
+  .site-nav-shell .nav-more-button:hover,
+  .site-nav-shell .themebtn:hover { transform: none; }
+}
+</style>
+<style id="apff-premier-redesign">
+
+/* ============================================================
+   APFF PREMIER — visual redesign layer
+   Presentation-only: preserves existing IDs, data and behavior.
+   ============================================================ */
+:root {
+  --apff-glow: rgba(68,145,255,.16);
+  --apff-elev: 0 10px 34px rgba(6,24,53,.09);
+  --apff-elev-strong: 0 18px 45px rgba(6,24,53,.15);
+  --apff-round: 18px;
+  --apff-soft-round: 12px;
+}
+:root[data-theme="dark"] {
+  --apff-glow: rgba(90,160,255,.17);
+  --apff-elev: 0 12px 36px rgba(0,0,0,.22);
+  --apff-elev-strong: 0 20px 48px rgba(0,0,0,.33);
+}
+html { scroll-padding-top: 24px; }
+body {
+  background-image:
+    radial-gradient(ellipse 850px 480px at 95% -140px, var(--apff-glow), transparent 72%),
+    radial-gradient(ellipse 550px 360px at -18% 26%, color-mix(in srgb,var(--accent) 5%,transparent), transparent 75%);
+  background-attachment: fixed;
+}
+.wrap { max-width: 1220px; gap: 68px; }
+.mast {
+  position: relative;
+  padding: 34px clamp(20px,3vw,40px) 30px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(132deg,
+    color-mix(in srgb,var(--surface) 94%,var(--accent)),
+    var(--surface) 62%,
+    color-mix(in srgb,var(--surface) 90%,var(--accent)));
+  box-shadow: var(--apff-elev);
+  overflow: visible;
+}
+.mast::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 5px;
+  border-radius: 24px 24px 0 0;
+  background: linear-gradient(90deg,var(--accent),#6cb9ff 56%,transparent);
+}
+.mast h1 { font-size: clamp(34px,5vw,60px); letter-spacing: -.055em; line-height: 1.06; }
+.mast .eyebrow { color:var(--accent); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: 11px; }
+.ruler { height: 7px; border: 0; opacity: .32; border-radius: 10px; }
+.mast .facts { margin-top: 12px; }
+.mast .facts div { padding: 5px 0; }
+.season-pill { box-shadow: 0 0 0 3px color-mix(in srgb,var(--accent) 9%,transparent); }
+.site-nav-shell { margin-top: 12px; }
+.site-nav-shell .nav { gap: 7px; }
+.site-nav-shell .nav > a,
+.site-nav-shell .nav-more-button {
+  border-radius: 11px;
+  background: color-mix(in srgb,var(--surface) 83%,var(--bg));
+  font-weight: 700;
+  min-height: 46px;
+  box-shadow: none;
+}
+.site-nav-shell .nav > a[aria-current="page"],
+.site-nav-shell .nav-more-button[aria-current="page"] {
+  box-shadow: 0 5px 16px color-mix(in srgb,var(--accent) 25%,transparent);
+}
+.nav-more-items { border-radius: 14px; box-shadow: var(--apff-elev-strong); }
+section { min-width: 0; }
+.shead { padding-bottom: 15px; border-bottom: 1px solid var(--line); }
+.shead h2 {
+  font-size: clamp(29px,3.6vw,42px);
+  font-weight: 700;
+  letter-spacing: -.045em;
+  line-height: 1.16;
+}
+.shead h2::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: .75em;
+  margin-right: 14px;
+  border-radius: 5px;
+  background: var(--accent);
+  vertical-align: -.04em;
+}
+.sub, .hof-section-title { letter-spacing: -.025em; }
+.note, .legend, .softnote { color: var(--muted); }
+.strip { gap: 12px; border-top: 0; }
+.strip > div {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--apff-elev);
+}
+.strip .v { font-size: clamp(27px,3vw,37px); letter-spacing: -.045em; color: var(--fg); }
+.strip .k { font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+.scroll {
+  border-radius: var(--apff-round);
+  box-shadow: var(--apff-elev);
+  border-color: var(--line);
+}
+table { border-collapse: separate; border-spacing: 0; }
+th {
+  background: color-mix(in srgb,var(--bg) 75%,var(--surface));
+  font-size: 12.5px;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+th, td { border-bottom: 1px solid var(--line); }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: var(--tint); }
+.tn { font-weight: 800; }
+.rank { color: var(--accent); }
+.pfbar { height: 6px; border-radius: 9px; }
+.pfbar i { border-radius: 9px; }
+.tag, .chip, .capital-pill, .hof-badge { border-radius: 7px; }
+.seg, .btnrow { gap: 8px; }
+.seg button, .btnrow button, .stand-viewtabs button,
+.matchups-week-controls > button, .draft-viewtabs button {
+  border-radius: 10px;
+  min-height: 41px;
+  font-weight: 700;
+}
+.seg button[aria-pressed="true"], .btnrow button[aria-pressed="true"] {
+  box-shadow: 0 4px 12px color-mix(in srgb,var(--accent) 22%,transparent);
+}
+.picker select, input, select { accent-color: var(--accent); }
+.picker select { border-radius: 11px; }
+.game, .matchup-page-card, .dispatch-game, .story-card,
+.hof-metric, .profile-metric, .h2h-stat, .dispatch-award,
+.dispatch-leader, .profile-section, .board .rnd {
+  border-radius: var(--apff-round) !important;
+  box-shadow: var(--apff-elev);
+}
+.game, .matchup-page-card, .dispatch-game, .story-card,
+.hof-metric, .profile-metric, .h2h-stat, .dispatch-award,
+.dispatch-leader, .board .rnd {
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.game:hover, .matchup-page-card:hover, .dispatch-game:hover,
+.story-card:hover, .hof-metric:hover, .profile-metric:hover,
+.h2h-stat:hover, .dispatch-award:hover, .dispatch-leader:hover,
+.board .rnd:hover {
+  box-shadow: var(--apff-elev-strong);
+  border-color: color-mix(in srgb,var(--accent) 48%,var(--line));
+}
+.matchups-board-shell, .hof-hero, #teamProfiles .profile-hero,
+#teamProfiles .profile-report-box {
+  border-radius: 20px;
+  box-shadow: var(--apff-elev);
+}
+#matchupGames { gap: 18px; }
+.matchup-card-top {
+  background: color-mix(in srgb,var(--surface) 88%,var(--accent));
+}
+.matchup-score-row .matchup-score { letter-spacing: -.05em; }
+.matchup-status { letter-spacing: .035em; }
+.live-meter { height: 10px; }
+.hof-hero, #teamProfiles .profile-hero {
+  background: linear-gradient(125deg,
+    color-mix(in srgb,var(--surface) 89%,var(--accent)),
+    var(--surface) 70%);
+}
+.hof-metric .value, .hof-table .hof-score { letter-spacing: -.045em; }
+.hof-metric .icon { filter: drop-shadow(0 3px 6px rgba(0,0,0,.1)); }
+#teamProfiles .profile-hero { border-left-width: 5px; }
+#teamProfiles .profile-hero h3 { letter-spacing: -.045em; }
+#teamProfiles .profile-metric strong { letter-spacing: -.04em; }
+#teamProfiles .profile-week-track { border-radius: 9px; }
+.board { gap: 22px; }
+.board .rnd { padding: 22px; }
+.board .pk { border-radius: 11px; }
+.article .kicker, .story-card .story-tag { letter-spacing: .09em; }
+.article h3 { letter-spacing: -.05em; }
+.story-card { background: var(--surface); }
+.dispatch-award, .dispatch-leader { background: var(--surface); }
+.matchup-dialog {
+  border-radius: 22px;
+  box-shadow: 0 28px 85px rgba(0,0,0,.35);
+}
+.matchup-dialog-head { border-radius: 22px 22px 0 0; }
+.matchup-close { min-width: 44px; min-height: 44px; }
+.status, .pending {
+  border-radius: 13px;
+  background: var(--surface);
+}
+.foot { padding-top: 22px; }
+:where(button,a,select,input,[tabindex]):focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (max-width: 760px) {
+  .wrap { gap: 48px; }
+  .mast { padding: 24px 17px 22px; border-radius: 18px; }
+  .mast::before { border-radius: 18px 18px 0 0; }
+  .site-nav-shell .nav { padding-bottom: 8px; }
+  .shead h2::before { margin-right: 9px; width: 4px; }
+  .strip > div { padding: 15px; }
+  .board .rnd { padding: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; }
+}
+
 </style>
 </head>
 <body>
@@ -3693,7 +4057,20 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface) 91%,var(--a
         var sum=0,seen=0;
         sec.querySelectorAll('[data-proj-pid]').forEach(function(el){
           var v=map?map[el.dataset.projPid]:undefined;
-          if(v!=null){el.textContent='Proj '+v.toFixed(1);sum+=v;seen++;}else el.textContent=map?'Proj —':'';
+          if(v!=null){
+            el.textContent='Proj '+v.toFixed(1);sum+=v;seen++;
+            var row=el.closest('.matchup-player'),scoreNode=row&&row.querySelector('.mp-pts');
+            if(row&&scoreNode){
+              var actual=parseFloat(scoreNode.childNodes[0]&&scoreNode.childNodes[0].textContent);
+              var delta=row.querySelector('.mp-delta');
+              if(!delta){delta=document.createElement('span');delta.className='mp-delta';scoreNode.appendChild(delta);}
+              if(Number.isFinite(actual)){
+                var diff=actual-v;
+                delta.textContent=(diff>=0?'+':'')+diff.toFixed(1)+' vs proj';
+                delta.className='mp-delta '+(diff>0.05?'positive':diff<-.05?'negative':'neutral');
+              }else delta.textContent='';
+            }
+          }else el.textContent=map?'Proj —':'';
         });
         var tot=sec.querySelector('[data-proj-team]');
         if(tot)tot.textContent=seen?'Projected '+sum.toFixed(1):'';
