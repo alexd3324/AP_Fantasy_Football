@@ -2854,6 +2854,15 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
         <div><dt>Wins above expected</dt><dd>Actual wins minus expected wins. Positive means a team has won more than its scoring deserves. Negative means it has been unlucky.</dd></div>
         <div><dt>Schedule luck</dt><dd>The league's average score minus the average score of the opponents a team actually faced, in points per game. Positive means an easier schedule than average.</dd></div>
       </dl>
+      <div class="analytics-topic-panel" id="scheduleRecordStrength">
+        <h3 class="sub">Strength of schedule &amp; record</h3>
+        <p class="note">Completed regular-season games only. SOS is opponents’ average points per game (higher = harder). SOR measures actual wins above the wins expected against those opponent scores, using the franchise’s own weekly scoring distribution (higher = stronger result relative to schedule).</p>
+        <div class="scroll"><table style="min-width:880px">
+          <thead><tr><th>Franchise</th><th class="num">Record</th><th class="num">SOS (opp PPG)</th><th class="num">SOS rank</th><th class="num">Expected wins</th><th class="num">SOR (wins)</th><th class="num">SOR rank</th></tr></thead>
+          <tbody id="strengthRows"></tbody>
+        </table></div>
+        <p class="legend">SOS ranks hardest schedule first. Expected wins use each team's observed weekly scores as an empirical distribution against each opponent's actual score; ties count as half a win. SOR is actual wins minus this schedule-adjusted expectation. Small samples and unusual scoring weeks can make results volatile.</p>
+      </div>
       <div class="analytics-topic-panel">
         <h3 class="sub">Wins above expected</h3>
         <div class="dchart" id="waeChart"></div>
@@ -3629,6 +3638,84 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     $("anBody").hidden = !has;
     if (!has) return;
     var rows = A.rows.slice();
+    // Schedule-adjusted record strength: score-distribution expected wins against actual opponent scores.
+    var samples = {}, opponents = {};
+    S.ids.forEach(function(id){ samples[id]=[]; opponents[id]=[]; });
+    for (var sw=1; sw<=Math.min(S.lastScored,regEnd()); sw++) {
+      pairsOf(sw).forEach(function(pair) {
+        if(pair.length!==2) return;
+        var x=pair[0],y=pair[1];
+        if(!samples[x.roster_id]||!samples[y.roster_id]) return;
+        if(!Number.isFinite(Number(x.points))||!Number.isFinite(Number(y.points))) return;
+        samples[x.roster_id].push(Number(x.points)); samples[y.roster_id].push(Number(y.points));
+        opponents[x.roster_id].push(Number(y.points)); opponents[y.roster_id].push(Number(x.points));
+      });
+    }
+    rows.forEach(function(a){
+      var scores=samples[a.id], opp=opponents[a.id];
+      a.sorExpected=opp.reduce(function(sum,target){
+        if(!scores.length) return sum;
+        return sum+scores.reduce(function(acc,score){return acc+(score>target?1:score===target?.5:0);},0)/scores.length;
+      },0);
+      a.sor=a.w-a.sorExpected;
+    });
+    var sosOrder=rows.slice().sort(function(a,b){return b.oppPPG-a.oppPPG||String(a.id).localeCompare(String(b.id));});
+    var sorOrder=rows.slice().sort(function(a,b){return b.sor-a.sor||String(a.id).localeCompare(String(b.id));});
+    var sosRanks={},sorRanks={};
+    sosOrder.forEach(function(a,i){sosRanks[a.id]=i+1;});
+    sorOrder.forEach(function(a,i){sorRanks[a.id]=i+1;});
+    // Sortable strength table; retain selected ordering on every analytics refresh.
+    var strengthTable=$("strengthRows").closest("table");
+    if(!strengthTable.dataset.sortReady){
+      strengthTable.dataset.sortReady="1";
+      strengthTable.dataset.sortKey="sor";
+      strengthTable.dataset.sortDir="desc";
+      var sortKeys=["team","record","sos","sosRank","expected","sor","sorRank"];
+      Array.prototype.forEach.call(strengthTable.querySelectorAll("thead th"),function(th,i){
+        th.style.cursor="pointer";
+        th.setAttribute("tabindex","0");
+        th.setAttribute("role","button");
+        th.setAttribute("title","Sort by "+th.textContent.trim());
+        th.dataset.sortKey=sortKeys[i];
+        var activate=function(){
+          var key=th.dataset.sortKey;
+          var defaultDir=(key==="team"||key==="sosRank"||key==="sorRank")?"asc":"desc";
+          strengthTable.dataset.sortDir=strengthTable.dataset.sortKey===key
+            ? (strengthTable.dataset.sortDir==="asc"?"desc":"asc") : defaultDir;
+          strengthTable.dataset.sortKey=key;
+          renderAnalytics();
+        };
+        th.addEventListener("click",activate);
+        th.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();activate();}});
+      });
+    }
+    var strengthKey=strengthTable.dataset.sortKey||"sor";
+    var strengthDir=strengthTable.dataset.sortDir||"desc";
+    var strengthValues={
+      team:function(a){return tname(a.id).toLowerCase();},
+      record:function(a){return a.og?a.w/a.og:0;},
+      sos:function(a){return a.oppPPG;},
+      sosRank:function(a){return sosRanks[a.id];},
+      expected:function(a){return a.sorExpected;},
+      sor:function(a){return a.sor;},
+      sorRank:function(a){return sorRanks[a.id];}
+    };
+    var strengthSorted=rows.slice().sort(function(a,b){
+      var av=strengthValues[strengthKey](a),bv=strengthValues[strengthKey](b);
+      var cmp=typeof av==="string"?av.localeCompare(bv):av-bv;
+      if(cmp===0 && strengthKey==="record")cmp=a.w-b.w;
+      return (strengthDir==="asc"?cmp:-cmp)||tname(a.id).localeCompare(tname(b.id));
+    });
+    Array.prototype.forEach.call(strengthTable.querySelectorAll("thead th"),function(th){
+      var active=th.dataset.sortKey===strengthKey;
+      th.setAttribute("aria-sort",active?(strengthDir==="asc"?"ascending":"descending"):"none");
+      th.style.textDecoration=active?"underline":"none";
+    });
+    $("strengthRows").innerHTML=strengthSorted.map(function(a){
+      var wins=Number.isInteger(a.w)?String(a.w):String(a.w);
+      var losses=a.og-a.w;
+      return '<tr><td class="tn">'+esc(tname(a.id))+'</td><td class="num">'+wins+'-'+losses+'</td><td class="num">'+f1(a.oppPPG)+'</td><td class="num">'+sosRanks[a.id]+' of '+rows.length+'</td><td class="num">'+a.sorExpected.toFixed(2)+'</td><td class="num '+(a.sor>=0?'up':'down')+'">'+signed(a.sor)+'</td><td class="num">'+sorRanks[a.id]+' of '+rows.length+'</td></tr>';
+    }).join("");
     // diverging bars: wins above expected
     var byWae = rows.slice().sort(function (a, b) { return b.wae - a.wae; });
     var maxAbs = Math.max(0.5, Math.max.apply(null, rows.map(function (a) { return Math.abs(a.wae); })));
