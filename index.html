@@ -2717,6 +2717,110 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
 .pick-dist-footnote{font-size:13px;color:var(--muted);margin:14px 0 0;line-height:1.55}
 .pick-dist-card+.draft-sub-accordion{margin-top:5px}
 @media(max-width:600px){.pick-dist-intro{align-items:flex-start;flex-direction:column;gap:10px}.pick-dist-row,.pick-dist-row.muted{grid-template-columns:48px minmax(0,1fr) 55px;gap:9px;padding:8px 5px}.pick-dist-favorite{padding:8px 12px}}
+
+/* Analytics explanatory copy: use the full available width of its table/card.
+   Overrides older character-based max-width caps without changing table layout. */
+#analytics .analytics-topic-panel > .note,
+#analytics .analytics-topic-panel > .legend,
+#analytics .analytics-topic-panel > p,
+#analytics .analytics-topic-panel > .shead .note,
+#analytics #an-league > .stack > .note,
+#analytics #an-league .defs,
+#analytics #an-league .defs dd,
+#analytics .scroll + .legend {
+  width: 100%;
+  max-width: none;
+}
+#analytics .analytics-topic-panel > .note,
+#analytics .analytics-topic-panel > .legend {
+  text-wrap: pretty;
+}
+
+
+/* Schedule strength: explanatory copy across the full panel, separated from the data. */
+#scheduleRecordStrength .schedule-strength-explainer {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  max-width: none;
+  padding: 20px 24px;
+  margin: 8px 0 32px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+#scheduleRecordStrength .schedule-strength-explainer p {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+#scheduleRecordStrength .schedule-strength-explainer strong {
+  color: var(--fg);
+}
+#scheduleRecordStrength > .scroll {
+  width: 100%;
+  margin-top: 0;
+}
+@media (max-width: 640px) {
+  #scheduleRecordStrength .schedule-strength-explainer {
+    padding: 16px;
+    margin-bottom: 26px;
+    gap: 12px;
+  }
+}
+
+/* Collapsible full-width explanation for schedule analytics. */
+#scheduleRecordStrength details.schedule-strength-explainer {
+  display: block;
+  padding: 0;
+  margin: 10px 0 30px;
+  overflow: hidden;
+}
+#scheduleRecordStrength .schedule-strength-explainer > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 22px;
+  cursor: pointer;
+  color: var(--fg);
+  font-weight: 700;
+  font-size: 16px;
+  list-style: none;
+}
+#scheduleRecordStrength .schedule-strength-explainer > summary::-webkit-details-marker { display: none; }
+#scheduleRecordStrength .schedule-strength-explainer > summary::after {
+  content: "⌄";
+  color: var(--accent);
+  font-size: 22px;
+  line-height: 1;
+  transition: transform .15s;
+}
+#scheduleRecordStrength .schedule-strength-explainer[open] > summary::after { transform: rotate(180deg); }
+#scheduleRecordStrength .schedule-strength-explainer > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+#scheduleRecordStrength .explainer-hint { margin-left: auto; color: var(--muted); font-weight: 400; font-size: 13px; }
+#scheduleRecordStrength .schedule-strength-explainer-content {
+  display: grid;
+  gap: 22px;
+  padding: 2px 24px 26px;
+  border-top: 1px solid var(--line);
+}
+#scheduleRecordStrength .schedule-strength-explainer-content h4 {
+  font-size: 16px;
+  color: var(--fg);
+  margin: 0 0 6px;
+}
+#scheduleRecordStrength .schedule-strength-explainer-content p { margin: 0; }
+#scheduleRecordStrength .schedule-strength-explainer-content .explainer-intro { padding-top: 16px; }
+#scheduleRecordStrength .schedule-strength-explainer-content .explainer-footnote { font-size: 14px; }
+@media (max-width: 640px) {
+  #scheduleRecordStrength .schedule-strength-explainer > summary { padding: 15px 16px; }
+  #scheduleRecordStrength .schedule-strength-explainer-content { padding: 4px 16px 22px; }
+  #scheduleRecordStrength .explainer-hint { display: none; }
+}
 </style>
 
 
@@ -2850,21 +2954,39 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     <div class="section-tab-panel" id="an-league" role="tabpanel">
     <div class="stack">
       <dl class="defs">
-        <div><dt>Expected wins</dt><dd>Each week a team's score is compared with every other team's score, as if it played all of them. Beating 8 of 11 teams counts as 0.73 of a win. The weekly values add up over the season.</dd></div>
+        <div><dt>Scoring-based expected wins</dt><dd>Each week a team's score is compared with every other team's score, as if it played all of them. Beating 8 of 11 teams counts as 0.73 of a win. The weekly values add up over the season.</dd></div>
         <div><dt>Wins above expected</dt><dd>Actual wins minus expected wins. Positive means a team has won more than its scoring deserves. Negative means it has been unlucky.</dd></div>
         <div><dt>Schedule luck</dt><dd>The league's average score minus the average score of the opponents a team actually faced, in points per game. Positive means an easier schedule than average.</dd></div>
       </dl>
       <div class="analytics-topic-panel" id="scheduleRecordStrength">
         <h3 class="sub">Strength of schedule &amp; record</h3>
-        <p class="note">Completed regular-season games only. SOS is opponents’ average points per game (higher = harder). SOR measures actual wins above the wins expected against those opponent scores, using the franchise’s own weekly scoring distribution (higher = stronger result relative to schedule).</p>
+        <details class="schedule-strength-explainer">
+          <summary>How to understand SOS, expected wins &amp; strength of record <span class="explainer-hint">Click to expand</span></summary>
+          <div class="schedule-strength-explainer-content">
+            <p class="explainer-intro">These stats explain how difficult each team's schedule has been and whether its win-loss record matches what its scoring performances would typically produce. Two teams with the same record may have faced very different opponents.</p>
+            <div>
+              <h4>Strength of schedule (SOS) — How tough have your opponents been?</h4>
+              <p>SOS is the average points per game scored by the opponents you've played. If your opponents average 180 points and another team's average 145, yours has been the tougher schedule. <strong>Higher SOS = tougher opponents.</strong> SOS rank #1 means the hardest schedule; #12 means the easiest. SOS uses opponents' points, not their win-loss records.</p>
+            </div>
+            <div>
+              <h4>Schedule-adjusted expected wins — How many games would you normally win?</h4>
+              <p>For each completed matchup, we compare your opponent's actual score with your team's range of weekly scores so far. We estimate how often your team would have beaten that score, then add those chances across the season (a tie counts as half a win). For example, a team that's 4-2 with 2.8 schedule-adjusted expected wins has won more games than its scoring history would typically predict against those opponents.</p>
+            </div>
+            <div>
+              <h4>Schedule-adjusted strength of record (SOR) — Are you winning more than expected?</h4>
+              <p><strong>SOR = actual wins − schedule-adjusted expected wins.</strong> A 4-2 team with 2.8 expected wins has <strong>+1.2 SOR</strong>, meaning about 1.2 more wins than expected. <strong>Positive = above expectations; negative = below expectations; zero = about as expected.</strong> A positive SOR doesn't necessarily mean the strongest team — it means the results have exceeded this model's expectations.</p>
+            </div>
+            <p class="explainer-footnote">These numbers include completed regular-season matchups only and can change considerably early in the season. Schedule-adjusted expected wins differ from the scoring-based expected wins shown elsewhere on this page.</p>
+          </div>
+        </details>
         <div class="scroll"><table style="min-width:880px">
-          <thead><tr><th>Franchise</th><th class="num">Record</th><th class="num">SOS (opp PPG)</th><th class="num">SOS rank</th><th class="num">Expected wins</th><th class="num">SOR (wins)</th><th class="num">SOR rank</th></tr></thead>
+          <thead><tr><th>Franchise</th><th class="num">Record</th><th class="num">SOS (opp PPG)</th><th class="num">SOS rank</th><th class="num" title="Expected wins against actual opponent scores, using the team’s weekly scoring distribution">Schedule-adjusted exp. wins</th><th class="num" title="Actual wins minus schedule-adjusted expected wins">Schedule-adjusted SOR</th><th class="num">SOR rank</th></tr></thead>
           <tbody id="strengthRows"></tbody>
         </table></div>
-        <p class="legend">SOS ranks hardest schedule first. Expected wins use each team's observed weekly scores as an empirical distribution against each opponent's actual score; ties count as half a win. SOR is actual wins minus this schedule-adjusted expectation. Small samples and unusual scoring weeks can make results volatile.</p>
+
       </div>
       <div class="analytics-topic-panel">
-        <h3 class="sub">Wins above expected</h3>
+        <h3 class="sub">Wins above expected (scoring-based)</h3>
         <div class="dchart" id="waeChart"></div>
         <div class="strip" id="anStrip"></div>
       </div>
@@ -2873,11 +2995,12 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
           <h3 class="sub" style="flex: 1; min-width: 160px">Expected standings</h3>
           <div class="seg" id="anSeg" role="group" aria-label="Sort"></div>
         </div>
+        <p class="note">Scoring-based expected wins compare each weekly score with the league’s other teams, regardless of actual opponents. These differ from the schedule-adjusted expected wins and SOR above.</p>
         <div class="scroll">
           <table style="min-width: 820px">
             <thead>
               <tr>
-                <th>#</th><th>Team</th><th class="num">Wins</th><th class="num">Exp. W</th><th class="num">Above exp.</th><th class="num">All-play</th>
+                <th>#</th><th>Team</th><th class="num">Wins</th><th class="num" title="Scoring-based expected wins from all-play weekly comparisons">Exp. W (scoring)</th><th class="num" title="Actual wins minus scoring-based expected wins">Above exp. (scoring)</th><th class="num">All-play</th>
                 <th class="num">PPG</th><th class="num">Opp. PPG</th><th class="num">Sched. luck</th><th class="num">Rank shift</th>
               </tr>
             </thead>
