@@ -2973,14 +2973,16 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
               <p>For each completed matchup, we compare your opponent's actual score with your team's range of weekly scores so far. We estimate how often your team would have beaten that score, then add those chances across the season (a tie counts as half a win). For example, a team that's 4-2 with 2.8 schedule-adjusted expected wins has won more games than its scoring history would typically predict against those opponents.</p>
             </div>
             <div>
-              <h4>Schedule-adjusted strength of record (SOR) — Are you winning more than expected?</h4>
-              <p><strong>SOR = actual wins − schedule-adjusted expected wins.</strong> A 4-2 team with 2.8 expected wins has <strong>+1.2 SOR</strong>, meaning about 1.2 more wins than expected. <strong>Positive = above expectations; negative = below expectations; zero = about as expected.</strong> A positive SOR doesn't necessarily mean the strongest team — it means the results have exceeded this model's expectations.</p>
+              <h4>Strength of record (SOR) — How impressive is your record?</h4>
+              <p>SOR measures how difficult it would be for an <strong>average league team</strong> to match or beat your current number of wins against the <strong>actual points scored by your opponents</strong>. We estimate a typical team's chance of winning each matchup using the league's completed weekly scores, then calculate its chance of reaching your win total or better across those games.</p>
+              <p><strong>SOR score = 100% minus that chance.</strong> For example, if an average team has only a 10% chance of matching a 5-1 record against your opponents, your SOR score is <strong>90%</strong>. <strong>Higher SOR score = more impressive record</strong>; SOR rank #1 is the most impressive. Going undefeated matters, and doing it against tougher-scoring opponents is more impressive than doing it against easy ones.</p>
+              <p><strong>Not the same as wins above expected:</strong> SOR evaluates the record itself against a neutral league-average team. Schedule-adjusted expected wins still estimate how often <em>your own team</em> would win given its scoring history. The scoring-based wins-above-expected chart below is another separate metric.</p>
             </div>
-            <p class="explainer-footnote">These numbers include completed regular-season matchups only and can change considerably early in the season. Schedule-adjusted expected wins differ from the scoring-based expected wins shown elsewhere on this page.</p>
+            <p class="explainer-footnote">These numbers use completed regular-season games only. A small sample can make rankings volatile. Ties are treated as half a win in expected-win probabilities; tied actual records are approximated using the next whole-win threshold in the SOR probability calculation.</p>
           </div>
         </details>
         <div class="scroll"><table style="min-width:880px">
-          <thead><tr><th>Franchise</th><th class="num">Record</th><th class="num">SOS (opp PPG)</th><th class="num">SOS rank</th><th class="num" title="Expected wins against actual opponent scores, using the team’s weekly scoring distribution">Schedule-adjusted exp. wins</th><th class="num" title="Actual wins minus schedule-adjusted expected wins">Schedule-adjusted SOR</th><th class="num">SOR rank</th></tr></thead>
+          <thead><tr><th>Franchise</th><th class="num">Record</th><th class="num">SOS (opp PPG)</th><th class="num">SOS rank</th><th class="num" title="Expected wins against actual opponent scores, using the team’s weekly scoring distribution">Schedule-adjusted exp. wins</th><th class="num" title="100% minus the probability an average team matches or exceeds these wins against the same opponents. Higher is better.">SOR score</th><th class="num" title="Ranks the most impressive records first, based on SOR score">SOR rank</th></tr></thead>
           <tbody id="strengthRows"></tbody>
         </table></div>
 
@@ -2995,7 +2997,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
           <h3 class="sub" style="flex: 1; min-width: 160px">Expected standings</h3>
           <div class="seg" id="anSeg" role="group" aria-label="Sort"></div>
         </div>
-        <p class="note">Scoring-based expected wins compare each weekly score with the league’s other teams, regardless of actual opponents. These differ from the schedule-adjusted expected wins and SOR above.</p>
+        <p class="note">Scoring-based expected wins compare each weekly score with the league’s other teams, regardless of actual opponents. These are different from team-specific schedule-adjusted expected wins and the neutral-team SOR record-impressiveness score above.</p>
         <div class="scroll">
           <table style="min-width: 820px">
             <thead>
@@ -3774,13 +3776,43 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
         opponents[x.roster_id].push(Number(y.points)); opponents[y.roster_id].push(Number(x.points));
       });
     }
+    // SOR is record impressiveness, not wins above expectation.
+    // Evaluate each opponent's actual score against a neutral league-average
+    // team's empirical scoring distribution (all completed regular-season team scores).
+    // Compute P(neutral team wins >= franchise actual wins) with Poisson-binomial DP.
+    var leagueScoreSamples=S.ids.reduce(function(all,id){ return all.concat(samples[id]); },[]);
+    function probabilityAtLeastWins(winProbabilities, needed) {
+      if (needed <= 0) return 1;
+      if (needed > winProbabilities.length) return 0;
+      var dp=[1];
+      winProbabilities.forEach(function(p){
+        var next=new Array(dp.length+1).fill(0);
+        for(var k=0;k<dp.length;k++){
+          next[k]+=dp[k]*(1-p);
+          next[k+1]+=dp[k]*p;
+        }
+        dp=next;
+      });
+      return dp.slice(needed).reduce(function(sum,v){return sum+v;},0);
+    }
     rows.forEach(function(a){
       var scores=samples[a.id], opp=opponents[a.id];
+      // Keep the existing team-specific schedule-adjusted expected wins as context.
       a.sorExpected=opp.reduce(function(sum,target){
         if(!scores.length) return sum;
         return sum+scores.reduce(function(acc,score){return acc+(score>target?1:score===target?.5:0);},0)/scores.length;
       },0);
-      a.sor=a.w-a.sorExpected;
+      var neutralWinChances=opp.map(function(target){
+        if(!leagueScoreSamples.length) return 0.5;
+        return leagueScoreSamples.reduce(function(acc,score){
+          return acc+(score>target?1:score===target?.5:0);
+        },0)/leagueScoreSamples.length;
+      });
+      // Wins in a tied matchup can be fractional; require at least the achieved
+      // whole-win threshold for the binomial comparison.
+      var actualWinThreshold=Math.ceil(a.w-1e-9);
+      a.sorTail=probabilityAtLeastWins(neutralWinChances,actualWinThreshold);
+      a.sor=100*(1-a.sorTail); // Larger = more impressive actual record.
     });
     var sosOrder=rows.slice().sort(function(a,b){return b.oppPPG-a.oppPPG||String(a.id).localeCompare(String(b.id));});
     var sorOrder=rows.slice().sort(function(a,b){return b.sor-a.sor||String(a.id).localeCompare(String(b.id));});
@@ -3837,7 +3869,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     $("strengthRows").innerHTML=strengthSorted.map(function(a){
       var wins=Number.isInteger(a.w)?String(a.w):String(a.w);
       var losses=a.og-a.w;
-      return '<tr><td class="tn">'+esc(tname(a.id))+'</td><td class="num">'+wins+'-'+losses+'</td><td class="num">'+f1(a.oppPPG)+'</td><td class="num">'+sosRanks[a.id]+' of '+rows.length+'</td><td class="num">'+a.sorExpected.toFixed(2)+'</td><td class="num '+(a.sor>=0?'up':'down')+'">'+signed(a.sor)+'</td><td class="num">'+sorRanks[a.id]+' of '+rows.length+'</td></tr>';
+      return '<tr><td class="tn">'+esc(tname(a.id))+'</td><td class="num">'+wins+'-'+losses+'</td><td class="num">'+f1(a.oppPPG)+'</td><td class="num">'+sosRanks[a.id]+' of '+rows.length+'</td><td class="num">'+a.sorExpected.toFixed(2)+'</td><td class="num">'+a.sor.toFixed(1)+'%</td><td class="num">'+sorRanks[a.id]+' of '+rows.length+'</td></tr>';
     }).join("");
     // diverging bars: wins above expected
     var byWae = rows.slice().sort(function (a, b) { return b.wae - a.wae; });
