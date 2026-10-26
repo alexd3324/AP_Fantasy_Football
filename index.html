@@ -2999,17 +2999,16 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
         </div>
         <p class="note">Scoring-based expected wins compare each weekly score with the league’s other teams, regardless of actual opponents. These are different from team-specific schedule-adjusted expected wins and the neutral-team SOR record-impressiveness score above.</p>
         <div class="scroll">
-          <table style="min-width: 820px">
+          <table style="min-width: 760px">
             <thead>
               <tr>
-                <th>#</th><th>Team</th><th class="num">Wins</th><th class="num" title="Scoring-based expected wins from all-play weekly comparisons">Exp. W (scoring)</th><th class="num" title="Actual wins minus scoring-based expected wins">Above exp. (scoring)</th><th class="num">All-play</th>
-                <th class="num">PPG</th><th class="num">Opp. PPG</th><th class="num">Sched. luck</th><th class="num">Rank shift</th>
+                <th>#</th><th>Team</th><th class="num">Wins</th><th class="num" title="Scoring-based expected wins from all-play weekly comparisons">Exp. W (scoring)</th><th class="num" title="Actual wins minus scoring-based expected wins">Above exp. (scoring)</th><th class="num">PPG</th><th class="num">Opp. PPG</th><th class="num">Sched. luck</th><th class="num">Rank shift</th>
               </tr>
             </thead>
             <tbody id="anBodyRows"></tbody>
           </table>
         </div>
-        <p class="legend">All-play is each team's record against every team's score each week. Rank shift is the number of spots a team's expected rank sits above (+) or below (-) its place in the standings. Positive means the standings flatter the team.</p>
+        <p class="legend">All-play records are available in Headquarters → Standings & Playoffs and Advanced stats. Rank shift is the number of spots a team's expected rank sits above (+) or below (-) its place in the standings. Positive means the standings flatter the team.</p>
       </div>
       <div class="analytics-topic-panel">
         <h3 class="sub">Season highs</h3>
@@ -3547,6 +3546,8 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
   function renderStandings() {
     var st=S.league.settings||{},cut=Number(st.playoff_teams||0),form=formFor(),mine=myTeam();
     var faab=st.waiver_type===2&&st.waiver_budget;
+    var allPlayById={};
+    computeAnalytics().rows.forEach(function(a){allPlayById[a.id]=a;});
     var showOdds=standView==='playoffs' || $('standOddsToggle').checked;
     $('standOddsLabel').hidden=standView!=='playoffs';
     var champ=S.league.metadata&&S.league.metadata.latest_league_winner_roster_id;
@@ -3558,15 +3559,15 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       '<div class="stand-highlight"><span class="label">⚔️ Playoff cutoff</span><strong>'+esc(bubble?bubble.name:'Not configured')+'</strong><small>'+(bubble?'Seed '+cut+' · '+recStr(bubble):'Playoff teams not set')+'</small></div>';
     document.querySelectorAll('[data-stand-view]').forEach(function(btn){btn.setAttribute('aria-pressed',String(btn.dataset.standView===standView));});
     $('standNote').textContent=cut?'Top '+cut+' qualify · Seed '+cut+' is the points-for wildcard':'Ranked by wins, then points for';
-    $('standViewNote').textContent=standView==='standings'?'Official seeds, games behind, recent form, and the points wildcard race.':standView==='advanced'?'Scoring efficiency, points allowed, potential points, scoring differential, and waiver budget.':'Games behind the league leader, simulated qualification odds, and the points wildcard chase.';
-    var cols=standView==='advanced'?[['seed','Rank'],['name','Franchise'],['pa','PA'],['max','Max PF'],['eff','Efficiency'],['diff','Point diff.'],['ppg','PF / game']].concat(faab?[['faab','FAAB']]:[]):standView==='playoffs'?[['seed','Rank'],['name','Franchise'],['wins','Record'],['gb','GB to 1st'],['pf','PF'],['odds','Playoff odds'],['status','Playoff status']]:[['seed','Rank'],['name','Franchise'],['wins','W–L'],['pf','PF'],['gb','GB'],['form','Last 5']];
+    $('standViewNote').textContent=standView==='standings'?'Official seeds, all-play records, games behind, recent form, and the points wildcard race.':standView==='advanced'?'All-play records, scoring efficiency, points allowed, potential points, scoring differential, and waiver budget.':'Games behind the league leader, simulated qualification odds, and the points wildcard chase.';
+    var cols=standView==='advanced'?[['seed','Rank'],['name','Franchise'],['allplay','All-play'],['pa','PA'],['max','Max PF'],['eff','Efficiency'],['diff','Point diff.'],['ppg','PF / game']].concat(faab?[['faab','FAAB']]:[]):standView==='playoffs'?[['seed','Rank'],['name','Franchise'],['wins','Record'],['gb','GB to 1st'],['pf','PF'],['odds','Playoff odds'],['status','Playoff status']]:[['seed','Rank'],['name','Franchise'],['wins','W–L'],['allplay','All-play'],['pf','PF'],['gb','GB'],['form','Last 5']];
     // Dynamic columns: advanced and playoff views have more metrics than the five-column standings view.
-    var widths=standView==='advanced'?(faab?[7,29,10,11,12,12,11,8]:[7,32,11,13,12,13,12]):standView==='playoffs'?[7,30,11,12,10,14,16]:[7,38,11,13,9,22];
+    var widths=standView==='advanced'?(faab?[6,24,12,9,10,11,11,10,7]:[6,27,13,10,11,12,11,10]):standView==='playoffs'?[7,30,11,12,10,14,16]:[6,31,10,14,12,9,18];
     var table=$('standTable'),colgroup=table.querySelector('colgroup');
     if(!colgroup){colgroup=document.createElement('colgroup');table.insertBefore(colgroup,table.firstChild);}
     colgroup.innerHTML=widths.map(function(w){return '<col style="width:'+w+'%">';}).join('');
     table.dataset.view=standView;
-    var sortable={seed:1,name:1,wins:1,pf:1,pa:1,max:1,eff:1,faab:1,diff:1,ppg:1,gb:1,odds:1};
+    var sortable={seed:1,name:1,wins:1,pf:1,pa:1,max:1,eff:1,faab:1,diff:1,ppg:1,gb:1,odds:1,allplay:1};
     $('standHead').innerHTML=cols.map(function(c){return '<th'+(['seed','name','form','status'].indexOf(c[0])<0?' class="num"':'')+'>'+(sortable[c[0]]?'<button class="table-sort" data-stand-sort="'+c[0]+'">'+c[1]+' <span class="sort-arrow">'+(standSort===c[0]?(standDesc?'↓':'↑'):'↕')+'</span></button>':c[1])+'</th>';}).join('');
     var directCut=Math.max(0,cut-1),recordCutId=S.pure[Math.min(directCut-1,S.pure.length-1)];
     var recordCut=recordCutId?S.T[recordCutId]:null;
@@ -3580,6 +3581,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       else if(standSort==='diff'){vx=x.pf-x.pa;vy=y.pf-y.pa;}
       else if(standSort==='ppg'){vx=x.pf/Math.max(1,x.w+x.l+x.t);vy=y.pf/Math.max(1,y.w+y.l+y.t);}
       else if(standSort==='gb'){vx=gap(a);vy=gap(b);}
+      else if(standSort==='allplay'){vx=allPlayById[a]?allPlayById[a].awW:0;vy=allPlayById[b]?allPlayById[b].awW:0;}
       else if(standSort==='odds'){vx=simOdds(a)??-1;vy=simOdds(b)??-1;}
       else if(standSort==='faab'){vx=(st.waiver_budget||0)-(x.faabUsed||0);vy=(st.waiver_budget||0)-(y.faabUsed||0);}
       else{vx=Number(x[standSort]||0);vy=Number(y[standSort]||0);}
@@ -3591,12 +3593,12 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
 
       var pips=(form[id]||[]).slice(-5).map(function(x){return '<b class="'+x.toLowerCase()+'" title="'+(x==='W'?'Win':x==='L'?'Loss':'Tie')+'">'+x+'</b>';}).join('');
       var played=t.w+t.l+t.t,odds=simOdds(id);
-      var values={seed:'<span class="'+(seed<=3?'top-rank':'')+'">'+seed+'</span>',name:'<div class="tn"><button type="button" class="team-jump" data-team-jump="'+id+'" title="Open '+esc(t.name)+' in Team Hub">'+esc(t.name)+'</button>'+tags+'</div><div class="th">'+esc(t.handle)+'</div>',wins:recStr(t),pf:f2(t.pf),pa:f2(t.pa),max:t.max?f2(t.max):'—',eff:t.max?(t.pf/t.max*100).toFixed(1)+'%':'—',diff:(t.pf-t.pa>=0?'+':'')+f2(t.pf-t.pa),ppg:f2(t.pf/Math.max(1,played)),faab:'$'+(st.waiver_budget-t.faabUsed),form:'<span class="form">'+pips+'</span>',gb:gap(id).toFixed(1),status:cut?(seed<=directCut?'<span class="up">Record berth position</span>':S.wild===id?'<span class="up">Points wildcard position</span>':'<span class="th">In the hunt</span>'):'—',odds:odds!==null?'<span class="odds-value">'+odds.toFixed(1)+'%</span>':'<span class="th" title="Run Playoff Scenario Explorer for projections">Not available</span>'};
+      var values={seed:'<span class="'+(seed<=3?'top-rank':'')+'">'+seed+'</span>',name:'<div class="tn"><button type="button" class="team-jump" data-team-jump="'+id+'" title="Open '+esc(t.name)+' in Team Hub">'+esc(t.name)+'</button>'+tags+'</div><div class="th">'+esc(t.handle)+'</div>',wins:recStr(t),allplay:allPlayById[id]?num(allPlayById[id].awW)+'–'+num(allPlayById[id].awL):'—',pf:f2(t.pf),pa:f2(t.pa),max:t.max?f2(t.max):'—',eff:t.max?(t.pf/t.max*100).toFixed(1)+'%':'—',diff:(t.pf-t.pa>=0?'+':'')+f2(t.pf-t.pa),ppg:f2(t.pf/Math.max(1,played)),faab:'$'+(st.waiver_budget-t.faabUsed),form:'<span class="form">'+pips+'</span>',gb:gap(id).toFixed(1),status:cut?(seed<=directCut?'<span class="up">Record berth position</span>':S.wild===id?'<span class="up">Points wildcard position</span>':'<span class="th">In the hunt</span>'):'—',odds:odds!==null?'<span class="odds-value">'+odds.toFixed(1)+'%</span>':'<span class="th" title="Run Playoff Scenario Explorer for projections">Not available</span>'};
       rows+='<tr class="'+(cut&&seed<=cut?'in':'out')+(cut&&seed===cut?' bubble':'')+'">'+cols.map(function(c){var key=c[0];return '<td'+(key==='seed'?' class="rank"':['name','form','status'].indexOf(key)<0?' class="num"':'')+'>'+values[key]+'</td>';}).join('')+'</tr>';
       if(standSort==='seed'&&cut&&idx===cut-1&&idx<ordered.length-1)rows+='<tr class="cut"><td colspan="'+cols.length+'"><span class="cut-label">Playoff cutoff · Top '+cut+'</span></td></tr>';
     });
     $('standBody').innerHTML=rows;
-    $('standLegend').textContent=standView==='playoffs'?'GB to 1st measures wins behind the league leader (ties count as half a win). The sixth berth goes to the highest-scoring remaining team. Playoff odds come from 3,000 simulated seasons when complete future Sleeper matchups are available; otherwise they are unavailable. Status describes the current position, not mathematical clinching.':'GB is games behind the league leader (ties count as half a win). Seeds follow the league’s five record berths plus one points-for wildcard. Select a franchise to open Team Hub.';
+    $('standLegend').textContent=standView==='playoffs'?'GB to 1st measures wins behind the league leader (ties count as half a win). The sixth berth goes to the highest-scoring remaining team. Playoff odds come from 3,000 simulated seasons when complete future Sleeper matchups are available; otherwise they are unavailable. Status describes the current position, not mathematical clinching.':'All-play compares each completed weekly score against every other team that week (ties count as half a win). GB is games behind the league leader. Seeds follow five record berths plus one points-for wildcard. Select a franchise to open Team Hub.';
     var race=$('wildcardRace');
     race.hidden=standView==='advanced'||cut<2;
     $('wildcardDetails').hidden=race.hidden;
@@ -3929,8 +3931,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
         '<td class="num">' + f1(a.w) + "</td>" +
         '<td class="num">' + f2(a.exp) + "</td>" +
         '<td class="num ' + (a.wae >= 0 ? "up" : "down") + '">' + signed(a.wae) + "</td>" +
-        '<td class="num">' + num(a.awW) + "-" + num(a.awL) + "</td>" +
-        '<td class="num">' + f1(a.ppg) + "</td>" +
+                '<td class="num">' + f1(a.ppg) + "</td>" +
         '<td class="num">' + f1(a.oppPPG) + "</td>" +
         '<td class="num ' + (a.sl >= 0 ? "up" : "down") + '">' + signed(a.sl, 1) + "</td>" +
         '<td class="num ' + (sh > 0 ? "up" : sh < 0 ? "down" : "") + '">' + (sh > 0 ? "+" : "") + sh + "</td></tr>";
