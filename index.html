@@ -2842,6 +2842,25 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
 
 
 
+
+<style id="apff-refined-design">
+:root,:root[data-theme="light"]{--bg:#f2f5f9;--surface:#fff;--fg:#152640;--muted:#60718a;--line:#dce4ef;--accent:#2165df;--accent-ink:#fff;--tint:#eaf1ff;--flag:#9b6914;--flag-tint:#fff5df;--loss:#ba4254;--loss-tint:#ffeef0;--body:'Atkinson Hyperlegible',sans-serif;--display:'Lexend',sans-serif;--mono:ui-monospace,SFMono-Regular,monospace;--ap-radius:16px;--ap-shadow:0 8px 28px #142c4d06}
+:root[data-theme="dark"]{--bg:#0b1220;--surface:#131f32;--fg:#eaf0fc;--muted:#a0afc6;--line:#293a53;--accent:#80adff;--accent-ink:#0b1930;--tint:#1b3154;--flag:#efc773;--flag-tint:#392e19;--loss:#ffa3b0;--loss-tint:#392232;--ap-shadow:0 10px 30px #0002}
+@media(prefers-color-scheme:dark){:root:not([data-theme]){--bg:#0b1220;--surface:#131f32;--fg:#eaf0fc;--muted:#a0afc6;--line:#293a53;--accent:#80adff;--accent-ink:#0b1930;--tint:#1b3154}}
+html{scroll-behavior:smooth}body{margin:0;background:var(--bg)!important;color:var(--fg);padding-top:0!important}.wrap{max-width:1280px!important;gap:28px!important;padding-top:28px}
+.mast{padding:26px 28px 0!important;border:1px solid var(--line)!important;border-radius:22px!important;background:var(--surface)!important;box-shadow:var(--ap-shadow);overflow:visible!important;gap:24px!important}
+.mast-brandrow{align-items:center!important;gap:20px}.mast-identity{border-left:5px solid var(--accent);padding-left:18px}h1#title{font-family:var(--display)!important;font-size:clamp(26px,4vw,45px)!important;line-height:1.15!important;letter-spacing:-.045em!important;text-transform:none!important}.eyebrow{margin-top:9px;color:var(--muted)!important;font-size:11px!important;letter-spacing:.12em!important}
+.site-nav-shell{border-top:1px solid var(--line)!important;background:transparent!important;padding:12px 0!important}.nav{gap:5px!important}.nav a,.nav-more-button{border:0!important;background:transparent!important;border-radius:9px!important;padding:11px 14px!important;font:600 14px/1.3 var(--body)!important;letter-spacing:0!important;text-transform:none!important;color:var(--muted)!important}.nav a:hover,.nav-more-button:hover{background:var(--tint)!important;color:var(--accent)!important}.nav a[aria-current="page"]{color:var(--accent)!important;background:var(--tint)!important;box-shadow:none!important}.season-pill,.themebtn{border:1px solid var(--line)!important;border-radius:30px!important;background:var(--bg)!important;color:var(--fg)!important;padding:8px 13px!important;font-size:12px!important}
+section{gap:20px}h2{font-size:clamp(25px,3vw,34px)!important;letter-spacing:-.035em!important;text-transform:none!important;line-height:1.2!important}.league-pulse-heading{display:block!important;padding:30px!important;border:1px solid var(--line);border-radius:18px;background:linear-gradient(115deg,var(--surface),var(--tint))!important}.league-pulse-heading h3{font:600 clamp(26px,4vw,42px)/1.15 var(--display)!important;letter-spacing:-.04em!important;margin:10px 0!important}.league-pulse-heading p{max-width:none!important;color:var(--muted)!important}.league-pulse-kicker{font-size:10px!important;letter-spacing:.16em!important;color:var(--accent)!important}
+.stand-summary{gap:14px!important}.stand-highlight{background:var(--surface)!important;border:1px solid var(--line)!important;border-radius:14px!important;padding:20px!important;box-shadow:var(--ap-shadow)!important}.stand-highlight .label{font-size:12px!important;color:var(--muted)!important}.stand-highlight strong{font:600 20px/1.35 var(--display)!important;margin:8px 0!important}.stand-highlight small{color:var(--muted)!important}
+.scroll,.bracket-shell,.profile-section,.pick-projection-module,.scenario-shell,.analytics-topic-panel,.hub-panel{border-radius:16px!important;border:1px solid var(--line)!important;box-shadow:var(--ap-shadow)!important;background:var(--surface)!important}th{background:var(--bg)!important;color:var(--muted)!important;letter-spacing:.05em!important}th,td{padding-top:14px!important;padding-bottom:14px!important}tbody tr:hover{background:var(--tint)}.note,.legend{line-height:1.65!important}button,select,input{accent-color:var(--accent)}button{cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--accent)!important;outline-offset:3px!important}button:disabled{opacity:.5;cursor:not-allowed}select{min-height:44px}details{border-color:var(--line)!important}summary{min-height:44px}
+.data-health{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:13px 18px;font-size:12px}.data-health>div{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.data-health>div>span:last-child{margin-left:auto;color:var(--muted)}.data-health p{margin:5px 0 0;color:var(--muted);line-height:1.5}.health-dot{width:7px;height:7px;background:#36b587;border-radius:50%}.data-health.degraded{border-color:var(--flag);background:var(--flag-tint)}.degraded .health-dot{background:var(--flag)}.data-health:empty{display:none}
+#draftRankBanner:not(:empty){padding:14px 18px;border-left:3px solid var(--flag);background:var(--flag-tint);color:var(--fg);border-radius:8px;font-size:13px;line-height:1.6}.bracket-desc::after{content:' · Historical scoring model; not calibrated betting odds';color:var(--muted)}#matchups .section-page-head::after{content:'Live win odds are withheld once scoring starts: this feed does not provide reliable time-remaining projections.';display:block;font-size:12px;color:var(--muted);line-height:1.6;margin-top:8px}
+@media(max-width:700px){.wrap{padding-top:12px;gap:20px!important}.mast{padding:20px 16px 0!important;border-radius:16px!important}.mast-brandrow{flex-wrap:wrap}.mast-actions{width:100%;justify-content:space-between}.nav{flex-wrap:wrap!important}.nav a,.nav-more-button{padding:10px!important;font-size:13px!important}.league-pulse-heading{padding:22px!important}.stand-summary{grid-template-columns:1fr!important}.data-health>div>span:last-child{margin-left:0;width:100%}.scroll{max-width:100%}h1#title{font-size:28px!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+[hidden]{display:none!important}
+</style>
+
 </head>
 <body>
 <div class="wrap">
@@ -2874,6 +2893,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     <dl class="facts" id="facts" hidden></dl>
   </header>
   <div class="status" id="status" role="status">Loading league from Sleeper...</div>
+  <div id="dataHealth" class="data-health" role="status" aria-live="polite"></div>
   <noscript><div class="status">This page needs JavaScript to load the league from Sleeper.</div></noscript>
 
   <section id="standings" aria-labelledby="h-standings">
@@ -2882,8 +2902,8 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       <p class="note" id="standNote"></p>
     </div>
     <div class="league-pulse-heading">
-      <div><span class="league-pulse-kicker">LIVE LEAGUE SNAPSHOT</span><h3>League Pulse</h3></div>
-      <p>Who's leading, who's hot, and where the playoff line stands.</p>
+      <div><span class="league-pulse-kicker">YOUR LEAGUE, AT A GLANCE</span><h3>The playoff race starts here.</h3></div>
+      <p>Follow the contenders. Find your edge. Keep the whole league in view.</p>
     </div>
     <div class="stand-summary" id="standSummary" aria-label="League standings highlights"></div>
     <div class="stand-viewbar">
@@ -2906,7 +2926,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     <details id="wildcardDetails" class="wildcard-details" open><summary>🎯 Points wildcard race <span>Sixth playoff berth · expand / collapse</span></summary><div id="wildcardRace" class="wildcard-race"></div></details>
     <span id="faabLegend" hidden></span><span id="standOddsTh" hidden></span>
     </div><div class="hq-bracket-column">
-    <div class="bracket-shell" id="projectedBracket"><div class="bracket-top"><div><h2>Projected Playoff Bracket</h2></div></div><p class="bracket-desc">Current top six · provisional seeds</p><div class="bracket-actions"><button type="button" id="simulatePlayoffsBtn" class="bracket-sim-btn">🎲 Simulate playoffs</button><span id="bracketSimStatus" class="bracket-sim-status" aria-live="polite"></span></div><div id="bracketContent"></div></div>
+    <div class="bracket-shell" id="projectedBracket"><div class="bracket-top"><div><h2>Projected Playoff Bracket</h2></div></div><p class="bracket-desc">Current top six · provisional seeds · fixed bracket preview</p><div class="bracket-actions"><button type="button" id="simulatePlayoffsBtn" class="bracket-sim-btn">🎲 Simulate playoffs</button><span id="bracketSimStatus" class="bracket-sim-status" aria-live="polite"></span></div><div id="bracketContent"></div></div>
     </div></div>
     <details id="scenarioExplorer" class="scenario-shell">
       <summary>🎯 Playoff Scenario Explorer</summary>
@@ -2918,7 +2938,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
         <div id="scenarioGames" class="scenario-game-list"></div>
         <div class="scenario-actions"><button type="button" id="scenarioRun">Recalculate playoff odds</button><button type="button" class="secondary" id="scenarioReset">Clear predictions</button><span id="scenarioStatus" class="scenario-note" role="status"></span></div>
         <div id="scenarioResults"></div>
-        <p class="scenario-note">3,000 Monte Carlo seasons per scenario. Uses the same scoring-strength model and points-for wildcard as Analytics. Locked results determine the winner; simulated points still contribute to points-for tiebreakers. Estimates are uncertain, not guarantees.</p>
+        <p class="scenario-note">3,000 Monte Carlo seasons per scenario. Uses the same scoring-strength model and points-for wildcard as Analytics. Locked results sample scores conditional on that winner; those scores contribute to points-for tiebreakers. Estimates are uncertain, not guarantees.</p>
       </div>
     </details>
   </section>
@@ -2955,7 +2975,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     <div class="stack">
       <dl class="defs">
         <div><dt>Scoring-based expected wins</dt><dd>Each week a team's score is compared with every other team's score, as if it played all of them. Beating 8 of 11 teams counts as 0.73 of a win. The weekly values add up over the season.</dd></div>
-        <div><dt>Wins above expected</dt><dd>Actual wins minus expected wins. Positive means a team has won more than its scoring deserves. Negative means it has been unlucky.</dd></div>
+        <div><dt>Wins above expected</dt><dd>Actual wins minus expected wins. Positive means more wins than its weekly all-play results imply; negative means fewer. This is retrospective context, not a forecast.</dd></div>
         <div><dt>Schedule luck</dt><dd>The league's average score minus the average score of the opponents a team actually faced, in points per game. Positive means an easier schedule than average.</dd></div>
       </dl>
       <div class="analytics-topic-panel" id="scheduleRecordStrength">
@@ -3304,7 +3324,9 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
   });
 
   /* ---------- loading ---------- */
+  var refreshing=false;
   function init() {
+    if(refreshing)return Promise.resolve();refreshing=true;
     setStatus("Loading league from Sleeper...");
     var base = "/league/" + LEAGUE_ID;
     return Promise.all([
@@ -3316,11 +3338,11 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       var st = S.league.settings || {};
       S.lastScored = st.last_scored_leg || 0;
       S.leg = Math.min(Math.max(st.leg || (S.state && S.state.week) || 0, S.lastScored), 18);
-      S.weeks = {}; S.tx = []; S.futureWeeks = {};
+      S.weeks = {}; S.tx = []; S.futureWeeks = {}; S.loadWarnings=[];
       var jobs = [];
       for (var w = 1; w <= S.leg; w++) {
         (function (w) {
-          jobs.push(getJSON(base + "/matchups/" + w).then(function (d) { S.weeks[w] = d || []; }).catch(function () { S.weeks[w] = []; }));
+          jobs.push(getJSON(base + "/matchups/" + w).then(function (d) { S.weeks[w] = d || []; }).catch(function () { S.weeks[w] = []; S.loadWarnings.push("Matchups unavailable for week "+w); }));
           jobs.push(getJSON(base + "/transactions/" + w).then(function (d) { S.tx = S.tx.concat(d || []); }).catch(function () {}));
         })(w);
       }
@@ -3331,14 +3353,32 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       return Promise.all(jobs);
     }).then(function () {
       buildTeams();
+      auditData();
       renderCore();
       renderTeamHub();
       setStatus("");
       return loadNames().then(function () { renderRosterAges(); renderNamed(); renderTeamHub(); return refreshNFLGameStatus(); }).catch(function () { renderRosterAges(); renderNamed(); renderTeamHub(); $("namesNote").hidden = false; return refreshNFLGameStatus(); });
     }).catch(function (e) {
       setStatus("Could not load the league from Sleeper (" + e.message + ").", true);
-    });
+    }).finally(function(){refreshing=false;});
   }
+
+
+  function auditData(){
+    var issues=(S.loadWarnings||[]).slice(),last=Math.min(S.lastScored,regEnd());
+    for(var w=1;w<=last;w++){
+      var rows=(S.weeks[w]||[]).filter(function(e){return e.matchup_id!=null;});
+      if(rows.length!==S.ids.length||new Set(rows.map(function(e){return e.roster_id;})).size!==S.ids.length||rows.some(function(e){return e.points==null||!Number.isFinite(Number(e.points));})||pairsOf(w).some(function(g){return g.length!==2;}))issues.push('Incomplete completed week '+w);
+    }
+    var calc=cum(last);
+    if(S.lastScored<=regEnd())S.ids.forEach(function(id){var a=calc[id],b=S.T[id];if(Math.abs(a.pf-b.pf)>.1||a.w!==b.w||a.l!==b.l||a.t!==b.t)issues.push(tname(id)+': matchup totals differ from official standings');});
+    S.dataIssues=Array.from(new Set(issues));S.analyticsSafe=!S.dataIssues.length;if(!S.analyticsSafe){scenarioContext=null;scenarioBaseline=null;}
+    var el=$('dataHealth');el.className='data-health '+(S.analyticsSafe?'healthy':'degraded');
+    el.innerHTML='<div><span class="health-dot" aria-hidden="true"></span><strong>'+(S.analyticsSafe?'League data checked':'Some data needs attention')+'</strong><span>Updated '+new Date().toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})+'</span></div><p>'+(S.analyticsSafe?'Completed matchup totals checked against standings. Forecasts are exploratory estimates.':esc(S.dataIssues.join(' · '))+' — derived analytics and forecasts are paused. Official standings remain available.')+'</p>';
+    ['anBody','rosRows','scenarioExplorer','pickProjectionModule','anStrip','anHighs','teamProfiles','rosterAgeChart'].forEach(function(id){var e=$(id);if(e)e.hidden=!S.analyticsSafe;});
+  }
+  function seededRandom(key){var h=2166136261;for(var i=0;i<key.length;i++)h=Math.imul(h^key.charCodeAt(i),16777619);return function(){h+=0x6D2B79F5;var t=h;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
+  function forecastRandom(){return seededRandom(LEAGUE_ID+':'+S.lastScored+':'+S.ids.map(function(id){return id+':'+S.T[id].pf+':'+S.T[id].max;}).join('|'));}
 
   function recOrder(stats, ids) {
     return ids.slice().sort(function (a, b) {
@@ -3711,9 +3751,9 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     var semiB=sim?team(sim.semiB.a,sim.semiB)+team(sim.semiB.b,sim.semiB):team(ids[1])+'<div class="bracket-placeholder">Winner of 3 vs 6</div>';
     var title=sim?team(sim.finalGame.a,sim.finalGame)+team(sim.finalGame.b,sim.finalGame):'<div class="bracket-placeholder">Semifinal 1 winner</div><div class="bracket-placeholder">Semifinal 2 winner</div>';
     el.innerHTML='<div class="bracket-grid">'+
-      '<div class="bracket-round wild-round"><h3>Wild Card · Week 15</h3>'+slot('4 vs 5',wildB,'')+slot('3 vs 6',wildA,'')+'</div><div class="bracket-connector" aria-hidden="true"></div>'+ 
-      '<div class="bracket-round semi-round"><h3>Semifinals · Week 16</h3>'+slot('SEMIFINAL 1',semiA,'')+slot('SEMIFINAL 2',semiB,'')+'</div><div class="bracket-connector second" aria-hidden="true"></div>'+
-      '<div class="bracket-round final-round"><h3>Championship · Week 17</h3>'+slot('AP TITLE GAME',title,'<span class="bracket-champion">'+(sim?'🏆 '+esc(tname(sim.finalGame.winner)):'Champion to be determined')+'</span>')+'</div></div>'+
+      '<div class="bracket-round wild-round"><h3>Wild Card · Week '+(regEnd()+1)+'</h3>'+slot('4 vs 5',wildB,'')+slot('3 vs 6',wildA,'')+'</div><div class="bracket-connector" aria-hidden="true"></div>'+ 
+      '<div class="bracket-round semi-round"><h3>Semifinals · Week '+(regEnd()+2)+'</h3>'+slot('SEMIFINAL 1',semiA,'')+slot('SEMIFINAL 2',semiB,'')+'</div><div class="bracket-connector second" aria-hidden="true"></div>'+
+      '<div class="bracket-round final-round"><h3>Championship · Week '+(regEnd()+3)+'</h3>'+slot('AP TITLE GAME',title,'<span class="bracket-champion">'+(sim?'🏆 '+esc(tname(sim.finalGame.winner)):'Champion to be determined')+'</span>')+'</div></div>'+
       '<details class="bracket-method"><summary>How the simulation works</summary><p class="bracket-footnote">'+(sim?'One illustrative postseason using historical weekly scoring, shrunk toward the league average. This is a fixed bracket: 4/5 winner plays seed 1, 3/6 winner plays seed 2; there is no reseeding. Scores are simulated, not live.':'Fixed bracket: 4/5 winner advances to face seed 1; 3/6 winner advances to face seed 2. No reseeding. Semifinal placeholders update when you simulate.')+'</p></details>';
     requestAnimationFrame(drawFixedBracketLines);
   }
@@ -3758,6 +3798,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
   }
 
   function renderAnalytics() {
+    if(S.analyticsSafe===false)return;
     var A = computeAnalytics();
     S.analytics = A;
     var has = A.games > 0;
@@ -3941,6 +3982,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
 
   /* ---------- rest-of-season forecast ---------- */
   function renderROS() {
+    if(S.analyticsSafe===false)return;
     if (!$('rosRows') || !S.T) return;
     var last = Math.min(S.lastScored, regEnd()), future = [], missing = [];
     for (var w=last+1; w<=regEnd(); w++) {
@@ -3956,6 +3998,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       $('rosRows').innerHTML = '<tr><td colspan="6">Standings projections will appear when Sleeper provides the remaining matchups. We do not invent opponents.</td></tr>';
       return;
     }
+    var random=forecastRandom();
     var current=cum(last), ids=S.ids.slice(), n=3000, stats={}, cut=(S.league.settings||{}).playoff_teams||6;
     var leagueAvg=ids.reduce(function(a,id){return a+(S.T[id].pf/Math.max(1,last));},0)/ids.length;
     ids.forEach(function(id){
@@ -3967,7 +4010,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       var sd=Math.max(20,Math.sqrt(variance)*shrink+mu*.18*(1-shrink));
       stats[id]={mu:mu,sd:sd,wins:0,playoffs:0,rank:0,finish:{}};
     });
-    function normal(){var a=Math.max(1e-8,Math.random()),b=Math.random();return Math.sqrt(-2*Math.log(a))*Math.cos(2*Math.PI*b);}
+    function normal(){var a=Math.max(1e-8,random()),b=random();return Math.sqrt(-2*Math.log(a))*Math.cos(2*Math.PI*b);}
     for(var sim=0;sim<n;sim++){
       var simStats={};ids.forEach(function(id){simStats[id]={w:current[id].w,t:current[id].t,pf:current[id].pf};});
       future.forEach(function(g){
@@ -3985,12 +4028,14 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       var st=stats[id];
       return '<tr><td class="rank">'+(i+1)+'</td><td class="tn">'+esc(tname(id))+'</td><td class="num">'+current[id].w+'–'+current[id].l+'</td><td class="num">'+(st.wins/n).toFixed(1)+'</td><td class="num">'+(100*st.playoffs/n).toFixed(1)+'%</td><td class="num">'+(st.rank/n).toFixed(1)+'</td></tr>';
     }).join('');
-    $('rosNote').textContent = '3,000 simulated seasons · '+future.length+' scheduled games remaining · through week '+regEnd();
+    $('rosNote').textContent = 'Exploratory scoring model · 3,000 simulations · '+future.length+' scheduled games remaining · through week '+regEnd();
   }
 
   /* ---------- Headquarters: conditional playoff simulations ---------- */
   var scenarioReady=false, scenarioContext=null, scenarioBaseline=null;
   function setupScenarioExplorer(){
+    if(S.analyticsSafe===false)return;
+    $('scenarioResults').innerHTML='';
     var box=$('scenarioExplorer');if(!box||!S.T)return;
     var last=Math.min(S.lastScored,regEnd()),next=last+1,ids=S.ids.slice(),future=[],missing=[];
     for(var w=next;w<=regEnd();w++){
@@ -4014,11 +4059,14 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
   }
   function simulateScenario(locks){
     var ctx=scenarioContext;if(!ctx)return null;
+    var random=forecastRandom();
     var ids=ctx.ids,n=3000,totals={},qualWins={};ids.forEach(function(id){totals[id]={playoffs:0,wins:0};qualWins[id]=[];});
-    function normal(){var a=Math.max(1e-8,Math.random()),b=Math.random();return Math.sqrt(-2*Math.log(a))*Math.cos(2*Math.PI*b);}
+    function normal(){var a=Math.max(1e-8,random()),b=random();return Math.sqrt(-2*Math.log(a))*Math.cos(2*Math.PI*b);}
     for(var sim=0;sim<n;sim++){
       var rec={};ids.forEach(function(id){var r=ctx.current[id];rec[id]={w:r.w,t:r.t,pf:r.pf};});
       ctx.future.forEach(function(g){var a=g.a,b=g.b,pa=Math.max(0,ctx.strength[a].mu+normal()*ctx.strength[a].sd),pb=Math.max(0,ctx.strength[b].mu+normal()*ctx.strength[b].sd),winner=g.week===ctx.next?locks[a+'-'+b]:null;
+        // Rejection-sample scores conditional on the locked winner.
+        if(winner){var tries=0;while((winner===a?pa<=pb:pb<=pa)&&tries++<10000){pa=Math.max(0,ctx.strength[a].mu+normal()*ctx.strength[a].sd);pb=Math.max(0,ctx.strength[b].mu+normal()*ctx.strength[b].sd);}if(winner===a&&pa<=pb)pa=pb+.01;if(winner===b&&pb<=pa)pb=pa+.01;}
         rec[a].pf+=pa;rec[b].pf+=pb;
         if(winner===a)rec[a].w++;else if(winner===b)rec[b].w++;else if(pa>pb)rec[a].w++;else if(pb>pa)rec[b].w++;else{rec[a].t++;rec[b].t++;}
       });
@@ -4349,6 +4397,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
   // Normal approximation: each unfinished starter contributes his average (never less than points already scored)
   // with a spread proportional to that average. Starters whose NFL game is final are locked in with zero variance.
   function matchupWinProb(week,e,o){
+    if(week>S.lastScored && (S.weeks[week]||[]).some(function(x){return Number(x.points)!==0;}))return null;
     var H=starterHistory(week),pst=PROJ_STATE[week],hasProj=!!(pst&&pst.map);
     if(!H.n&&!hasProj)return null;
     var isFinal=week<=S.lastScored;
@@ -4381,11 +4430,11 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       var wprob=aPts>bPts?wp.pa:wp.pb;
       if(wprob<40)upset='<span class="wp-upset">⚡ Upset · winner was a '+Math.round(wprob)+'% pick</span>';
     }
-    var label=isFinal?'PRE-GAME ODDS':'WIN PROBABILITY';
+    var label=isFinal?'RECONSTRUCTED PRE-GAME ESTIMATE':'ROUGH PRE-GAME ESTIMATE';
     return '<div class="wp-box"><div class="wp-head"><span>'+label+'</span>'+upset+'</div>'+
       '<div class="wp-row"><span>'+esc(tname(e.roster_id))+' <b>'+pa+'%</b></span><span><b>'+pb+'%</b> '+esc(tname(o.roster_id))+'</span></div>'+
       '<div class="wp-meter" role="img" aria-label="'+esc(tname(e.roster_id))+' '+pa+' percent, '+esc(tname(o.roster_id))+' '+pb+' percent"><span style="width:'+wp.pa.toFixed(1)+'%"></span><span></span></div>'+
-      '<div class="wp-proj">'+(isFinal?'Pre-game projection':'Projected totals')+': '+f1(wp.ma)+' – '+f1(wp.mb)+'</div></div>';
+      '<div class="wp-proj">'+(isFinal?'Reconstructed projection':'Estimated totals')+': '+f1(wp.ma)+' – '+f1(wp.mb)+'</div></div>';
   }
   var SLOT_ELIG={QB:['QB'],RB:['RB'],WR:['WR'],TE:['TE'],K:['K'],DEF:['DEF'],DL:['DL'],LB:['LB'],DB:['DB'],FLEX:['RB','WR','TE'],SUPER_FLEX:['QB','RB','WR','TE'],REC_FLEX:['WR','TE'],WRRB_FLEX:['RB','WR'],IDP_FLEX:['DL','LB','DB']};
   function anPos(pid){
@@ -4397,17 +4446,24 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     return p;
   }
   // Best possible lineup from everyone on that week's roster. Most restrictive slots fill first, then flex slots take the best remaining eligible player.
-  // Greedy, so it can differ slightly from a perfect optimizer in rare flex overlaps.
+  // Exact maximum-weight assignment across all eligible slots; empty slots score zero.
   function optimalLineup(e){
-    var slots=((S.league&&S.league.roster_positions)||[]).filter(function(s){return s!=='BN'&&SLOT_ELIG[s];}).slice().sort(function(a,b){return SLOT_ELIG[a].length-SLOT_ELIG[b].length;});
-    var pool=Object.keys(e.players_points||{}).map(function(pid){return {id:pid,pos:anPos(pid),pts:Number(e.players_points[pid])||0};}).sort(function(a,b){return b.pts-a.pts;});
-    var used={},total=0;
-    slots.forEach(function(s){
-      var el=SLOT_ELIG[s];
-      for(var i=0;i<pool.length;i++){var q=pool[i];if(used[q.id]||el.indexOf(q.pos)<0)continue;used[q.id]=1;total+=q.pts;break;}
-    });
-    return total;
+    var slots=((S.league&&S.league.roster_positions)||[]).filter(function(s){return s!=='BN'&&SLOT_ELIG[s];});
+    var pool=Object.keys(e.players_points||{}).map(function(id){return {id:id,pos:anPos(id),pts:Number(e.players_points[id])||0};});
+    var sink=1+slots.length+pool.length,g=Array.from({length:sink+1},function(){return [];});
+    function edge(a,b,c,cost){var f={to:b,cap:c,cost:cost,rev:g[b].length},r={to:a,cap:0,cost:-cost,rev:g[a].length};g[a].push(f);g[b].push(r);}
+    slots.forEach(function(slot,i){edge(0,1+i,1,0);edge(1+i,sink,1,0);pool.forEach(function(p,j){if(SLOT_ELIG[slot].includes(p.pos))edge(1+i,1+slots.length+j,1,-p.pts);});});
+    pool.forEach(function(p,j){edge(1+slots.length+j,sink,1,0);});
+    var cost=0;
+    for(var f=0;f<slots.length;f++){
+      var d=Array(g.length).fill(Infinity),prev=[];d[0]=0;
+      for(var k=0;k<g.length-1;k++){var changed=false;g.forEach(function(es,a){es.forEach(function(x,i){if(x.cap&&d[a]+x.cost<d[x.to]-1e-9){d[x.to]=d[a]+x.cost;prev[x.to]=[a,i];changed=true;}});});if(!changed)break;}
+      if(!Number.isFinite(d[sink]))break;cost+=d[sink];
+      for(var v=sink;v!==0;){var p=prev[v],x=g[p[0]][p[1]];x.cap--;g[v][x.rev].cap++;v=p[0];}
+    }
+    return -cost;
   }
+
   function renderMatchupAnalysis(week,isFinal){
     var box=$('matchupAnalysis');
     if(!box)return;
@@ -4685,8 +4741,9 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
   /* Draft pick probability forecasts — distinct from the existing deterministic draft board. */
   var PICK_PROJECTION_CACHE=null;
   var UPCOMING_PROJECTED_ORDER=null;
-  function normalPick(){var a=Math.max(1e-9,Math.random()),b=Math.random();return Math.sqrt(-2*Math.log(a))*Math.cos(2*Math.PI*b);}
+  function normalPick(random){var a=Math.max(1e-8,random()),b=random();return Math.sqrt(-2*Math.log(a))*Math.cos(2*Math.PI*b);}
   function renderPickProjections(){
+    if(S.analyticsSafe===false)return;
     var root=$('pickProjectionModule');if(!root||!S.T)return;
     var year=Number(S.league.season)+(S.draftDone===false?0:1);
     $('pickProjectionYear').textContent=year+' draft';
@@ -4701,6 +4758,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       if(pairs.length!==Math.floor(ids.length/2))missing.push(w);else future=future.concat(pairs);
     }
     if(missing.length){$('pickProjectionContent').hidden=true;$('pickProjectionStatus').textContent='Pick probabilities unavailable: Sleeper has not supplied complete remaining matchups for week(s) '+missing.join(', ')+'. Current projected draft board is still available below.';return;}
+    var random=forecastRandom();
     var current=cum(last),n=3000,models={},leagueAvg=ids.reduce(function(a,id){return a+S.T[id].pf/Math.max(1,last);},0)/ids.length;
     var ratioList=ids.map(function(id){return S.T[id].pf>0?S.T[id].max/S.T[id].pf:1;}).filter(function(x){return isFinite(x)&&x>=1&&x<3;});
     var leagueRatio=ratioList.length?ratioList.reduce(function(a,b){return a+b;},0)/ratioList.length:1.15;
@@ -4714,7 +4772,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     });
     for(var sim=0;sim<n;sim++){
       var st={};ids.forEach(function(id){st[id]={w:current[id].w,t:current[id].t,pf:current[id].pf,max:S.T[id].max};});
-      future.forEach(function(pair){var a=pair[0],b=pair[1],pa=Math.max(0,models[a].mu+normalPick()*models[a].sd),pb=Math.max(0,models[b].mu+normalPick()*models[b].sd);
+      future.forEach(function(pair){var a=pair[0],b=pair[1],pa=Math.max(0,models[a].mu+normalPick(random)*models[a].sd),pb=Math.max(0,models[b].mu+normalPick(random)*models[b].sd);
         st[a].pf+=pa;st[b].pf+=pb;st[a].max+=pa*models[a].ratio;st[b].max+=pb*models[b].ratio;
         if(pa>pb)st[a].w++;else if(pb>pa)st[b].w++;else{st[a].t++;st[b].t++;}
       });
@@ -4758,7 +4816,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       $('pickDistChart').innerHTML=html;
     }
     sel.onchange=draw;draw();$('pickProjectionContent').hidden=false;
-    $('pickProjectionStatus').textContent='3,000 simulated seasons · '+(Math.max(0,regEnd()-Math.min(S.lastScored,regEnd())))+' regular-season weeks remaining · probabilities are estimates; playoff slots use seeding proxies, not postseason results.';
+    $('pickProjectionStatus').textContent='Exploratory scoring model · 3,000 simulations · '+(Math.max(0,regEnd()-Math.min(S.lastScored,regEnd())))+' regular-season weeks remaining · probabilities are estimates; playoff slots use seeding proxies, not postseason results.';
   }
 
   /* ---------- rules ---------- */
@@ -4931,7 +4989,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       if(finished.JAX)finished.JAC=true;
       if(finished.LAR)finished.LA=true;
       completedNFLTeams=finished;
-      playerStatusMessage='Current-week appearances count only after the player’s NFL game is final.';
+      playerStatusMessage='PPG uses completed non-zero scoring weeks, not verified NFL appearances. Zero-point appearances cannot be identified from this feed; live points are excluded until final.';
       renderPlayers();
       renderMatchupsPage();
     }).catch(function(){
@@ -4950,6 +5008,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
           var pts=Number(e.players_points[pid]);if(!isFinite(pts)||once[pid])return;once[pid]=1;
           var v=data[pid]||(data[pid]={id:pid,pts:0,g:0});
           // Keep recorded fantasy points, including provisional live points.
+          if(w>S.lastScored && !(w===currentNFLWeek && completedNFLTeams && completedNFLTeams[NAMES[pid]&&String(NAMES[pid][2]||'').toUpperCase()]))return;
           v.pts+=pts;
           // A zero-filled lineup entry is NOT evidence of an NFL appearance.
           if(pts===0)return;
@@ -5011,6 +5070,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     return out;
   }
   function renderProfiles(){
+    if(S.analyticsSafe===false)return;
     if(!S.T)return;
     var sel=$('profileTeam'),keep=sel.value;
     sel.innerHTML='<option value="">Select a franchise…</option>'+S.ids.map(function(id){return '<option value="'+id+'">'+esc(tname(id))+'</option>';}).join('');
@@ -5481,7 +5541,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     var basis=$('draftRankBasis')?$('draftRankBasis').value:'production';
     var market=basis==='blend'?draftRankMarket():null,model=draftBuildModel(market);
     var maxSeasons=entries.reduce(function(m,x){return Math.max(m,x.weeks/DRAFT_SEASON_WEEKS);},0);
-    $('draftRankBanner').textContent=(entries.length&&maxSeasons<3)?'Early read: the oldest class in this view has only '+maxSeasons.toFixed(1)+' seasons of scoring data (3 or more is recommended). Use these ranks as a first look, not a verdict. With so few picks per team, most franchises cannot be separated from average yet.':'';
+    $('draftRankBanner').textContent='Coverage warning: production includes only recorded league-roster scoring weeks. Unrostered production and zero-point appearances are not fully captured. These are descriptive draft estimates. '+((entries.length&&maxSeasons<3)?'Early read: the oldest class in this view has only '+maxSeasons.toFixed(1)+' seasons of scoring data (3 or more is recommended). Use these ranks as a first look, not a verdict. With so few picks per team, manager skill cannot be established from these rankings alone.':'');
     var groups={},count=0,eligible=0,defense=0,missingWeeks=0,marketCovered=0,offenseCount=0;
     var sg=function(v,d){return (v>0?'+':'')+v.toFixed(d==null?1:d);};
     entries.forEach(function(x){
@@ -5509,7 +5569,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       var scores=g.rows.filter(function(o){return o.score!==null;}).map(function(o){return o.score;}),seed=0;
       String(g.id).split('').forEach(function(c){seed=(seed*31+c.charCodeAt(0))|0;});
       g.ci=draftBootstrapMean(scores,seed);
-      g.verdict=(!g.ci||g.eligible<6)?'Too few picks to tell':g.ci.lo>0?'Clearly above average':g.ci.hi<0?'Clearly below average':'Not distinguishable from average';
+      g.verdict=(!g.ci||g.eligible<6)?'Too few picks to tell':g.ci.lo>0?'Observed range above baseline':g.ci.hi<0?'Observed range below baseline':'Observed range crosses baseline';
       g.score=mode==='class'?g.sum:g.sum/(g.eligible+4);
       return g;
     }).filter(function(g){return g.eligible>0;}).sort(function(a,b){return b.score-a.score||b.eligible-a.eligible;});
@@ -5527,7 +5587,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
         '<td class="num dr-extra" title="Expected value of the slots this franchise held, weighted by class maturity">'+Math.round(g.capital)+'</td>'+
         '<td class="num dr-extra '+(g.roc===null?'':g.roc>=0?'draft-rank-positive':'draft-rank-negative')+'">'+(g.roc===null?'—':sg(g.roc*100,0)+'%')+'</td>'+
         '<td class="num dr-extra '+(g.avg>=0?'draft-rank-positive':'draft-rank-negative')+'">'+sg(g.avg)+(g.ci?'<div class="th">'+sg(g.ci.lo)+' to '+sg(g.ci.hi)+'</div>':'')+'</td></tr><tr class="dr-detail-row" data-detail-for="'+i+'" hidden><td colspan="3"></td></tr>';
-    }).join('')+'</tbody></table><p class="note" style="padding:12px 14px 4px">Capital used is the expected value of the picks a franchise held; return on capital is value delivered divided by capital used, so a team cannot rank high just by holding extra picks. The 80% range in the detailed columns resamples each franchise&rsquo;s own picks (1,000 times); when it spans zero, that team cannot be separated from average by luck alone, which is common with only a few drafts.</p>';
+    }).join('')+'</tbody></table><p class="note" style="padding:12px 14px 4px">Capital used is the expected value of the picks a franchise held; return on capital is value delivered divided by capital used, so a team cannot rank high just by holding extra picks. The 80% range in the detailed columns resamples each franchise&rsquo;s own picks (1,000 times); this describes variation within observed picks, not a test of manager skill. It excludes benchmark uncertainty, missing production, and correlations between picks.</p>';
     $('draftRankDetail').innerHTML='';
     applyDraftRankOpen();
   }
@@ -5632,7 +5692,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
       <h4>5 · Maturity weighting</h4>
       <p>A pick&rsquo;s surplus (value minus expected) is multiplied by <strong>min(1, seasons since the draft ÷ 2)</strong>. A six-week-old rookie therefore moves the rankings very little, and a two-year-old class counts in full. The audit shows the raw surplus, the weight and a Provisional tag. The two-season ramp is a judgment call, not a fitted value.</p>
       <h4>6 · Rankings, capital and verdicts</h4>
-      <p><strong>Per-pick talent evaluation</strong> (the default) divides total weighted surplus by eligible picks plus four neutral picks, so it measures how well a franchise chose, not how many picks it held. <strong>Total draft haul</strong> adds the surplus, so it also rewards volume from traded picks. <strong>Capital used</strong> is the expected value of the slots a franchise held; <strong>return on capital</strong> is value delivered divided by capital used. <strong>Contributors</strong> is the share of picks worth at least a position-adjusted bar: 17 points per season above replacement for an average position, scaled up or down (between half and double) by how high that position&rsquo;s replacement-level scoring is, so QBs are not judged on the same raw bar as TEs. <strong>The 80% range</strong> (detailed columns) comes from resampling a franchise&rsquo;s own picks 1,000 times to get an 80% range for its average pick: if the whole range is above zero the franchise is clearly above average, if it is entirely below zero it is clearly below, and otherwise it cannot be separated from average. A franchise with fewer than six picks is not judged. Under each name, the best pick and the share of total gains from its top two picks show whether a score rests on one or two hits.</p>
+      <p><strong>Per-pick talent evaluation</strong> (the default) divides total weighted surplus by eligible picks plus four neutral picks, so it measures how well a franchise chose, not how many picks it held. <strong>Total draft haul</strong> adds the surplus, so it also rewards volume from traded picks. <strong>Capital used</strong> is the expected value of the slots a franchise held; <strong>return on capital</strong> is value delivered divided by capital used. <strong>Contributors</strong> is the share of picks worth at least a position-adjusted bar: 17 points per season above replacement for an average position, scaled up or down (between half and double) by how high that position&rsquo;s replacement-level scoring is, so QBs are not judged on the same raw bar as TEs. <strong>The 80% range</strong> (detailed columns) comes from resampling a franchise&rsquo;s own picks 1,000 times to get an 80% range for its average pick: the range describes variation within observed picks, not statistical proof of skill. It excludes missing production, benchmark uncertainty, and correlations between picks. A franchise with fewer than six picks is not judged. Under each name, the best pick and the share of total gains from its top two picks show whether a score rests on one or two hits.</p>
       <h4>7 · Asset value versus production</h4>
       <p>Each pick&rsquo;s audit shows <strong>production delivered</strong> (points above replacement already scored) and <strong>asset value now</strong> (what its current market price implies). The ranking uses the blend of the two, with market counting more for young classes, but you can see which one drove a result.</p>
       <h4>8 · Future draft capital</h4>
@@ -6166,7 +6226,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,
     }
   });
   setInterval(function(){ if (!document.hidden && S.league) {
-    getJSON("/league/"+LEAGUE_ID+"/matchups/"+S.leg).then(function(d){S.weeks[S.leg]=d||[]; renderScores(); renderLive(); renderMatchupsPage(); renderPlayers(); refreshNFLGameStatus();}).catch(function(){});
+    init();
   }},60000);
 })();
 
