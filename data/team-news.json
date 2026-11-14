@@ -1,7 +1,61 @@
 {
   "league_id": "1314307626137321472",
-  "updated_at": "2026-11-14T06:44:33.400653+00:00",
+  "updated_at": "2026-11-14T12:33:37.589950+00:00",
   "articles": [
+    {
+      "player_id": "96",
+      "player": "Aaron Rodgers",
+      "position": "QB",
+      "title": "Aaron Rodgers reconnects with brother Jordan in Pittsburgh, see photo - Milwaukee Journal Sentinel",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQLVgxZkFCaVktYS1haWhXVlN3VmcwcU14NVVIdmg3WWFkczZneXZNdmdtN2pOMG1zQnNhRmpqRXlEVkdlVjRmcGVHa3NQWFVRTjZkbjVVQWpueE5TNFJ4ZDJDU00xQmtyclR1ZnRBY0F2bEFnQ2hQLTR2RE1iTm5hZzZ3cUdxNUkxY2pwMTMtSVJYQi03blkzTklVNTFnVnFYM1l4aTJPREdnTzJ5R2lfVnVtQWRHRDRleEpYYVliRDE?oc=5",
+      "source": "Milwaukee Journal Sentinel",
+      "published": "2026-11-14T12:05:00+00:00"
+    },
+    {
+      "player_id": "6118",
+      "player": "Quinnen Williams",
+      "position": "DT",
+      "title": "As Cowboys search for defensive answers, Quinnen Williams' impact is felt beyond All-Pro push - Dallas News",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUEp1MTRWWURUV1BOX01qd0N5VDBkSDBucTlhOW4tZ2xMZjlCU1lfSHZWZUp5cEl3OHd3cVVsMlAxb0R6cDBKUFB2WldfbFVQRFJLajhCaGZia0VTZG5HdHRpaVpqX1lSdU8zVjA5N3hPb2tadHp2QVAyVExISU4yNTA4MzYyRExwZWdBa2hCWWYwMjJJbFZVWWt0d0gwYlo4NUI1LVBPVlhIUnBjMTYxNXpHdw?oc=5",
+      "source": "Dallas News",
+      "published": "2026-11-14T12:04:06+00:00"
+    },
+    {
+      "player_id": "13425",
+      "player": "Jalon Daniels",
+      "position": "QB",
+      "title": "Buccaneers rookie Jalon Daniels is the biggest riser in FanSided’s latest QB rankings - The Pewter Plank",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUTRpelRrd01lOTNLQURvdzNrUTVpMnVhYjRiTFlWRE1Hb0RtUHNydGxLTkJRd0pKX25vNDRhMmF2VnQ5MHFCZXJucTdaWVRmbFZXRkk4bU5jY1lxWmhtQWw4Z0JmQmZwSGxUX0NkM2JpVTJFLVc2QWJoQVYxY2lRNWk5YVA1RG1pOFFKR0ZLT2NOSjNQNkljSjNlUjNYZ2F6RVUxV3U5MVNUZTJXZ3I4?oc=5",
+      "source": "The Pewter Plank",
+      "published": "2026-11-14T12:00:02+00:00"
+    },
+    {
+      "player_id": "1466",
+      "player": "Travis Kelce",
+      "position": "TE",
+      "title": "Inside Scoop: Why Travis Kelce and Patrick Mahomes are the Greatest Duo of All Time | Jets vs. Chiefs - NFL Week 9 - Kansas City Chiefs",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNMVJibXV4R0NLdGNuSTBvamcwV1FDY1NIQ1RFT2t0Z3VUSEh1QXNveFExVDk2Y01wanp4TW9vTjhwMFV3QXNpYWJibFBpZmhrMUdTQ2hjYXFOZXlMUlNqN2xmWTY5WmlGb3VLNm11d2xibDhsREdDSHBkVHZRbWhxNlFTSkhPcFFqMHEtOGNEdTFoNzB5M3dmN25tS1lYdTZzRkhtZUhncTB0NVFha2RhS3hVak1wbEtkTmhETElxNFdOWVhOYUdjVFhfUTVnWlhkVXFr?oc=5",
+      "source": "Kansas City Chiefs",
+      "published": "2026-11-14T11:16:58+00:00"
+    },
+    {
+      "player_id": "7547",
+      "player": "Amon-Ra St. Brown",
+      "position": "WR",
+      "title": "Untold stories of Detroit Lions WR Amon-Ra St. Brown's German upbringing - ESPN",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNTZGZjNJc0Y3bHQ4Q0duSDhTRXAwVFZadl9fTmtRU2UzdzRHcVJDRlBWT0Vyal9FQkV1R0lGOXJwVUktWVlEb1Fuc1lianpGMjJualFvZHJ2eGFDNjRJYVROSkpCd0xXOUdiU2JFdUNvbUhmc0lZYU82N3NmQkNNUlBQTGRKQnpzRDh2MmVRUQ?oc=5",
+      "source": "ESPN",
+      "published": "2026-11-14T11:00:00+00:00"
+    },
+    {
+      "player_id": "12485",
+      "player": "Tez Johnson",
+      "position": "WR",
+      "title": "Baker Mayfield Launches it Deep to Tez Johnson for 58 Yards | Bucs vs. Bears Highlights - Tampa Bay Buccaneers",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSzQ2ZHhrNHoyMnk1dUVfeC1GVk9FWkM0RDBsbGhuVl94eW9HbUpLMFFUYnllR0Q4dnpvLUl1Z1FXLUxSMHJLWkpmLVllMGJIdHNjbV9aOXdJNWlqaVR6VUdtLXg0YUh5WThkOUEwNTIwb2pEZUtycEVQUzQ2UXVXUk9sMDg2alVvUDBXTV9WS2pEVEE3bkFv?oc=5",
+      "source": "Tampa Bay Buccaneers",
+      "published": "2026-11-14T09:24:21+00:00"
+    },
     {
       "player_id": "5991",
       "player": "Maxx Crosby",
@@ -9,16 +63,16 @@
       "title": "Raiders’ Future With Maxx Crosby Gets Major Insider Update - Yahoo Sports",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOYWpzcHhRMkhiNmJvdHdmVVFIMC05eGlqTllMVFBFS2R5eDVvUnBJaXlzRjZqeHdQNEY5N0cwRXZ2Vk9fTmI5Yi04OFNZMGJuZ21CdUg2RGVZNFNKcnJVSGdPSG00WGt2Y3VpVlRpVXlPOHBWWWNaOS1KNWpJSG1QWmpnaXFUTmM?oc=5",
       "source": "Yahoo Sports",
-      "published": "2026-11-14T06:11:04+00:00"
+      "published": "2026-11-14T06:11:00+00:00"
     },
     {
-      "player_id": "11729",
-      "player": "Sione Vaki",
-      "position": "RB",
-      "title": "Sione Vaki (ankle) limited on Friday, questionable - NBC Sports",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZ1ZMZWVGZGMzZ0s4WFhhTEFKdTY5M3lPai11TlhLMjhqNC1VZWxDeWx3V2E1alBSNXVXOVRpVnRnejllSjJQUnpOMExyWnFKcmtobWRlR1l6a0ZmTll4ZjFsZUtVd0gwWHRfWGFUcEhFbXg0SS01VGhULXJ4aFhiR1hBa2JCUndLOUNULW9OcUI3VU96NXRqcmVNbjNUbE5TSGZJUWVZcUVkclZORVRwbTFRWQ?oc=5",
-      "source": "NBC Sports",
-      "published": "2026-11-14T05:49:59+00:00"
+      "player_id": "12498",
+      "player": "Mason Taylor",
+      "position": "TE",
+      "title": "Mason Taylor's Target Volume Declining - NFL News | Fantasy Football - RotoBaller",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNjB1TXE2dDJqQzlJSEJsNUpyTDc1aUpDU1ZpcTloc0V1QWRvMjJkN002RzdxbWI5TU5NNkZheGl3TFBRVGR5TENVTmZrdmZncXU4QXRQaWtaQm53MjdmbmJHVzU2UGxfT0JOeFE2cDNBTWFzdGxVV0J1QnJCUzh6ZFp6Z0xUYUhoM21jRg?oc=5",
+      "source": "RotoBaller",
+      "published": "2026-11-14T05:56:09+00:00"
     },
     {
       "player_id": "6650",
@@ -39,6 +93,15 @@
       "published": "2026-11-14T05:19:09+00:00"
     },
     {
+      "player_id": "13337",
+      "player": "Emmett Johnson",
+      "position": "RB",
+      "title": "Emmett Johnson Was Mic'd Up For His First NFL Touchdown - Kansas City Chiefs",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOd3RhaG5wYzVsU194RnYwd1hGXzN5UXdjR29WMHRYeTNEZGRPUnhxcW1QRTVjY0lud2F4TXlLREhyU0Q5dTZrbjBoX2ZMVXhEQ2lZZnpZNjVNNUtfc19xdFpOVy04ZEc5SmRscUFwekZJYmh1dkcxeE54VEhTek1sLV9scEtIaGNiUzBkeQ?oc=5",
+      "source": "Kansas City Chiefs",
+      "published": "2026-11-14T05:18:46+00:00"
+    },
+    {
       "player_id": "5848",
       "player": "Marquise Brown",
       "position": "WR",
@@ -57,13 +120,31 @@
       "published": "2026-11-14T04:26:00+00:00"
     },
     {
-      "player_id": "12485",
-      "player": "Tez Johnson",
+      "player_id": "4033",
+      "player": "David Njoku",
+      "position": "TE",
+      "title": "David Njoku (fibula) limited again on Friday - NBC Sports",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxORGtzNWllQkM3SFBUX0ZvRExyR0JIX1Y5Rk9xRHNITGdZb0dWWHBLaWVCZUdqdFUwMUNKR0ZpT05zSjlHTFJMcWhXTmVZaTktSXYxRUpoc3Rwb2dGemF6U2JTTGxYX0ozWW1DNkd5OWdNZFE0dTVXdURKcF9UUXZKY1JldjNOYzkxTmEtWkNpMUc3T0o4N2JCd2V4ZkxRWlYzRnhHS3gxcW9aZldo?oc=5",
+      "source": "NBC Sports",
+      "published": "2026-11-14T03:56:02+00:00"
+    },
+    {
+      "player_id": "12501",
+      "player": "Matthew Golden",
       "position": "WR",
-      "title": "Baker Mayfield Launches it Deep to Tez Johnson for 58 Yards | Bucs vs. Bears Highlights - Tampa Bay Buccaneers",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSzQ2ZHhrNHoyMnk1dUVfeC1GVk9FWkM0RDBsbGhuVl94eW9HbUpLMFFUYnllR0Q4dnpvLUl1Z1FXLUxSMHJLWkpmLVllMGJIdHNjbV9aOXdJNWlqaVR6VUdtLXg0YUh5WThkOUEwNTIwb2pEZUtycEVQUzQ2UXVXUk9sMDg2alVvUDBXTV9WS2pEVEE3bkFv?oc=5",
-      "source": "Tampa Bay Buccaneers",
-      "published": "2026-11-14T03:24:21+00:00"
+      "title": "Packers’ Christian Watson and Matthew Golden emerging as one of NFL’s top wideout duos - WMTV 15 NEWS",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPY3hQaS1VelB5RktJOUcyY21sbko3R0M1YW9wM096bE53R0xOVTZsVW4yVkVCS013SkxERkZ2OXEyUG9iZVlHSXVteW80M1JZbkItb0RXNjZ0NklsRlRtR1VIZG11SVVwMDlpMjVLakFaSTk1ZnRyRy1fYk03ZUhtWHFkYTcyUUU2dERkMTZORFVnbTBpYUQ1ZDIwbjJlMXEtcDVsZWlCTEdQMVQyQXRmN1dBd9IBxwFBVV95cUxQSWY0Q21ab3lINDROWWRYVHRQR3JtYkJRNF9CRWszckdOOUw4aW9FTHI3a3EtLXJ0amNRRWo3ZE1rNmoyVU93S2NNOS1FeUxjYmhxMzl4R1RfMjA0VllhVnZWZkZyd2gxdDEzWnhxV3pLTE5wQ2tXQzJGRlBLYjR5NEFCalktLVh0UnJSdURLVTNFM2w5RENlWUNjV1pZV3paYUJPcDVYRmF0S1VFVUJVOThCZkZHZDc5b2NoU0F6WWpCR3ZlU3JZ?oc=5",
+      "source": "WMTV 15 NEWS",
+      "published": "2026-11-14T03:43:00+00:00"
+    },
+    {
+      "player_id": "8167",
+      "player": "Christian Watson",
+      "position": "WR",
+      "title": "Packers’ Christian Watson and Matthew Golden emerging as one of NFL’s top wideout duos - WMTV 15 NEWS",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPY3hQaS1VelB5RktJOUcyY21sbko3R0M1YW9wM096bE53R0xOVTZsVW4yVkVCS013SkxERkZ2OXEyUG9iZVlHSXVteW80M1JZbkItb0RXNjZ0NklsRlRtR1VIZG11SVVwMDlpMjVLakFaSTk1ZnRyRy1fYk03ZUhtWHFkYTcyUUU2dERkMTZORFVnbTBpYUQ1ZDIwbjJlMXEtcDVsZWlCTEdQMVQyQXRmN1dBd9IBxwFBVV95cUxQSWY0Q21ab3lINDROWWRYVHRQR3JtYkJRNF9CRWszckdOOUw4aW9FTHI3a3EtLXJ0amNRRWo3ZE1rNmoyVU93S2NNOS1FeUxjYmhxMzl4R1RfMjA0VllhVnZWZkZyd2gxdDEzWnhxV3pLTE5wQ2tXQzJGRlBLYjR5NEFCalktLVh0UnJSdURLVTNFM2w5RENlWUNjV1pZV3paYUJPcDVYRmF0S1VFVUJVOThCZkZHZDc5b2NoU0F6WWpCR3ZlU3JZ?oc=5",
+      "source": "WMTV 15 NEWS",
+      "published": "2026-11-14T03:43:00+00:00"
     },
     {
       "player_id": "9511",
@@ -102,15 +183,6 @@
       "published": "2026-11-14T02:52:13+00:00"
     },
     {
-      "player_id": "421",
-      "player": "Matthew Stafford",
-      "position": "QB",
-      "title": "NFL Star Matthew Stafford’s Wife Kelly Stafford Tackles Facelift Speculation With One Comment - E! News",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOWGJuT3pkRGJ5TktlVHFoOGY1SHBCYUxpakdfcFlGNXQ3TFdFMFAta242allvaHFxbi1PYzhUTzFqdDdKMXdoRF9Ic21rMzZRQ1VFdUFPOTB5VjY4RkxlOVJkckdxd0VDeldGTDQ1N2dRX01qVE0zUmREZXdXWV9aM0o0OHpKU2pBdThBNjh2U1duN0J6eU9Nc2RLNTVGRmk1aHo4N1RFQVRpeDA?oc=5",
-      "source": "E! News",
-      "published": "2026-11-14T02:42:00+00:00"
-    },
-    {
       "player_id": "12585",
       "player": "James Pearce Jr.",
       "position": "DL",
@@ -129,15 +201,6 @@
       "published": "2026-11-14T02:19:41+00:00"
     },
     {
-      "player_id": "13311",
-      "player": "Chris Bell",
-      "position": "WR",
-      "title": "Chris Bell (knee) doubtful for Week 10 - NBC Sports",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcHNtNGw4bmp3OEx6UF9QUXBWRVpfY2lPTmdBV1VSRmNjTW5QSTlJOXI0ZUNJY05Uc0RxMnFjRDFuYm1ySTJocnUyMmsySnBVN3lqZzBKd1RjUjk0ZE9CcHk2WEpjYUhVQmJDNkJGMThKWk14ZmNQeVBNRnZGbkNKcmdBRXltV193aFBMZG9wcTlhX3dtWlhjQ3ZHeVRCcWg0aWV0dw?oc=5",
-      "source": "NBC Sports",
-      "published": "2026-11-14T02:17:36+00:00"
-    },
-    {
       "player_id": "12540",
       "player": "Chimere Dike",
       "position": "WR",
@@ -154,15 +217,6 @@
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdlpPVGxYdjMwZFNQVG84QW1SZTVoUHoxZGNQQUgtYW1XY3BkeHhqMkVwSzhySHg0TFJPNDdWVTRHMnhKNl9hd3duVlQzcnpYV1RMbHg1YmdxSXNsTTMxZUhXN3BOcXlDLUE0STdUUGZ0MzBWMzFURU9hdzNCSkRDakUwMDk3eEt6SU9QdWIxZWtFakNSQ1RyUklscGs1XzVtMElPTg?oc=5",
       "source": "RotoBaller",
       "published": "2026-11-14T02:04:09+00:00"
-    },
-    {
-      "player_id": "7600",
-      "player": "Pat Freiermuth",
-      "position": "TE",
-      "title": "Pat Freiermuth Week 10 Outlook for Fantasy Football (2026) - RotoBaller",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcGFkNFV3c0t3YURxSzhwanZXcTl5RXFSM3EwSURMcElfVXBiUUxEZDJZeDlCdXhUanByWFZDR0FKekY4VW10NUZnYjBweV9ESVFLQjlsN21ZOVgxekFka0hZTmwwNTNxNDlSRW1QYm5SOFM0dXdTZHAyZkFMRjQzUUJuY0RQcXNmQXo1Q05FNjRmbUZYT1F0eTZn?oc=5",
-      "source": "RotoBaller",
-      "published": "2026-11-14T01:54:12+00:00"
     },
     {
       "player_id": "12502",
@@ -192,6 +246,24 @@
       "published": "2026-11-14T01:47:00+00:00"
     },
     {
+      "player_id": "5859",
+      "player": "A.J. Brown",
+      "position": "WR",
+      "title": "NFL Week 10 injury report: Chiefs' Kenneth Walker has new groin injury, Patriots' A.J. Brown questionable - CBS Sports",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQOVlsbDlkMjFZdThzbE5MX25vd3BEOUZfa2xZbUJIMF9KcXFFWU9pc3JFdWVUY0FXd1RxMDM4Tm96S2FsLXlPcjV5NkNlOXpuVC1Bb1Z3bXBYQmhLRXg1V2tmY2xKOXY1cDJrUXh4ZzFNclhKaHo0U21pMnlWeFlDNXJRLXo2OHFjOUZkY3Z6X0pncGlyUndF?oc=5",
+      "source": "CBS Sports",
+      "published": "2026-11-14T01:35:38+00:00"
+    },
+    {
+      "player_id": "4033",
+      "player": "David Njoku",
+      "position": "TE",
+      "title": "David Njoku Injury: Logs another limited practice - RotoWire",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPdzQyVzdmTEpLVU1CWUlLbTZhMS12Rl82NDJXOGpBQVRLMFIwa3d2YkdDdnhNN01NYldoY3lZWm0wc1BGTHhCdUV4eHQ2X2F1T21nVzM3YWxnY0J2TGlDdzhsVEs2UXlaM2x2TnhlSjhWM3lhX0V1V2s3YjFnYzF2ZTk1dk5DME1KM1dPeUNrOVFCeWxCQlhhYkVOdlhiUzR2?oc=5",
+      "source": "RotoWire",
+      "published": "2026-11-14T01:35:32+00:00"
+    },
+    {
       "player_id": "6904",
       "player": "Jalen Hurts",
       "position": "QB",
@@ -201,15 +273,6 @@
       "published": "2026-11-14T01:34:26+00:00"
     },
     {
-      "player_id": "4039",
-      "player": "Cooper Kupp",
-      "position": "WR",
-      "title": "Cooper Kupp Week 10 Preview vs. the Raiders - Rip City Radio 620 Portland",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMGpfMk1Kd09taGpwdjMxd0liOV8wRVpFX3BiTXJYRWd1RjRkdFFLdmdhSy1Ec29wdEZTUXY1UV9WNm01OEg3Ym5qRTc2RUMyVzRIekN4Z2o3SFFEcHZvRTRjR0ZnM0pQSkVLN1podXpCOFExaXh0b2V0V1lMVnZrVEhGRzVvVTdnWHBSbjhsWnZ6N0lMVVlHcWVn?oc=5",
-      "source": "Rip City Radio 620 Portland",
-      "published": "2026-11-14T01:29:33+00:00"
-    },
-    {
       "player_id": "421",
       "player": "Matthew Stafford",
       "position": "QB",
@@ -217,6 +280,15 @@
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORnNFSlpwRlJUdlZRTkpHbnZyRnNYc1kyQmI4VkRPTXA5bVVSeWtEeDBadEViTUJMRDRtQ2E1NWVDcVhrdkNzeXpkcFRCbXFKUW96RWdJYmlTSWYxVi0xekZtVlczUGloSUdneUNQT0lZLU9HVFNOUUM4a1dPUl8taTV2Tm9SNEpRMVg5bi1UZzNWcFRhRGU5c0E2dlRHS01nYU1iMndpM3BMejA?oc=5",
       "source": "Rams",
       "published": "2026-11-14T01:06:45+00:00"
+    },
+    {
+      "player_id": "7021",
+      "player": "Rico Dowdle",
+      "position": "RB",
+      "title": "Rico Dowdle Week 10 Outlook for Fantasy Football (2026) - RotoBaller",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORk1UQzNaZG1TQ2Y2Yll3eXdYSXUxSmd1OHdDdDVZaUIxeUJybm1hdkRycWg5Ujc5NEtlZy1INjJZUXRXdm12TDJKZmxqVEJSZUdadVlSOTVmcjZaeDlrOVhld2RFc3A3bVJDbURlTkFOam9ocGR5WVMtZnNhb0dLa1diRlV1aTdHNEF3QndvMFRwa0FJczFqTTVOYzlnMTd2YzJz?oc=5",
+      "source": "RotoBaller",
+      "published": "2026-11-14T01:05:11+00:00"
     },
     {
       "player_id": "11665",
@@ -253,6 +325,15 @@
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQT25haHRjY0xmZ1pZREd6aDRjLXVWMVpMaUdBRk9GTHN6cFRuVXNYOXZwajdyT2k5cVZudU1kX2lXdEg1ck1Ubk9tTExSYzJZMjlxZjdEYjZHS2czQzZKQ2Y0WElNRWYtQTlTbXJYNm9pbkwzTzdQZ1M4a3NncTg2WXljY2g3Vmk1TVBvVUZiNHQ?oc=5",
       "source": "Fantasy Footballers Podcast",
       "published": "2026-11-14T00:19:12+00:00"
+    },
+    {
+      "player_id": "9511",
+      "player": "Keaton Mitchell",
+      "position": "RB",
+      "title": "Keaton Mitchell (hip) limited in practice Friday - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNRU1VLWFmWUlSeWhydEJNdHFWd2Vad05ZZjJZN1lGdUY1WXBGZE9Mc0Nud0tYb3NiYmFhSTZ5VDNqOTc5OFdxS21PRktjZzlOODdPV2FVSk55U1dOYkEzRFYtV1FxdmNpRlExdklrT3hyeGs5cGRFaktMNmxhTjlNcDFkaVBPNDFaNkxTT0hSTXNFbjBWS0HSAZsBQVVfeXFMUE5HcnF5dnBBNHcyOEFubXhIRVRLWjhKSHlWUTJPU0F6V1VGVXNWQTFIVk9EQzdKQVpPVWVkZ29LZk5TSDhzZmVnRGtla3RhUUdRZTVXQkg4M0pUdmljN3FGRjhRdXJsVmYzVkoxMGo0cmhGNzd0WVoyLXl6ZEpJM1poOTB0Z0V3dHljaW1kQ0QweUYyMWJZYXp4ZWM?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-14T00:09:00+00:00"
     },
     {
       "player_id": "12578",
@@ -318,11 +399,38 @@
       "published": "2026-11-13T23:20:48+00:00"
     },
     {
+      "player_id": "13337",
+      "player": "Emmett Johnson",
+      "position": "RB",
+      "title": "Emmett Johnson Could lead backfield Sunday - Fantasy Footballers Podcast",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOa2NzcXFhSDY4V3FvdVFrT0FiUzJvTDM1ZjlxeENPQ0NIUzc2NTFIWTZWVHdpR2hWWWctSHd2TEo1UUZ6d0MySXExWGlCRzJuWVU4dWdBMXFXZmtVWWlTY0RUV3hHOWdMRUZia1JmVFRrdmRzMWd0NVZ0c2ZQQ1BvSDhqNlJYZzZlN0FMcGo3MU1tR3QzeUg3NA?oc=5",
+      "source": "Fantasy Footballers Podcast",
+      "published": "2026-11-13T23:20:48+00:00"
+    },
+    {
+      "player_id": "8210",
+      "player": "Chig Okonkwo",
+      "position": "TE",
+      "title": "Chig Okonkwo Questionable to return Thursday - Fantasy Footballers Podcast",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNYzNzcWw5WG0xTlRodTUybElCbXVmdXpYMDUtZlQtLWhNUlZScnNoNlVuSUZBVFZtYk90c3Z0dk9RM1VqZktJckphazcxSm9TbFBNOGFieThuektVNWRGa3pyU1hoRnZ6Vl9VQnhQOU1CaFVFR3JWOC1SUzI1c2tJVWhBQWtSdkRQUklfdTR2eFVCRDc1SHN0NEZfOG5qaDgzelE?oc=5",
+      "source": "Fantasy Footballers Podcast",
+      "published": "2026-11-13T23:20:48+00:00"
+    },
+    {
       "player_id": "9756",
       "player": "Jordan Addison",
       "position": "WR",
       "title": "Jordan Addison Questionable due to thumb injury - Fantasy Footballers Podcast",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMFdZWUtycjNSWE5iRXpFZW9kbEFXRC02c3pfOG5hSTBUQzdvOWZQV3BUaWZISVFrRTJKd29oTERzUWlzVWZ0NG9kMDdic3VpSHJLc2V5VjZEZjBXM1lVT0lNbGtuRnloUDhtY2JVVDNsSHM2MU9od2lHT0dQRVFfUXc0a2U2blM3dGJURE95bFlEWjFZYk95YUxxUVZQY1E?oc=5",
+      "source": "Fantasy Footballers Podcast",
+      "published": "2026-11-13T23:20:48+00:00"
+    },
+    {
+      "player_id": "3271",
+      "player": "Tyler Higbee",
+      "position": "TE",
+      "title": "Tyler Higbee Cleared for action - Fantasy Footballers Podcast",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQeU9MRll0cl90S1U3bjlSanEwMlZSS3JiWXVaVmhVVDV0MmdMRmVhWXFaM2VOeTltUGFGenNNemRFc0t4dUk1MXVmcW9aZEw5WkE0bXZMZk14WkZRdlZ4UzNFeWpiNGVwWTQ0ckdZQngtMmFQLVpHUUg3RnB0MVl6d2RRampQTHliWVE?oc=5",
       "source": "Fantasy Footballers Podcast",
       "published": "2026-11-13T23:20:48+00:00"
     },
@@ -354,15 +462,6 @@
       "published": "2026-11-13T23:07:02+00:00"
     },
     {
-      "player_id": "2216",
-      "player": "Mike Evans",
-      "position": "WR",
-      "title": "49ers rule out Mike Evans (Achilles) for Week 10 - NBC Sports",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQRmg4VlRkZmJ2YXF6WXRGcjZVTzBKT0VFVUZXamJjZmpBbWFwT3lDVWtGM2FWdE5Bb2hKUkZwREU4aG1QUUZKNFFJdlAtak9NRHlHa1M1d3FtQXVnaXFQZTVEUVpzblBJRUxtWGNkWGtsY0FwMjRXbkxPNHZjM1NLU3V6TVdDbFhfX3NIUXhhdWxVUURocHVDcVZreWpBWmxQWUFIN2dkc1ZvMEplRlFnVGln?oc=5",
-      "source": "NBC Sports",
-      "published": "2026-11-13T23:06:24+00:00"
-    },
-    {
       "player_id": "13346",
       "player": "Denzel Boston",
       "position": "WR",
@@ -372,13 +471,13 @@
       "published": "2026-11-13T23:05:59+00:00"
     },
     {
-      "player_id": "13289",
-      "player": "Drew Allar",
+      "player_id": "4881",
+      "player": "Lamar Jackson",
       "position": "QB",
-      "title": "Steelers' Drew Allar Gets Strong Backing To Replace Aaron Rodgers - Steeler Nation",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQdU4wdVIyWmJXVUVWNGxRTVlMalp1aVhZeFpzZjVUeDdvYmswSmhjRWxXWV9tYnVDNjJuZkJsMVR1ODYtdERucG54VC1qVFNrd3dSMHVrVlhVb0laT254eDZLYkhsZzFFcUh2TS1pQ0NmalJPaU9TdzdaUHRUNVUwWg?oc=5",
-      "source": "Steeler Nation",
-      "published": "2026-11-13T23:00:57+00:00"
+      "title": "Ravens QB Lamar Jackson expected to miss 6-10 weeks following thumb surgery - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOV2ZyRHNrOEhTQm84UlViR3lvb0pyNHVzWVRCZ2NRbEVBU3BPMG54WjRzeEFPNUNxQXpNRHc1eVNLMG4tUE5IazVHVmtWandtSGpkeGdkdVlkcU9laE0xT3VWYV9nOTRJaTJpX2pSNmM1RlVkelFxendoY05vTWhPa2NyQ1FNU0ljOFkyMlR2ZXRsM0ZsWEFRczg3bw?oc=5",
+      "source": "The New York Times",
+      "published": "2026-11-13T22:43:28+00:00"
     },
     {
       "player_id": "8364",
@@ -388,6 +487,15 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxON19XcTFFVW1WaDJxdWRjNk5jUzJkM2xGRVlBWFg2blJCUlFONnZYVlNGZEV1bll5MHM2M3JWeTNocHZkRUkxcTBYbUtsbmNyUDJpTkRRQkFlY2U2aVB6QkQ0RHpFVjhEQkJ0eVVWT1NoYktsbG0xUnhkY0wwdlNMcE9ibWFpai1nVHRIOUNiUDFidzdiUHFnTWZKSlhzdGRoWHBGendza0pnUdIBqgFBVV95cUxPbU9LQzNzemFPSDcyV3NDck1CY0xmRkxBWWVZQVhETVB4TkpieGd4WkZrOWZidFEyWnNud0xVT3VONTJmZThYeW9kaUhzRVRtSjRTbWt0NHpCQnI0QTFvSlBILTFkelVscFdxZDd4NHh3WWJvY0k3d1ZXelJ0OWxWR1N2aDVOV0hrc3FPanVUYVBJZXh3VEFEWWIweW9uQVM5YUxVSGx1ME1MQQ?oc=5",
       "source": "FOX Sports",
       "published": "2026-11-13T22:40:43+00:00"
+    },
+    {
+      "player_id": "7640",
+      "player": "Micah Parsons",
+      "position": "LB",
+      "title": "Packers rule out Micah Parsons for Week 10 - NBC Sports",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNYkpaLVJwYnhZc0YtYTNLeGc0NTBkNzhtdEQzN0EwUGVpeEFtT1Z1cUlESFNWRTlaYV9FNGdoc2I5MjluWnVjY2pmMGs3TnVvQmk1Q0hwM2hQaWFPQ0k5aTEzQl9wQ3oxVFhpRG5rQVRMend2SWVkU2lfd2d0dGNiRzhJaTEwekN3WlZCbGZXd3gwQmRnMEJBRkVqYXh1RFl2MjRQcTRhZXRfdlpB?oc=5",
+      "source": "NBC Sports",
+      "published": "2026-11-13T22:40:30+00:00"
     },
     {
       "player_id": "12529",
@@ -408,42 +516,6 @@
       "published": "2026-11-13T22:34:00+00:00"
     },
     {
-      "player_id": "7547",
-      "player": "Amon-Ra St. Brown",
-      "position": "WR",
-      "title": "Lions’ Amon-Ra St. Brown takes center stage in Munich in a special kind of homecoming - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZEt0dHBXRnFVek1vUm1nVGNPSV9leWRxc21iTFJDYUxyZVRKTXVDU25tN0pvYVdMT3pSUFFQS1FSWjM4RU5oeGRJRFJRc096VUJ2S3c0NmVZMVlvc2t6MFhXa3RpNmJPMXJrRmpVTmxhVkNHZVJoc3FjcEllYzFCUVJacmJfTFVWeDJVdmxtWHU4TzNIMEE?oc=5",
-      "source": "The New York Times",
-      "published": "2026-11-13T22:30:45+00:00"
-    },
-    {
-      "player_id": "4033",
-      "player": "David Njoku",
-      "position": "TE",
-      "title": "David Njoku (fibula) limited to start Week 10 - NBC Sports",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQTZxMUlsN3ZNcnhfT2pYalhQVkVGRWxES0NRclE0TERnTUVsQi10YU01MlMwOEVGNEUyUTZQQXFqcjczSEttZGpVcEQtTWdTSXc3cnRyQWU0dHQ5V2s5RmQ1SzBGZ21QNGVpZlcyUDFQY1hDWHdnZ2V5eGJvVExBRWdDV1UtOHNrQkxyZHJDNFdCOXRRc0MwemluWXhNQnNPUWpKX3JIVHRmc1JQemc?oc=5",
-      "source": "NBC Sports",
-      "published": "2026-11-13T22:30:00+00:00"
-    },
-    {
-      "player_id": "12501",
-      "player": "Matthew Golden",
-      "position": "WR",
-      "title": "Packers' Christian Watson and Matthew Golden emerging as one of NFL's top wideout duos - Spectrum News",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRlR2Nk1UV1UyS1N6Szk0ZlJoSEVGeHNROU9fMUpKWF9jOVY4VEItUzFiT2NSZ3FVeUFsRlgzNUhqeWk5OHlSdGpXVjY4X2xHMVl6M3VwdHY4dWtVNzQxRWR1YXlIcUk5TWJxNkhLdFpqVDlGSjVBRDdxbXBueVB6Q0phdw?oc=5",
-      "source": "Spectrum News",
-      "published": "2026-11-13T22:19:00+00:00"
-    },
-    {
-      "player_id": "8167",
-      "player": "Christian Watson",
-      "position": "WR",
-      "title": "Packers' Christian Watson and Matthew Golden emerging as one of NFL's top wideout duos - Spectrum News",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRlR2Nk1UV1UyS1N6Szk0ZlJoSEVGeHNROU9fMUpKWF9jOVY4VEItUzFiT2NSZ3FVeUFsRlgzNUhqeWk5OHlSdGpXVjY4X2xHMVl6M3VwdHY4dWtVNzQxRWR1YXlIcUk5TWJxNkhLdFpqVDlGSjVBRDdxbXBueVB6Q0phdw?oc=5",
-      "source": "Spectrum News",
-      "published": "2026-11-13T22:19:00+00:00"
-    },
-    {
       "player_id": "13270",
       "player": "CJ Daniels",
       "position": "WR",
@@ -460,6 +532,15 @@
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSDNMc0k0YUEtMDFJaktuWGIwT2xpQ0FPU3BmUWpZTWxYN3ZQeDhIOERYWmRobkFGU3h3ZE1wSDFPaGphVkRnT1I4Y3l1TmQ5dGExc0VCV3FqWVFCeDc4eXlSRi1vZ09LVlB6dFJhUnZOcEJKdWp5a2o3VXhlX0hoel9FUjRmT19rY1FySVpDRk1Sa3pucHBIZi1KbTlvVjhpNzd5aFpua05uVVJhTkNJekVzaU1UUzVIZlRn?oc=5",
       "source": "NBC Sports",
       "published": "2026-11-13T22:15:29+00:00"
+    },
+    {
+      "player_id": "5844",
+      "player": "T.J. Hockenson",
+      "position": "TE",
+      "title": "T.J. Hockenson will not be available to play - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNSTZEYWRKdUFVRGMyWkttcjZYMWJCR05EMGl2VUhMQmRac0EyRWFUdm9fX0xmU1RqQWh4d3RjWF91d0RkVV9JeExqSkhvYU5RcXc3M0dtdHFuOFNqV2ZTRUlLbkNNT1RGY0tWUHBNVnZWang4LS1oTGdCdVNOUU1xaDJ3?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-13T22:14:02+00:00"
     },
     {
       "player_id": "7039",
@@ -555,10 +636,10 @@
       "player_id": "13360",
       "player": "Emmanuel McNeil-Warren",
       "position": "DB",
-      "title": "Browns final injury report: Emmanuel McNeil-Warren gets his chance, Denzel Boston TBD - Dawg Pound Daily",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaHcza0pqbUJnamwzal9fR3h1SWN1SjFiLTBSNW1hX3hocnpCQ0VEZUhyazNaem1ZZGZtd1Q3YjZPbHkzSEtCS0VPQ3N4SEozUnpsNE1Fa0dRU0E0STYtOEVJelR3RDMwNWxZdU9ZM0FpR0xmb01fV1piVmFXY01jWHhPTGQweHgxM0p6dGZJY0JDU19CLS1nRWVYR0s3aTA1SzZMVGZqWGxsUi0wVGw2RDh0U3lkdWNFOFJsN1gyT0Q?oc=5",
-      "source": "Dawg Pound Daily",
-      "published": "2026-11-13T21:31:03+00:00"
+      "title": "Browns final injury report: Emmanuel McNeil-Warren gets his chance, Denzel Boston TBD - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQaHpaLVM4V0ZDeGRJTGZOcFpSVEt5cHRZQXZldWt2X0hwUU9yLWpMamdXWDdNWExmemFYaHFBNjBsbFUyRlo3U2lhRDg3SGJHVVBuNXBOLTZ6TTRqVTdQZERmQXNVYmRDd2c5Wnd3ZU5jVU4xcC1acERqa21EMTNVWDNYSi1kMHNyOXEzRA?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-13T21:31:04+00:00"
     },
     {
       "player_id": "12540",
@@ -586,15 +667,6 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSEJrdzNmUmIxZmQxLXI5OW8tTERTRGtOSm1vNll2bEE5Qi1PaEtLLXdzYmNmb0NTRHNNdHQybUY3a3dsa29Ed0M2cTFTb2RtOGJic01YbTBPM2o5c3VmVXlGSmpVSjhGbEk3U2ZzY1JYdWFMdzRLcVlPYlJmWDRGZkl6NDZmbnFWQnU0Q05XekM1ZXItZlJLTjdYdkVQb1BoMUotX2hhQ3VQd3E0aVUwbU5R?oc=5",
       "source": "NFL.com",
       "published": "2026-11-13T21:21:00+00:00"
-    },
-    {
-      "player_id": "7648",
-      "player": "Nick Bolton",
-      "position": "LB",
-      "title": "Chiefs LB Nick Bolton named Week 10 NFLPA Community MVP - KSNT 27 News",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQU0lUQ3JxQ1RSUUVhVnNWN2hWb1pjZHZFeGtUdEQ1d1BpdnBOcVg1eTZGNXhud0FYamoxS3BtcGFEbl96aGtPUWdmbzdaajhPNWpJVmIwOUJYUkRBNFY5WFdfWm00VC0yLXRkbVdpTmpJZi00cTNiSXNOSXJDeFA0RG0xQTh1Q3h4QWdDbnRXaU9ObmluaGRyXzNXajJYXzVDMnfSAacBQVVfeXFMUGt6MVBicEo3Y2VraHFEY1ZYUWVjekd6elo5VmhoTThiaHRaYUxIRUNobE1YUjBXWDVseWc4UGx4VWJCUVlwcnhpQnRtVGFRZ0hxNkxyZS1PUnA2YnlqSk55a0VWd1lUOVFVRFpJS2NBYkJUcUZOc21GTFBRcll4V1kxVjBuLWlISDk2Xy1mbV95TG0wazc4WnBvMEd5SnhhRUVFVHdBQ3M?oc=5",
-      "source": "KSNT 27 News",
-      "published": "2026-11-13T21:16:24+00:00"
     },
     {
       "player_id": "13360",
@@ -633,6 +705,24 @@
       "published": "2026-11-13T21:06:48+00:00"
     },
     {
+      "player_id": "9508",
+      "player": "Tyjae Spears",
+      "position": "RB",
+      "title": "Tyjae Spears Questionable for Sunday - NFL News | Fantasy Football - RotoBaller",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNcGpodXlzemh6Z2Uzd2twanl5LUJkV1ZuVm9XVDMxMXJkMmpQNlBKTjhqbXVmRDl1SFFWaWxxX3FnTWo0QVR0NVpGdmpOU2ZibUhWNVJOTWFRV25vaUZ2Q0JYWlNjRkJWMDliYkxQY0lMa2xyRkxwbW0wdDBxcHlHWFdlNEJIWVdNLUJTdGlNMDZpUQ?oc=5",
+      "source": "RotoBaller",
+      "published": "2026-11-13T20:51:00+00:00"
+    },
+    {
+      "player_id": "3163",
+      "player": "Jared Goff",
+      "position": "QB",
+      "title": "Jared Goff might torch the Pats secondary | NFL Pro - NFL.com",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOSnlpTHVQbnlJUlhxZi1TN0hJSWhrZnY5bnkwTlRqSVRzenMySHN0WFBCbFV5NmRlNGw0aDNKbk9zMERCZWthcUMxbXRpYWdTZG91aHhVVHdBaHBTSDB0T1J4UDFQM1dHWU1iblZCNnAyTFVmTjNIM0JWUVVVS2IwVVF3?oc=5",
+      "source": "NFL.com",
+      "published": "2026-11-13T20:46:08+00:00"
+    },
+    {
       "player_id": "13320",
       "player": "Zachariah Branch",
       "position": "WR",
@@ -642,13 +732,22 @@
       "published": "2026-11-13T20:42:51+00:00"
     },
     {
+      "player_id": "13385",
+      "player": "Mansoor Delane",
+      "position": "DB",
+      "title": "Mansoor Delane (shoulder) questionable for Sunday - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQb3dQWkN3MmtVNVN2RnBISDhXbTJ4amNnSFl3Mm1TVHJ4ZFRScHdJTVVhOEZPam93LXJnMmExYzNiQURHNnhvXzFjYlBLN2ZWbHdTNHh0SkFYZ29YcnpzVnBJSnNLX0NXbGxNVVM4dlFvSVhTU3pRZGY3VXJJMkhyTG9fLWVrVnFBWmtDek9LaFVoaThUdnfSAZsBQVVfeXFMTUhBbGIyb1FLUlVMd0RRQjl4cVM5d21kQk40cVFzSTJCY1hTY3EyY1hhRkJ5cDJRY1hPbVdVa210aktxdkVuUEFQSDFzZWI4NDhyLUhzM2U5YnhSMTNkMjJwMGpkWXIyUXRCVWZ5N0RMUnlOT1FTdVFTUHNZWkxVUUJoZHBEbGx0QUc2S21tWFVkS3hGYTEzZGJFRUk?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-13T20:37:34+00:00"
+    },
+    {
       "player_id": "13337",
       "player": "Emmett Johnson",
       "position": "RB",
-      "title": "Fantasy Football Injury Impact: Kenneth Walker's Groin Issue Teases an Emmett Johnson Emergence - Sports Illustrated",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSVNDTEpUY2xtNnozTTN6NHdZb2p3YjU1Z0VCMUw5dVZ1VWxOeE1TS1ZWd3JENzZ2WXY0V2Q2Q3lPNlQxR1EzRGMyR0kyZFZkaVMxZXoyZDg4NDFQSTNHZk5WV3RzX0FPWGhNaU9vOGswWmZ0dUxkVFVVbFcwVUhQVl9yYmRpb0NuSDY3ZU5LNk5VR0M5cndMcXhzR0hsZGxNVEx6SXhaNXhxMGE3Tzh1YTV5OGcwbk0?oc=5",
-      "source": "Sports Illustrated",
-      "published": "2026-11-13T20:38:49+00:00"
+      "title": "Fantasy Football Injury Impact: Kenneth Walker's Groin Issue Teases an Emmett Johnson Emergence - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPa1FaRDQzWG1VZzR0T0VjWXpqWEJPelo2U1hpUDR3MzdNVk5hX1g2Vl81bGhpeWN5MHF1d0JaTUNYVGthWVQydmxiWHdvRVVLWkFfenhqSHRNaVBHd0E3U0ZXbTlGQ0t6SlRsWGZvdTBjaHlhOXNhNXZqNlRjTTBXMEZCeW1CTzdWUDI1UFhlbzY?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-13T20:36:35+00:00"
     },
     {
       "player_id": "8183",
@@ -732,33 +831,6 @@
       "published": "2026-11-13T19:46:16+00:00"
     },
     {
-      "player_id": "13337",
-      "player": "Emmett Johnson",
-      "position": "RB",
-      "title": "Emmett Johnson Could lead backfield Sunday - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOa2NzcXFhSDY4V3FvdVFrT0FiUzJvTDM1ZjlxeENPQ0NIUzc2NTFIWTZWVHdpR2hWWWctSHd2TEo1UUZ6d0MySXExWGlCRzJuWVU4dWdBMXFXZmtVWWlTY0RUV3hHOWdMRUZia1JmVFRrdmRzMWd0NVZ0c2ZQQ1BvSDhqNlJYZzZlN0FMcGo3MU1tR3QzeUg3NA?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-13T19:43:48+00:00"
-    },
-    {
-      "player_id": "13320",
-      "player": "Zachariah Branch",
-      "position": "WR",
-      "title": "Falcons' Zachariah Branch: Out again this week - CBS Sports",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSEt4YVpLR21vcEt5ODE4bVUxaWxka2VSbjh6S3pRYWZhMmI2Um81S19fZ0NyYy1yaUVqb0JLTzVwUjFvbTY4UVZCeFo4a2dGcHdPWVFNeU50cUVhVGNMWVRiNzJUYmUyMndXNzM5VVlncmx0V1I3Z25YYmFWNlRPWVZELVRybk1rd1FreE12Sko4WHY1ZUxHbA?oc=5",
-      "source": "CBS Sports",
-      "published": "2026-11-13T19:42:14+00:00"
-    },
-    {
-      "player_id": "5859",
-      "player": "A.J. Brown",
-      "position": "WR",
-      "title": "A.J. Brown (knee) remains limited on Thursday - NBC Sports",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOHFsYjdISkdXYTVmdS1fb0lQMEpjbUoxUXVEY3ZsQUtvN3RGdzdna2dIY3drX3ZRSlJJbU9ZV25FcGJjcTU1ZGZCSWZLYm1hN3lNSW5BY2xlM0V4ZlVBWWkyblpvNVltbVZLdlFiamtBT0FmMGViRThZTndpRlVtZmhMWkJsdDBVQ0U3MFhHbXk0OElSRWczbGczNklsMW44ZHJRQ2QtU2NuTnNf?oc=5",
-      "source": "NBC Sports",
-      "published": "2026-11-13T19:25:47+00:00"
-    },
-    {
       "player_id": "3294",
       "player": "Dak Prescott",
       "position": "QB",
@@ -775,15 +847,6 @@
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPMVZBdW5JRTlMSlMtNnI5RnMzYmhCRDVfTG8wdVlRaGUtd3M3VUpOalNWbXpxNE96QTIwOUI0eE5mek5jY2JqRU5BTkU4NW5DbDBacmxjcFVlaVJPUElTZFBSdGxJcG9XRW5BNFJyeWNqU3NhUGlOdGFUMlBYZmRWS2RtMXlTMHd3STFzT2drUHNTT3VwWDlUMlUtRDBsWFgwYkRBajFOLUlRS0x5eTg4dFRfcVp5Y2hhSnowRmNQZE5KUXc?oc=5",
       "source": "Sports Illustrated",
       "published": "2026-11-13T19:00:01+00:00"
-    },
-    {
-      "player_id": "8130",
-      "player": "Trey McBride",
-      "position": "TE",
-      "title": "Cardinals award Trey McBride the captain’s ‘C’ - Arizona Sports",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPR082dnN2Zkd2OWtLVDB1NVp4Tmc3M3RLamNWTUw0QUxMeVBva191SnpwLUZaRjNtaVVFUDVrTzJUMG1ObTdfaTFlM3hWSTJNb2pzRjN1S0JEYUFHam0yV1RPTE9VR0ppaExiMWVyUTlWRjgzRmg1RDlGeUJNbXRrZw?oc=5",
-      "source": "Arizona Sports",
-      "published": "2026-11-13T18:58:29+00:00"
     },
     {
       "player_id": "11686",
@@ -813,6 +876,15 @@
       "published": "2026-11-13T18:34:53+00:00"
     },
     {
+      "player_id": "8329",
+      "player": "Devin Lloyd",
+      "position": "LB",
+      "title": "Devin Lloyd (ILB, Panthers) Contract & Cap Hit 2026 - Spotrac",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBKckVaTzRTSVZzcF9obDNteklsNWo0MlpMLWEyWGRDQURqRnRWMFA1aGhZT09yV1l0Si1TOWhZcEg5Qnc2UDFYb3VKWTVPaE9TSW9pTjdtRWFTSFY3RExIYk1YQWlLS1pSb2FaQWs1cXFCVkl5?oc=5",
+      "source": "Spotrac",
+      "published": "2026-11-13T18:21:57+00:00"
+    },
+    {
       "player_id": "11583",
       "player": "Jonathon Brooks",
       "position": "RB",
@@ -829,15 +901,6 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBLeF9HX0VueHVtY2hXUU1fSzdicTBsaEVwYTdGVTNQZmw0ZzZvUlFlYlVLdC1Tc3F2VExCNTRDXzVtcGFLZUZkOS1BYlktYndPNmpKbkx5ZUxsNG1ISUViSGJPalN0WUE?oc=5",
       "source": "FantasySP",
       "published": "2026-11-13T18:11:25+00:00"
-    },
-    {
-      "player_id": "13320",
-      "player": "Zachariah Branch",
-      "position": "WR",
-      "title": "Falcons injury report: Zachariah Branch out; James Pearce Jr. questionable vs. Chiefs - Atlanta Falcons",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbUJGVFhIbGRpSG9aaE9YYkFzeUwtbzBQWFRvMm9pVkNFREp0dHJYa25vLWFfZk0tTGRVLWhiZVF2TGRlbWsyS2xvNUk4VHFSYTdlTXlTZktQejhBT3lkRFd4Q09xVkZfcUhROERYdjNqQ0Zwa05VNnFpTXoxNzBKcVJtZFQtR3VOSjlWZDk3NFN3cmRvWnNFVTg4UWxVcmpQZVNCRnZJSm5ramVDcGEyaFlxVnM?oc=5",
-      "source": "Atlanta Falcons",
-      "published": "2026-11-13T18:10:27+00:00"
     },
     {
       "player_id": "11539",
@@ -867,13 +930,13 @@
       "published": "2026-11-13T18:00:10+00:00"
     },
     {
-      "player_id": "5859",
-      "player": "A.J. Brown",
-      "position": "WR",
-      "title": "A.J. Brown may be back for the Patriots as pressure ramps up in season's second half - NFL.com",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdzVWYktiY1V2RHFycGU1YlE1VnFJQWJRRHc3UzVxUFQ1enhpM3ZCdWdUWXJrZnRkbUZ6NFVnbXVxa1J4V0F3Y0kwOFk5RUM3dHdKR2FTZ0VsUEZOWDd3RkI0cXRJTGMwcGFxc3hKUFhaenhTdVNJMTNXbDE1Y2pOT0RBOUhkQmNnUFhIRzA1eFJQbmJZOU42V0FoVGxxaUhHVjlNeG44cmFmSWFE?oc=5",
-      "source": "NFL.com",
-      "published": "2026-11-13T17:46:06+00:00"
+      "player_id": "12474",
+      "player": "Woody Marks",
+      "position": "RB",
+      "title": "Week 10 Fantasy Football Start ’Em, Sit ’Em: Woody Marks VS Tony Pollard - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTjdYTnhPM1dHVldINWtjUzFJVzAyQk1TYUxFVDlVdlBWblZkZlRJNDdKRDFXTFN1WW80Y2ZiNkRhUWl3RXd6QWNzaEhGMFM4WXltS191ZkpqdFMxVk9PLXF6QmNmdFg1Zk85RWpfbjFTbHl1azhTU3NHM3hQU0lRVWVDbldjT2NMdmxYZXdDcVlEcXJtRU5sNjd5Wkh0ay05eHdOVTh5ajE?oc=5",
+      "source": "Sports Illustrated",
+      "published": "2026-11-13T17:38:41+00:00"
     },
     {
       "player_id": "9484",
@@ -903,15 +966,6 @@
       "published": "2026-11-13T17:30:48+00:00"
     },
     {
-      "player_id": "10222",
-      "player": "Jayden Reed",
-      "position": "WR",
-      "title": "Jayden Reed or Jadarian Price - FantasySP",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5aMXdiUWtZTndUMmFyeXkxUmFaeExDMkNLT2xqMF9RUTkwVmd3eS1RQ0xodDkwdTRzUDRELVpOVkdYNGdHNXF4bUw0YWplVEpTSFpjOHNHM2xSNmdqV3NXcHZqT1VSdEVSUmxQS1ozbmZkelhZaXNfdUtDU04?oc=5",
-      "source": "FantasySP",
-      "published": "2026-11-13T17:07:47+00:00"
-    },
-    {
       "player_id": "9502",
       "player": "Tank Dell",
       "position": "WR",
@@ -919,6 +973,15 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMTJCZWx4cVVBQmg0VHZwZ1JtTF9JejZWODYzdGM0aGVidUt4alVaYW9DdEo1eVowZ1R4cEF3aGxNb3ZLZUUyWURKMGpySDBlQTQ2WGVXOHF5dTNYQmt3NjdlMUNiSXo1VjVPOEMxTno4b3ZmRG91LWZPNjFMLWdtY00zTWd6dHlUbElILS1RTDFSamh4TmtIbk4yRWxkdFJLVkxrOU9tQnYtek9kalB4MExrZGgtbUNDeFdrMlJOSXdxbmJTM0E?oc=5",
       "source": "NBC Sports",
       "published": "2026-11-13T17:05:38+00:00"
+    },
+    {
+      "player_id": "10222",
+      "player": "Jayden Reed",
+      "position": "WR",
+      "title": "Michael Mayer or Jayden Reed - FantasySP",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFAyU0VHVndWaWZpZjFkRmtpVG9JMi1XdkpXZ3ZHc1ZtU284dlY4YkN4MjU3RUJLUzVYSmw4dkxsYkxYNmRmc01LZmxpYWNfbEZTcHI2clk3WDRSNEtHbEtHeF9CLUJyM0RCdGNZNzZBT0p0LTNSQ25pTkJUWQ?oc=5",
+      "source": "FantasySP",
+      "published": "2026-11-13T17:03:49+00:00"
     },
     {
       "player_id": "13285",
@@ -948,6 +1011,15 @@
       "published": "2026-11-13T16:52:47+00:00"
     },
     {
+      "player_id": "7594",
+      "player": "Chuba Hubbard",
+      "position": "RB",
+      "title": "Chuba Hubbard And Panthers Tight Ends Form Perfect Chemistry - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNaDFGVW9PWU9SNVFmc3R0Q3pIX0FYcE1uZUlVcXp3Y1FXT091a19aY3JxVGZhaFJaaUxJdmtZY3BPS1FLcXRZNEhjY0VobGJ6RXVuc0RCWEZ1ODFtUGowcGx1RU14djhVVTB1bGpjNFhYUGh2S3pIcWptSzI1WEJjTzJBNXdWRnBLZWc?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-13T16:49:36+00:00"
+    },
+    {
       "player_id": "7648",
       "player": "Nick Bolton",
       "position": "LB",
@@ -964,24 +1036,6 @@
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE41ZWI3elNjR3IwQWVLSDA5ZVQwaEp5Tmt5Mm1hT1lYNUxNQVIxYWZOU3RPRzRqYVhSa2IxZ2UzbXNIQlNyemZTYVMwd0wwdi1YNHJnNE1TU1pkMGloY0NBS2MxOUdaUWF5Z002RkdaUnF0anh1ZVpBQm9RQQ?oc=5",
       "source": "Yahoo Sports",
       "published": "2026-11-13T16:27:31+00:00"
-    },
-    {
-      "player_id": "4137",
-      "player": "James Conner",
-      "position": "RB",
-      "title": "From a cancer diagnosis to the NFL: How James Conner defied the odds and turned his biggest battle into a - The Times of India",
-      "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxNckl6WkZvSEI4SWtoZlpYZ1J0eFpoTVlWY0dDMHFrNUpRa2ZnWmRMMjBJcHM3bFEwTzUtQW5lbjE1eGtoVklTYzJnOHlUWXhsWWd5c1UzWHJiNFdxdEQ5NjAwMExjdE5McFF0Ri04RUxRNUo0ZGlCb3ZoUUtIQ252VkVoUC1lUnYzSmlUNEhnWVl2cEhURU5kZGRmckpuZFE2RFVRNWEyc3NMeUR3NGpmQTlGUFZmRWtzZmk1S08zS1p1cEdlQnNFSzl0d0Ixc1N3NkQ3NEZSQkhUcGgwRmZSdkdSTFFpeVlLb3RaMGc5b3BGOC1OWEl4Y0t4aUZRZlVERWltWXQ1SzIzckdMSjZYWS1PTTU3emUxRE1kN1Y2LUQwU0R6VWVCczl0UdIBsAJBVV95cUxQMUdub21Eb2UtZE5ZZ2wxVWtJclpMa2ZGaEtxcjUzZmlnZUN4dS01VnVjZVRiRllVbE9jYV9FMkljVXBwOUxIV0ZwZFZmZ2lQNWZDYVNJdXFEWmFtRUVXZnpFUGd3OWQxWTVmcWVvamd3X0hZeDctalowYnNGaXpuVTYtYnhXM2h0QWN2RXUtSVkwR3JWSE9lT1ZEbVBmTEcybTVVcV9YMXg4bFp5bnBmQ3FSRllycnRfcTdyUDNkb1FwZlA2cXBHNEpyNHdqUS1SdlRENHIwZTBDSFViam9CQ2k3VUJIWFNCRnhla2F0ejltV21kSUlCTk9mT0pzVjRyNDlud2x3dUVHS3dSbmJUZ0M5dlhjb0ppV21KbThjb3IxQjNJME1icEhqZjJZZ2sx?oc=5",
-      "source": "The Times of India",
-      "published": "2026-11-13T16:18:00+00:00"
-    },
-    {
-      "player_id": "13417",
-      "player": "De'Zhaun Stribling",
-      "position": "WR",
-      "title": "KC Concepcion or De'Zhaun Stribling | Who Should I Start Week 10 - FantasySP",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOTk5rU1NialJMUGpzM2IyR3pYTUprVFp6aVZhaHdnMXVrd1BVbWZibzh4QWJxZ3pLb20tNWdJcmhjZ3dOZFgwVHhtVjhxSjVKV1A2SEo0MTA0VHhkUWlMb25jNjMwZmFWNWVrbDViVzczckNtUGt3amJXVGYyclJHSmVWNA?oc=5",
-      "source": "FantasySP",
-      "published": "2026-11-13T16:17:21+00:00"
     },
     {
       "player_id": "12535",
@@ -1009,24 +1063,6 @@
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVy1QaUZ6TGlzZmhEMUlsX2ZJVV9pcmR1Q0tUWGpTcFR4YmRENVhPR194ZTl1OG1TX3lpTFBrS2x0S0puRFJsdEN4YjdsUEZkUXJDRW1HRTZIbHktZWprQ2s0TUhXLWJBR0NJQWlHS1Z0UjZVd2VBVTJzNWRSOURITUExcl9PblRJQk1TMGxB?oc=5",
       "source": "Complex",
       "published": "2026-11-13T16:03:20+00:00"
-    },
-    {
-      "player_id": "11586",
-      "player": "Blake Corum",
-      "position": "RB",
-      "title": "Kyren Williams, Blake Corum have redefined Rams offense: ‘This is who we really are’ - The Athletic - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTEc0M2sybWxBMHBEUFE2QWU5VGxHWktScVBqN0FEaElSMWNOMjF1Slh0LVQwY0laRGl5UVZORzRBMzZUVFl2VnZFVklzQmFFbUpDOHZ6ZGNBaF9jbXA5TGRIN2FYQlhyRk45cGJnRlJIZzhKSTg1SkZDLU50WlhUeUR3LTFRbUdYbUlrQ0U1ajNHX3lLeHFv?oc=5",
-      "source": "The New York Times",
-      "published": "2026-11-13T16:00:36+00:00"
-    },
-    {
-      "player_id": "8150",
-      "player": "Kyren Williams",
-      "position": "RB",
-      "title": "Kyren Williams, Blake Corum have redefined Rams offense: ‘This is who we really are’ - The Athletic - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTEc0M2sybWxBMHBEUFE2QWU5VGxHWktScVBqN0FEaElSMWNOMjF1Slh0LVQwY0laRGl5UVZORzRBMzZUVFl2VnZFVklzQmFFbUpDOHZ6ZGNBaF9jbXA5TGRIN2FYQlhyRk45cGJnRlJIZzhKSTg1SkZDLU50WlhUeUR3LTFRbUdYbUlrQ0U1ajNHX3lLeHFv?oc=5",
-      "source": "The New York Times",
-      "published": "2026-11-13T16:00:36+00:00"
     },
     {
       "player_id": "7527",
@@ -1119,6 +1155,24 @@
       "published": "2026-11-13T15:29:25+00:00"
     },
     {
+      "player_id": "11586",
+      "player": "Blake Corum",
+      "position": "RB",
+      "title": "Kyren Williams, Blake Corum have redefined Rams' offense: 'This is who we really are' - NFL.com",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSjhSMDFYMzVzR2ladzJGTFlCWHctVE9VWlRFazhYbVNwNnprSHR2LWg1VXBDZ0VPdGk4RzRIaFU4ZmhjOGhmREptMHB3SUk1TUZTbGY2WE45LXZWbHY1Y2JESWxkVElsQ2dpd0pKRHd4Z3JOZjdxNGxhT01OODJNN082dDFRMmZZQXBBREp3RmcyMEV0dzVhS2xPUE96dlhkTDE1aWo5Z2JSenFCRXdQajMtYldnaUVXVm84?oc=5",
+      "source": "NFL.com",
+      "published": "2026-11-13T15:16:06+00:00"
+    },
+    {
+      "player_id": "8150",
+      "player": "Kyren Williams",
+      "position": "RB",
+      "title": "Kyren Williams, Blake Corum have redefined Rams' offense: 'This is who we really are' - NFL.com",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSjhSMDFYMzVzR2ladzJGTFlCWHctVE9VWlRFazhYbVNwNnprSHR2LWg1VXBDZ0VPdGk4RzRIaFU4ZmhjOGhmREptMHB3SUk1TUZTbGY2WE45LXZWbHY1Y2JESWxkVElsQ2dpd0pKRHd4Z3JOZjdxNGxhT01OODJNN082dDFRMmZZQXBBREp3RmcyMEV0dzVhS2xPUE96dlhkTDE1aWo5Z2JSenFCRXdQajMtYldnaUVXVm84?oc=5",
+      "source": "NFL.com",
+      "published": "2026-11-13T15:16:06+00:00"
+    },
+    {
       "player_id": "11686",
       "player": "Javon Bullard",
       "position": "DB",
@@ -1137,6 +1191,15 @@
       "published": "2026-11-13T14:55:15+00:00"
     },
     {
+      "player_id": "7648",
+      "player": "Nick Bolton",
+      "position": "LB",
+      "title": "Chiefs LB Nick Bolton named Week 10 NFLPA Community MVP - FOX4KC.com",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPbHdGcnlBdHd6MlhaUUFaSTkxRG1FTVpMaWN4cVgwZW40dmkzdFZHUkZWeGJSa1Z0by01LUdaa0xwWmlyamlWbGJPeWJSRmtpelY0VTFwaG9VbVl6U2lNdGpIZEZKVWpGM0VnTWU5UkpvSFdkOFhZdFJrX2NRSVkzeFVNbHVRYjl6ZW1vcGZOb2lZekI5QzJqZtIBmAFBVV95cUxPbHdGcnlBdHd6MlhaUUFaSTkxRG1FTVpMaWN4cVgwZW40dmkzdFZHUkZWeGJSa1Z0by01LUdaa0xwWmlyamlWbGJPeWJSRmtpelY0VTFwaG9VbVl6U2lNdGpIZEZKVWpGM0VnTWU5UkpvSFdkOFhZdFJrX2NRSVkzeFVNbHVRYjl6ZW1vcGZOb2lZekI5QzJqZg?oc=5",
+      "source": "FOX4KC.com",
+      "published": "2026-11-13T14:46:34+00:00"
+    },
+    {
       "player_id": "11665",
       "player": "Jared Verse",
       "position": "DL",
@@ -1146,15 +1209,6 @@
       "published": "2026-11-13T14:37:53+00:00"
     },
     {
-      "player_id": "9509",
-      "player": "Bijan Robinson",
-      "position": "RB",
-      "title": "Chiefs are preparing to face the NFL’s leading rusher: Bijan Robinson - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPOTdHN1ZucHBGSS1JSXdtTUQxZTEwOHVrMGZNRzhqallHMkNOVlBVcGk2alBHTXhITVp1MmpyamdwUjZoR2c2ZFBlNXZCY1dQc3p6X284QmRGakcyT3Y4ejJseHFJdDVFTGlBRk1iZXJONDIyVjF2LUJCbHE3a0pSMTdQTFYyd3EyNHc?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-13T14:00:00+00:00"
-    },
-    {
       "player_id": "12969",
       "player": "Lan Larison",
       "position": "RB",
@@ -1162,6 +1216,15 @@
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPUHgzQkMzb3lyeEU4VzN5SXRPMW52NFRzbkthRTBFTEF5NlFUT2g2UkdUQWZTY3lvd1JnQlZlQjNvU0FidlJYWkVKQW5Fd25PR0o4VE94dkxXcUl4SWFwUTREa2VqMlV0UnQ1R1VoVUxGTjktUmxMNW5uUkVjVm5rdXlQUG9EUGprSHhYdkV2OEFqX3lpQnliS1BLQjdRV3FpWnN5WFFoLV9WdEtadWliMThwSUhnNlVBYk8tc2M1d1k1RjF1MGJneWJNS1FpeXlGRlJLONIB1AFBVV95cUxPUHgzQkMzb3lyeEU4VzN5SXRPMW52NFRzbkthRTBFTEF5NlFUT2g2UkdUQWZTY3lvd1JnQlZlQjNvU0FidlJYWkVKQW5Fd25PR0o4VE94dkxXcUl4SWFwUTREa2VqMlV0UnQ1R1VoVUxGTjktUmxMNW5uUkVjVm5rdXlQUG9EUGprSHhYdkV2OEFqX3lpQnliS1BLQjdRV3FpWnN5WFFoLV9WdEtadWliMThwSUhnNlVBYk8tc2M1d1k1RjF1MGJneWJNS1FpeXlGRlJLOA?oc=5",
       "source": "NBC Sports Boston",
       "published": "2026-11-13T13:34:53+00:00"
+    },
+    {
+      "player_id": "11665",
+      "player": "Jared Verse",
+      "position": "DL",
+      "title": "Browns: without a sack, Jared Verse speaks of a \"mental block\" - DAZN",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMVZLUzNSWnBFX01BelB2QjVCdE5IUW1MS28tZU9ad3p6dU54WFNvdWgwUGxEaURYNzAxcnRkUjMzMXJjZy1nQWI1TWM4RDBVUkVKS2dMM1Y1Z0ZQbUVhMWxSZm5jbGRZTldGdEwzVjZVbFJSbk9nQXlfQU5lVzBOV19ZYklpRjJWdmhiMkM0MzhnUmFUckdYUmJLLXFvNGEyZE1ybm1iWVdMbHZHd29iZ3RR?oc=5",
+      "source": "DAZN",
+      "published": "2026-11-13T13:22:45+00:00"
     },
     {
       "player_id": "13371",
@@ -1180,6 +1243,15 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOdi04VTQ1S3UwUEZuSDhfRmJLWkJQak1WVGRmMV9SdTBLNm1ORGR6TWZqeDZhN0FCWHY2Y1JBMjRrSTdQMVhINHBnRk9hRTMxa1lucVB0VktpVUZ2LVF5d0UwQWl1SDBETzBaU3l2Z3VyYkZjRG5hT0diYTF3ZEhRZmp6Q1hxZGN0aFo4YTBSOFVQcXR0SWlPOXFhY2ZlOW1CdHRjTlJ2UDVWRUVMU0ZtalVDTFg5NTB6UWs4Zng5bmY4TkZ5TWc?oc=5",
       "source": "NFL.com",
       "published": "2026-11-13T13:16:06+00:00"
+    },
+    {
+      "player_id": "8121",
+      "player": "Romeo Doubs",
+      "position": "WR",
+      "title": "Patriots | Romeo Doubs hopeful to return after Week 11 bye - Fantasy Guru",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTWtqU2Q2VkdRUFJqRW5ZeHR5MXQ0aUMyRTdPWGlob0JPdFNITWQta0pJZzhFbGFtNmMyaFU4NWQyUVQ2RTFjVHB5VVRzaC15Ukx3VDliYi13RXN6ODdSWlZQRnp1eVc1QjJRVE5GLWxwSE1IeWx1V1d4RjdjWkozd0doSnJkQU1BdktHUQ?oc=5",
+      "source": "Fantasy Guru",
+      "published": "2026-11-13T13:15:05+00:00"
     },
     {
       "player_id": "3558",
@@ -1281,15 +1353,6 @@
       "published": "2026-11-13T07:19:00+00:00"
     },
     {
-      "player_id": "8210",
-      "player": "Chig Okonkwo",
-      "position": "TE",
-      "title": "Chig Okonkwo Questionable to return Thursday - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNYzNzcWw5WG0xTlRodTUybElCbXVmdXpYMDUtZlQtLWhNUlZScnNoNlVuSUZBVFZtYk90c3Z0dk9RM1VqZktJckphazcxSm9TbFBNOGFieThuektVNWRGa3pyU1hoRnZ6Vl9VQnhQOU1CaFVFR3JWOC1SUzI1c2tJVWhBQWtSdkRQUklfdTR2eFVCRDc1SHN0NEZfOG5qaDgzelE?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-13T07:18:58+00:00"
-    },
-    {
       "player_id": "13285",
       "player": "Malachi Fields",
       "position": "WR",
@@ -1324,6 +1387,15 @@
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOLXVYUnBCYkJkcGp2VzN5ZUdTTEdQUWQ5OTlfQm1yaGlGRy1zaDRGYlQ2ZGlJQWNVMGNiY0hhQXNaM2NaTzVPUHpqdFZrYWZwbWRidUhFTGkxOGJFbGVYLVBSdjZqTS1xT29HY0c2MGZEb3M2VkhYU1pFTVpBZTlVV0x4ZDJDOFhvNVN6Y1R3czJPenloejFkNnUxcFZqbGlEMVlMcmltbjlhNVZRbFBJ?oc=5",
       "source": "NBC Sports",
       "published": "2026-11-13T06:10:46+00:00"
+    },
+    {
+      "player_id": "13340",
+      "player": "Rueben Bain Jr.",
+      "position": "DL",
+      "title": "Miami Hurricanes Make Exciting Announcement About Rueben Bain Jr. Coming Home - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaHdNc1E0TlZJa1JWSGxkWmwtTFVwaHd0QmcwcVNWaGJrMWgxQUJUTVpoR2FRYWZhMVltSVBpdGg2ZF9EWW82czhvc0tWWjAyTng0MFJtbkJKVldOYjFwWkVCVzhxbUFoUlhycTdzU0d0SmlNbTk5Mlp4YjYtZE83Z0tqb1ZDLXdSdm5NeHFQb2hlc3NfQ1dzT053?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-13T05:51:00+00:00"
     },
     {
       "player_id": "4663",
@@ -1425,24 +1497,6 @@
       "published": "2026-11-13T04:10:41+00:00"
     },
     {
-      "player_id": "11564",
-      "player": "Drake Maye",
-      "position": "QB",
-      "title": "Drake Maye's 22-yard TD loft to Hollins marks QB's third scoring strike of day so far - Patriots.com",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWFVUaGxLNThIbVRHSUR3dFlIcHI5Q0hrUFB0b2RIb0YzM01SVkhNR2ZkU1VxMVpmaUNHWldVb1hKNlVqZFIyQzRDYlFORkRFa1hjLWJkb0VoSmtDcUlWVER1U0JTcWtmbFhHYWR0NjB0Vm1NMjNHYU9JdEhTd0NXYlJudzNfSXByT1Ezb3lPMXJ3czFTMThIbjcxRVUtNkRSQTdjOUE3eFBBVmF4Z1drOHM2a2d0Z2M?oc=5",
-      "source": "Patriots.com",
-      "published": "2026-11-13T04:10:27+00:00"
-    },
-    {
-      "player_id": "12508",
-      "player": "Jaxson Dart",
-      "position": "QB",
-      "title": "Giants’ Cam Skattebo pays perfect tribute to Jaxson Dart with TD celly vs. Commanders - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOemhkakRyYlNmY0U4cnZ5SHNPUXExTjVQR2piY0wyV21Cc3VQV0VGT181TnNjNVRyc1lLZ1pMcHRNQmM4ci1VV0x1ZXpxbG9fcWZNMHVHVFNCUF84aDJVSTN5RU1FZW50Uk5fRnAtd1lDT1RkNVNJazFjV3JvZG9wdmtMdUlUc3hW?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-13T03:58:00+00:00"
-    },
-    {
       "player_id": "8131",
       "player": "Isaiah Likely",
       "position": "TE",
@@ -1461,15 +1515,6 @@
       "published": "2026-11-13T03:48:00+00:00"
     },
     {
-      "player_id": "4033",
-      "player": "David Njoku",
-      "position": "TE",
-      "title": "David Njoku Remains Limited as Prep for Week 10 Begins - NFL News | Fantasy Football - RotoBaller",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOd0w1UW92VHowa1lrd0ZVT3pjT0FjXzQwTU1IYzlLMElmMURRVkp0b09ybnZEOHBaR05qMWRfTXhaRXZlYlVZeVlfYXRsQ1FwemQwQTlUaW1hdU01cVdIS0dHVWRDWExRSmdtRDFjY0lYQnZUQ2V1VW1uMDBOWHBaY1lxY0k1bElsalNlSmhwYVhOZE5EXzVvckIzWU1jVW5pSGxr?oc=5",
-      "source": "RotoBaller",
-      "published": "2026-11-13T03:42:12+00:00"
-    },
-    {
       "player_id": "3271",
       "player": "Tyler Higbee",
       "position": "TE",
@@ -1486,15 +1531,6 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNXFnR2syYnYwYzVGSjVLamdDNVFBb0VKQkx4TkRWUkU2V2d4MlhHOE1NTG9DNVFOSnpDNmR0QjFQWmhsODhsQlZpS09YU2dBN3E0UUx6elg5N2VGdzFLV3ZISVFHYUhpdEROdFY3NU9laFFEODN5N1FSNEJ3RDBYUllZRDA2aWRHbll2R015ZTl4VGxCLV9hNFBhVEhTdlRVcm5JZFh2MFJCcVBNcmZabUdn?oc=5",
       "source": "NBC Sports",
       "published": "2026-11-13T03:32:13+00:00"
-    },
-    {
-      "player_id": "8210",
-      "player": "Chig Okonkwo",
-      "position": "TE",
-      "title": "Chig Okonkwo (back) to locker room in 2Q - NBC Sports",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWNWZHJqRURMX0k4WENFMkZsdTRHVnVFVmZBcm8wR013ZlRrbzVWdGRjblJGM0JxeS1NSG9nRVNINHowaVcyWXFnaEdiQmFockx0M2hDVW83dWFTYmg3OW0zVjViUENSY0tRNUFYZjU1SVFkZjUyNmRQRDNna0VlVzNIT1BjTVZEcXA4R3RCUTBTR2U3MkVHaGN4VVQ4U2hZZlp5RXpLUkt6d3gwY3A0dA?oc=5",
-      "source": "NBC Sports",
-      "published": "2026-11-13T03:24:34+00:00"
     },
     {
       "player_id": "12502",
@@ -1549,15 +1585,6 @@
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5FZTlmNXpIaHBuN1VUeTVjTG9QWjhjVFFucVdxQllqeVRyanFzcFRSY0hnNWtMSmpGTF9RaUUwRjE2MjN5WllMOVJ2STdTeERXME1pVzVIOU1jWFh0NHc1WlhVRUlLMk1CbS1uN3BR?oc=5",
       "source": "Pro Football Network",
       "published": "2026-11-13T02:50:41+00:00"
-    },
-    {
-      "player_id": "12542",
-      "player": "Efton Chism III",
-      "position": "WR",
-      "title": "Maye's TD pass to Efton Chism III reduces Packers' lead to 24-14 in second quarter - Patriots.com",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUlNnQkVaVHVTWXZTMC0wRGlhSG5EaVBPVm9GcVBoNXlOTm4xanBnR0k0Ql94MHhSM2drWDBLZkRqODJrZlN0aUl6akhrOW5VZXpJNGVkY0NzN25GdFkwV1UzMW9EakN5Q1ByUi02YlFjNHhIdXNkMFM2NU00ZkZVYTJzcnlDU2lGSEpV?oc=5",
-      "source": "Patriots.com",
-      "published": "2026-11-13T02:50:30+00:00"
     },
     {
       "player_id": "8210",
@@ -1722,6 +1749,15 @@
       "published": "2026-11-13T00:20:27+00:00"
     },
     {
+      "player_id": "3558",
+      "player": "Chris Jones",
+      "position": "DT",
+      "title": "Patrick Mahomes Shares Chiefs’ Instagram Post Involving Chris Jones - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQT1paeFloRExvT1BHZ09uaC1Oc3VBOU96SWtES1lzRW1iY1Ewa1loYXBpVnJLeXFQNW5xa29WWmZzY1lGWmFFbGdLTC1RQnJzQTVITVF3WUpha0dCc0JKS2ZpNTF4TnRpMzItZW5SSGNHZFNkVl9CSFNlX01EcDZyNG0yb3FnY2dqMExzdExQZXAtUQ?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-13T00:20:00+00:00"
+    },
+    {
       "player_id": "3271",
       "player": "Tyler Higbee",
       "position": "TE",
@@ -1803,13 +1839,13 @@
       "published": "2026-11-12T23:33:11+00:00"
     },
     {
-      "player_id": "8131",
-      "player": "Isaiah Likely",
-      "position": "TE",
-      "title": "Isaiah Likely NFL Stats & News - RotoWire",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8tQ3hHWXBxNDVTYVY0TUNvSmVtOFRZV3JEVVFrSDRGcE1rYzdESENlNjkyY2tTVDI4Y25pdUs3U2JxY3BxMmFzdEQ3aXNJM3AybmJLNnBHSFB4R183bGhTUHloY2EzcVdYcGVSaw?oc=5",
-      "source": "RotoWire",
-      "published": "2026-11-12T23:29:30+00:00"
+      "player_id": "11564",
+      "player": "Drake Maye",
+      "position": "QB",
+      "title": "New England Patriots quarterback Drake Maye backs Harry Kane to become NFL kicker - Bundesliga | official website",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPTy1pcUNicnJ1dXljOGV4d1hyelBhcWJvOUNKNW91cnNUVFg0Vktaa0JCQm00aVo4aTNkalRMRkV4SnpsdVMtTXlzQUlnQzN4cUYwR1JZV2c5LVFxVXdzNTVsTk1MV0YwU3N1alUzY0d1YzNSSHNLRkM5aHFhV1pUOU16OW03aWsxTWhMQVRCeWVhVExoN0RCQmgwRy1lYmh6ZkVoZzAxZXgxNGhsSjl0d0M4Sms0Y0RwTXBHQnI5ZFh0U1YyT3M0ZGhHbjB5OEE?oc=5",
+      "source": "Bundesliga | official website",
+      "published": "2026-11-12T23:30:18+00:00"
     },
     {
       "player_id": "7571",
@@ -1830,33 +1866,6 @@
       "published": "2026-11-12T23:24:08+00:00"
     },
     {
-      "player_id": "13279",
-      "player": "Carnell Tate",
-      "position": "WR",
-      "title": "Carnell Tate Sits out Thursday's practice - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTGJ1VDQxVmlEX203REJqLThRUEJYeGJXSGtNYUE0VnVZUzNFaTdmN01FbVk3NWYxNGlLbEx6ckw0RHNqbnJZTmEwS0tTM0FLQzc5UzJncFZDWDlyQzhWUDRKUWhPSEs3ckd3cVVuODJXaEV4WEp0a3BNMlRSNVFmYW9EdlFjTklIdzU1c3VjcWtWWVJPckE?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-12T23:18:06+00:00"
-    },
-    {
-      "player_id": "4035",
-      "player": "Alvin Kamara",
-      "position": "RB",
-      "title": "Alvin Kamara Returns to practice - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPMUpTN3RXNXNSUUtQckFSaTU2Q1JhMXBicVlTRDk4aXdRQm16UC1nTU93b2E1ei1GQUw3dURyM2dFa25mTTY3UGVpOHJMWEtER19VeXlycG5JNy1RNlRQOXkxSzE2bUNWTXlJeVlQOUZZSVdMd0RZN1g4MFpTbVJFY0o2N21meUpHRWNr?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-12T23:18:06+00:00"
-    },
-    {
-      "player_id": "12474",
-      "player": "Woody Marks",
-      "position": "RB",
-      "title": "Woody Marks Not spotted at Thursday's practice - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTkRZaFUxZlA4RjZhWGdMTGNSWmdwQkwxQjBoZjJsWHI3NFg5V1RENFN0UVY0alFKbE1PR1JldlkzRzkwb2hyd1VDSVZZRS1KQ19rVWc3WG5ySUFyTkdJQTJVRXdtMDhpOUt6SVFZaWc3a2x1dm8zNURxYl9Beks1VGFTRS1NN1dGdHRqclM3a19Qa0FFYmJ0QTBDMXA?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-12T23:18:06+00:00"
-    },
-    {
       "player_id": "7543",
       "player": "Travis Etienne Jr.",
       "position": "RB",
@@ -1864,15 +1873,6 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNVJEQUxjRVR1Mjk2YlVWalZmT3h6ZDRDTG11b2tHMWJ6WEtzNHZ2UG1JcDZSMS0wdTR6OTluczBRZjJnVEI0S2tiVXhrSmRXZDFTVkJ3RkljV3VXczNDV0thdS1PVHlJLVBCZjFaTlZJSmVRVmlQUjhfaDBxZ0ZYUDVNb05EMVMxa1duT3VVdGNCNE9J?oc=5",
       "source": "Fantasy Footballers Podcast",
       "published": "2026-11-12T23:18:06+00:00"
-    },
-    {
-      "player_id": "13293",
-      "player": "Ja'Kobi Lane",
-      "position": "WR",
-      "title": "Is it over for Ja'Kobi Lane in fantasy this season? - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTmRwZTZ1eXAzS2ZUSGJvZW9zZDVUS2kxTWxXa2owWEthQi1YMEpCaEJtWVhtM2dxdE90c2Fnc3FYMnBWd0VxR3NFM0RXZ3VEM2ZaNUtLTmwtdjdmTi1qc2JjbnNGWVBPejJoRHAwVGZzb0V5QWVoTUgtYzNhZjZsTW9Hd1MzTjZ2U1QtV1AtUk9LanduUmJDMU9FQQ?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-12T23:12:23+00:00"
     },
     {
       "player_id": "5947",
@@ -1884,13 +1884,13 @@
       "published": "2026-11-12T23:08:53+00:00"
     },
     {
-      "player_id": "5844",
-      "player": "T.J. Hockenson",
-      "position": "TE",
-      "title": "Vikings' T.J. Hockenson: Misses Thursday's practice - CBS Sports",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZ05JZXJSN3hTaFdlamxqbWNJVVh6bmlvX3FSQzBrbDdROFd0c3ZDTHY2TnExRnFRRm11eWdJQ3k5Ql9yb0NXSG41NTFkNTAzc1ZkQ0RWbDVPTDhHZTdwR3h5U05aM09fbUpIM2JxY1I5U3htTEVJakItbktDTjNDdXFMU01LMVBLb19ybFhDb3BYZ1BiTkxGd1g3Rlc?oc=5",
-      "source": "CBS Sports",
-      "published": "2026-11-12T22:59:49+00:00"
+      "player_id": "11628",
+      "player": "Marvin Harrison Jr.",
+      "position": "WR",
+      "title": "Marvin Harrison Jr. Downgrades to 'DNP' Thursday - Fantasy Footballers Podcast",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPckROeVRzUS1MTDZqN3RveWlMQ0t4WTEzTDJfX0VuaWpvVWFrNzNfQVZZRmRVNTZDSkplT1ViV1JSRWVqMm81eFJ5MUNsSnZSXzlTZlhPSlF3SUNCekVfQ1FENjhDR1Y1WUtBYURrX3ZIZjBtYV9NeXBkYWFjV1Y0dkxDUlFad2RGR1RUWl93dzNSamRybmtJNG1PZUY?oc=5",
+      "source": "Fantasy Footballers Podcast",
+      "published": "2026-11-12T23:00:58+00:00"
     },
     {
       "player_id": "10905",
@@ -1992,13 +1992,13 @@
       "published": "2026-11-12T22:01:33+00:00"
     },
     {
-      "player_id": "11665",
-      "player": "Jared Verse",
-      "position": "DL",
-      "title": "Jared Verse opens up about playing struggles, met with team psychiatrist - Cleveland 19 News",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNVlRlaW0wRHdabWp1RTNJeXJNRk5Pc3dJVGxPM3phaHFWR1R0SklfYVhiMlpXMXFjR1kwclFOWnZjWVdmOXpickpEWnFCemY5Q0o5RVhyV3N1MUhGQk9XZ2c5TTV6YmhzYVZENmdyTUotM1QzOTI3VUk3TlJ0Z2JDMGl4SnBpZUhGcXZKR2lhcEloY0dQNF84OUdGVXZYTFRJLTEtWWh6eWY0Q29BQXVQWtIBxAFBVV95cUxNdUxMRGY5MDNLRGtMWGdaWV96RHdMeWtqYy1wQUxFd21ldVpVUWFMdElFSGtJMV9sVjdjWE5mOThvS2cwd0E5dllZcy1ibmhPeUZudVhrLUkxcGRyeF9pY2E5UFd4SmJGLS1OSFRlYTZmVkh0MUhwdlA5Y3JxaloxUW9jUjRyLVVmSjlIS3RVNDdKSkxWam1wVkpWODdwSmpEYjI2aVQ3YU9OZ05HLXI5OFJaLWRCREJZRVBoblJfUDhrLTFC?oc=5",
-      "source": "Cleveland 19 News",
-      "published": "2026-11-12T22:00:57+00:00"
+      "player_id": "13311",
+      "player": "Chris Bell",
+      "position": "WR",
+      "title": "Chris Bell (knee) downgrades, sits out on Thursday - NBC Sports",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQYjJVMlJLNWNJN3JjbmRHVzgwZnU3UUltUmo4Z0xaQnpxbVZBVEhUaGVKRXpZOWtMZF9ZaklNT1FYQnEyNXpLTkhVWWRIbk5rOS1Qa2RLNEZUVXYzM1BBU1dIeEFoUUVqX3BLcF9FVUJLaUlJdXB4NldhbS1zLTdDSTBoTEx6SllKU2kwVUdpSXo1TnA1NXZmRkFCQWFzR3A3UVJUTDNHNjhXYnNLVndPNnJFZw?oc=5",
+      "source": "NBC Sports",
+      "published": "2026-11-12T21:56:00+00:00"
     },
     {
       "player_id": "13277",
@@ -2073,6 +2073,24 @@
       "published": "2026-11-12T21:29:38+00:00"
     },
     {
+      "player_id": "4035",
+      "player": "Alvin Kamara",
+      "position": "RB",
+      "title": "Alvin Kamara Returns to practice - Fantasy Footballers Podcast",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPMUpTN3RXNXNSUUtQckFSaTU2Q1JhMXBicVlTRDk4aXdRQm16UC1nTU93b2E1ei1GQUw3dURyM2dFa25mTTY3UGVpOHJMWEtER19VeXlycG5JNy1RNlRQOXkxSzE2bUNWTXlJeVlQOUZZSVdMd0RZN1g4MFpTbVJFY0o2N21meUpHRWNr?oc=5",
+      "source": "Fantasy Footballers Podcast",
+      "published": "2026-11-12T21:15:14+00:00"
+    },
+    {
+      "player_id": "11626",
+      "player": "Xavier Legette",
+      "position": "WR",
+      "title": "Xavier Legette Logs full practice - Fantasy Footballers Podcast",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPYlZvX2IwVDZiLUw5ZncxVElyZTVsNUpaQ0pGOXJ6N1dUclp3T0pma2otMDZtOFlKelAzN3oyWktYYWVaRGpybmRmZDlDZl8xWlNCODh6RWRseExiWHdiSXJxS3hmRzU0TmYtOVdBT0lpWGhldGc2UE5Td1BEVVc3ZkhFLUdTZ25rNm9Vdg?oc=5",
+      "source": "Fantasy Footballers Podcast",
+      "published": "2026-11-12T21:14:09+00:00"
+    },
+    {
       "player_id": "12474",
       "player": "Woody Marks",
       "position": "RB",
@@ -2100,6 +2118,15 @@
       "published": "2026-11-12T21:04:00+00:00"
     },
     {
+      "player_id": "5859",
+      "player": "A.J. Brown",
+      "position": "WR",
+      "title": "A.J. Brown (knee) remains limited on Thursday - NBC Sports",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOHFsYjdISkdXYTVmdS1fb0lQMEpjbUoxUXVEY3ZsQUtvN3RGdzdna2dIY3drX3ZRSlJJbU9ZV25FcGJjcTU1ZGZCSWZLYm1hN3lNSW5BY2xlM0V4ZlVBWWkyblpvNVltbVZLdlFiamtBT0FmMGViRThZTndpRlVtZmhMWkJsdDBVQ0U3MFhHbXk0OElSRWczbGczNklsMW44ZHJRQ2QtU2NuTnNf?oc=5",
+      "source": "NBC Sports",
+      "published": "2026-11-12T21:04:00+00:00"
+    },
+    {
       "player_id": "6904",
       "player": "Jalen Hurts",
       "position": "QB",
@@ -2107,15 +2134,6 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMDczeTVFOUlhMkk2MXJvY2dmYW12dXZtMDlDekpWZnVmN3g3VzA4Qmt6R0RSR2NVMEdKQ0tfWnBJbUxKMWFPd3M5Yjg2OWloWjNZb25sNXA0bU02M05jT19RdndtcF8yS0RWN3VySEVqdVhXMGxVbGtXcEdmeTlMVTlZTEdaZzhCMTVPdHRmX1BqZHJhdUxtU2w3bmdEYVNmUmt4VUdROA?oc=5",
       "source": "Inside the Iggles",
       "published": "2026-11-12T21:00:38+00:00"
-    },
-    {
-      "player_id": "4017",
-      "player": "Deshaun Watson",
-      "position": "QB",
-      "title": "Deshaun Watson Drops Blunt Message on Browns Future - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNLW9DdlFPeVNKUjBCcmhMUnVMbVZKc2FTYzdwVUpyMEJFdXdObzcxNUg3VzctYVRKLWQzRXA4UWpxQmpmS0JDNTZ5dXpHMEpfM19KMG1qVFAtX1pEODZaTmd5d2ZjQlAybHB6UEEtQmFlSkxNdmtubW5JMXkwNFRWWVltMzN6ZGlEWkhZ?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-12T20:59:36+00:00"
     },
     {
       "player_id": "7523",
@@ -2199,15 +2217,6 @@
       "published": "2026-11-12T20:01:20+00:00"
     },
     {
-      "player_id": "96",
-      "player": "Aaron Rodgers",
-      "position": "QB",
-      "title": "Aaron Rodgers and the Steelers are still looking for answers in the red zone - Pittsburgh Post-Gazette",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNTBqRm1RSzdoVFByNHlrX1pBaTlIOWFiSnV4bTYxWVVMa0tIVDFka2hFMjAzbzdSUkpMbmdOMlZLMGw2bDdLY0FCLWtPakRaUml3Y3JZcTJPVWxtclRQbkR2TllMSkliWkRsN2lVTXRMbjBsdUpuRDB0bThyZXJrUUFLSDQxTGMwdHkxOGtzUHlCOGh6bHZQRFA5SUpSS2Z0R3NQTw?oc=5",
-      "source": "Pittsburgh Post-Gazette",
-      "published": "2026-11-12T20:00:00+00:00"
-    },
-    {
       "player_id": "12524",
       "player": "Shedeur Sanders",
       "position": "QB",
@@ -2215,15 +2224,6 @@
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPemQ1X0R1N0FYMUw2MkNtQlhJZnR2M0VoYndLbklnbDNZdWQtZHdra1ZvSFVGaG5Bcl9VUld0dkNtU3hZVWloQkZtd19pSkxCQ0ZZcGw1UUJJRFo5QmlIV01pcXBFeWdYbHZpODJoaFBWY19FYTdhSUZlYXFqd3RLcjdSb1l1ZjlDei1HdGotYkJ2SzNHTzQxQ0pJblBKT2lMbnJJQ3VDRXFjaFdGR0dZaGNKajQ4TzNpeVVGU25jeXA4RVU?oc=5",
       "source": "Bleacher Report",
       "published": "2026-11-12T19:54:55+00:00"
-    },
-    {
-      "player_id": "9229",
-      "player": "Anthony Richardson Sr.",
-      "position": "QB",
-      "title": "Why are Colts not likely to turn to Anthony Richardson Sr. anytime soon - Sporting News",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTGNXRzVwOHFWTWp6SmktZ3BMWkY3NUhIQW9KY0ZKbTdFbHpqVmZrUWR0WkVkY1pubDlsd2x2c29MaXZ6TGw1aDJEQ2hqTnZXNjJRNFZvX3FxR3pFWDNZUU1JRExISXpIbHRBUjN3TEJydXpVM2lPRVEwSnlZMkdvSkdwS09JMGVEZzFzVWNFdm00MFJGQzVqLWEyV0dsSE94SENVYmJoZE1SU3pxZnhWOVJJeENfYjlWTXgzS2s3QWNVVWdHNXhHamtORHgzRFRTTTlDMEtjOXV6QzFjakE?oc=5",
-      "source": "Sporting News",
-      "published": "2026-11-12T19:42:53+00:00"
     },
     {
       "player_id": "12474",
@@ -2235,6 +2235,24 @@
       "published": "2026-11-12T19:39:00+00:00"
     },
     {
+      "player_id": "12530",
+      "player": "Travis Hunter",
+      "position": "DB",
+      "title": "Travis Hunter said Jaguars moves on defensive line will help secondary - FL Times-Union",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPVWZhdVNNeHJCTkFMa0Z3eHVfZHR6SDBBSmt1ZlRKTWFQSEFMWkxNM2NQbXVLOHVMMWdpZzRXdUM0WXFoVVlScFd1NzFZbExDNlNveURxWTlSb2ZMS1daZ2hRUW41a2VrcE9WRVNFdVNPVFRqeGstYTNDYU9idjhERUhuZk11d0hReWc2dTlBRU92eDB5amF5RF9ISHBoUzVEeDhqYjJPcTlCVFBILWpjTzdBU0pIdUdrMDJsZ1ZTMkpYeHBYMWR5SFpoN2QxYjZ2TldtcDVGdVZic1k?oc=5",
+      "source": "FL Times-Union",
+      "published": "2026-11-12T19:32:53+00:00"
+    },
+    {
+      "player_id": "4039",
+      "player": "Cooper Kupp",
+      "position": "WR",
+      "title": "Cooper Kupp Surprised by Klint Kubiak’s Sideline Energy with Raiders - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQWXc1TFVVelhScGZBT1RDa0t4R0s2Uk9Wd0tGRk5jdW5vUU85OVhteHFnMm9tWlBKR19ROWkwQmh2dmtYUGVVTFNWbjNCRVNRak9ZR09LQnhMZkptb29aSG9reU4zTDBIZTFVck9jZVNYWHA5Q24tS2t6Y1Z0QUNUWTk0YWJvSjZadjQ0?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-12T19:30:22+00:00"
+    },
+    {
       "player_id": "11610",
       "player": "Malik Washington",
       "position": "WR",
@@ -2244,11 +2262,38 @@
       "published": "2026-11-12T19:30:00+00:00"
     },
     {
+      "player_id": "13311",
+      "player": "Chris Bell",
+      "position": "WR",
+      "title": "Dolphins receiver Chris Bell is nursing a knee injury - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNcnIyM2Q4cjNIZHgzeFFKOHBzSUEtTkZfQ19PVTVXbTFTQzBaVWVTSWc0VlNOOEVTNDRyNVFrbTdjVXhHRzI3cEpHaEh6d2ZkWm52QThRdll5VVlRcGlWcHhFalhQLW5LODU5OC0yX2pla0J4UUR3SmJYTG9WOGpyVEZHeWdIREdaSXBDb0Z3?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-12T19:22:01+00:00"
+    },
+    {
       "player_id": "4993",
       "player": "Mike Gesicki",
       "position": "TE",
       "title": "Fantasy Football Start/Sit: Mike Gesicki, Pat Freiermuth, Darren Waller - FantasyPros",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPcU5naFA2TDh6ajhCMUl2T1BreEY4XzhCV1NGVWJxMVM3SGxZUFRjRVVtSWJ2VFJPaUZicm5BY2d3TVdaY0tuWmc4bk9jajVLNHBKTU1Ha3p2TTdMVE1oZ1BwMFp5bnl4YUZmOElFWFlmejgzc3FTaHRFSnFPaENXT3V0TDFsdHFyYUxxbnBtcWhtYkJISzBrX2hyVUdtSzZBek9KR0g3VWVvZEh1d1l6dVVNSkJSTU1ObnfSAb8BQVVfeXFMT2U1UzVQYzdSdVRWcVlmamxPN0lPSkUzYnp4Qi1POHRoSlNzaDV0YVJVVU1lSEM0bGUxOUM3RDJZNGRrdHhkY1JkZFB0NnQ4S0QweVJXQ3JMeE9wWEk0WW9nNjg1OUsxamZBZFpnM0tEVS1JZW9JM0VMUVJERmtqYWVEc1d6Y0JiOFh3UnBJQkRkcGpwRmtUWXE3eU8wbUNmZUJhS082b2VjOUdqbU82aTFOdGtnR2xaN3lfb2R4dk0?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-12T19:21:54+00:00"
+    },
+    {
+      "player_id": "9501",
+      "player": "DeMario Douglas",
+      "position": "WR",
+      "title": "Fantasy Football Start/Sit: DeMario Douglas, Germie Bernard, Denzel Boston - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPelp2VUUtcGVidDk0dEhzV3p6MHN2OXR2QVVvSDRsUUc4NG1HemdSNHUwR2JsRXVKWktkQndUaFk1NjZYVnRYRk11cEF0RWZid0FmdTZXb0R2RVBralpoQjQtNVFuRXFqSDFxOFJSV3pMbUVoVGRLT2Q1YTEyYUZycnp6YXVNM0pwZzNSQm0tT2UwbUp0U0k2NFNCbG4yZGdFZlhfbG9RU3VNMnZGUE1iLUtMRHBqNnFZWGRuX0d30gHDAUFVX3lxTE1ldmlIWFlJdnlQRmdzMjVnaUItb1FzNGVIOFVUMG84TEx2SDNiZE5DS0tUa2ozTVEwVEZLRjFNT3pYWDU4RURyNVVncG5KZjJtcC1kRUgwX2g5VkwwRTBYbkdlai02UUtqRmpsVlpzY2loQ2JuZThvVDhxQ2VnRzhVMWJCMl9hUXZwLUIwX2ZHM0owWmNMMnI0WDRjdWprVV9mRmlZVnlaTDN1SnFfc2RUSm5yZlhFcUFwdm0zd2VNa3dsYw?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-12T19:21:54+00:00"
+    },
+    {
+      "player_id": "13274",
+      "player": "Germie Bernard",
+      "position": "WR",
+      "title": "Fantasy Football Start/Sit: DeMario Douglas, Germie Bernard, Denzel Boston - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPelp2VUUtcGVidDk0dEhzV3p6MHN2OXR2QVVvSDRsUUc4NG1HemdSNHUwR2JsRXVKWktkQndUaFk1NjZYVnRYRk11cEF0RWZid0FmdTZXb0R2RVBralpoQjQtNVFuRXFqSDFxOFJSV3pMbUVoVGRLT2Q1YTEyYUZycnp6YXVNM0pwZzNSQm0tT2UwbUp0U0k2NFNCbG4yZGdFZlhfbG9RU3VNMnZGUE1iLUtMRHBqNnFZWGRuX0d30gHDAUFVX3lxTE1ldmlIWFlJdnlQRmdzMjVnaUItb1FzNGVIOFVUMG84TEx2SDNiZE5DS0tUa2ozTVEwVEZLRjFNT3pYWDU4RURyNVVncG5KZjJtcC1kRUgwX2g5VkwwRTBYbkdlai02UUtqRmpsVlpzY2loQ2JuZThvVDhxQ2VnRzhVMWJCMl9hUXZwLUIwX2ZHM0owWmNMMnI0WDRjdWprVV9mRmlZVnlaTDN1SnFfc2RUSm5yZlhFcUFwdm0zd2VNa3dsYw?oc=5",
       "source": "FantasyPros",
       "published": "2026-11-12T19:21:54+00:00"
     },
@@ -2280,15 +2325,6 @@
       "published": "2026-11-12T19:18:26+00:00"
     },
     {
-      "player_id": "10917",
-      "player": "Byron Young",
-      "position": "LB",
-      "title": "Rams would have been foolish to complete suggested Byron Young trade - Ramblin' Fan",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE4yY3pYdHJIM19vNkVRQlFrZExBcTk4MGhpRGFOeDV5dTVJMUVINnI0cVpSWGtFSzluVktWaE5KcXBGZlVlc182SUlvbzc0dXFabExuNnVqaEl1czlHckd1SV9aRnNzR3dBRnFQWE51dmZMT29rVlZkUlota3A?oc=5",
-      "source": "Ramblin' Fan",
-      "published": "2026-11-12T19:05:00+00:00"
-    },
-    {
       "player_id": "11564",
       "player": "Drake Maye",
       "position": "QB",
@@ -2305,15 +2341,6 @@
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQejAzYjdJM1BJaUhWbExZNmY5SWNrQUMzTTVMZXhJSVloQmpvbGQxNTRLeWwwdTlDcVdoYS1WQ19hR2xhQUt3TUNHallhaGVBM0dleWVWWVlLcVdSdFh0ZmM3MXI0eldYb2stMzQ1TmpVcGlZcHhoajdFY3lDLUs5eDJn?oc=5",
       "source": "Yahoo Sports",
       "published": "2026-11-12T19:00:28+00:00"
-    },
-    {
-      "player_id": "12494",
-      "player": "Kyle McCord",
-      "position": "QB",
-      "title": "What Are Realistic Expectations for Dolphins QB Kyle McCord's First NFL Start? - Sports Illustrated",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOS25QdDFYbVVEaF9uTnRTeTYzTFF3WXBMcEhwbURjdjJFN0pxUU1nWXNsOXBOaDBzVk1IZ0lKRkhKM1FXdW9uWkhOX0FVaEZ3TVVfdzFBYTJIbTRFRS1lalp4RUhyY2NHYkRIUkJWNWprMlNDZThKbWNxMVdRbGFXU2FId3pjQXk0ekNMY1hpWm5Rd0wzbVdLQVAzTlZzc2VmYWpqOHEzYWd1R2o2aExvVUpqQVZkWlpEVXlKOWU3Q1RSMkhQVnc?oc=5",
-      "source": "Sports Illustrated",
-      "published": "2026-11-12T19:00:02+00:00"
     },
     {
       "player_id": "8289",
@@ -2350,15 +2377,6 @@
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5VU2V5c2VJMkNQVjVZZ2RtdGdpZUM4YzhwQ3JpS0pva1NESlp4Ni1DeTNzbHh6NHpYX2lkMjZzUy02N0x2SDRmV1NEejVDT19ZT2pPRmFrMUh2US1yWVJRdU1HSUQ?oc=5",
       "source": "FantasySP",
       "published": "2026-11-12T18:56:33+00:00"
-    },
-    {
-      "player_id": "13311",
-      "player": "Chris Bell",
-      "position": "WR",
-      "title": "Chris Bell Not seen at practice Thursday - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYUtyOEIyUUoweVBaNzB0YnBDQnhZRW9GMkFJVnNHVmIxZ2hqZDBKYnVySlBXWG5HQXZ2ZXIxeW91dFFHMW5ZUUhMazA0WFdNeTAzTkxqSXB6Ync1em1qaWVzT2JLZF9hVWRiY3ZBczNJZ0sycFB4am8yRExQZlJpSzlKdUFGTFhDUGtTVXVOV3FKb2RpQmc?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-12T18:49:09+00:00"
     },
     {
       "player_id": "6130",
@@ -2400,19 +2418,10 @@
       "player_id": "10917",
       "player": "Byron Young",
       "position": "LB",
-      "title": "Byron Young’s ‘breakout season’ is breaking down recently - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVjdPengtYllLd2hEeXdDVDhzUjlmYjRMNGZsUnpnYkhQcE15NHA4RkYxbmlLcWQ3eFl1RjNhUklUUjBRR2JKOWRmbE5VLVNfdElSQ3NWMjd1ZXlXQm5QVUJnU3VkLUJ5a1h0aVRrSG9UMW5hbWhwbkFKV0dqeFZzRW1ROGVLNUZqV2FzSTV3?oc=5",
-      "source": "Yahoo Sports",
+      "title": "Byron Young’s ‘breakout season’ is breaking down recently - Turf Show Times",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOQXE2dDdseVlMOUk3R3pBN1lPaTIyaEdfNDRZUVo3cGE5UVMxdUZXdXM5Wkw1cUlBU0U1UHpwZ01QcVF1UU9YNXNsa0x0eTJqdGpRbWVhOHFuNlJWcXRMZThXcTdHOFJNLTZWMFZZc2VYRHV6emhEU1l6bVFzdVdaS05YZW12TXUwX1NCaXl6Z0FHanBoRkhNN3E5dEZ6Q2Z0ZUVGNA?oc=5",
+      "source": "Turf Show Times",
       "published": "2026-11-12T18:17:04+00:00"
-    },
-    {
-      "player_id": "13287",
-      "player": "Jeremiyah Love",
-      "position": "RB",
-      "title": "Cardinals Place RB Jeremiyah Love on IR Stream of National Football League - CBS Sports",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSWtKSWVlV2d6WHM3R0VFTW91Vm5EbnF0R2otT3NGQXk5ZHJqR01PbVd1eU81aWR2TVJvU1hLbVBydm5zZERndU1tRUdmYVFWRUFhMVNTZlZmb2ZzTXJ4SDA5NjdEVkNnMmJ2bE4zb2x3UTdOWVJ0QmRGYzNrbE1rbU9GellqRjhu?oc=5",
-      "source": "CBS Sports",
-      "published": "2026-11-12T18:05:22+00:00"
     },
     {
       "player_id": "8146",
@@ -2478,15 +2487,6 @@
       "published": "2026-11-12T17:40:00+00:00"
     },
     {
-      "player_id": "13413",
-      "player": "Cyrus Allen",
-      "position": "WR",
-      "title": "Chiefs rookie Cyrus Allen could lose valuable opportunities after Josh Downs trade - Arrowhead Addict",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQndoeG5UWldwZjZlRHJhaVZDT1l3TDN1Mko4N3BCNkVFVVJTZ1dkalNHUnpvR3M5eTJYcFdPZkVyV09SdGUyXy1GSWhoNk5kdmZRREF1eV9DM0IySmR2cDgtY1NWN3ZtV1dOOWF6S3NGRC1Mck9xbE5iX3h4Sm50NTRBdzVSRmprVUtSdnlCdURYUm9OSzFTRXU2bFYyMzM2enp0MjdRY1lwYkhvWXpV?oc=5",
-      "source": "Arrowhead Addict",
-      "published": "2026-11-12T17:30:00+00:00"
-    },
-    {
       "player_id": "12512",
       "player": "Quinshon Judkins",
       "position": "RB",
@@ -2532,15 +2532,6 @@
       "published": "2026-11-12T17:00:48+00:00"
     },
     {
-      "player_id": "8329",
-      "player": "Devin Lloyd",
-      "position": "LB",
-      "title": "Monroe Freeling, Devin Lloyd & Nick Scott | Locker Room Sound - Panthers.com",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNWERCdlBYVlRfOUkzbEZJUjZ4aTdocUZ2WmRLTjFJQTk4RTJfN0FrTU1iUFZVZ3BkQVZ5OEM0TlhKbG00LXMxR3BYdHdOVWJ1S215UlcwZXJDVWJHenVuMVRQQTQwT0xlcDM1NEhxV0tCdDFvNXVucW14SUpZVGZqeHFWLTVWSkxtZnYtTWZSbUE?oc=5",
-      "source": "Panthers.com",
-      "published": "2026-11-12T16:59:22+00:00"
-    },
-    {
       "player_id": "7600",
       "player": "Pat Freiermuth",
       "position": "TE",
@@ -2577,13 +2568,13 @@
       "published": "2026-11-12T16:48:21+00:00"
     },
     {
-      "player_id": "11626",
-      "player": "Xavier Legette",
-      "position": "WR",
-      "title": "Panthers coordinator is making one thing clear about Xavier Legette's offensive role after making his return to practice - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPN3pjMU5tTkFPV2NNTkpyX2w4bE5kUV8zSldwYk95em1GZXBQaXpWZ21kQ3FNcWpfa1FBMGV3T21kWHo2SXh1THNVY2JNQmdmS2txWk85TC1KZUVGZzJwWU0zeWhmNWtOVjU1M08tWEJ1bjFnVm9CQmwtRGRHU0hnQUpZRks4OVJVVkFmdXV4MA?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-12T16:48:07+00:00"
+      "player_id": "13287",
+      "player": "Jeremiyah Love",
+      "position": "RB",
+      "title": "Jeremiyah Love or Stefon Diggs - FantasySP",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5MdzhvX3I0Rmh6azFPbHpuSUxOblRiOUZTWlJCNUFFX2xJQVdYbVRBdXN1dnhmT0YxTWQyWGUxdjlhWmZldC0zOEx3VWxyTkxQbXM5Q1h2NGptWFpqR2Z5cERIUl9FbW1mLWxqdldGcFR1MUpQTm1zcTY5Z0N5Zw?oc=5",
+      "source": "FantasySP",
+      "published": "2026-11-12T16:42:47+00:00"
     },
     {
       "player_id": "13377",
@@ -2646,7 +2637,7 @@
       "title": "Made by Music: Dallas Turner Visits Electric Fetus & Talks Gameday Music & Unexpected Favorites - Minnesota Vikings",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZXRjZ2IwcmxXWkpHa0RLWm9hSFVvTGRtcTR0cGtKcm9fX1Z6b1V6UUEwc204VXM3YkRQbm9hTjZJc2FuSXlWa3lRLVJ2ajRoZE4xWHI2dUJjSVdWX1RvRm5DMTlMZGlMT0JCQ2Y4RmJrRm92VEI1N3ltZnBZZ2s2VnBNSW9vRmxRUkhvNlViMA?oc=5",
       "source": "Minnesota Vikings",
-      "published": "2026-11-12T16:04:13+00:00"
+      "published": "2026-11-12T16:04:15+00:00"
     },
     {
       "player_id": "13296",
@@ -2748,6 +2739,15 @@
       "published": "2026-11-12T15:07:12+00:00"
     },
     {
+      "player_id": "11604",
+      "player": "Brock Bowers",
+      "position": "TE",
+      "title": "Brock Bowers is an explosive playmaker - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQm9VSUQzazJFUmV2NXZSNFdXUDAzWlE3NXhFU085bFl6R1l2QU1lTF9aQS1seGx3Z3BSQVlVblRZZmYyNXpWd3VKZWRaclFGcXh6N29TUGdoV0hYWVRlQTdDR3pFdEE2cWZHaElpZTJ1S2Ewa2RfNTJGSEdJbGdiU1Fpa01NNVhN?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-12T15:05:00+00:00"
+    },
+    {
       "player_id": "6217",
       "player": "Blake Cashman",
       "position": "LB",
@@ -2766,13 +2766,13 @@
       "published": "2026-11-12T14:45:27+00:00"
     },
     {
-      "player_id": "11564",
-      "player": "Drake Maye",
+      "player_id": "6768",
+      "player": "Tua Tagovailoa",
       "position": "QB",
-      "title": "NFL Munich: Drake Maye's organised improvisation - DAZN",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxORlQzc0xzOC1oNmRfMkNMejYtQkdYakZTOXl3N2cxZzJCUV9LeTI2MzdVYmZHSlc2QzNVNk5SbDFWV3l5LWsxMFp3TTRVZ0d1cmVFVEZXeEdKRnNfU3o2V19kWDFrTjdIdFV4dVIzVTh0Mkh0RW5BcGxaU09IZVkxSGVwcXZ1ZEh0NkxkTHRFYUU4bjJXZGR2RVdTTllEZFp4RTlqSjEtTHJIT3ZlUnczYTVQYlJNZlpSNkE?oc=5",
-      "source": "DAZN",
-      "published": "2026-11-12T13:25:30+00:00"
+      "title": "Ex-Dolphins QB Tua Tagovailoa Put on Notice After NFL Trade Deadline - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNT3EwdDRvNDFmeWV5QkVzc1lqRzBJMWRHd1RRZ2hCTGgtbTFISmdrRW5Lb3hTMEJPM2U1QmduQTk3TnRPbXpWQ295aEJTVmxrb3R2aGZSekFPdTd4WEJSNEloU0NvN2VwdUo3UHVOMFNPblpiSlVsTkxRakNHU3VPV2t0X1k?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-12T14:31:42+00:00"
     },
     {
       "player_id": "7547",
@@ -2800,6 +2800,15 @@
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMDZPMVNsb1BUSDdaTklVaU11NFd6eFZBN3VkUGFiaFg1NXRrNXhPNktGNTZHWVZtUExjYWcweTllUmphVi1HY0k5YU0xRGd3OEFwSlk1amNLQkNmQTNibURYN0p5a3NOSV9Zd1ZITWx4QXNwWjRHYnJueGwtSWFxbVZaekJHSW9UMnNfZVo5c2dkTHRVY2p3dV90TzREdzNJOVp4M0dHNUxqdDFhMG1KdS1YYXZYZXFvZUxpcHR6WWFLRXJtUDd3SGdHQTEzRzZUb0RWTw?oc=5",
       "source": "Sports Illustrated",
       "published": "2026-11-12T13:00:03+00:00"
+    },
+    {
+      "player_id": "13458",
+      "player": "Derrick Moore",
+      "position": "DE",
+      "title": "Derrick Moore's breakout game for Lions could signify something big - Detroit Free Press",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQzB1dWFpc1V6SFFqaHh6cHJhbjQyUXVJRjkwY0kycDRRdWY4NEZleS04U19pX24yM3ZvSktJVU9HQTcySmw0NVRDd2RjeUY5SjJKZkFpalF5WUFWS3RTU2JsTkgwaVhLcXh2ZlhCbjd2N0VnYjh4U0p6WjZZYmFRZHJWcGlmajQ0aGt4Tm4tYmxINl8tSm9PbnZLRWFlcWROZmZJ?oc=5",
+      "source": "Detroit Free Press",
+      "published": "2026-11-12T12:42:00+00:00"
     },
     {
       "player_id": "13458",
@@ -2874,15 +2883,6 @@
       "published": "2026-11-12T11:00:00+00:00"
     },
     {
-      "player_id": "11604",
-      "player": "Brock Bowers",
-      "position": "TE",
-      "title": "Rob Gronkowski makes a prediction about Brock Bowers after incredible start to NFL career - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWTFpbDRySkZZc1l0dlR3Qm5qLW4xWHVmMGN3Y2gzUF93U2l1UTZEcWJxVEh6dVVFWjZpd1I3a3o2c0VVeVJ2OHRlc1F0MTRhVEdqYXNBSEJtaGdKWU5UempXTXVJcjl2OXR0d1RBUjkzeEpaMWNvdmQ1ZmZtMktsb3NkRlUzUGNXNzdIUG5mUQ?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-12T10:50:00+00:00"
-    },
-    {
       "player_id": "5846",
       "player": "DK Metcalf",
       "position": "WR",
@@ -2908,6 +2908,15 @@
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNaDlOaTEyLVlVclpHWHZkT1R5U3hvRmxvZHZYcHFsbFItNVFkREdiTW9pSHpiVGJqLTZMUl9aUl9xR1dXVnQwS2l1WEJyaWprYWY0Y3VSbmdVMnZ0M0dlcXBvQXZYQ0tRb2x2eGN3YkpiRHFsZ1dOelR6dTk2T3JLTmNYWVVjeW45SExhOGFzcDFIVlI1OFF3?oc=5",
       "source": "The New York Times",
       "published": "2026-11-12T10:30:19+00:00"
+    },
+    {
+      "player_id": "11604",
+      "player": "Brock Bowers",
+      "position": "TE",
+      "title": "Rob Gronkowski makes a prediction about Brock Bowers after incredible start to NFL career - HITC",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOQ3JXaFc2UmhhX2xJU3VrY09Yb2huR09lTGpZUDJpTVFBR3BfYnZfYkh6d0NXVGpqZUNkUWxBMGphTVEtM2dzc09USUhPejA3ay1WeDlJTVZzQllWYmtkTS1BV3FRenU3akZuazQwUmZwUjBySTBReEh4TnliVExJZU9raVFSR29kSXBqUGN0S3dncTlIc1RfelIwTkVVWFhGd29pTFFSVDBXWVRybF9uQw?oc=5",
+      "source": "HITC",
+      "published": "2026-11-12T10:20:00+00:00"
     },
     {
       "player_id": "5846",
@@ -2937,12 +2946,48 @@
       "published": "2026-11-12T09:00:00+00:00"
     },
     {
-      "player_id": "13337",
-      "player": "Emmett Johnson",
-      "position": "RB",
-      "title": "Emmett Johnson Was Mic'd Up For His First NFL Touchdown - Kansas City Chiefs",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOd3RhaG5wYzVsU194RnYwd1hGXzN5UXdjR29WMHRYeTNEZGRPUnhxcW1QRTVjY0lud2F4TXlLREhyU0Q5dTZrbjBoX2ZMVXhEQ2lZZnpZNjVNNUtfc19xdFpOVy04ZEc5SmRscUFwekZJYmh1dkcxeE54VEhTek1sLV9scEtIaGNiUzBkeQ?oc=5",
-      "source": "Kansas City Chiefs",
+      "player_id": "6804",
+      "player": "Jordan Love",
+      "position": "QB",
+      "title": "Jordan Love's 100th TOUCHDOWN PASS | Packers vs. Patriots - Packers.com",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPd2ZKb1d4c1RBLXloZjBiN0E1eDR0TktRbHd4a1VrZWpYeGVwaDc0WHhhbnYzZ2ZSelBNY1BQUnhTYzRfY2xlUWtLZHJKZVRQeW0zeGQ1YWk2elNyQVRIUkR4YkFTMmtNLUhmN2hMX1pMUHdVcVlEdW9EYTZCTjZJYm5LQ1d3ajIyOVpYc3c0MHhLdTQ?oc=5",
+      "source": "Packers.com",
+      "published": "2026-11-12T08:00:00+00:00"
+    },
+    {
+      "player_id": "12501",
+      "player": "Matthew Golden",
+      "position": "WR",
+      "title": "Matthew Golden Fantasy Football News, Rankings, Projections | Green Bay Packers - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4zQzl5MVVZNHlHTWZGRzAzblJWOTBYdXZrZFlza2hKb0hSejJvcHgxdHZXRzlIOEdia1paZ0FRbElhdlUzMEdVYUV1RS1jeER5U0EwVGM0dFdPZkhWa1hnX1VUZ285TC1tVnc?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-12T08:00:00+00:00"
+    },
+    {
+      "player_id": "8210",
+      "player": "Chig Okonkwo",
+      "position": "TE",
+      "title": "Chig Okonkwo NFL Stats & News - RotoWire",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1MSXVRNnl6bXRoX0xMRnYzTnRDZU81RG95SVhhQkhDNEc1S1VIY0tYTFlvNnNJUzZmbTVjWW5BMmZNajhCbEJocFFMcjBBel9fSURSRDN6cGFVb1I4X0VqYTRDVXlRR1ROSWFF?oc=5",
+      "source": "RotoWire",
+      "published": "2026-11-12T08:00:00+00:00"
+    },
+    {
+      "player_id": "8131",
+      "player": "Isaiah Likely",
+      "position": "TE",
+      "title": "Isaiah Likely NFL Stats & News - RotoWire",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8tQ3hHWXBxNDVTYVY0TUNvSmVtOFRZV3JEVVFrSDRGcE1rYzdESENlNjkyY2tTVDI4Y25pdUs3U2JxY3BxMmFzdEQ3aXNJM3AybmJLNnBHSFB4R183bGhTUHloY2EzcVdYcGVSaw?oc=5",
+      "source": "RotoWire",
+      "published": "2026-11-12T08:00:00+00:00"
+    },
+    {
+      "player_id": "4177",
+      "player": "Mack Hollins",
+      "position": "WR",
+      "title": "Mack Hollins Fantasy Football News, Rankings, Projections | New England Patriots - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9pU2FsUmthR243OVJ4VExUMFNnX002OWYzc3BzVnFCb3JhdzFZMFhpUjZxeUxCVWptN1RtRUxVNkliVXhBWmRqV1Y3STFJdVdNTFZGQVgwTGhiTmVqTXRhbzh3U3FQYXJ6MDJyVEwzb3JfUnBsMGQ4?oc=5",
+      "source": "FantasyPros",
       "published": "2026-11-12T08:00:00+00:00"
     },
     {
@@ -2964,13 +3009,13 @@
       "published": "2026-11-12T07:59:59+00:00"
     },
     {
-      "player_id": "6118",
-      "player": "Quinnen Williams",
-      "position": "DT",
-      "title": "‘Built The Structure’: Quinnen Williams Credits Nick Saban, Alabama Staff For Leadership He Brings To Dallas Cowboys - Dallas Hoops Journal",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMXd2RTAyb0ZjbzlmRUtQXy0zZENWUTJkbFg3UFJJNmFzWWt4eExMb0FoSTdLRnFiTlI0YWVtX3dlWnlXUVVWOFY1X1hmcGFtUlV3ZzVTVG5LaC1jbC02bC1CUlNUa1A2MGJrcDFoMVlKTEZ3MmF3TUlEVjNTQmt6azJPenE1ZjBLejZz?oc=5",
-      "source": "Dallas Hoops Journal",
-      "published": "2026-11-12T06:15:46+00:00"
+      "player_id": "13297",
+      "player": "Reggie Virgil",
+      "position": "WR",
+      "title": "Reggie Virgil One catch against Seattle - Fantasy Footballers Podcast",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMDdZWVQwU1lCUjZ2bGpBSExRT1hKOHV0aVJGd1E1Q2FxVmRqMWdXVTFEZUdTV3hLS2ZjWXg0b1c2NU90SHZ3MExEeEtYckdnTWh5Mk1yam5FSnY1T1dRVTR4eW40YzNiQWhzc3ZIc3BScTdFVS1LcjFuemlDdWFWeTFiMjlUN1I2OEc1Qk8yVzBhbHlu?oc=5",
+      "source": "Fantasy Footballers Podcast",
+      "published": "2026-11-12T07:13:48+00:00"
     },
     {
       "player_id": "8121",
@@ -3369,15 +3414,6 @@
       "published": "2026-11-11T23:50:36+00:00"
     },
     {
-      "player_id": "5844",
-      "player": "T.J. Hockenson",
-      "position": "TE",
-      "title": "T.J. Hockenson not on practice field Wednesday - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQYjVPNWVQU1lPbkxRTTI1ZFFxVUhIM1lENGhFeDRNMUFqeUE4eUNXSEtzb1U0MExIN3lJcnJTcHcxR2I0UlNzV001aENFS3F6bEk2ZUplc1g1RFZzaUhHbE5oNlhEa0lBMTB5ZlBWWnB4UGdwVUYtdUpuTl81ZXMtYg?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-11T23:44:04+00:00"
-    },
-    {
       "player_id": "13376",
       "player": "Caleb Downs",
       "position": "DB",
@@ -3387,6 +3423,15 @@
       "published": "2026-11-11T23:43:29+00:00"
     },
     {
+      "player_id": "11581",
+      "player": "MarShawn Lloyd",
+      "position": "RB",
+      "title": "MarShawn Lloyd (knee) absent from injury report - NBC Sports",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxORklrdjJxdjF2emQ4U1V0amhmZmEzMmRlTzVETjdIb3ByOEh6SWZRNmhidzgyNnQ1em1INlNZYndsMVJXSERvSlp3bmlvcDFKVzExYlFxR2JJTWFMSDZZaS11ejNEVkstdmFRU2FaTTI3WWN6cTR1b0x2X3RJU0Fuam9wX3VEcmYxdld0RjdBbDRGTE5EV1AwVlN6MFZmbTVFbm1MdUVnemphQ19kZEljRA?oc=5",
+      "source": "NBC Sports",
+      "published": "2026-11-11T23:40:00+00:00"
+    },
+    {
       "player_id": "12574",
       "player": "Abdul Carter",
       "position": "DL",
@@ -3394,15 +3439,6 @@
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNT3VuOFFla0J0UzRZUlA5M3BBVm8ydVNFdHZoWldkLVRmV25UTkRpU29UN0h3YjFJd3hSNlVxVWdWRUdndzZNYWRxNzJyRXlNd3Y5MUllR3FXLXFLbWY2YW1lOXVmZ3FuNGNEVmFfNDJ5OHhBNFFYRXI0RzV5TnY5MFlJLXVXUll5T2hCazZ5TEg?oc=5",
       "source": "CBS Sports",
       "published": "2026-11-11T23:30:01+00:00"
-    },
-    {
-      "player_id": "11628",
-      "player": "Marvin Harrison Jr.",
-      "position": "WR",
-      "title": "Marvin Harrison Jr. Dealing with hamstring injury - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUF9nekpCckMzZWlodjBGRXo4SjlPVURWQlRnQXQtMlM2WmFHSGk4SWVnbDlWcFQwU0pSeDJEdEJkNnh2MkMzODlOMFJoQ3RiUHhmSXFoUlJxYW1tSGZKM2dmUU1paklzMnhoeVRFQXQyMXg2Zi0zVFNSZlBsM3prbU5iX0RXRV90eDhMRlJlQkxmTFhfdVdkaW9hT2ZYS3cy?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-11T23:29:07+00:00"
     },
     {
       "player_id": "4663",
@@ -3468,6 +3504,15 @@
       "published": "2026-11-11T23:08:57+00:00"
     },
     {
+      "player_id": "13311",
+      "player": "Chris Bell",
+      "position": "WR",
+      "title": "Chris Bell Zero catches in Week 9 - Fantasy Footballers Podcast",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaEd3S2l5VVlCYVhQcVljVkR2M2c3ajk2aWtzTUFDa0VKLU9wa2JCaHpleGQzcXRfbjVKUENIQ3FBMkViZVhsLVRLN3Y5dEZtX1d3TjdRdXA0NjYtekdJN01tdWdJUEZFY1QxWlJxazctbEtma1lYSUJlNU5kS0RvT0FqQWJ6OU1pdzV6Rg?oc=5",
+      "source": "Fantasy Footballers Podcast",
+      "published": "2026-11-11T23:08:57+00:00"
+    },
+    {
       "player_id": "8119",
       "player": "Jahan Dotson",
       "position": "WR",
@@ -3475,6 +3520,15 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYkxLU19HY0wzVzZvNTlRSW5xaXFYdHhEaVY3ZC1lTUphUm9KZkRybmRBcl9UbGhBUy1BWjNxNXd4eElERHpXUXpyMGR3LWlHc3JVZXFMbENnbWtyazl5bzUxbU1GNUd6UnBCeDRKMXBUQ3ZIYUtpV3YxTDFFMjVuVldac2pyU2xRRTQyZms0TFVNYjFI?oc=5",
       "source": "Fantasy Footballers Podcast",
       "published": "2026-11-11T23:08:57+00:00"
+    },
+    {
+      "player_id": "8130",
+      "player": "Trey McBride",
+      "position": "TE",
+      "title": "Fantasy Football Week 10 Tight End Projections & Rankings: Trey McBride is Affected by Carson Beck - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMXY4N3JqYWpxSk1MLTFOeHd3N0x2a01TVUNGSTBvRlBpRS1RM0J4MmstYVA3MkhielFBZ1Jia3NDbVF5aWhndG9pWm5MODlJRU9jLXZ2ZUlyV25QMWxOYjJZRG1hQV82TXozU0oxLUp6WTViRGRvdnRkeXJ2NzZNNGFYYkxRWVVnMnB5SVdid1BnTjBFUkRvNGhxQ21LSnlaNW1LUXFqU2FWS3V2cmRVOUhVS0o?oc=5",
+      "source": "Sports Illustrated",
+      "published": "2026-11-11T23:03:48+00:00"
     },
     {
       "player_id": "8135",
@@ -3529,6 +3583,15 @@
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOU2lRTlVJSHZOeXNLTmZRMlRybllCSC1ocUZkTVlhalJJclloQWVrVGZKY2hBMVFIc2RCOFp0dldNcC1zVkZwVE15QzZzOE5OVXp0RHljZW1xLTBVaG12bDhBOXJEVmsxWUVJXy1ncElCeW5tcW5hRTJjbnJxVTFGQWZsbTVmQUE3STU2akVuMnlkNjFianVaTllLRWMtQ29mV0ZmTE9hX3M3RGdZcmhsd0RENEVRZw?oc=5",
       "source": "NBC Sports",
       "published": "2026-11-11T22:42:12+00:00"
+    },
+    {
+      "player_id": "13338",
+      "player": "Kevin Coleman Jr.",
+      "position": "WR",
+      "title": "Cody White or Kevin Coleman Jr.: Who Should I Start in Week 10? Fantasy Football - RotoBaller",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOaWdzZ0NlQnU2RTVNR2w4MjhHdTNNTnJRRzd2eFh4cWVYdEd3c2E5bnVZMXRxdWprcFBwQmRBT3c3N1dabVN2Vl9JbjdHeWtESFk2ZXg4dnpVVFBOS05fc3p3UnpYeFJqR3dIbGtBM0dWSEdlRTdabEUxRkZhdlFJUG9uVGxvSzYwdjJoVUROV0FMbWs0MVdnUHhyWUxmMHRsYjNzYS02UF9tUDJTMmtMMDRwOA?oc=5",
+      "source": "RotoBaller",
+      "published": "2026-11-11T22:23:33+00:00"
     },
     {
       "player_id": "7523",
@@ -3747,6 +3810,15 @@
       "published": "2026-11-11T21:29:49+00:00"
     },
     {
+      "player_id": "13279",
+      "player": "Carnell Tate",
+      "position": "WR",
+      "title": "Carnell Tate injury update, Titans WR status for Jacksonville Jaguars in NFL Week 10 - The Tennessean",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQbGNvbC1pQ2hfYzFBSW1ucUlvN3FGcW5idHBfY0FIZ1NwTUJicDhFTlI3UzRzYmdPNUZtSmpoMDUzeW5rTVRSamo2SEYwa2lHbDFkYlJhZkxzTWVUV1pZcVBvdmNIaEpxelpVY194ZGdwMHc0Y0FfaUV4ZDNQU3dWaVVCTGZhVjZEVTg5UzZUbzRKV0x5TXFwRGNaUXZaSEt6bGtUdk1NMl9Pd01kcDlSZkRnREYtYkJwMVJIam04U1NfTEJYQVAyeURIZkxieHRPQjZ0RW1B?oc=5",
+      "source": "The Tennessean",
+      "published": "2026-11-11T21:29:36+00:00"
+    },
+    {
       "player_id": "7562",
       "player": "Tutu Atwell",
       "position": "WR",
@@ -3783,6 +3855,15 @@
       "published": "2026-11-11T21:25:26+00:00"
     },
     {
+      "player_id": "11729",
+      "player": "Sione Vaki",
+      "position": "RB",
+      "title": "Sione Vaki (ankle) limited to begin Week 10 - NBC Sports",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPVmlHMTJIYVBQR3ZFTWYwZHJETmhraGxENW4zckRvZ2FPMk4wMEIyRGxMLWpTSTJucmdQSWZMZ25xSHk4WkZnTURXRDFNM0Y0WXllT0dVX054ZnJEMWZBd01JbVVVbDZhM1Uzcmt2V29FbXJoWWxfVnFkU3V6eHhCUWpEcWg0eU1FNUhKVGdramdOcFV5QlUxX1pBV1ByZThXOVJEdEN5bHJObUk?oc=5",
+      "source": "NBC Sports",
+      "published": "2026-11-11T21:24:00+00:00"
+    },
+    {
       "player_id": "3163",
       "player": "Jared Goff",
       "position": "QB",
@@ -3799,15 +3880,6 @@
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMDhsZzZydW1hLXJGNFpTSDBvbHFTM1dpeDZYdmQxN2E0ZERBQXU2Y2RJNm1WVGdfRXp0SXJtU1gyOWNMMU51Z1ZUR2hSaGd1MDhUbVpiYnV4Zm1Rb1J5b1pmNk1zWWZaYkNCTGdoUVU1VE9BOU5IeF9lc1JXYkg3TWM4cmdzVDFBcVR1SGFCdnc?oc=5",
       "source": "Fantasy Footballers Podcast",
       "published": "2026-11-11T21:18:16+00:00"
-    },
-    {
-      "player_id": "8135",
-      "player": "Treylon Burks",
-      "position": "WR",
-      "title": "Treylon Burks expected to play in Week 10 - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNVFpJZUszYkVidm11c0ZiY2IwcEpZdENVT2VNSWtPangxRFo1QTN2eW5zNVQ1R09CeUc3YnpObmlQdk9aSVJYbXFfU0FYdjREOWgyY3dHV0p1eGUwOGNzaGxaaTBLcWNIY0dzUk5SSGp3VDRCWnBpXzF1UFdIS0lLT1J5V0RGMjBt?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-11T21:13:09+00:00"
     },
     {
       "player_id": "13285",
@@ -3891,15 +3963,6 @@
       "published": "2026-11-11T20:20:36+00:00"
     },
     {
-      "player_id": "13296",
-      "player": "Caleb Douglas",
-      "position": "WR",
-      "title": "Week 10 Caleb Douglas Fantasy Start or Sit 2026 - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZ1Blczk4VWEzVlh5M2ZrZFduempiWlUwYVozb2FGdUNpMmdCZk1KcGZzMU9NVVlJMGpNZkZpcGp4S3R3dUxyZFNHQjV4VTRRdW9KdHhQVVFrRzUwUENJSFF2cDVQV0ZQSnNtc0dMdzhVOU5jRG52NUJnaTVxYXlkMjVR?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-11T20:19:29+00:00"
-    },
-    {
       "player_id": "6819",
       "player": "Michael Pittman Jr.",
       "position": "WR",
@@ -3963,6 +4026,15 @@
       "published": "2026-11-11T19:23:07+00:00"
     },
     {
+      "player_id": "9509",
+      "player": "Bijan Robinson",
+      "position": "RB",
+      "title": "Giants reportedly called Falcons about RB Bijan Robinson ahead of trade deadline - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSlpZX3hXWXozTWV3enFtTkxBNTZpZ1cwV3g0ZGdlRVJrQjJDMWxhX1Y5eTFycE1BSEY0NVlTVFVfSDNvVWxLSXh6eUZQR2VDbTg2RDI1NmxCbm82OUR2bG91M01KMVpaUUt6RXVYZEpuVE9ibVpBWDZQSm5CSGd4VUVub0VVYmlhaW9pNFZydHpoRDY1QWtHN3JkQl9BQjhsdnFxZU5PdFRJbTA4Um80M0NNdTNNZm53LW1tZjhUM2dqa1Uwelp3MjlsNF8?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-11T19:19:33+00:00"
+    },
+    {
       "player_id": "9500",
       "player": "Josh Downs",
       "position": "WR",
@@ -3988,15 +4060,6 @@
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNaU9ZWlZXeXZRcUFhWS1lU0RKS04tUWdOVzRLcHZhaDMyallSTzItSDM4czgxYTU4LWJyeHhfM25uWFczWkhHYTZsTzBJSmRMRmlXM0JyeEFEanFfZ2t0LVVzWGJTWkw2RThJSDR5V0dwSDZTUjVhUU9sdmVqUFpUalRyeTJIRF9KeDBGd0NBX3hUbjA3RXFuTGpsemZzNDJ2ZlZ2YS1DVkp3bXRiTDNxY1h2c2tta0VfZEkyeGVySF83M0U2TDZQM0RTXzdVUQ?oc=5",
       "source": "NBC Sports",
       "published": "2026-11-11T18:53:50+00:00"
-    },
-    {
-      "player_id": "7588",
-      "player": "Javonte Williams",
-      "position": "RB",
-      "title": "Cowboys to sign former Saints third-round RB as new backup to Javonte Williams - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcUo1VENqU1d2QjV4eVE0cDRkQmFEc09STWxJZldROEl0QTJfTFB4NmRBdzl4X081dkhZU3FBdDVQdllOZkZiMGxlRUNudVNPU0pyVkZCTnFPcEVCdkN6NTlHalN0OEZzci1RQklFVWpTWjM0bUktU19VYWFJamZOVHhKa1EtU2FF?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-11T18:50:17+00:00"
     },
     {
       "player_id": "6813",
@@ -4044,13 +4107,13 @@
       "published": "2026-11-11T18:38:54+00:00"
     },
     {
-      "player_id": "9508",
-      "player": "Tyjae Spears",
-      "position": "RB",
-      "title": "Tyjae Spears Not Practicing Wednesday - NFL News | Fantasy Football - RotoBaller",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPXzA0SXNoRFRVSXpzWDdEeFFXdXJ0dGpHOHYzdnV1SnNEOGQ4b0VMQndVTjRMb2JaZ3NMNVpjcmxNcE1VSkY2WVd2QnR3UHloYTkzTHFLUHBhVXBlTGNiVmN6NXlDbmFOejhqblVaWVNDSjhaWUhDN3A1MWJjT1RXUnd0azN5RVo1WDh0eQ?oc=5",
-      "source": "RotoBaller",
-      "published": "2026-11-11T18:38:09+00:00"
+      "player_id": "8188",
+      "player": "Tyquan Thornton",
+      "position": "WR",
+      "title": "Chiefs players paid subtle tribute to injured receiver Tyquan Thornton on Sunday - Kansas City Star",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOHVacmpWSnZENjhraE93VnBScXBNNUUtUkd2d3NCRzR5eEtycUtrd3BCclFjeHd5djA1MUE4SS1PVzItVmd3WlVPQ05qZGlGckdzS0NhLXFpYTdBblZLTWF1UGVLY3BwT1dIUU1CeE1sbWdpQ1ZkUTNtWXVMSXpzSGNSQUJ4aElTaFBLdUxCLW5GQdIBkgFBVV95cUxNUjhJY2FLTkJGSzlkRl9NampsbGlFenQ0Wll3Rm5lTHZfaWVfWUliekVmT21yclV4Q0RoSW00aG1HYWhjLVJfZmdWc1ppdDRTWjF1YmoyOEpDN3hrclpfUzI2c290U1ROM3dXVk9vdkxmbnlPSFpQT29BQVJzMEdodFVYSE9YOFc2eHhONUpPVEUwQQ?oc=5",
+      "source": "Kansas City Star",
+      "published": "2026-11-11T18:33:18+00:00"
     },
     {
       "player_id": "8131",
@@ -4062,17 +4125,26 @@
       "published": "2026-11-11T18:29:40+00:00"
     },
     {
-      "player_id": "1166",
-      "player": "Kirk Cousins",
-      "position": "QB",
-      "title": "Man vs. machine NFL power rankings: How much better can Vikings be with Kirk Cousins? - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRW5nWTl6SnpyTWJ4VUtVRkJPd2xnSjdWZFdQWVFET2RIem1rd181aDZ3aU1TcFFLVEZ1VGoySmVMbkdQRUEyQzR1N29hV3ByTFA0S2FyQ1dnb3VvdHh1Z2dRT2Nqa3hHRmEySjFlb0NCVUlpRkt3THhTQkpFY1E0ZUJ2QTdOakhoMExzUXZDeS1tUGpsOGZ5RElWZUpzWlRDTU9JR0ZWMA?oc=5",
-      "source": "The New York Times",
-      "published": "2026-11-11T18:29:30+00:00"
+      "player_id": "5850",
+      "player": "Josh Jacobs",
+      "position": "RB",
+      "title": "Report: Josh Jacobs could return in 2-3 weeks from broken finger - NBC Sports",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQenhYMllpYkM2cnUySVdvQjJzTHVRSW9DV1lIXzZyQTFtVG02b1R5YTZSRWRYM0R0bVljLU5NWk1HOTdKRzJIcUFJR2RMMmxqaFhiQ1VMVWhlMXJISFFDbGZHQXl5UTF3emlmRWxsQmw3VmMyc1QyOGZKalFRaXJWcnRUU25UVlJyU3lxVVByV2dCSTBIUTZfTFhEWlJhS2JYcDEwUVNPUk5aMzhCaXJNTVVnNnctSXZHbnFTMHhLbEZyMWc?oc=5",
+      "source": "NBC Sports",
+      "published": "2026-11-11T18:18:50+00:00"
     },
     {
       "player_id": "13298",
       "player": "KC Concepcion Jr.",
+      "position": "WR",
+      "title": "Who Should I Trade For in Week 10? Omar Cooper Jr., KC Concepcion Jr., Hunter Henry, Trey McBride, Tee Higgins, Kyren Williams - RotoBaller",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOOC0tR1ZLZS1SclZfUkJIbkFiU1YzV3BQMFZqMTBBRkJrNzU4ZkpSVHlRRGFjemNoOWtlYmIxcEJBRi1lX2czVnVaQVBVZ1k1WW1wcnlDZmpoeFRGM2NWNGxsc2JrY2RIN255dGIyTVZ5SmNZM3FuYXJFLV9WMzdCSlpucHF1UWJfbFJXOGpmbFBIbmU0WGVQSmRpT2FWcXdXdFQ1RDZYVlJIM0NVRDR2NmtRVHZnbkRHazhISVlmam5fa2x4UnBxY1JJTFVTSUpxbmRpazk2WGt5VFp3SEFUUFlpWDJFSE1M?oc=5",
+      "source": "RotoBaller",
+      "published": "2026-11-11T18:02:47+00:00"
+    },
+    {
+      "player_id": "13276",
+      "player": "Omar Cooper Jr.",
       "position": "WR",
       "title": "Who Should I Trade For in Week 10? Omar Cooper Jr., KC Concepcion Jr., Hunter Henry, Trey McBride, Tee Higgins, Kyren Williams - RotoBaller",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOOC0tR1ZLZS1SclZfUkJIbkFiU1YzV3BQMFZqMTBBRkJrNzU4ZkpSVHlRRGFjemNoOWtlYmIxcEJBRi1lX2czVnVaQVBVZ1k1WW1wcnlDZmpoeFRGM2NWNGxsc2JrY2RIN255dGIyTVZ5SmNZM3FuYXJFLV9WMzdCSlpucHF1UWJfbFJXOGpmbFBIbmU0WGVQSmRpT2FWcXdXdFQ1RDZYVlJIM0NVRDR2NmtRVHZnbkRHazhISVlmam5fa2x4UnBxY1JJTFVTSUpxbmRpazk2WGt5VFp3SEFUUFlpWDJFSE1M?oc=5",
@@ -4092,9 +4164,9 @@
       "player_id": "11786",
       "player": "Cam Little",
       "position": "K",
-      "title": "Jaguars' Cam Little wins AFC Special Teams Player of the Week - FL Times-Union",
+      "title": "Jaguars' Cam Little wins AFC Special Teams Player of the Week - The Florida Times-Union",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNbURUWmhVcnI5eGEwY2JKV3NITEUyRDh0NHlpUm40aVNRWjhMbzVNem5sX0FLd3N4dDFOYk9GOTFDaThBV3lkaWNJVGdKd20zaVNNMHBMbWFqSE1hRlFDZDlMN0lPWlNqdjFGYnFmdVQwa3ZPc2EzZmJidEpYZERxYTE0cHFOaGJESmdZMlNrX2oyRmlmVUJrUGZ4eUNwQU9KSHktWUQ2anFzTmJ0aEhXd3RUNE80ZmI4OGlNX1RKWTUzVERKSGRMWWQtUzk3S3MzN1puekFR?oc=5",
-      "source": "FL Times-Union",
+      "source": "The Florida Times-Union",
       "published": "2026-11-11T17:58:27+00:00"
     },
     {
@@ -4116,15 +4188,6 @@
       "published": "2026-11-11T17:45:40+00:00"
     },
     {
-      "player_id": "11579",
-      "player": "Audric Estime",
-      "position": "RB",
-      "title": "Listen: Audric Estime had 'unfinished business' when he rejoined Saints - Audacy",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1aTHV2SllXWFJ3dDN2ZWtEZXp3bWlZdVJaNU1kNFBDRW5FR2o4ZWxsOFVXSklRLWRNcE43QkZxbmlLN2VlVTNyMXNMcW9mbnRzbDA4bXIyWkdoZHdoekl5NE9zYXUxenJJUUk2SU8wRlowYnNOTEg1N3RvZWU?oc=5",
-      "source": "Audacy",
-      "published": "2026-11-11T17:43:00+00:00"
-    },
-    {
       "player_id": "7525",
       "player": "DeVonta Smith",
       "position": "WR",
@@ -4141,15 +4204,6 @@
       "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNN1dyREtNNDkyRFFBRjljdU9pVE11OUtzLU93c1lpaDFVU3N1SmNBd2N0ckdzRW9KWjFKdnIwZEZfdW12ZzNjNS1iVXFSVFNkUzZxaUVDV1dxVWxzMkw3N044NS1aZnhpLXY4R1Q1WDBPaE5XZDgza0hVdjYxZVg2SExiamV3WkhlNllLRURCOV9QR19jbGFBSlU4eW9aSUhLN3FBYUtCalNTVURPQnFDbTVReXU5TmZjeFI4LUNzVGJmUGhhTUFwZGwyVmZaYy1KZmRfOTltQ1hMemJqeWJTWnRJcGlLdHJRYjhXYVFxQ2R6eEZnUDUycGNGeS05OGVKc3BKaTlpTlR1OEE?oc=5",
       "source": "firstcoastnews.com",
       "published": "2026-11-11T17:40:00+00:00"
-    },
-    {
-      "player_id": "8180",
-      "player": "Jalen Nailor",
-      "position": "WR",
-      "title": "Deion Burks or Jalen Nailor: Who Should I Start in Week 10? Fantasy Football - RotoBaller",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVEFEUS0zTVdJaUpjTk1vTGp4QVk3MWx4MHBtZ0FmekFBZGV5TnBYYUZ4WkhHS3dkMGJVcV82MTliMFhDYWhpay1XVmdKSnhPUHAtb1g5cnlyTUstZXNaeWFWRFJBXzlQY0lvcC1fZWdVN1lXcVdnOWNQV0RWVVNSYnNiVzFrb2NUbU1FQ3BRaWx1bnpKQ1Q0UTJCQ3BZNGlxS1lhR1kyN1JyWEZES0pRcg?oc=5",
-      "source": "RotoBaller",
-      "published": "2026-11-11T17:34:21+00:00"
     },
     {
       "player_id": "11786",
@@ -4257,15 +4311,6 @@
       "title": "Rome Odunze Grabs First TD of 2026 in Bears' 27-24 Win Over Bucs - Huskies Wire",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOcFNNUEdrZHlTNi1Tb2NGLS01NnlMTzVEZEc0Q2JvNzlpSGp3b2J0bUk5SEZaUW50bUJiZktnekVQRWVUVUJhd3NFV3I5Ni1OVXR4cUNUWllhTVNpdTlsWWkyajdRdWUtZWxSakNXMjJXd19NUjFsRWFUM0U2OU81dWdJQ0VlT2FtdWFMdS1DandkZllhSnBQMEJDUUUyN1RtUVFnYndUWUlKclRUbGxaVXl2RUZlc0hXYjV1WEUzbk9NVlFxTnE3QjNXWGk0SC1pUi1OX2o1dUFMVXAwNzZWWk5heTN5NGRjdjA5Ui02VUo?oc=5",
       "source": "Huskies Wire",
-      "published": "2026-11-11T17:00:00+00:00"
-    },
-    {
-      "player_id": "8188",
-      "player": "Tyquan Thornton",
-      "position": "WR",
-      "title": "Chiefs players paid subtle tribute to injured receiver Tyquan Thornton on Sunday - Kansas City Star",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOHVacmpWSnZENjhraE93VnBScXBNNUUtUkd2d3NCRzR5eEtycUtrd3BCclFjeHd5djA1MUE4SS1PVzItVmd3WlVPQ05qZGlGckdzS0NhLXFpYTdBblZLTWF1UGVLY3BwT1dIUU1CeE1sbWdpQ1ZkUTNtWXVMSXpzSGNSQUJ4aElTaFBLdUxCLW5GQdIBkgFBVV95cUxNUjhJY2FLTkJGSzlkRl9NampsbGlFenQ0Wll3Rm5lTHZfaWVfWUliekVmT21yclV4Q0RoSW00aG1HYWhjLVJfZmdWc1ppdDRTWjF1YmoyOEpDN3hrclpfUzI2c290U1ROM3dXVk9vdkxmbnlPSFpQT29BQVJzMEdodFVYSE9YOFc2eHhONUpPVEUwQQ?oc=5",
-      "source": "Kansas City Star",
       "published": "2026-11-11T17:00:00+00:00"
     },
     {
@@ -4407,19 +4452,10 @@
       "player_id": "9221",
       "player": "Jahmyr Gibbs",
       "position": "RB",
-      "title": "Jahmyr Gibbs has made Detroit Lions history with 11 touchdowns in four seasons - spectrumlocalnews.com",
+      "title": "Jahmyr Gibbs has made Detroit Lions history with 11 touchdowns in four seasons - Spectrum News",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNYWhYSjBsZWU5VDlSN3gxV05uUnVrWUsxOFN4UVlwQ0ctd0U1ci15UW1Eb0lKUFJWVUhSUlJXTmhSOFVzVlJwbTg0dVJYNWNHUE8zZUttaWtBY0wwQnFaMEwyZ0x6eVJiSFJjS2F6SEFKZnZGZjR1Q0syc25Hem9jRkF0bld3cF93QTB4Rg?oc=5",
-      "source": "spectrumlocalnews.com",
+      "source": "Spectrum News",
       "published": "2026-11-11T15:21:00+00:00"
-    },
-    {
-      "player_id": "7021",
-      "player": "Rico Dowdle",
-      "position": "RB",
-      "title": "Rico Dowdle: Must-Add Waiver Wire Pickup for Week 10 Fantasy Football? - NFL News - RotoBaller",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWEZKZ1lxV1hMUlVhUUcycFdleVVmOWdLVDRUdXY0VWE2ZmpwUnZTUC1zUjU3VktDaDgtZjBpSkJ1cGJKUFZqR1p5b3F3aUdFOGQta0hmWHJrLUh4TVV0U2JHNDcxRVdqRENFUENFMXEwdGtNZUZTWDB6bnByczJVYXpEZmtPQmx5WU5tT1pHVTVsME5ZbjItV3dNZzhhUjF3Sms1LUkxUXE?oc=5",
-      "source": "RotoBaller",
-      "published": "2026-11-11T15:18:15+00:00"
     },
     {
       "player_id": "8228",
@@ -4438,15 +4474,6 @@
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxORC03LUs5X0J0MV93eFdEY3lDQ2NESDNSMExBRi1rQjJ1SzBrVkFudDVwLUtENi1UMjFjVFhGS2hjM2ZUZi1nVzBjWkRyOFlacWtfYnA3MU5YaXZ0UHY0ME1ValJtcGk5U0VWNFdYOU56ekQ1NDN2bnFMandmN3l4VUlmNXN2U29xcFdHanNMRDV3X0RFTnZScVVUZ3dnV0FuUDUxSlAzV2NVb3JzcUtxbGRHT0xVWmxsNWpiTkF6NXpkTGFlcnkw?oc=5",
       "source": "NBC Sports",
       "published": "2026-11-11T15:10:42+00:00"
-    },
-    {
-      "player_id": "6768",
-      "player": "Tua Tagovailoa",
-      "position": "QB",
-      "title": "5 possible post-2026 NFL trade deadline veteran cuts, including Tua Tagovailoa - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE12WGJsYzhuOEZpeFdHdDhsQ2d2MlVzVk5GQWd6VkU1OHpCOTVsOUwtMENYWmZpYXZrbVVPOXg4anV3UXpCbzhQMzdFTlBHMkFWTWxRTmcwWGMtbGx4cXZQblFzSDNJaVBUN2ZhSGxkdW1nenlkcDByTS0tb0lmdw?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-11T15:08:30+00:00"
     },
     {
       "player_id": "11583",
@@ -4485,6 +4512,15 @@
       "published": "2026-11-11T14:49:00+00:00"
     },
     {
+      "player_id": "2133",
+      "player": "Davante Adams",
+      "position": "WR",
+      "title": "New NFL Trade Rumors on Rams' Ladd McConkey Pursuit Amid Puka Nacua, Davante Adams Injuries - Bleacher Report",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWGd5SFprY1pSdXlPSUlvbHBEb1F2WjZlSnNWVW5WblFxcUlUcFk3a3VucVEtTHFVSFloNnlvUmpPZHJ5R2xURlg2OXJSMVZ3ZTIzSnEyX21WaUF4WWtzMFdGRk9BNTBZZnFBWVpmY0J4R0ppd0R6bXBPN3RXcTR0a1hWT1h2a3drZnRocUVwODFpZ3RaaVV3dXJTdGxwem5ueEpXSlFlR2dreGRuTUo4TEpiM2ZMRjdvdWRlNkhtTDNoV3Nnek9CX3paTQ?oc=5",
+      "source": "Bleacher Report",
+      "published": "2026-11-11T14:47:01+00:00"
+    },
+    {
       "player_id": "11635",
       "player": "Ladd McConkey",
       "position": "WR",
@@ -4492,6 +4528,15 @@
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWGd5SFprY1pSdXlPSUlvbHBEb1F2WjZlSnNWVW5WblFxcUlUcFk3a3VucVEtTHFVSFloNnlvUmpPZHJ5R2xURlg2OXJSMVZ3ZTIzSnEyX21WaUF4WWtzMFdGRk9BNTBZZnFBWVpmY0J4R0ppd0R6bXBPN3RXcTR0a1hWT1h2a3drZnRocUVwODFpZ3RaaVV3dXJTdGxwem5ueEpXSlFlR2dreGRuTUo4TEpiM2ZMRjdvdWRlNkhtTDNoV3Nnek9CX3paTQ?oc=5",
       "source": "Bleacher Report",
       "published": "2026-11-11T14:47:01+00:00"
+    },
+    {
+      "player_id": "12494",
+      "player": "Kyle McCord",
+      "position": "QB",
+      "title": "What Kyle McCord’s Preseason Film Showed Ahead of His First Dolphins Start - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQWmp5NnkxWVIydnRMbHFPZkhCLVpWR0NlX2hlUFNleUdCZnNMTkpNMlRBQ25QU05nbWI1MFpzOW0ybHFfUHlqcXF2R1AzbEJXaUt2MlF4S2tIMFV3ajRQT05JQl9iV0hsZDY4RW5NdmpEdUtuVTZGclhHM2hYczlQemVxSHExekk4QXh3SVZCc2JmS2NkVC0zX29Xc2tCczZpVHhzU3h2YjZGbHVQMjZTYTNZTUZQQVVVRU5RVzFiQ2pKUQ?oc=5",
+      "source": "Sports Illustrated",
+      "published": "2026-11-11T14:45:31+00:00"
     },
     {
       "player_id": "8150",
@@ -4584,6 +4629,15 @@
       "published": "2026-11-11T12:22:00+00:00"
     },
     {
+      "player_id": "11560",
+      "player": "Caleb Williams",
+      "position": "QB",
+      "title": "Bears’ Caleb Williams gets needed wake-up call: NFL QB stock report, Week 10 - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQWdzOUxQRTQzTE55WE9LcjZIQVZ5T29fT1V1MklNcXcyeHVPQXRLNGh1Q1Eyajc4Zk5Ga3VCYWVqdEE2XzVWVG1pSzFrQ1hRMVdlYmRCby1jM0JyNm4zdGVVMGpDY2xZRmFidFNZbXhWZDFfaTEtMjR6d2pvRml6QktfcDFKQS1mT29KUEJxYUp5QkFvbWhTUmtkR2lqMWM?oc=5",
+      "source": "The New York Times",
+      "published": "2026-11-11T12:03:48+00:00"
+    },
+    {
       "player_id": "13363",
       "player": "David Bailey",
       "position": "LB",
@@ -4618,6 +4672,24 @@
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNR3VnU1l6aU1TcXhGalEwazNBRlZQQ1JmTi0zZGNETXhGWlBBdUVacmdYR1ZFLVdCenEzX3ZPTDliWW9ORGl4b0xnMGNyaXZRN1BNU0JyYVhzRmVjMG82dFUtc05QNEJoLWpncHZaMjdtYlA1YlE3Wjg0NEVwRzZwZVY3cw?oc=5",
       "source": "Yahoo Sports",
       "published": "2026-11-11T11:44:15+00:00"
+    },
+    {
+      "player_id": "421",
+      "player": "Matthew Stafford",
+      "position": "QB",
+      "title": "Reigning NFL MVP Matthew Stafford Makes BIG Statement About Joe Burrow - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOb0JIcS14bmxrVEdZOFBhcHRMblZITG1iN19zbmRNSHpBT0JtS0o3Sk1sMFllR1hWbmlQQVJqX3hpeHBvN01DckIzaDZjTUN0RzRyOGxRUEFoeWNMSTc1emJ3LUJlQWZNbEtyN1I4MGFjeHBTbXJrc0lSOGRWU3J5ME5GV3c5WkR5a3RZTmRwSXYtbWtnZVE1Y3dmWnJwazBCbGZDSkRMWEFydVlHY1FtRkN3dHhJTlFub2pF?oc=5",
+      "source": "Sports Illustrated",
+      "published": "2026-11-11T11:24:36+00:00"
+    },
+    {
+      "player_id": "3634",
+      "player": "Kalif Raymond",
+      "position": "WR",
+      "title": "Kalif Raymond - Chicago Bears Wide Receiver - ESPN",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE53YV9teVpNUlVZVk1NbUVhdk5JNVN2YU95cWVxUFJ2N245SzAtbVF5dy1lMjdrNVdpWFdVT3dlX2ZMemYxZnhsM1ZnbFRlTFF1SG9wWDNQbUV1STRyakk2TERTWG01U2FJREE?oc=5",
+      "source": "ESPN",
+      "published": "2026-11-11T11:22:31+00:00"
     },
     {
       "player_id": "12522",
@@ -4719,6 +4791,15 @@
       "published": "2026-11-11T08:00:00+00:00"
     },
     {
+      "player_id": "6813",
+      "player": "Jonathan Taylor",
+      "position": "RB",
+      "title": "What I’m hearing about Derrick Henry, Jonathan Taylor, Garrett Wilson rumors at the NFL trade deadline - The Athletic - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZnNyVEdNcUJIVk1DVEVna3VEUkhVR0czVjh6WHpXVVkxbzc3YWRFRkQ5V2V4ZnFVMXNkbFk5aks4UFFYZ3d2THdYclBPbFFSYjVNRTdxQmt5MzRKRk50SVI2MVpBRFpsdkJQRVVIUkhSTjdVTXExNlhzLTNTX21jVG9vdjZqbHVlbWRUOXV4a3NYY0ZXOElGQlR4UkQ?oc=5",
+      "source": "The New York Times",
+      "published": "2026-11-11T08:00:00+00:00"
+    },
+    {
       "player_id": "12457",
       "player": "Jaydon Blue",
       "position": "RB",
@@ -4735,24 +4816,6 @@
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBjNnJaVV9QUzlmOWdPbnlZdUNtcV9DY1FSX1llV2lZU05XNjlHdW5IYTlOS2xsZVlUYTFGSzluaEhOS2ptV2JpYUdveXhZRGRhZ2d3aEQ2eDFNR0REOTA2Vk1fZVFxbExxSDNSYTNSYlBPWVJibkFBaVlR?oc=5",
       "source": "FantasyPros",
       "published": "2026-11-11T07:06:23+00:00"
-    },
-    {
-      "player_id": "3634",
-      "player": "Kalif Raymond",
-      "position": "WR",
-      "title": "Kalif Raymond Four catches in SNF win - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPUmtGT1Rpcm9Ec0RWNlJtUzBITEp4VTlOenBTUnRDSFNmZTJjQ3hob2hjeXEwRDJoS3JXZ3hoRnkyNDB3QWNBQWpFRjFBTWdZYVhpZ1ZDd0VlSjZqVnczQXdkdDFSZjlvSHlTOVBkMjQ1bFBXYTVQS0F1eVh2czN3MjRSQkRhNmxtWkg5d29sNVFDQQ?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-11T06:54:51+00:00"
-    },
-    {
-      "player_id": "13297",
-      "player": "Reggie Virgil",
-      "position": "WR",
-      "title": "Reggie Virgil One catch against Seattle - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMDdZWVQwU1lCUjZ2bGpBSExRT1hKOHV0aVJGd1E1Q2FxVmRqMWdXVTFEZUdTV3hLS2ZjWXg0b1c2NU90SHZ3MExEeEtYckdnTWh5Mk1yam5FSnY1T1dRVTR4eW40YzNiQWhzc3ZIc3BScTdFVS1LcjFuemlDdWFWeTFiMjlUN1I2OEc1Qk8yVzBhbHlu?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-11T06:54:51+00:00"
     },
     {
       "player_id": "4199",
@@ -4791,6 +4854,24 @@
       "published": "2026-11-11T06:54:51+00:00"
     },
     {
+      "player_id": "12494",
+      "player": "Kyle McCord",
+      "position": "QB",
+      "title": "Kyle McCord - ESPN",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5EVnU5d2dEd2Zxanh2NEo4TW02TjNOQUNqWUNSYXJodHp1Z2VkZk5ZX2N0STA1RzBaZDNfNWxGOExJc3VCZUZXYk5NWjFxVkpSMmctSGlNejUwbS1POXpUdWc4c1M4WFU?oc=5",
+      "source": "ESPN",
+      "published": "2026-11-11T06:13:34+00:00"
+    },
+    {
+      "player_id": "13347",
+      "player": "Demond Claiborne",
+      "position": "RB",
+      "title": "Demond Claiborne placed on IR - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQURMQ2gzRUZRNDNUeXEwRjhvclJHTF9BZ0VzWXROM3ZqQlpGaWRMV1RvdFhOOG1lSWRYeVdGY2Q3aFNsbVo2TDBjS2d2R1FGS3kteFlKdDVNcUxQRjJ0Z2NDUFFsOS1TMmZ4T2NxeklaVk5taGxkbnRCRHkzb3E0UVdMSdIBiAFBVV95cUxORWVBUER2V05SdHVpUkMwUlRoYnRQX3VXSnRmRDc0a3JxZ1c3T09ZbmFJNEFFU0U3TjEtN0Y5U19penF0M3hnVXNsS1Y4bTdCU0g3X0xvT2N4UlJNSUpLc3lhQWxwV3BjYWdzOHkwa2xwa2VlTXBEZW05MmJJNXJBNnRWZERUbVky?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-11T05:55:14+00:00"
+    },
+    {
       "player_id": "7567",
       "player": "Kenny Gainwell",
       "position": "RB",
@@ -4798,6 +4879,15 @@
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcWVYOXFSZXhoS0dxMEYzRWY4dENmMEs1SjlONFJ4MWY4WkM2Z3d0dGcyTzVWWTEzclNORVNORTVzMHZCSFl3Vmg4UGhCZ0Vmam5OdDNiZTc1QnEzdEp5VWtMVmdWMU04cVF3R3NRVEk1TDM5ZWxDU2FTU0tpVG56NXhIUF9HRDI2NUE?oc=5",
       "source": "FantasyPros",
       "published": "2026-11-11T05:46:17+00:00"
+    },
+    {
+      "player_id": "7562",
+      "player": "Tutu Atwell",
+      "position": "WR",
+      "title": "Tutu Atwell - ESPN",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCN2c0WVF4anNyUkdoVFBzb1FhQ1YtVXVGZWVIZmRoRElHbl82cFlBMS12NU1FSlZ5dEk0bllvSW1VMkZWSmk1RFNBREtTS1NKanI4Qld6MVRCaWtqOFhLLTMwU3pRTkk?oc=5",
+      "source": "ESPN",
+      "published": "2026-11-11T05:45:23+00:00"
     },
     {
       "player_id": "12484",
@@ -4818,15 +4908,6 @@
       "published": "2026-11-11T04:57:26+00:00"
     },
     {
-      "player_id": "7562",
-      "player": "Tutu Atwell",
-      "position": "WR",
-      "title": "Tutu Atwell - ESPN",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCN2c0WVF4anNyUkdoVFBzb1FhQ1YtVXVGZWVIZmRoRElHbl82cFlBMS12NU1FSlZ5dEk0bllvSW1VMkZWSmk1RFNBREtTS1NKanI4Qld6MVRCaWtqOFhLLTMwU3pRTkk?oc=5",
-      "source": "ESPN",
-      "published": "2026-11-11T04:38:42+00:00"
-    },
-    {
       "player_id": "11627",
       "player": "Troy Franklin",
       "position": "WR",
@@ -4834,15 +4915,6 @@
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1UOFpVV3pFanVQRndod1hPc2czc3ZENllDdENHYkwxdzF0N1I5cDVYR1RsQk1LZ2VPLXdrMWhjWnVPNExhcXg2a1lnSFJyVl9pbkVod015cVl2cHZNc1JKejB0eVQwd1hvb1E?oc=5",
       "source": "ESPN",
       "published": "2026-11-11T04:29:41+00:00"
-    },
-    {
-      "player_id": "12494",
-      "player": "Kyle McCord",
-      "position": "QB",
-      "title": "Kyle McCord - ESPN",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5EVnU5d2dEd2Zxanh2NEo4TW02TjNOQUNqWUNSYXJodHp1Z2VkZk5ZX2N0STA1RzBaZDNfNWxGOExJc3VCZUZXYk5NWjFxVkpSMmctSGlNejUwbS1POXpUdWc4c1M4WFU?oc=5",
-      "source": "ESPN",
-      "published": "2026-11-11T04:24:58+00:00"
     },
     {
       "player_id": "7588",
@@ -4858,7 +4930,7 @@
       "player": "DeVonta Smith",
       "position": "WR",
       "title": "Devonta Smith (CB): Bio, News, Stats & more - Panthers.com",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdGNhdzRCSFA0b09kN2wzSFg3LXJEY2FSY05fbURhMUZVQnhQWWhvaVVCYjlvY2MzRU83LVRNWVE5emJ3XzNGQ3pUQlJySy1OYkNjNU1maTZwMThZc2wwV09GcVZyYkUyN0lqRngzblJqcTBxcWtJd0tLdFZSMVJHMnJRV2c0YjU4bmc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPa0RzZktXQTRiVnNEOFQ2WU9FSW40Q3JrN0ZVVktJLTNPLS1IcVdzeXFvNXFURF9Hal9lZzEzeTJLUVRUY1N1b0FDYzRzemlZelpZU0pGVGVOaVhNS1g0dUpGMEVka2hJNHZtWFpGMExqeF9ELWlBTmN0aENXOWlaVk1hdU9LeXR5?oc=5",
       "source": "Panthers.com",
       "published": "2026-11-11T04:06:59+00:00"
     },
@@ -4917,15 +4989,6 @@
       "published": "2026-11-11T03:04:45+00:00"
     },
     {
-      "player_id": "12531",
-      "player": "Trevor Etienne",
-      "position": "RB",
-      "title": "Trevor Etienne News: Logs two carries in loss - RotoWire",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPd0JXY3ZiNDNXbGUzV0VSX281dVRzSXZnc2lQNXlxaGo0Ri05aVAxZzRwVVRGN3BHUVQ1eXR5cFZUdXdzSEtEY3FqSWJ6UGNINDZZbnhxcUJrQlVITHpkT2Zva2hUbGdTUVUwbDl2YlFmdDItUXN6QThtSmlwMHMyQWdaSC1xMnk1blVVODA0Q0w4cUpyRFZNTU5idw?oc=5",
-      "source": "RotoWire",
-      "published": "2026-11-11T02:45:43+00:00"
-    },
-    {
       "player_id": "8188",
       "player": "Tyquan Thornton",
       "position": "WR",
@@ -4962,24 +5025,6 @@
       "published": "2026-11-11T02:34:05+00:00"
     },
     {
-      "player_id": "5995",
-      "player": "Justice Hill",
-      "position": "RB",
-      "title": "NFL Update: Justice Hill Breaks Loose for Big Score, Chuba Hubbard Keeps Trucking - Pistols Firing",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVGN0dGM5dUtrbEYzU2ZUSy1LZVdGelNQaE1ybzd0a2RLLTNYMDlBTEJUV1FLVmJOUWREUVh5Q19MeWlYYUNPckxJT3lBTWJFTUNDdzZkT0pxOE9DbERWLTFPY25vTlNnYXpVQktwWTBZSk9WRENnX2VwSk93NEswWnJJUVFxZDk3cGRfeV9DOTV5TDk2R0ozd3VENEFpYmlUQlRlQWpRTEpfZUJ3Y19n?oc=5",
-      "source": "Pistols Firing",
-      "published": "2026-11-11T02:29:20+00:00"
-    },
-    {
-      "player_id": "7594",
-      "player": "Chuba Hubbard",
-      "position": "RB",
-      "title": "NFL Update: Justice Hill Breaks Loose for Big Score, Chuba Hubbard Keeps Trucking - Pistols Firing",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVGN0dGM5dUtrbEYzU2ZUSy1LZVdGelNQaE1ybzd0a2RLLTNYMDlBTEJUV1FLVmJOUWREUVh5Q19MeWlYYUNPckxJT3lBTWJFTUNDdzZkT0pxOE9DbERWLTFPY25vTlNnYXpVQktwWTBZSk9WRENnX2VwSk93NEswWnJJUVFxZDk3cGRfeV9DOTV5TDk2R0ozd3VENEFpYmlUQlRlQWpRTEpfZUJ3Y19n?oc=5",
-      "source": "Pistols Firing",
-      "published": "2026-11-11T02:29:20+00:00"
-    },
-    {
       "player_id": "11435",
       "player": "Emanuel Wilson",
       "position": "RB",
@@ -4995,16 +5040,7 @@
       "title": "Bears' Sam Roush: Catches two passes Sunday - CBS Sports",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTkVUU0VpODdHOENnQXotVEQ2S25Gd05WV3NnWVJpaTVXTmR4WFMtTUI0Vmhka3NqdXdSMGNsTXc4Mk1nNm02b3NYZlEtc1U3aFRNS3JvSHdLVDFvS1JuZWdJdUtYS0xLUkVqWkZXYjFWNnQ1ZFRjVDVwbEpXU3FBWEJrTm9FOXBXS01MMF94ZmpVbkxp?oc=5",
       "source": "CBS Sports",
-      "published": "2026-11-11T02:28:10+00:00"
-    },
-    {
-      "player_id": "12504",
-      "player": "Kaleb Johnson",
-      "position": "RB",
-      "title": "Kaleb Johnson - ESPN",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1PQjZYaWYzcjVoQ3o2ckxDZnVnWkpMOF93OWhKRzhWYlZuT1BiZW9QNE5oTFhqODB5UnlIeWZPWThSYmJxTzU3RmR3aFpHWjNoTEplbnRydmpxWURnNkR3R0ZheExTbG15NUE?oc=5",
-      "source": "ESPN",
-      "published": "2026-11-11T02:16:48+00:00"
+      "published": "2026-11-11T02:28:00+00:00"
     },
     {
       "player_id": "13533",
@@ -5014,6 +5050,15 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFIyVWVfU0hjUHNhSmpfc2RVYXRlNWFLRFhUcDJHT3BmN3dKcVYyZkJIU1VGNlN0ejVNNTR5djNaRHNMVDFBVk1uSkRGRGt4aW9IWUlfTXRiTlFLd3E0N3pab25tUUE3QmtPb3VhbGRlMEdZM25xdnZnQXk3WWFROWIzM1E2enRFTXg3OW1jQ2VlNUV2M1E4N2hpNWxKTWt4d0t0cjlLeV85QQ?oc=5",
       "source": "CBS Sports",
       "published": "2026-11-11T02:09:35+00:00"
+    },
+    {
+      "player_id": "11729",
+      "player": "Sione Vaki",
+      "position": "RB",
+      "title": "Lions' Sione Vaki: Totals 21 yards vs. Miami - CBS Sports",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQeWJpdkFlay1rSWRXbG9TTGthSG1JcUdNZThXMnF6bW5tLXhZVElRUHhkdUQ0NnNCWWxOcVVsZVBzWEhTYVloMzZ1a2p4dnNXVUI0dnpDQi0wOWJRMXdVRkNCNGxIczI5TmVJdXlERVN1THNJS3JZZHBSMXVjWmpVQ2p1NjZkdG9iR0NtOXZuVmNjelBC?oc=5",
+      "source": "CBS Sports",
+      "published": "2026-11-11T02:03:59+00:00"
     },
     {
       "player_id": "8408",
@@ -5052,6 +5097,15 @@
       "published": "2026-11-11T01:27:54+00:00"
     },
     {
+      "player_id": "6125",
+      "player": "Jeffery Simmons",
+      "position": "DT",
+      "title": "NFL trade deadline: Ranking all 18 in-season deals as Kirk Cousins, Jeffery Simmons reshape Super Bowl race - CBS Sports",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOaVh3d0oyZTRJMEt3RGg4NzVxdWdQNUdzU19ocmF5aW9vdjlVbHpvRTF2LU5kM3cxTU1rY1o4VFhWNTJHcnU5T2wzUTdUdm1seFVFSUZJY2NFSTkwN3dPa1VJb05xWlhiUTdaU0NJdjc0QlhZbzNVV2dvdmE4QmJnbmRKbTZmNXkxaUJIZjFCaEhmQzVMaExFa21EZWJ2WGJla2ZRdGZpRQ?oc=5",
+      "source": "CBS Sports",
+      "published": "2026-11-11T01:27:00+00:00"
+    },
+    {
       "player_id": "13421",
       "player": "Eli Raridon",
       "position": "TE",
@@ -5070,15 +5124,6 @@
       "published": "2026-11-11T01:16:00+00:00"
     },
     {
-      "player_id": "3271",
-      "player": "Tyler Higbee",
-      "position": "TE",
-      "title": "Tyler Higbee Just one catch in Week 9 victory - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZnp4dFRVVDNjYVgtaWtoX0hzVWl1akQ4T2t6V3pQcHQxaFFuVUpjV0dUZEFXOExtVjhGTjI0V1ZSSnQ3RDY1UlJVSV9jYmFvU1Y1ekNPWl9HSnpIaXhyTEFkNnowZVhNZ3NCeGVpWm1BRThzX0hadmIwY2RkSXlCVG9kY1cyelZqWVFaMXZWaUZMdWFyNjhjYjBmX0k?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-11T01:14:59+00:00"
-    },
-    {
       "player_id": "7562",
       "player": "Tutu Atwell",
       "position": "WR",
@@ -5086,15 +5131,6 @@
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNV2ZJbXpXanZKdUNFVzdxbXpUUkxmOHQzSVk3SmFnOExyYkZiRFlpNElBN3htdlhhSFpMdk80UFoyYVpTN0Q5YmttTXdMdDZjVUhIdXZRV3NtcVN5MkpydVhVUmwwTkVjWVg5T1lhSkVzRW5lc3J6Vi04VFhhcmotVFk2WVFsZzlYTm9mdF83elBzNFFSOVEzWmVmaw?oc=5",
       "source": "Fantasy Footballers Podcast",
       "published": "2026-11-11T01:14:55+00:00"
-    },
-    {
-      "player_id": "13150",
-      "player": "Darius Cooper",
-      "position": "WR",
-      "title": "Darius Cooper News: Does little with eight targets in loss - RotoWire",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdy03czRtc3JRNnBQQThXemdlZ19NN09RVFlSOFc2aXh5bGwyUTBYUi1tZnZkRDZSdXdidWpqNHpLandfa1hSVmFaMFRzcHo5OG1MenlMR1ByOTUxOGt6NG5jSmdQanR6ZzNmTnJLQV9Fam9JREhPM3hDSG9vY1h3WEZiR1VmNHNIZFVacUxOWVpXMlZhQnUwQ1hIYUREWlFHa2R6YU1iRlNtZ2l2?oc=5",
-      "source": "RotoWire",
-      "published": "2026-11-11T01:14:51+00:00"
     },
     {
       "player_id": "13297",
@@ -5166,16 +5202,25 @@
       "title": "Raiders rookie QB Fernando Mendoza will make first career start vs. Seahawks after Kirk Cousins trade: 'He's prepared' - Yahoo Sports",
       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNenh0TkZ6RzFNRXp4Mnpaa05FOHpHcF9YVnFhYXRTb2pBaVdoX0tLU25fSmVKMmhrTUpyWTVBTUZHT1M4RXVtQWgyLWxfWXdXMVg1OG1uU0dIX0tnZVN6UjVEdlZoSjhuYjY2SkRYRUxGdXY1QWhXbUx3MEo1OHVyT1RYTWN2dU1VR2pYMHdOdFk3VmJ2elo3YkFyYWxtWFNQUkNTRHlTV1ZlR005b0JmbFJZMDUyTm5wazg3Q0dJamJPM3dkTllGLXFOV3gzSEhrUHdBSGQyaWVqbFNLM1lHNEppQkRvY2ZiSjBSMFlGM1ZUZl92QWJERQ?oc=5",
       "source": "Yahoo Sports",
-      "published": "2026-11-11T00:33:00+00:00"
+      "published": "2026-11-11T00:33:58+00:00"
+    },
+    {
+      "player_id": "11632",
+      "player": "Malik Nabers",
+      "position": "WR",
+      "title": "Giants WR Malik Nabers calls Fox criticism ‘a lie’ - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQS1E4Nl84bThoOWYtVWdsdEMtZ1hCR2lfX3QtUXJsRlY5VHE3eXljN1dkUEY0b2QzTVVqVXRYWkhqZFhoM1FBQ1NNYUJmMG1mYVNwVjduWndXLU1zY2FEX1R5RTFrNHFaeGZXY2R3S1JtYjhPQjd3NXo0N1NRRldsWTVONzgxckNyM2hPcUcwcWRHbE9uZ213Ykdn?oc=5",
+      "source": "Reuters",
+      "published": "2026-11-11T00:27:00+00:00"
     },
     {
       "player_id": "12493",
       "player": "Oronde Gadsden",
       "position": "TE",
-      "title": "Oronde Gadsden News: Only two catches in Week 9 loss - RotoWire",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQc0ltNGtCUmd2RmxCaWVNa2NFTUwzNGVjS1hMcTZ1Z0t6UmRDSzlBVVpDdjNlNlJHTmVKUEVuZm1ycDNVaUI2VjRKRnBXa2ZUX01vNndkempDaEVVZWgtM05DaGlFTmpnek1XVDBTVDB2WlVlQWNtSUtOWTBCZDVyLXRBeHVwTnJjc0ZUNV9HYThlUGFUX3hoMDlYSElGcmdOSC04Xw?oc=5",
-      "source": "RotoWire",
-      "published": "2026-11-11T00:14:46+00:00"
+      "title": "Oronde Gadsden Only two catches in Week 9 loss - Fantasy Footballers Podcast",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQajNCbFVINUlaYU9kNWJIWVEwUlk0R1V4Y2NzSWJEQWNQMVFxZVFvOUlvS2pTMmlDa0dTdVR0VGlRdXFBd2p0OFUzenZkQm9sU0s3UlBCS202b1hORG9kbkQ5SVhDYjdFWEpiUDhPeTdaUDBxU3RXM1RqTHhMcFQtN1RFaFR3VExSSDZub1VpWmp5S2kyOHZ1cnh3TjdZTDBWN3c?oc=5",
+      "source": "Fantasy Footballers Podcast",
+      "published": "2026-11-11T00:25:37+00:00"
     },
     {
       "player_id": "9494",
@@ -5196,13 +5241,22 @@
       "published": "2026-11-11T00:06:00+00:00"
     },
     {
-      "player_id": "11637",
-      "player": "Keon Coleman",
+      "player_id": "8135",
+      "player": "Treylon Burks",
       "position": "WR",
-      "title": "Keon Coleman Posts three receptions in Week 9 victory - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWGdtbVU3MlBkX3U0aWQ5VlYxd1Q4U29xNHlobVpia3l0OHFqZmhweE1BNUVTbHdSZTltZFhsVXBCUWxqZjJFSzBZTHFNSEN2MlNuMTFjcm1QUTUycXFZYUV1RVNHdEN4SnFPUXJOYjktSDRGNlRPMEVDNDRLV1B6LVNqLVNXQmZNdlZ6VE5lU25ob3NYbDV3bm5PaGZnd05VUUc2b05lZw?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-10T23:57:08+00:00"
+      "title": "Commanders upgrade WR Treylon Burks to limited practice participation - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSy1EWkU4dm5NN2FHTmd5NWJQRXZ3QnFSN1kwR2pxbFlCOTlsTUM5YXRpSGZpRkVZNFItd2lqWFRLdGRLWkZqNEZsck1QbmlRaGc1TXRDZnF1TzdLbnQzZFFBSndOZW5jUi1EdExlZ2tGbmMyR0l6Ny04aTBNWFQ2S2FBY0lkUzgydlotZg?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-11T00:02:25+00:00"
+    },
+    {
+      "player_id": "1166",
+      "player": "Kirk Cousins",
+      "position": "QB",
+      "title": "How Kirk Cousins Can Make NFL History After Vikings-Raiders Trade at Deadline - Bleacher Report",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPTVZhdFZoSndrc3htZ3JCODJqeEttVHdlT25RdjFZckhsZ2k1RUV2UjdNbmF1eC1VNkViT3oyZzQ0N01IRWRJQ291eFpnTTlZb2FkbzRxOEd0eWt3R1JPd1VSTGJ5RFRIdmpxVGJTYlduY1JuWENrUklpOVh3d2hkTVlIdmI0SzVfN25EY1ppTTFkRndad0ZQbHg4OGJabmNDQk1VSVpuSjFONHc0R2dGdTNIOWRkUEhrazhv?oc=5",
+      "source": "Bleacher Report",
+      "published": "2026-11-10T23:59:17+00:00"
     },
     {
       "player_id": "11435",
@@ -5214,15 +5268,6 @@
       "published": "2026-11-10T23:54:53+00:00"
     },
     {
-      "player_id": "11632",
-      "player": "Malik Nabers",
-      "position": "WR",
-      "title": "Malik Nabers: I felt like it was a lie for Fox broadcast to attack my character - NBC Sports",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQVmNvcm1iQUltUm1sZTdIYWN1WXVnWElCMUZSZ2VHcFlzVUhlTGtSSkt1cG5HVy1UbndIQ0JTQkxoeUFnaDVpSXdwRUQ3NHk3Zng5anhGcUk3UWNNanJMcmhta0MtS1ZmS1pBSG1fenRzcFVOQTZtRk03NWRpbHh1eXYzMVNXUlRxVDhvWjVVY0NwT0lGRWF5YXRPOWV2ejBMR2UzeHNSVGJkM0lrWGRRMkt3OHdIcFNzQzdzQjJtbw?oc=5",
-      "source": "NBC Sports",
-      "published": "2026-11-10T23:51:02+00:00"
-    },
-    {
       "player_id": "9500",
       "player": "Josh Downs",
       "position": "WR",
@@ -5230,15 +5275,6 @@
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSVlncDA4eFkyOWljNDVnZXhxa04xVFlkdlVlMVdBcjJ1bWI2ZnRvTFhpdzg5SU9ybTBtOVRBZ2lURkxwS180RWt4dUgxdnBkUUEzM2RqaWJYMVBEYWV4c1hyTzZOcXRkWHByeWI5WjFWS19iRW1FR3M4djR5ektHQzNxTGYtN3Z0WkE?oc=5",
       "source": "The New York Times",
       "published": "2026-11-10T23:49:51+00:00"
-    },
-    {
-      "player_id": "12497",
-      "player": "Tory Horton",
-      "position": "WR",
-      "title": "Tory Horton - Seattle Seahawks Wide Receiver - ESPN",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBhejEtV19qWFdTSmR6emtOVDZycm1Oc2k4WnA4QVdXWlRLZUhWdUluQjMyUWZSS01QYVpneWJKQnREWnJ2OXFkbVpCWFJLX1lpZnlvTVZ0NVlHdmNPb1dWd0o2SjhrVms?oc=5",
-      "source": "ESPN",
-      "published": "2026-11-10T23:49:30+00:00"
     },
     {
       "player_id": "13269",
@@ -5292,7 +5328,7 @@
       "title": "Fantasy football waiver wire Week 10: Tank Dell and more wide receivers to save your season - The New York Times",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZC1TUlk0ajRjeVowb1hEQkVyRmFhNU9leGhOeUpCalVxdWFfU3g0UHRSeHNtdC1URGU3dHVNSnpaNTJtemJWdkNJMXZPMUZoZ2syanluNzA3bTFUYW9qM0ZvMEkta18xazBjZ3hUcHF5NG1tSGV5czdyMzZXVkNCTi16TlpESTZEM2czZTk2bzlKTm9UcVlINXEwUEp1M01Q?oc=5",
       "source": "The New York Times",
-      "published": "2026-11-10T23:16:54+00:00"
+      "published": "2026-11-10T23:16:45+00:00"
     },
     {
       "player_id": "5927",
@@ -5421,15 +5457,6 @@
       "published": "2026-11-10T22:31:00+00:00"
     },
     {
-      "player_id": "13385",
-      "player": "Mansoor Delane",
-      "position": "DB",
-      "title": "Chiefs Rookie Mansoor Delane Nominated for NFL Award - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbUlfaHNGekVmTlRBd3pWa3JvOWxUMHhJRGpsby1TclBrR0Q1UklPT284VjZ4VXdjYlRORk1fNkZ6cW5jdUdrMGR6Mm1NVlp3OWV4S2tjbmV4bVhVLUdnRHlsSVp0QmJmU2lkS3M4aEpCUGFGZEVRTXpmOWRfZHM1d3FWc0RFaUFGYjd4bEpLUTY?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-10T22:30:45+00:00"
-    },
-    {
       "player_id": "11583",
       "player": "Jonathon Brooks",
       "position": "RB",
@@ -5502,6 +5529,15 @@
       "published": "2026-11-10T22:05:44+00:00"
     },
     {
+      "player_id": "5995",
+      "player": "Justice Hill",
+      "position": "RB",
+      "title": "NFL Update: Justice Hill Breaks Loose for Big Score, Chuba Hubbard Keeps Trucking - Pistols Firing",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVGN0dGM5dUtrbEYzU2ZUSy1LZVdGelNQaE1ybzd0a2RLLTNYMDlBTEJUV1FLVmJOUWREUVh5Q19MeWlYYUNPckxJT3lBTWJFTUNDdzZkT0pxOE9DbERWLTFPY25vTlNnYXpVQktwWTBZSk9WRENnX2VwSk93NEswWnJJUVFxZDk3cGRfeV9DOTV5TDk2R0ozd3VENEFpYmlUQlRlQWpRTEpfZUJ3Y19n?oc=5",
+      "source": "Pistols Firing",
+      "published": "2026-11-10T22:02:36+00:00"
+    },
+    {
       "player_id": "2747",
       "player": "Jason Myers",
       "position": "K",
@@ -5556,15 +5592,6 @@
       "published": "2026-11-10T21:32:55+00:00"
     },
     {
-      "player_id": "6797",
-      "player": "Justin Herbert",
-      "position": "QB",
-      "title": "New Justin Herbert Trade Rumors on Vikings Links Surface After Kirk Cousins Deal at NFL Deadline - Bleacher Report",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOV05FblVncDA1Rkk0c0xFS1RGNlRaVjZIM1dBU0VlNURtbG1BTnBCNVlrNEpaUDFZQjN6RURfbHJYY3RhbW5najVtOEgwemZkUkZNU1V4cERkUW9UMWNuNFkzZGJsOVdaal9pWjlwZElTbXR3LWI5SklFenNnRm5MNVJ4VTduMzQ0RlBHSm95TElsSmZOaE9iYmVfVlVqU0FPYXFFMWZGVVpVckhub1pDMFl5MDA3Q1BOaTRyejYtcWV2QXZxdDRYVE9lRTItTFJR?oc=5",
-      "source": "Bleacher Report",
-      "published": "2026-11-10T21:31:19+00:00"
-    },
-    {
       "player_id": "8161",
       "player": "Malik Willis",
       "position": "QB",
@@ -5592,13 +5619,13 @@
       "published": "2026-11-10T21:26:20+00:00"
     },
     {
-      "player_id": "12574",
-      "player": "Abdul Carter",
-      "position": "DL",
-      "title": "New York Giants injury report: Abdul Carter, Colton Hood limited - Giants Wire",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQOWlyUF9sVlN0RnN1UEktX285MVF5aEMwQzNaY05ISnpSM29zQUtyVzQyM1NNZERzeUhyQk15aE9VS21VMV9nN0F4My14WXFpWmxueklQT29xRXg1YTRkNU11T2FxWWZsNGxoMkJHZm5HOFJKTGxUQlpCeThYak0yZUNHMi10THU5a1RNUW52VGpHQmFZWkh6N19ROW1MRi1PbHhVZm9MSmZ0MGdONm9WVll2b1EzVy1iRFFSM2R3WmRlUERkenM5eXU2WjI3d2N5SGNiMF9Ca2diQQ?oc=5",
-      "source": "Giants Wire",
-      "published": "2026-11-10T21:10:00+00:00"
+      "player_id": "13376",
+      "player": "Caleb Downs",
+      "position": "DB",
+      "title": "Jerry Jones’ Glowing Verdict On Cowboys Rookie Caleb Downs - Dallas Hoops Journal",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNLW9xN0QwVkJjU0NBZ2E3Z1RSMFJfd3pFZlZ1YkhRcUtBSkVJSEFZMkcwV2s5SkxFYUxWWl9vc2ZkQmZIanVQaDZkMHdzV1pkUlBiaVctY2tMNzM0aVo4b1hWdXJPNHRyTWZMN2FnOUlRMkU2YVZJdDNmcWlQUzBTQTd3?oc=5",
+      "source": "Dallas Hoops Journal",
+      "published": "2026-11-10T21:20:14+00:00"
     },
     {
       "player_id": "7042",
@@ -5727,15 +5754,6 @@
       "published": "2026-11-10T20:36:01+00:00"
     },
     {
-      "player_id": "6807",
-      "player": "Patrick Queen",
-      "position": "LB",
-      "title": "Steelers' Patrick Queen had bold feelings about Omar Khan's trade plans - Yardbarker",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxONTd6LTBXSTdvN0NBSGlLeUJGb2pOSGtfOHBvUFpMdnM3OHc5RlduVVBkS2J0UXUwUGFYNDBaRDNoS3FmdUVGeDZnTGx3Ym9ISW5DU29yRW9RSmpCMi1neG5zU09jNEE4cWdiMWMta3lsOTltbWFYWXF5WHczWFNFcnBLVjlpeXJJcmg2ZnNLYzdPOGJfWEpOU2FBVU5GX2tFVVFFd2E5QVItWFBpXzNGZ3pGWFJ4Szcza2g3c3pqV1A2cV9rQWc?oc=5",
-      "source": "Yardbarker",
-      "published": "2026-11-10T20:35:05+00:00"
-    },
-    {
       "player_id": "13349",
       "player": "Eli Stowers",
       "position": "TE",
@@ -5743,15 +5761,6 @@
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5zZ1poRTVhQVp4V0JmSnJ0S0RwcVhpVnFXcnNLQ2pvTndHMFp0S1JVY2tzTWI1RWZKOHlFNUx6aHI2QTBlMkRwbjBDYlIyV3h1TWdxTW5uSU52bFYyZGIwbGt1dGJ6cE5ZYWZCY2dUZEhwLU0?oc=5",
       "source": "FantasyPros",
       "published": "2026-11-10T20:32:43+00:00"
-    },
-    {
-      "player_id": "6813",
-      "player": "Jonathan Taylor",
-      "position": "RB",
-      "title": "Colts Don't Move Jonathan Taylor At NFL Trade Deadline - FOX Sports",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPN3Y5dWs0TWw0czZ5QWtpMV84QkJ4NzNOOE1NRTdIMTE3U25uN2tUbU9NTHFJdHNQZ3VPdmtReDNtUGNGbVJKVVgwaldicklHTGVfRTlma2dBbjJvQlVRTUFFRXFHQU12ODFIV24wSkdXdE1lVV92R05wbVZ1UzlYUFE3SWlnczJSMWFCLWt30gGOAUFVX3lxTFBZNUNibVRKZldWdVVYQklzRVU4LXljRlYxbkExSDV1OEpZVlp2ZnIyVG1uZ1J4Q0k5ZTJQUzRPMjdBRmctNFFGYVQxOEtBTkNCS1lBN3lmU3VjSTg1TmR2djNKN2VqZy1KekxMME1MY1d1eG1NTlJGWHU0b201Q2xmOFJmYVo5a1p3Q05SQ1E?oc=5",
-      "source": "FOX Sports",
-      "published": "2026-11-10T20:28:22+00:00"
     },
     {
       "player_id": "13269",
@@ -5776,7 +5785,7 @@
       "player": "Jahmyr Gibbs",
       "position": "RB",
       "title": "2026 NFL OPOY Odds: Detroit's Jahmyr Gibbs Favored - FOX Sports",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQXplajJZc3c2S3JpRXF5c2ZZT0xYMkpJa2tOVVlBbjllbzJmSVBuZWRIS1p4dVdnNEJTSzhCRVNFUkt2WHo5R19hdkgwYVJjVS10eDI2d0F3b3VtenNOQkZib2hsdTVLV1NLSXlSQ21HcmdVcV9OVFRKWldjRnZIZTgxX3ZwcGPSAYcBQVVfeXFMTVRiUmh1UEZHMlVwc2NCZ0hjcHpCQ1p6NEpZSWZSdGd3aW40S1hGQ1BiU09GVHpLcS1VNHlyWnd5TWRqejhtdFBWUXZCclpfcWhIN01CN21tT25pYnhySTdmZ25tWWhLNTM4SWd5LVluTmtFYkFPYlpkZ29wbWg5ZVhSNS1JaDFn?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQXplajJZc3c2S3JpRXF5c2ZZT0xYMkpJa2tOVVlBbjllbzJmSVBuZWRIS1p4dVdnNEJTSzhCRVNFUkt2WHo5R19hdkgwYVJjVS10eDI2d0F3b3VtenNOQkZib2hsdTVLV1NLSXlSQ21HcmdVcV9OVFRKWldjRnZIZTgxX3ZwcGM?oc=5",
       "source": "FOX Sports",
       "published": "2026-11-10T20:16:00+00:00"
     },
@@ -5826,6 +5835,15 @@
       "published": "2026-11-10T19:59:40+00:00"
     },
     {
+      "player_id": "13268",
+      "player": "Elijah Sarratt",
+      "position": "WR",
+      "title": "Camden Brown or Elijah Sarratt: Who Should I Start in Week 10? Fantasy Football - RotoBaller",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZTdrWjdzNU8tUUJTazE2ZF9SZTMyZ2gxNHJzMzBaRlFEcEhoVHI1X0lTQWM4RjVDd1QyeVdseC1mcm1xZ1QxVHMzWVoyNkhwbllDWTZUaTE3aXJyakplXy1DT1FiWWRxMHNJeVl5dm92TmoxZjRqZlZKdUJXdzE4UXMxaDk1V2otYU1TY2xrNTQ4elg4LThBYWJyMmw1ZlpuQzhZUkdQY3RBNm9zM2lWX3JQQUo?oc=5",
+      "source": "RotoBaller",
+      "published": "2026-11-10T19:53:22+00:00"
+    },
+    {
       "player_id": "10892",
       "player": "Will Anderson Jr.",
       "position": "DL",
@@ -5844,6 +5862,15 @@
       "published": "2026-11-10T19:45:45+00:00"
     },
     {
+      "player_id": "13413",
+      "player": "Cyrus Allen",
+      "position": "WR",
+      "title": "Cyrus Allen or Kevin Coleman Jr.: Who Should I Start in Week 10? Fantasy Football - RotoBaller",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPN2JEbmt0SU1KT0ZzRFNFakluUFNzMUpQdDFFOVhFeWE1WEQtT1JuQVFMY29pQ09UOGdqUnA5a1BmYW5FZElrTkNxX2phejVHcTh1RVdUekhJNHdqOEZuZ0Q4SmVmZGVCYnFmT21TdU5EZXVvVUxVSUMyRm1NQWdPQXU3TjBCRDhRX0pZSWhIT1hSNHJGQjEtalNFNGY2WnNVbEtkVkVXWHh4bElQSDdFZ0JkS3g?oc=5",
+      "source": "RotoBaller",
+      "published": "2026-11-10T19:43:18+00:00"
+    },
+    {
       "player_id": "3321",
       "player": "Tyreek Hill",
       "position": "WR",
@@ -5860,6 +5887,15 @@
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE92akxEZkxLOU1kTnRydlZVbFRzWndjRk5DWWxBaVJuQ0hmamRDMFl4cGpGOHJXdnlHbnFPTVJEaEJocUZXQ19LaDBKcWhUMTFKUUJSQU1sWVJBcDJzWWNzYUZHMTd0R1I5T0d4a2I4SUhJb3RWNmM0?oc=5",
       "source": "FantasyPros",
       "published": "2026-11-10T19:41:39+00:00"
+    },
+    {
+      "player_id": "7523",
+      "player": "Trevor Lawrence",
+      "position": "QB",
+      "title": "Do Trevor Lawrence and the Jaguars Deserve More Love? Stream of National Football League - CBS Sports",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMWhWbmROR1dfTFhJaVZGVGk1Q2xaMG8tV3ZwUURnd2lsQ3R6TV8wQ2NnVnEwM2FyMUVUREllRlBsY1lhWEFJNVQxazVZMlhJRmltcTJGYjg4NS1KSklIeUdJYTNsR2RhLVVMSGFYQ21QU3k3TEY3NktFY19kTDhYX1FMazN2VTd1ZnhiSl9mZ3lwQlB3SU1TbHBR?oc=5",
+      "source": "CBS Sports",
+      "published": "2026-11-10T19:41:07+00:00"
     },
     {
       "player_id": "13307",
@@ -5905,6 +5941,15 @@
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxORnhfWVhrS05YX0JnS1k4T3NVSENzNG5lRThGUGgxZDJmQTlTeVJYVWVxM2xXbjkxdGoyUUdlWjR1djNpVGo4UkFFRVhNVlBBWEVfRUFZZ2ZJRV9aOWJmWlZJVWpiX1lSLUsySGY2TkJ5UlQ3Qm5jYlNhcmNFQnU1Q2FuTy1tcXlEc1hWdGRn?oc=5",
       "source": "Fantasy Footballers Podcast",
       "published": "2026-11-10T19:17:33+00:00"
+    },
+    {
+      "player_id": "7600",
+      "player": "Pat Freiermuth",
+      "position": "TE",
+      "title": "Pat Freiermuth quietly made Steelers history before the bye week (and nobody noticed) - Still Curtain",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbW15U3FKWG9rV1pGSkptTHkzdDNPdHNhMGVGa04wNmI2VVVEVHkxQTlUbnlDX0ROaDBoQ0NQblZJTW5HT1NVdTlzWjdQQVJXSnhZXzlNV0lBZm8zNllBbDIwck1OOFBxOC03NzduXzBYOHNJU0l6aDM2ODJKMXFsUXdwSHdEeEZFTzd5NUdGQ2J3UXlGRUdyYy1YSUNmTUdlNkUtcWlNcndvVDNPemNRcEo4dUdqYU1KM01wYTlxNWhaQQ?oc=5",
+      "source": "Still Curtain",
+      "published": "2026-11-10T19:15:52+00:00"
     },
     {
       "player_id": "7525",
@@ -6231,6 +6276,15 @@
       "published": "2026-11-10T16:43:46+00:00"
     },
     {
+      "player_id": "12512",
+      "player": "Quinshon Judkins",
+      "position": "RB",
+      "title": "Is Quinshon Judkins a good NFL RB, is Todd Monken a good head coach & what's wrong w/ Jared Verse? - WKYC",
+      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxNVTV1dmNGbVZabmtqRU9kWmR2UDFGV2l4YThSWWkwYWdMZWNCQnNoT0JNUEhwOW5NRU9TMGxUSmlXM0lSTW1VUmE4YW5EXzRJbFlJQ004eF9LRFVMZ3lzOGZCa2NaUGJNczhaWW01NllZSERGcExOeER0UlM2MXZwVmtZU3JBUFp0TjVDQ3dXTnFaSXNRVFhKcllOX2MyN3JabUNvcXdxTS1QaWhQWElpZHItZ2QwZXFYWElyMTBfc3lVempZOVpFYm1hdVpjU2RIZUt6SVFyVWNmdnlMX25CaXo4X21wYlp6Sk5FVmJfaXFlamVQU3FOMXZvZkJ0V29KUXRYQlpCYWE2alk5NW9aZU1TczNlSlA5V0s1MVBxcHhWUXRrWWgwek5aUFFOY0g2MmwteEYxMGhFTW90d1NQckpB?oc=5",
+      "source": "WKYC",
+      "published": "2026-11-10T16:43:00+00:00"
+    },
+    {
       "player_id": "4034",
       "player": "Christian McCaffrey",
       "position": "RB",
@@ -6249,15 +6303,6 @@
       "published": "2026-11-10T16:39:03+00:00"
     },
     {
-      "player_id": "10222",
-      "player": "Jayden Reed",
-      "position": "WR",
-      "title": "Michael Mayer or Jayden Reed - FantasySP",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFAyU0VHVndWaWZpZjFkRmtpVG9JMi1XdkpXZ3ZHc1ZtU284dlY4YkN4MjU3RUJLUzVYSmw4dkxsYkxYNmRmc01LZmxpYWNfbEZTcHI2clk3WDRSNEtHbEtHeF9CLUJyM0RCdGNZNzZBT0p0LTNSQ25pTkJUWQ?oc=5",
-      "source": "FantasySP",
-      "published": "2026-11-10T16:38:16+00:00"
-    },
-    {
       "player_id": "10880",
       "player": "Jack Campbell",
       "position": "LB",
@@ -6265,15 +6310,6 @@
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNS25VZHo4UHJRTmVoMHNIanhmRnZDcmJyUUFlc1pNZE9tR3pYaVJCWGdET1V3b0ZZU1kydkk0bTBpNzk2Ui1hYTlnVmwyRzVhRVZ2dk91eEZiTFR6VEFOcVZOWTlleUN3X2JXR0I1R0RCdVZsaWFPTjd1ZXJDZFZYYTZnMFNXQjB4cE0wcU1FdHVyYnpobU5KQkhUc29Vb18zMGdNVVdDS2V0cUVMc1hxOGZhYmpKQ0FmUHo1ZA?oc=5",
       "source": "Hawk Central",
       "published": "2026-11-10T16:35:00+00:00"
-    },
-    {
-      "player_id": "13287",
-      "player": "Jeremiyah Love",
-      "position": "RB",
-      "title": "Jeremiyah Love or Rachaad White - FantasySP",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5jLTY3MTladm5XZnd3UjlrM2RYWkJyQlJWM1dBUWFXNWlqWl9DRXc3WWxNbFV2d2h6MWkwbTJ3M3ZSYWl5eFNXVzZSVjZuLTlILU5GNU9vbTRsREdkRzdCYVZfR2Z3R3JDU0FWVmdBdTlqbG9XSlMwaGhudW1zeGs?oc=5",
-      "source": "FantasySP",
-      "published": "2026-11-10T16:27:01+00:00"
     },
     {
       "player_id": "12491",
@@ -6375,13 +6411,13 @@
       "published": "2026-11-10T15:55:04+00:00"
     },
     {
-      "player_id": "12530",
-      "player": "Travis Hunter",
-      "position": "DB",
-      "title": "Travis Hunter: Must-Add Waiver Wire Pickup for Week 10 Fantasy Football? - NFL News - RotoBaller",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdmpGYlNVb2FMSDJPLWx4X3d5ejY3cmRnSjc2RHFpSlNhQ1hLNkhkSzU5VTZrRndOdnBIV2RUSEZOeHctNTg3NWVzbktzNXJLLTU0Z1hCeGNxcmRoNlI0bjRPSEFhUkRCRzNhaXE4OEhlUklxazVzVU15a2k3Z2ZDZ0Y3N1p5SHZqOHlGYXZSTG9RZ2l6c3RUMmF5bVoxMXRYVHNHZQ?oc=5",
-      "source": "RotoBaller",
-      "published": "2026-11-10T15:49:55+00:00"
+      "player_id": "13453",
+      "player": "Jacob Rodriguez",
+      "position": "LB",
+      "title": "Jacob Rodriguez Leads Dolphins With 79 Tackles Through Week 9 - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPelplMURQWFYyMjFiN0lpOGlSc2NwYTVOVktoNmhJV0NBcVdZSXNiTnhFSnVON2JkaXl4SzV0YjN1SjlVSE5QVjFpMlNqTlRXSlhxOGhyLXU3M1Y3UzFJVU4yTi0ycHVJTVEyNENvRURZSjZVeXhxXzcySXVuYzd3Vm5KWEtUc2VwTUE?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-10T15:52:28+00:00"
     },
     {
       "player_id": "11631",
@@ -6477,19 +6513,19 @@
       "player_id": "13340",
       "player": "Rueben Bain Jr.",
       "position": "DL",
-      "title": "Rueben Bain Jr.'s slow start with the Buccaneers confirms a pre-draft suspicion about the historical outlier edge rusher - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1RVnZ3NUpvYWpQeUVxbVZsZlN2X1B6M2VoZHRIYndzekdNWlM1V3M2d3RQM1ZnSXlkN3F1RFZrUGpvbkJna0hyZElIMHcyOVgzMzkzWjkzYUlEWEFmVmFob0Z1cU95ZDdwZTRMblpkRG5QQURLcDkyaUVvNGhyM0k?oc=5",
-      "source": "Yahoo Sports",
+      "title": "Rueben Bain Jr.'s slow start with the Buccaneers confirms a pre-draft suspicion about the historical outlier edge rusher - A to Z Sports",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQV0FTN20wb3ZFcnpjSkpVc0hQUGtja01DMjl6UEg0VUk5NmlCUWtMLVJTSnpPVzg1VWhEQWdKS20wbDNMZEtoeFdjQldRTHo5Rkl6QnpoVUlKWGhTa0pFbU5HVUhqbXVOd3d6eUJZY3BfX2JvWTRyM0dERGh0VDJfbFRrR1R3MXUzNWZQUnFxRVNPRmNLOXJZbjRWVXBiSWxQOXRzNk11LW53QkxhYmMyVHFsLWVTSERUcURWVXJLM25kMURYdWRMSUpDazEyTnJIOHBLbQ?oc=5",
+      "source": "A to Z Sports",
       "published": "2026-11-10T15:23:27+00:00"
     },
     {
-      "player_id": "13274",
-      "player": "Germie Bernard",
-      "position": "WR",
-      "title": "Germie Bernard Fantasy Football News, Rankings, Projections | Pittsburgh Steelers - FantasyPros",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRmVKWGpFVmRQTk11cTJqTzdwYXZqbjlNeEFEUlRTQ29lajVvOG5yNVZQZG8wRVpTUVpiT2FUVkxBQWRXTFM4clVjMEVDMDJpMXNER0d0VW9Uc3hId1daaHJubDRfcFFKcF9wTTlHRXBncGgwRERrSU51a3NIWU9BNm1VOVI1WnM?oc=5",
-      "source": "FantasyPros",
-      "published": "2026-11-10T15:20:03+00:00"
+      "player_id": "12487",
+      "player": "Terrance Ferguson",
+      "position": "TE",
+      "title": "Rams hope to avoid keeping Terrance Ferguson on IR for rest of season - Rams Wire",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQldRcUU4VEZWakQ5LVVXLWk3ZF9JRUtoempzQTZYckN6UElidk83cldUSnVaU1lZV2tMTENOUDJ0bnVPekh3czc5WDU4WVVESE9VV18xSjRlUVc0N1c1ZDJLdjgzN1hwa3l0QjFscTE1TlppMnBsa0ZFLUJtRmwxdGNHTTRaTy1TMU80TFRYM1VWQkZad3VQOHpkWFdzYUNuVVJVMjNBX1diVXU3RDNtMTcwMXQ4OUxnX1hMU2Q4WEowdU51cnpHTUU5bw?oc=5",
+      "source": "Rams Wire",
+      "published": "2026-11-10T15:20:00+00:00"
     },
     {
       "player_id": "10892",
@@ -6544,15 +6580,6 @@
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOY292UVRrTy05cktNNEtQREdMQllqakNzaHlZTDdScVNMYmQ4cHp4Y0c5cS0tVDg0STgxX3JyUjNQeDR0aDM1Q2t6S1lFSk43YVFuRjVWTlNlMTVuRjg5cFhqcnNTMlpLR2d4WFdNUDlzcDZtalEwRzg5dmhJX2oxdXZLWllmUQ?oc=5",
       "source": "FantasyPros",
       "published": "2026-11-10T14:22:09+00:00"
-    },
-    {
-      "player_id": "421",
-      "player": "Matthew Stafford",
-      "position": "QB",
-      "title": "A Vikings-Matthew Stafford trade transforms them into a Super Bowl contender - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUmtmLXFCUjZ0c2Yyb211dGVwOF9QQzhoOWY0c1hUMGU1WmZWSkVOZXhkWmppcTNxZTQtVHBMakRMeDdvbDB4dXFjU0tIckJ3QjNDbmxwLUN4bWRVWG5uZVl5OXRiQ0ZvRTZJTTdKUUg3T1BDZFZvSmc5QmxnRmpuaVc5dUk2V19BYXBkRURucXRJaGdH?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-10T14:21:29+00:00"
     },
     {
       "player_id": "10859",
@@ -6645,6 +6672,15 @@
       "published": "2026-11-10T12:20:22+00:00"
     },
     {
+      "player_id": "10222",
+      "player": "Jayden Reed",
+      "position": "WR",
+      "title": "Jayden Reed or Jakobi Meyers | Who Should I Start Week 10 - FantasySP",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE55Z3RMd01RYXRhRXFrSTc1UTBuRWptLWpITkh4Z3piMjlQUXU1MldORDJZb1ZINHg2b1g1UVNKbm5DMWl2amIwYkc1V1ZzcVN5SzJadVlRQmI3TVplUTlQRFpTVGZUU3FvZ2ZaZWRVSVNjaGh0UXhvekxLWQ?oc=5",
+      "source": "FantasySP",
+      "published": "2026-11-10T12:19:58+00:00"
+    },
+    {
       "player_id": "7021",
       "player": "Rico Dowdle",
       "position": "RB",
@@ -6672,6 +6708,33 @@
       "published": "2026-11-10T11:37:00+00:00"
     },
     {
+      "player_id": "13417",
+      "player": "De'Zhaun Stribling",
+      "position": "WR",
+      "title": "KC Concepcion or De'Zhaun Stribling | Who Should I Start Week 10 - FantasySP",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOTk5rU1NialJMUGpzM2IyR3pYTUprVFp6aVZhaHdnMXVrd1BVbWZibzh4QWJxZ3pLb20tNWdJcmhjZ3dOZFgwVHhtVjhxSjVKV1A2SEo0MTA0VHhkUWlMb25jNjMwZmFWNWVrbDViVzczckNtUGt3amJXVGYyclJHSmVWNA?oc=5",
+      "source": "FantasySP",
+      "published": "2026-11-10T11:09:45+00:00"
+    },
+    {
+      "player_id": "12504",
+      "player": "Kaleb Johnson",
+      "position": "RB",
+      "title": "Kaleb Johnson - ESPN",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1PQjZYaWYzcjVoQ3o2ckxDZnVnWkpMOF93OWhKRzhWYlZuT1BiZW9QNE5oTFhqODB5UnlIeWZPWThSYmJxTzU3RmR3aFpHWjNoTEplbnRydmpxWURnNkR3R0ZheExTbG15NUE?oc=5",
+      "source": "ESPN",
+      "published": "2026-11-10T10:41:52+00:00"
+    },
+    {
+      "player_id": "12487",
+      "player": "Terrance Ferguson",
+      "position": "TE",
+      "title": "Terrance Ferguson - ESPN",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1JcWpLMC1WdDVQVjlkck1wSk50bnVhM0lIbUhwdnFuMVRTTnFHR2todVJIX3AxM3huNkkyMU1zX2dxdkdheVpjMVktaTV1MGZlR1otM3ZCZC1yUUVDeFY2Szd0Wkk5bmZFZUVqRVhkamMxdw?oc=5",
+      "source": "ESPN",
+      "published": "2026-11-10T10:05:38+00:00"
+    },
+    {
       "player_id": "11557",
       "player": "Joe Milton",
       "position": "QB",
@@ -6688,6 +6751,15 @@
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQOWl3ajV1ZFlxT3k0NEwta3AzZU1GVU5GbUluQmJPcmV2U1BjdjVuOWhpaTA2TmF0UVFmQk1LRXpiZnM1QndLWTd6dExBY2Rxbl9DalA0anF2LUpQS2xDN1dGcXh2cEtkRk9YSGNEN3F2T2pqamlmMnBabXh2clZYZTh5UkJEeUI4VnRUb3pWNlZHSU4zTHc?oc=5",
       "source": "FOX Sports",
       "published": "2026-11-10T09:49:48+00:00"
+    },
+    {
+      "player_id": "11618",
+      "player": "Jalen McMillan",
+      "position": "WR",
+      "title": "Jalen McMillan - ESPN",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9jZXFUWlRCUERwbUNwc2p0SmpEdXFzWTlqQnVCQ0dTeEdFVnM1Q1B5Z1d1bk9RU2xpalBvNE9jSGZpcmp0UndVbW9EY2hiZU5Pa2pQaU1jMWtILXI1MkhvSnhIRmRhYm1nRjRv?oc=5",
+      "source": "ESPN",
+      "published": "2026-11-10T09:07:56+00:00"
     },
     {
       "player_id": "13414",
@@ -6744,15 +6816,6 @@
       "published": "2026-11-10T08:00:00+00:00"
     },
     {
-      "player_id": "11637",
-      "player": "Keon Coleman",
-      "position": "WR",
-      "title": "Keon Coleman Fantasy Football News, Rankings, Projections | Buffalo Bills - FantasyPros",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQd1N6NDFIZ1dKN21CbzVMSk9uY0hOZEF6RU9nT3QzS083TTYwcEw2NFA4dTdSYzR2bDRRcllTYndTR2hHSFBPWW00TmVRSUxna3hVQ2RNYW1RNjhhRWszM3FGdTlXMWQ3QV96ZzdUM2lYU21sQ0JfeUg5ekh0YkNEc3B0Z3A?oc=5",
-      "source": "FantasyPros",
-      "published": "2026-11-10T08:00:00+00:00"
-    },
-    {
       "player_id": "6039",
       "player": "Ty Johnson",
       "position": "RB",
@@ -6771,6 +6834,15 @@
       "published": "2026-11-10T07:47:00+00:00"
     },
     {
+      "player_id": "12497",
+      "player": "Tory Horton",
+      "position": "WR",
+      "title": "Tory Horton - Seattle Seahawks Wide Receiver - ESPN",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBhejEtV19qWFdTSmR6emtOVDZycm1Oc2k4WnA4QVdXWlRLZUhWdUluQjMyUWZSS01QYVpneWJKQnREWnJ2OXFkbVpCWFJLX1lpZnlvTVZ0NVlHdmNPb1dWd0o2SjhrVms?oc=5",
+      "source": "ESPN",
+      "published": "2026-11-10T07:24:45+00:00"
+    },
+    {
       "player_id": "5872",
       "player": "Deebo Samuel Sr.",
       "position": "WR",
@@ -6778,6 +6850,15 @@
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTmZfcndrLUlnZ3RwQWtGdUJaS3hTc3RBWjlFUkxodDFkMGRPOTNSelQ2RU1NeGhaZGMtRk9pWXRKQUliZXFWQ0lFLVVnV3RtZFkyWTdPc1lWd3c2WDVkOUpBSjhpcWY3Z3RvbEFsZVkxcGdZQWxyXzNOTjNVQktIX252SXVIQlBXVTZiZkdwNWo1R2taeFRiQjl1c1FnSk43dHc?oc=5",
       "source": "Fantasy Footballers Podcast",
       "published": "2026-11-10T07:10:48+00:00"
+    },
+    {
+      "player_id": "12493",
+      "player": "Oronde Gadsden",
+      "position": "TE",
+      "title": "Is Oronde Gadsden II Playing This Week? - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVEFRdHBGU09UNURRR0FVMVBnVHZtWlVZbUJUT2NPTlBOQndRcmRXSGgtVnJwZGk0dTU1Q0dYQVZVem5MNS1nd1RkZ0Fhai0zQnpVbGM1cGR0WmprV1lLUjZ2ZzRxYTlXRG9rMmt4ZEx0d2FHVG1JeVlsdE1jb1RNX1Z1Yw?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-10T07:10:44+00:00"
     },
     {
       "player_id": "8408",
@@ -6803,15 +6884,6 @@
       "position": "RB",
       "title": "Ashton Jeanty Matches Washington with six carries - Fantasy Footballers Podcast",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNTlRuX2stR2FRZVpReWtuU2oyV3RiMlJiaV9ZZ0FjTFBhU3FZZ3llMlFNNC1nT05uT0lNLXhGaUdFdV9uRm5xSWpVMVRBcWVWZV81OWRUVW1TeUxRcWFPWUZqZTZWNGttLW5rRDFGS0tmVElYcG40RWNPcFpnRHl6QlRRR25wY0l6SGhKOFRYbVVTM1g1TjFVSmU0SnVtWUROcEE?oc=5",
-      "source": "Fantasy Footballers Podcast",
-      "published": "2026-11-10T06:54:10+00:00"
-    },
-    {
-      "player_id": "11626",
-      "player": "Xavier Legette",
-      "position": "WR",
-      "title": "Xavier Legette Poised to practice in Week 10 - Fantasy Footballers Podcast",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQclkyeTdMd1p5MjBCd09CTF9zU3dJYmZZTm9SdE5UTjNiNUpPZDctNVR2R1Jvb2liZUFSc2RuWU50bVo4VnhUdHNhQnVldmRzTzcyaHRFNDRTenF0Z1k0aG5VcjMyVThDVmxRQmJhYUFCLURpM19SMGhIelFJb0xaYWNTQVJKcHo1U3BJZjdoR0QzUzZISHhLQjJBQQ?oc=5",
       "source": "Fantasy Footballers Podcast",
       "published": "2026-11-10T06:54:10+00:00"
     },
@@ -6924,6 +6996,15 @@
       "published": "2026-11-10T06:13:00+00:00"
     },
     {
+      "player_id": "11667",
+      "player": "Dallas Turner",
+      "position": "LB",
+      "title": "Dallas Turner on Vikings Defensive Performance vs. Bills, Time on Field & Looking Ahead to Week 10 - Minnesota Vikings",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQa05xRm9mMmlKbnoya1pGQ1NsVnl6YnpUNmdhYUxva2pKd3JwaFBzVk5RdlY5aEwxQjlUQzlPY3VZdWp4RlNPM2VGa3N2aHFKZjhFUXprUGhkU3kzTUljdGVjR2NWTFZWUG9xYURPb25mTGY1bC0tLWtoRmtuVV9jV3ZmdlJiWjZmb2dvNFR5b2ZpOHhMOGdvLTZZQWd1WHd3MmNuWTQ0dVRzYmFBaFc2ZjBCamxabTd6Y3oyVzZRUTlkUQ?oc=5",
+      "source": "Minnesota Vikings",
+      "published": "2026-11-10T06:01:05+00:00"
+    },
+    {
       "player_id": "8134",
       "player": "Khalil Shakir",
       "position": "WR",
@@ -7014,15 +7095,6 @@
       "published": "2026-11-10T05:15:00+00:00"
     },
     {
-      "player_id": "8121",
-      "player": "Romeo Doubs",
-      "position": "WR",
-      "title": "Should I Trade (Half PPR) Romeo Doubs for Savion Williams (2026)? - FantasyPros",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVkV3S3NjRmNpZHUxb3VUUjdaY29jODdNZm14RTBPV3RUSkpqZ1hiX01GZFZ0aUJrTTNXckw0OWx2R3FWUVR3N3JIbXVySTFDRGczSUV5NTdhOFBrNlZFUS1LTFExbGxkTng1ZEgtS0Y2RFZJZTBXZjR0NXI5SElBVUpaaWJQY2hoR3c?oc=5",
-      "source": "FantasyPros",
-      "published": "2026-11-10T05:11:30+00:00"
-    },
-    {
       "player_id": "10236",
       "player": "Dalton Kincaid",
       "position": "TE",
@@ -7048,6 +7120,15 @@
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQYUlqODBzTVFNQUdNa05SN0xabzhqalNXWUZYLUViSlAtWWc0SDh3SE9SMEN5cEdPRndjMlZtZVREV0M0YzJoNlBlbXAtZ002WHhvRkE4NWtFWm4tN0YxNU5kbF9UYWNHMlkyWjRWUlllZm5sTHNzeFdodnNTMWd5cWJpQll3S2hBTXFRck44eVZsWnRfcFF4Zm12N0Z0cmo3T3FsMjlFb0U3SzlzckJNY2NGNHhOc1pCNHNWMdIBvAFBVV95cUxPdDl2dmR0MmFidDVaajdINkZUQU5aTFBrUDN2R2lYaWRxMTJVcnB3QW82d1lqOGF5SWlKUmVtc2haTVVMNHBqa0QwTV82QUhUOGJHMGY1YXB1Z3VDdDAxbG9VLUNzbVZoTlBPV2I1bEo1aUREU203Z1FpVndYZzFCU2h3djNPcWl3VUMtWHZySEtrMXg3bXp2LUlCUVU2WjlJWU5sM0tKaWt2cW5PYmQwTDVweUpoMlBRTEFTTw?oc=5",
       "source": "FOX Sports",
       "published": "2026-11-10T04:57:22+00:00"
+    },
+    {
+      "player_id": "12492",
+      "player": "Pat Bryant",
+      "position": "WR",
+      "title": "Pat Bryant: Must-Add Waiver Wire Pickup for Week 10 Fantasy Football? - NFL News - RotoBaller",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPelhpMVZrQ05jc0Fma2hnX01Xa3lnazViN2dEYWtIZUUxMEhtR0daYy1NdE5ZSndjNk9Kd2FhRm51M3Y3WjFGRzBUT0wzYTJobXM5OVk5OEJQdUxLMWtjbXBKbW1UVV83NnY4VXY2QjJkNkVYNVBSTDQ0T0ExY2MxcHNITmtFbENGdlh6Z0daaVdwZlhLZjdCbGt0akZzLXhVUnFoc3hiUm9GNDQ?oc=5",
+      "source": "RotoBaller",
+      "published": "2026-11-10T04:42:12+00:00"
     },
     {
       "player_id": "12467",
@@ -7164,7 +7245,7 @@
       "title": "Patriots RB Rhamondre Stevenson expected to miss at least 1 game with knee injury - The New York Times",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSTRVb21KaG9aLUtUb09yRm5RaGhIRGozOGVSLXV4WTlaaEhPUHRRcEdLWENnWWcxOC1lR1RldVliSzdjYzg4S1JKYzYwUzl3SkVjU01wa0FqTHlBWk8zQm1KVzhvc2llYUV0QU44dWdNcnFjYXVWVmxsak8yMXNXbUFubTZyRU0tSU9xS0VnNlEwenpHUVhKanpfUTQwTHN0TXZkZnFNVUU4UQ?oc=5",
       "source": "The New York Times",
-      "published": "2026-11-10T03:29:41+00:00"
+      "published": "2026-11-10T03:30:21+00:00"
     },
     {
       "player_id": "11583",
@@ -7257,15 +7338,6 @@
       "published": "2026-11-10T02:41:40+00:00"
     },
     {
-      "player_id": "12493",
-      "player": "Oronde Gadsden",
-      "position": "TE",
-      "title": "Is Oronde Gadsden II Playing This Week? - FantasyPros",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVEFRdHBGU09UNURRR0FVMVBnVHZtWlVZbUJUT2NPTlBOQndRcmRXSGgtVnJwZGk0dTU1Q0dYQVZVem5MNS1nd1RkZ0Fhai0zQnpVbGM1cGR0WmprV1lLUjZ2ZzRxYTlXRG9rMmt4ZEx0d2FHVG1JeVlsdE1jb1RNX1Z1Yw?oc=5",
-      "source": "FantasyPros",
-      "published": "2026-11-10T02:39:47+00:00"
-    },
-    {
       "player_id": "6650",
       "player": "Chase McLaughlin",
       "position": "K",
@@ -7300,15 +7372,6 @@
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5kaWhGQzVuWTMwVUVpNndxZ2FEcjJKR29BUUJNb2lLN3FzZ01wcHZjNkVpMUpnMk9GbnhUVnNmS2Q3andDaGF4QkJBT3lHYjJDaUlyZ050c0NQSXhjZlNaekdINGtjT3ZoalZpTA?oc=5",
       "source": "FantasySP",
       "published": "2026-11-10T02:24:49+00:00"
-    },
-    {
-      "player_id": "4046",
-      "player": "Patrick Mahomes",
-      "position": "QB",
-      "title": "Patrick Mahomes Injury Update Raises Potential Fantasy Sleeper for Week 10 - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxORE02T1I5aXM2ZmJHTThLbUd0NUZIYnF6c25DYXZhNFljVGtpdk8xeDZJREZReUZLRWNpV29kaGxfRGIxbVVwbTR1MGxwTFBQTGxJLUtpd2tBYmd3QkZDeEZWendBYmZmVzJJZXdqc3JjWXFtWU5kUjBHV0xiT0UzUklORk1NRzFFVkw2c21rNUFhQQ?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-10T02:21:00+00:00"
     },
     {
       "player_id": "8111",
@@ -7392,15 +7455,6 @@
       "published": "2026-11-10T00:59:32+00:00"
     },
     {
-      "player_id": "11618",
-      "player": "Jalen McMillan",
-      "position": "WR",
-      "title": "Jalen McMillan - ESPN",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9jZXFUWlRCUERwbUNwc2p0SmpEdXFzWTlqQnVCQ0dTeEdFVnM1Q1B5Z1d1bk9RU2xpalBvNE9jSGZpcmp0UndVbW9EY2hiZU5Pa2pQaU1jMWtILXI1MkhvSnhIRmRhYm1nRjRv?oc=5",
-      "source": "ESPN",
-      "published": "2026-11-10T00:43:09+00:00"
-    },
-    {
       "player_id": "13388",
       "player": "CJ Allen",
       "position": "LB",
@@ -7482,6 +7536,15 @@
       "published": "2026-11-10T00:15:09+00:00"
     },
     {
+      "player_id": "2216",
+      "player": "Mike Evans",
+      "position": "WR",
+      "title": "49ers minutia minute: Deebo Samuel, CJ West expected back; Mike Evans still on hold - The Athletic - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOMlllUkdkVFhVUkhqbDhjUHluWEJLTlFrZWJwYWZmY0U1eXllRXQ2SHoyX2ZybGJGMk40ZFZPTS0yeGhvLWFlek9iTlZuMmZkUnp6RDRLM18yUGQ3ZWxVMUVGUHI2NWx3NlVZQ2VyRU1WU0pZWTNWWjVHZ3Y5RjgxR1AydlpvbHZ6QmNOQ0tMRnc3dG9XdlE?oc=5",
+      "source": "The New York Times",
+      "published": "2026-11-10T00:12:03+00:00"
+    },
+    {
       "player_id": "13347",
       "player": "Demond Claiborne",
       "position": "RB",
@@ -7489,15 +7552,6 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQc21pclJ3OVlBMF9wYklwY0M4RGZTX0RBN0JkZGhfNV9GS2xQSUhFdVgwX2ZEWmJMeWZwT25fMkhLU3RoWXpUR3NoUl9OY21PUWxQWDBRYVlMYzlkTE1Tdy1yb2h5TC1oeTVtdE16WWNuSTltVTFFbktIMXBaQnQ5S0JUTXpNbWJXU19BUlFidkUyZ2pYcDFWY29DN1d4Zms?oc=5",
       "source": "CBS Sports",
       "published": "2026-11-10T00:10:26+00:00"
-    },
-    {
-      "player_id": "9501",
-      "player": "DeMario Douglas",
-      "position": "WR",
-      "title": "DeMario Douglas - New England Patriots Wide Receiver - ESPN",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBRazB4d3czeFhKYktWMHp0bi0wNFJuTWZ0LWFRclhTRE5zNkdScEdmWDB4X0puRWRENlBJVEFWS2dxdkhQYXNRYU5GM0ZuUUJtUWtZYjFwckFYU3h2R3ZralNyc3FuTU1sajQtMA?oc=5",
-      "source": "ESPN",
-      "published": "2026-11-09T23:56:47+00:00"
     },
     {
       "player_id": "11565",
@@ -7527,15 +7581,6 @@
       "published": "2026-11-09T23:16:00+00:00"
     },
     {
-      "player_id": "10232",
-      "player": "Michael Wilson",
-      "position": "WR",
-      "title": "Michael Wilson Injury, Latest Rumors on Cardinals WR's Timeline to Return and Fantasy Impact - Bleacher Report",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVzJVQjI3MlFZWHRVak1XYlIyZEhFbTBIUS1KWS10aVl4VElkdE1GYnZsLWR2eWY3a0ExLVJwVUZDLTBmaUc5SDRMZ25fb1U4QW52RWpSMkR1cEZUekg1cXpiMFotNS1CSHhNNWJ1dzBxVXhlbkt6T1l3SUJNRTFmOXNkVEdQcHYzUENmOHdVcV9EMUhFckt1SjQ0VS1ObFVHZmhKR3c0LUhNdVFHMlN5aWpSejQxZUhNaUlfQ012eWw5WnhneWE4aw?oc=5",
-      "source": "Bleacher Report",
-      "published": "2026-11-09T23:11:43+00:00"
-    },
-    {
       "player_id": "12526",
       "player": "Tetairoa McMillan",
       "position": "WR",
@@ -7552,6 +7597,15 @@
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFByLXZwdTk0SXVpWmc2V1pZRElyUWU4Mi1oXzlsLXNpd1B2NGY4Z2tpOGlqbEk1OGI3RnM4V2hzd05YOVY3RTh6Q0dqSlp4bjhFRlZ4RzQ5OEdjM0NrMFFTaFBoaTdPT0t1dmV2YktPMUtQR3JPb0ltU2tn?oc=5",
       "source": "NFLTradeRumors.co",
       "published": "2026-11-09T23:08:19+00:00"
+    },
+    {
+      "player_id": "12533",
+      "player": "Jacory Croskey-Merritt",
+      "position": "RB",
+      "title": "Jacory Croskey-Merritt Fantasy Football Half PPR Ros Rankings | Washington Commanders - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZ2lGZHJUbm5RWWFlOHpDRVJENlh3czE5bGdYLVJ6Y0tITkxPdTFhUUFJYWxUcVBrZmJPbGJSdHM1cVhuR3o0ZHFscjgtaTRFcUdRLTZuZ0hFWlhqQldmNEN5aWh6RW9UU0ZyS2NmU3ROdEl0dUcyXzJoUjFsWGlNS1ZsdW9FNlZRX1Y3S2psMXEwdw?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-09T23:06:18+00:00"
     },
     {
       "player_id": "5872",
@@ -7716,6 +7770,24 @@
       "published": "2026-11-09T22:18:10+00:00"
     },
     {
+      "player_id": "10232",
+      "player": "Michael Wilson",
+      "position": "WR",
+      "title": "Michael Wilson Sidelined For Season With Neck Injury - Arizona Cardinals",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSi02alp5cTg2RkR4YUUwQ1FOa3VBSlFacWNwTDJMdnZhUEctYzZRdF9FSTIxaGJUc3Z5S2FEdDFCc2N4RG9sTlA1VFNMLXcxa2UwazM2Tzlfalo4a0ZoVlpfZjZRYWdfYlJ0RmF3a0w3a096WXREZ1M4VzRsdF9xTHpmSGpGSnpxTG1vMGFn?oc=5",
+      "source": "Arizona Cardinals",
+      "published": "2026-11-09T22:16:30+00:00"
+    },
+    {
+      "player_id": "9754",
+      "player": "Quentin Johnston",
+      "position": "WR",
+      "title": "Quentin Johnston Fantasy Football Half PPR Ros Rankings | Los Angeles Chargers - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNVZqUVNuY1U4akNrTkVsMU5hSXYzMDREQ3VWcWhEckFMRmJIMGh1aVVpdG4yUEJNd1M5TzdRbDlEeDludDdLc1NxemktREkxMk1Gdy16cmJDZm9jTVZmVGdOaXVNRTZRRUVHOUs3LUJhNTBrS2NPRzBUYlRxNkZsSENCU21LbEdNWnI0?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-09T22:04:04+00:00"
+    },
+    {
       "player_id": "12634",
       "player": "Jordan Watkins",
       "position": "WR",
@@ -7797,6 +7869,15 @@
       "published": "2026-11-09T21:14:26+00:00"
     },
     {
+      "player_id": "11626",
+      "player": "Xavier Legette",
+      "position": "WR",
+      "title": "Xavier Legette will return to practice. Panthers have more ‘exciting’ injury news, too - Charlotte Observer",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNeEZmeDNiQ0otNklMY0k3Um5IamN3LXlfNGFRVXk5bkZjNC1RS1BhQUlvdzZuY3BkYXhTQlEyM2xaTWFZOERxZGp2TXYwMGNLeGZsZFQ1c200RGVmb3ViaFE1RFdYNmZUMlZoaEVTdFRydEEwQlNCcEhoSVUyQ01Dai05TFNrLTZtM3pqctIBjAFBVV95cUxNRzZmS25HenF5bHlOSU56MWh4N0VETkVfZVpaNWdMRXlBVXZmOFIwQTY5a1dZNjBab2xKeEtYMzFtUWtuV3dnNzFlandFaHpaSDlXcE44R2plcHYzTHNsMHVLVElEYkxnd2lUamJReEZyUXJ6MERZYUVkOWNqd0JYWTNPVjk4SW5qLW1LNw?oc=5",
+      "source": "Charlotte Observer",
+      "published": "2026-11-09T21:04:02+00:00"
+    },
+    {
       "player_id": "6801",
       "player": "Tee Higgins",
       "position": "WR",
@@ -7804,6 +7885,24 @@
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQWp6MTdVbUEyNlo4VXRLa19fVWpjV1htMmV1ejBYUFdvNFhudjFqaW5reXJ1WW5tMTFERXkyNGUtZTRXUGtMY1JMclMzR2JIZzJGdE5kLWZfNXpFQUtVZ01NU2NWUmpaQ2ZKSk53QWFwaEVEbXdxcTEyYnBBVnJlbURZbEcxY3o2U0FydEFjRUxiaUhJQnZfZjdNeU84UG1IaUZZQVBVdWVIY0oxeUdTTEp3akpDYnRXMEE4T29waTJIbkU?oc=5",
       "source": "Cincinnati Enquirer",
       "published": "2026-11-09T21:04:00+00:00"
+    },
+    {
+      "player_id": "13150",
+      "player": "Darius Cooper",
+      "position": "WR",
+      "title": "Darius Cooper Football News & Fantasy Analysis | Philadelphia Eagles - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5sTUVSVVU2TDF2T1p4Unk4Sm5Sc3NldEVEeUJ3RVJxaVBha0Ewc2RmcHRkTGFkajVzal8zVnd5ckpRTUdjeXhMWXI2Z0xiSEpnM3BkemYxVkhLVzJ0aVEtRWdhS1Y?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-09T21:02:09+00:00"
+    },
+    {
+      "player_id": "11586",
+      "player": "Blake Corum",
+      "position": "RB",
+      "title": "UNDENIABLE UPSIDE: Blake Corum and Rams RUNNING Unlock Week 10 Fantasy Football Gold - Central Oregon Daily",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOd1M4U2lLalpOSlB5RmJTQ1d3d1B5ZEp1QUF3YTZab1RQSnRCdmFScmI1Uksyc1BSTHJhejNXYVlZdFNuOXZtUGRWOHFtWGtnalAyQ1NacDdFOVFWT1pmRm1pcVFRSm03TWhvbUFqQUxscVRWYW5rek9iTGc5NUE0Z0VsamlySzhCeVRqMHhEbk12VzhWc2x3V2J0RVk0emtJQ3JNb2V5WjFiNXp5VXNoXzZob05nX0xGQlBtaWJZTE9MNllxbFF3bDQzSUEwVmxQbzZ0R1RqVHRxek5zMzRzWHF0bVhvbVJDNXhFRHloZXV5RmpMbkVZVVpZcDlDMHcweDhr?oc=5",
+      "source": "Central Oregon Daily",
+      "published": "2026-11-09T21:00:06+00:00"
     },
     {
       "player_id": "11635",
@@ -7822,15 +7921,6 @@
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBTbmpkclV1Y3RaTTRCV2JabE5RNWtDQTRHWlVWZG9oVUpvOUhxZ0kzbzRUMHpYVXd3OWNmY2VsUkhUWE5tVlo1WjlOMHhseTJYSzhyWFg3Vk4za3dJQ2hZZDA0bC1Ob0YwUUNr?oc=5",
       "source": "Fantasy Footballers Podcast",
       "published": "2026-11-09T20:56:04+00:00"
-    },
-    {
-      "player_id": "11557",
-      "player": "Joe Milton",
-      "position": "QB",
-      "title": "Joe Milton - ESPN",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBPdFZzczljWkRISS16UTc3NzEwN2lZUHFTVi1Wb0d4elF3aGtiYXFmU0ZESWg0UjNPSTZoV1BNYmtOUGxScW5QUzhkRG5ySmlTWlZXWWdGbGU2eFF2UHVSbVM2S20xUQ?oc=5",
-      "source": "ESPN",
-      "published": "2026-11-09T20:53:38+00:00"
     },
     {
       "player_id": "6768",
@@ -7896,15 +7986,6 @@
       "published": "2026-11-09T20:15:11+00:00"
     },
     {
-      "player_id": "5850",
-      "player": "Josh Jacobs",
-      "position": "RB",
-      "title": "Josh Jacobs breaks finger during Packers' win, will undergo surgery and could miss a maximum of three weeks - CBS Sports",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPRktDeGdYeF9ZT05qa2NSTnhRR0s1dEhTSGZudE1MQ2tyUjBNei14bmMySVVXUFdLZ0ctNTNsRmJVcHRMQ1gydzdTT1phdVRENXFVcjBpOWhIWGROZ2Y4dmlDUk9UbElrU3JPR3RqQTFTNGpyakE3Q3diWEd0aVI4WXJrN1hTcWdWYzR4TzduaWVoUDlwWmsxNXlrWFVXOUpLUFRycw?oc=5",
-      "source": "CBS Sports",
-      "published": "2026-11-09T20:10:00+00:00"
-    },
-    {
       "player_id": "8135",
       "player": "Treylon Burks",
       "position": "WR",
@@ -7932,15 +8013,6 @@
       "published": "2026-11-09T19:50:00+00:00"
     },
     {
-      "player_id": "3163",
-      "player": "Jared Goff",
-      "position": "QB",
-      "title": "Detroit Lions quarterback Jared Goff shares how the team has rallied around linebacker Jack Campbell - NFL.com",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTktCR2diRzl1bGF2bU9xUzNNRjhkdkQ1clpWelhldlhSN01UY1dRYzFGclZlTzJSaklPVG1feExjVmlUM0RzazVTLXI4U2RheVZhVThQR1M1a21fS0dOYzY1RVNNRTdSRVRaWDF2Y1d0WUpVUlQwaGFUSlM2dWMwTGRxaHV4YmpUUVA1SGFxbEQwaW04?oc=5",
-      "source": "NFL.com",
-      "published": "2026-11-09T19:19:43+00:00"
-    },
-    {
       "player_id": "11626",
       "player": "Xavier Legette",
       "position": "WR",
@@ -7966,15 +8038,6 @@
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNdk1EeGFFYTlnOFdfOF9ZdWxCRS1URFVhVkxmcEpaaHNzOU1EdU81UU16c1VHdHcwUW5yV1RreUJEVDBWaVdyT0dQeVg2NlM2MzRvdnk3NzJwcWtLejhyQVUtRHpIM1M5YzlScWk1SXB5SkdYOVV5elpyY3BIaThfOGlxYkE2QnFSX0Vac25UeGJiay1sdS04R0FR?oc=5",
       "source": "ESPN",
       "published": "2026-11-09T19:12:00+00:00"
-    },
-    {
-      "player_id": "4046",
-      "player": "Patrick Mahomes",
-      "position": "QB",
-      "title": "Chiefs QB Patrick Mahomes day-to-day with elbow injury - ESPN",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOaHhoYjFKcFdrWWFxZUNXSnczckFJb0lHRUgwX0k2T2NXRlcxRHRMRnJ6RHBxZ2RJV2JfWWNzdjlFclUybWV6dGtmRVFpWEhXQXpSQU96XzRDT1lhaXJmQm91QjVTNUNmcFhhcndHWEl6cjFVRmUzemtGQ3VfZW9TdENMRjA3Y3Roc1lOX2xOd2o2NE5RU3c?oc=5",
-      "source": "ESPN",
-      "published": "2026-11-09T18:58:00+00:00"
     },
     {
       "player_id": "3257",
@@ -8031,15 +8094,6 @@
       "published": "2026-11-09T18:21:46+00:00"
     },
     {
-      "player_id": "2133",
-      "player": "Davante Adams",
-      "position": "WR",
-      "title": "Davante Adams Fantasy Football Injury Update: When Will Rams WR Return? - Complex",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORkFKNVQ4Q050d1hzdHMwZXZtbGIxQlVPYzNGa09GMUFVR1FUQkxJblM0cjcxd3JteTFyUWV1c0J3Z0xPUEhhdzdQWTJDYU1Jem9pLUNibG1STGNDa1pyYzJhNjlzbFlkZEVZcFU5QTFGVVk0aEhOd0VFNEkzSEJubWlnZkRVbXJsVS1ncGpzQQ?oc=5",
-      "source": "Complex",
-      "published": "2026-11-09T18:20:19+00:00"
-    },
-    {
       "player_id": "13414",
       "player": "Kaelon Black",
       "position": "RB",
@@ -8085,15 +8139,6 @@
       "published": "2026-11-09T17:59:00+00:00"
     },
     {
-      "player_id": "6804",
-      "player": "Jordan Love",
-      "position": "QB",
-      "title": "NFL Week 9 Sunday aftermath: Myles Garrett's return buoys Rams; Jordan Love, Joe Burrow shine - NFL.com",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNUF9TRHpBdHhqUk5qWHQ4d1l1RXR0d1NFMWxJNnJwQk01eW1aY2xzT2RrSVA3QUxzSE4yNHRmbzFKVWRpUmJQUzdRTjV4S2gzamg0R1lDTDRKX3hxNGd3S1NGcm9iTC0tQ0JNUVdRSUc5TXlKRlBSWVhOVkdMbW9RQ1JUa0daMTQ4U0w1eS1PUnZ4djFra0hkaXNiam1WaFVsaWlKVUVjNEtWT3duLTdoaTNjd2VhSkNPOU90NVJ3?oc=5",
-      "source": "NFL.com",
-      "published": "2026-11-09T17:56:17+00:00"
-    },
-    {
       "player_id": "4943",
       "player": "Sam Darnold",
       "position": "QB",
@@ -8110,15 +8155,6 @@
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPR04zOE1nWTBBcnJRcnl4T1dySnkzdG4xS0wxWkxxSDgtMXFuZi1HUHVRaXNCVFkyUWhwTTVKZ1d6cEluV0VyMTlpZ2hLcEZKdGl3LWw4bV9DcDRVNllZUENHZFFZSl9uanE3Tl9hbzZEMDBjRUNvLU50Z0hPam1wOV8zb3c4dXZkWjRKLWJDNlFRLUcyZVkwM3ZhVnR5VzdZeWJXNk14SExud1RlS3QwdUx1S21DWFV4?oc=5",
       "source": "NFL.com",
       "published": "2026-11-09T17:52:34+00:00"
-    },
-    {
-      "player_id": "10888",
-      "player": "Jalen Carter",
-      "position": "DL",
-      "title": "New Eagles Trade Rumors on Jalen Carter and Moro Ojomo After Loss to Giants Ahead of NFL Deadline - Bleacher Report",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPQWlhbFlrNWx6WXZaWTFRWi1oMWpBcUtja0RpMmF5cXhnMTROemdSQmljZVRucE1GdE5BVGhwZXFZN3IwVGJJRXdnSkZJRXl5bURLdXc3S3ZrTFpsQUtXTEdXenVnS1pfaXpkMmczeE1qN2Q4QXp1RERLNkdqb2Q0Y1I1dnBnWWVyTG5fYUxXUVNYYUV1Qmlza0JHaHpEcWR3SmJnNGtwalN6LW1iYWpXQjY3RlBrSVJ0dTRBOTFaUVROYkJ0OURpN1NtSUoyUQ?oc=5",
-      "source": "Bleacher Report",
-      "published": "2026-11-09T17:46:54+00:00"
     },
     {
       "player_id": "5843",
@@ -8182,15 +8218,6 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVFpyeEF0N3NiR01tMlZSTFBpa0ZqT2pLYTRWYVVvT3k3MXVHX242MHV4aXNCcmlkUUZpUlZVUjFFUEVxaXNCWW45bmRjOGhYWTJ2WkRHb3NQNlgxTERmZTZtY2JmRVdQb2xIRlY5YjVGUW5JYVh1ZkhMLTlYSFk2UDM5VEVZaVlHdVBtdQ?oc=5",
       "source": "Yahoo Sports",
       "published": "2026-11-09T17:27:29+00:00"
-    },
-    {
-      "player_id": "3558",
-      "player": "Chris Jones",
-      "position": "DT",
-      "title": "Chris Jones Finally Breaks Through With a Pair Of Huge Sacks - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQOTFqNmp0ZkkySXRyd1VkVTFCd1U0bklyb0x3Z205WE5qQXdFMGtpeVN2R0pYd2ctaGg3YnFhU2ZTOEVrZzlPVElGTXRmYnR1SWo3Q2RyRXV5c0VlUE1IaDNGeEV0cDRUSW9DdnRnOEt4X2ZJTGtNN2lrMjlfWXQ1WkNPYTlNbEU?oc=5",
-      "source": "Yahoo Sports",
-      "published": "2026-11-09T17:15:13+00:00"
     },
     {
       "player_id": "9501",
@@ -8454,15 +8481,6 @@
       "published": "2026-11-09T15:56:13+00:00"
     },
     {
-      "player_id": "6125",
-      "player": "Jeffery Simmons",
-      "position": "DT",
-      "title": "Luke Goedeke airs grievances about Jeffery Simmons - NBC Sports",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQamlyRXdudVItR25GY0NkSTlhVjRkSUFiWVBMcVBrMEVIU0sxcmNHM0J3VjEzVGZSLTVXSERXSnlxaGtNUGFxRU80M01VM2sxdUFjY2o5UzdjWEV6a3pIZDdSMkRkWVVUb3J5dVI2emFObmtGQmQ2dC1XYW9IMWZ1OURFUlpvUGFrT3VXVEJzNTNNRkVtMjBNam5CcGdsWGlObWdLdnhIa3AwUnp6YWlmaGlB?oc=5",
-      "source": "NBC Sports",
-      "published": "2026-11-09T15:46:19+00:00"
-    },
-    {
       "player_id": "3321",
       "player": "Tyreek Hill",
       "position": "WR",
@@ -8499,15 +8517,6 @@
       "published": "2026-11-09T15:14:19+00:00"
     },
     {
-      "player_id": "13347",
-      "player": "Demond Claiborne",
-      "position": "RB",
-      "title": "Demond Claiborne 2026 Situational Stats - NFL.com",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9menNqUGNEc2I0eFJWRWNhS0pjbXNhSk9iSTdMRGVMYzBWdS1fSGtoRldnMUJESUY4LWtTcTh4c25nMDBLWmpSbng4VEpjVjFSUDRSQl9nN2FBSDRHV0hpS0xmUzB1TjdrMWYxVW1JVUtaLU1hbE16c1lJRQ?oc=5",
-      "source": "NFL.com",
-      "published": "2026-11-09T15:12:47+00:00"
-    },
-    {
       "player_id": "8137",
       "player": "George Pickens",
       "position": "WR",
@@ -8515,6 +8524,24 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNNktyUEI1OXRQRjJWRXBCZmFlVmdXVnozWnRqRUZwS2c4cUhFaGM4SzZGTVB1TmNreFRzbldIa2VPQVJITTl4dDV0QV8tUlVWVi1WNUxTZC1EbHJUOW9fT3JQdmhseF9rcHpDU0padzdnejlEZzZ4Tks1NHNNWHo3QlFoUTNrY2xYQUhELUJURi1UdXgwaTlRejlpWENycUZrQnJvM01SMktUdw?oc=5",
       "source": "Sports Illustrated",
       "published": "2026-11-09T15:10:16+00:00"
+    },
+    {
+      "player_id": "1466",
+      "player": "Travis Kelce",
+      "position": "TE",
+      "title": "Travis Kelce Sends Strong Patrick Mahomes Message After Chiefs Game - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcnBrZjVXRzJiT19oRE5hUF9EeVVyR1BiVnI1S1M2cVVQVWFsNzg4S2EyNkQ0QkY4S3JQa3dHTE43TEdJOTFteE54aDYtQlpLYTBJMWg4bUxnNE54dy03TXFDVnE2dzhMWWJpMThpRlZPX3VYaXlJQkk3bU54X254SjFWbFdCMEZrc2c?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-09T15:06:20+00:00"
+    },
+    {
+      "player_id": "4046",
+      "player": "Patrick Mahomes",
+      "position": "QB",
+      "title": "Travis Kelce Sends Strong Patrick Mahomes Message After Chiefs Game - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcnBrZjVXRzJiT19oRE5hUF9EeVVyR1BiVnI1S1M2cVVQVWFsNzg4S2EyNkQ0QkY4S3JQa3dHTE43TEdJOTFteE54aDYtQlpLYTBJMWg4bUxnNE54dy03TXFDVnE2dzhMWWJpMThpRlZPX3VYaXlJQkk3bU54X254SjFWbFdCMEZrc2c?oc=5",
+      "source": "Yahoo Sports",
+      "published": "2026-11-09T15:06:20+00:00"
     },
     {
       "player_id": "7564",
@@ -8578,6 +8605,15 @@
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQWmxTVHRQdmcxdEE5dXRlZUpCeHdYVzVVQnhwOTE4TlN4ZlRHVWM5THdudzhWN21tTG1hX3pkS3dTZmN2dHl2TnNpMUcxXzVGRk9uNVR4VUh4ZHNVd09WdmZDaVYyTXhwOFppOWN3Wl9xNGJGYU9LVTY4ZGdaV21jcUJDbWIwRFRtQ3owUDM0NmVlYnFjWFA2UkIzWGxUNVphZmZqX1ZOWEtBWllrTDZPWWE5YzhuVzVFclJoYXc2bVVld01PUTFzdnpqNktUVU5xR0c3VWE4ejFUZw?oc=5",
       "source": "Broncos Wire",
       "published": "2026-11-09T14:42:00+00:00"
+    },
+    {
+      "player_id": "6797",
+      "player": "Justin Herbert",
+      "position": "QB",
+      "title": "Justin Herbert Injured, DJ Uiagalelei Makes NFL Debut as Chargers Fall to 0-8 in Loss to Texans - Bleacher Report",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOWlNKQnFET0NlblZ2RE5IU0xuQUtudlByY195aTJiYUI5TExIb2doNDkwMHZwN0xISjUwQ09iSFpsREJ1Nk5EZlZmQS1JY3pzdzZhaFRDUTAxQ0hLb1MyY1RfcnR2NENseGFpSzFoRmh6dU53eXQ4Q3V3LUJESVJoVWl0bDc5dFNKdVFqS3RONzFkc2RfR2JDaHJkQ2dZNnJVVkc5UzlPX1FrS3hMWDNveFJaWmRIN0V6Ykh5NEZsQlNzcVYtTkE?oc=5",
+      "source": "Bleacher Report",
+      "published": "2026-11-09T14:40:57+00:00"
     },
     {
       "player_id": "12519",
@@ -8661,15 +8697,6 @@
       "published": "2026-11-09T13:53:46+00:00"
     },
     {
-      "player_id": "9486",
-      "player": "Dontayvion Wicks",
-      "position": "WR",
-      "title": "Dontayvion Wicks Fantasy Football Half PPR Ros Rankings | Philadelphia Eagles - FantasyPros",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT3hFbXF3X2U1RnpLTDQyaDFrVnd1SmN3Sk9Cb2lkQjgtSjdwX0F4THhCbkdoMmZ4ZUVqbjlfTXVhSG9PRm4zSS1QdmtqZ3g3dTU5RHN0MElGNUo4MGNoYXNvYTRzM0VBU1drTEZYZXNSMlEweTdkcExCZTlQUTFFN01vWktLdjFaZGx3?oc=5",
-      "source": "FantasyPros",
-      "published": "2026-11-09T13:40:14+00:00"
-    },
-    {
       "player_id": "3294",
       "player": "Dak Prescott",
       "position": "QB",
@@ -8742,15 +8769,6 @@
       "published": "2026-11-09T13:00:06+00:00"
     },
     {
-      "player_id": "11604",
-      "player": "Brock Bowers",
-      "position": "TE",
-      "title": "Las Vegas Raiders TE Brock Bowers was able to break an extraordinary record once again, even in the loss to the 49ers - A to Z Sports",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOM0NoakgycVRFWG9XbGhoWEVvVlN4TUkwWE1UaWNZNWIxNEZnRnVKdGZmYmQycVE5bEJiTUx5QkNqd0JDSEJzWkUtQXJhcXVSUlczdHRlZnIxM0MyZU1ZR24wd2hwNGZJdU03dzUyaG04NUg0MkNZOGNMcGxUWVpnYmQySEZqWVlMR1dNUlRNUmd5d2RHMUx5VGYtcTdRb2F5cWMxNQ?oc=5",
-      "source": "A to Z Sports",
-      "published": "2026-11-09T13:00:00+00:00"
-    },
-    {
       "player_id": "1373",
       "player": "Geno Smith",
       "position": "QB",
@@ -8785,6 +8803,15 @@
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZ2Z1eEZZdjc1RHY3WXkxSFk0ekp4SzM3LUs5Y1dWdjdvSE00dFpmN3UxN3piVVR0MUZfOUNaeG4tU3Z5eDYxVFVNazBZYUJUc0xqM1JFZjVJVUhBYy1qX25FM3FMQ3BLS3FfWUM2blRiYkc3RXBnTkRaLUdCU19qTXhib0QzWWhGUWJRVFZQWDU5WnI1b3p4M3lrZXVEVzFpeG9MSnN3ZXNvRHJJYzBwMdIBuAFBVV95cUxQVm9DeGNaZ0pqYXhIYWgzVVNZRjFQNXlqNUl0X2F5MXFydDRoVTc5MnZfdWxjQnlpVFNLWlJ2bk5lTmY5OFp1VjBGRkluaG1TWlZCeUc4ZE5BWnRzZzF6ZGNhclFmaEdxN0hzUFlQbENXNDk3UDhybXhiMFlxVi1vd2xRUmgyM2oxZmJtai1tV3Bsa2w2R3VlSkFMc1ZYRm5faS1xNlZFY1YyTjhvRW9LTmswaC1ZUXRp?oc=5",
       "source": "NBC Sports Bay Area & California",
       "published": "2026-11-09T12:09:01+00:00"
+    },
+    {
+      "player_id": "8121",
+      "player": "Romeo Doubs",
+      "position": "WR",
+      "title": "Should I Trade (Half PPR) Romeo Doubs for Seth McGowan (2026)? - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQcmVNRVVMdjdLMUF1VWlrY1k2anQ1a3ZwNGU5aFQ4SEc3Yk4yN0dSZGliRlI5ZTR0T2FBcGY5WVYwc1BGTVpTbVdKdzEtdkdXR25CWU1jYlRSWDVWTGluZ05PWkpHd28xTlBuYzZpbm5HZmREb0cxTkJhOTIwSncyZDQydmNJdw?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-09T12:03:53+00:00"
     },
     {
       "player_id": "5854",
@@ -8868,15 +8895,6 @@
       "published": "2026-11-09T11:04:55+00:00"
     },
     {
-      "player_id": "4037",
-      "player": "Chris Godwin Jr.",
-      "position": "WR",
-      "title": "Chris Godwin Jr. catches two passes in Week 9 - FantasyPros",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdWxoRy12RS1NRzFXRzJjUmFxZjNjTGpaZTBfb1hQeEtoZng4RWQwMUp2SHRiTVFpRzE4V2wzdWI1WThPaEh3QjAxX0JudjVHVDEyeFM5cG5BeEFXVWVjeW9LMnNFVmoxdXYyeXp1aTI3U2tyZVdRRTVjazNfSnowd2lRRUtVSDhHRHVUb2RMX1RjT0HSAZgBQVVfeXFMTnNXUHpDOC13OFR1a1BJVmRSOExiTDgtSEtsWkI0aG9ObmI0Qm8wNXlhTzlJR0lTR1M0NkRKbUZMUEJCNzJlc0ZqLU10cXhUN2ZXcXQwWVl1WTF3Sy01OXUxSkVPN004LUp2N0tfT2lwRG9YdzNJQUdpUTdfbjROcGJDWjYtTnFkVnJ4MnJYbF9Nd3JFbVlsZFI?oc=5",
-      "source": "FantasyPros",
-      "published": "2026-11-09T11:02:47+00:00"
-    },
-    {
       "player_id": "6770",
       "player": "Joe Burrow",
       "position": "QB",
@@ -8884,6 +8902,15 @@
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNUN0czdZMUJsNGdqMVQ1eE95MFBLTUVkM21FenJqbVpGTTUyZTI4T1dNWWVST3NDNk5rS0R3UWdkVEp1Q0tBV1JpX0RtdDFEYmxpcTByUDZYYUh1SmxKNl8wUmtwSFNJanNwYkxWbzYtcENjcklIRHNKUTdCdElEdVdzX2UzbDBBSkE?oc=5",
       "source": "ESPN",
       "published": "2026-11-09T11:00:00+00:00"
+    },
+    {
+      "player_id": "9486",
+      "player": "Dontayvion Wicks",
+      "position": "WR",
+      "title": "Dontayvion Wicks or Deebo Samuel Sr. | Who Should I Start? - Week 10 - PPR - FantasyPros",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVkItTDBIbV9aUXgtZnJCTkkwWjNHSTFnMXM3ZFo2Z1N3SEtLMlREdDZGMk53WU1HMkZ3YWJ3R04zWlBfeXFDQUwtZnR3UGhpSHR1VDBwUlNKX2pKOXpVWFVsbzN5anE3d053LUQxSkFCN1JIWmc3X3VycDAteHV6LUQ2N2sybXY1VWxZ?oc=5",
+      "source": "FantasyPros",
+      "published": "2026-11-09T10:50:00+00:00"
     },
     {
       "player_id": "9488",
@@ -8974,33 +9001,6 @@
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPZ3lEakVnSkZyQlB0cUVVaFhISU11RV9zLVRmMjBDX3pzYWFiMmpSZkZLdFpJdXdyRFlfR1lfd00zRnBqcjhEOW82cTU0NElscV83UVFqelNuWk9lZXJfbk9pRzZSUVVQc0xiMmZaa1lNQzgwamhfVzlaQXQ5bUVLNy1HanFrQQ?oc=5",
       "source": "AOL.co.uk",
       "published": "2026-11-09T09:44:18+00:00"
-    },
-    {
-      "player_id": "11589",
-      "player": "Trey Benson",
-      "position": "RB",
-      "title": "Trey Benson or Cash Jones | Who Should I Start? - Week 10 - PPR - FantasyPros",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQ2FnLUhCclJrV1QxNUF6ZjlXYlRLc2MxNlZBSkdPRVRXNVBWWWFxNldqZXhjMHM2MkRMcGJjWWJxRjZzVjNpM3cwX1E5WWRUcUpwRXJRYnIwNDAtZTZ3Qmljd0pneHJ1a3VMTl9qTjU5TnFOak5iaGY4MnBsTkZ3RFZB?oc=5",
-      "source": "FantasyPros",
-      "published": "2026-11-09T09:39:53+00:00"
-    },
-    {
-      "player_id": "11655",
-      "player": "Tyrone Tracy Jr.",
-      "position": "RB",
-      "title": "Elic Ayomanor or Tyrone Tracy Jr. | Who Should I Start? - Week 10 - PPR - FantasyPros",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVDJ2TkxIcVJqU1VCN3JWWjF5SU45TFlSaHhocHlKeTdxOGY3NzI3S1dlN09weTVlSkxUcExxNlg1dlZLeGNHRVhYa3VmRE1jbWFBeGtmamlvM3lDSVZpMkI3bThuMHVJMkwySXBzN0lyYmJYSGtfNC1yeDdoNU14VnVCUXhRTmNYN2pr?oc=5",
-      "source": "FantasyPros",
-      "published": "2026-11-09T09:15:55+00:00"
-    },
-    {
-      "player_id": "13329",
-      "player": "Malik Benson",
-      "position": "WR",
-      "title": "Malik Benson Football Stats | Las Vegas Raiders - FantasyPros",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5sM1BJVWxhVHhha1VRMnFMUDZPNFZjM01FSkRHNWEyVF9ST0FnWFVCLWpyR1hDYkxHOEZGalJLVHNQYnEwUVA3Tmloa0E4aXR3NTFvcWdRU2t4cGlvWnNRZ3Vxb1B4eGw5a2lVaVFZMXVpbVFS?oc=5",
-      "source": "FantasyPros",
-      "published": "2026-11-09T08:58:59+00:00"
     }
   ]
 }
